@@ -135,7 +135,7 @@ Separate budget: **24/24 offspring evaluated**, 4 numerically converged so far. 
 
 ![Actual simulated graphene lattice and local edge changes](results/continuous-dc/round-000059/winner-local/atomic-lattice.png)
 
-Actual carbon sites and hopping bonds from the transport builder. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity](results/continuous-dc/round-000059/winner-local/atomic-lattice.json).
+Actual carbon positions from the transport builder, shown as bright spots. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity](results/continuous-dc/round-000059/winner-local/atomic-lattice.json).
 
 | Local experiment | Converged DC power (pW) |
 | --- | ---: |

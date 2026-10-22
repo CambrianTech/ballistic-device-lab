@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.collections import LineCollection
+from scipy.ndimage import gaussian_filter
 from matplotlib.patches import Rectangle
 
 from ballistic_lab.pipeline.contracts import SquareDevice
@@ -29,16 +29,38 @@ def lattice(candidate: dict) -> dict:
     )
 
 
-def draw(ax, data: dict, title: str) -> None:
+def draw(ax, data: dict, title: str, bounds=(-8, 8, -8, 8)) -> None:
+    """Gaussian position markers; deliberately not electron-optical contrast."""
     xy = np.array(data["positions_nm"])
-    ax.add_collection(
-        LineCollection(xy[np.array(data["bonds"])], colors="#a8c4c8", linewidths=0.35)
+    left, right, bottom, top = bounds
+    pixels = 1000
+    density, _, _ = np.histogram2d(
+        xy[:, 1], xy[:, 0], bins=pixels, range=((bottom, top), (left, right))
     )
-    ax.scatter(*xy.T, s=1.2, color="#087f8c", linewidths=0)
-    for contact in data["contacts"]:
-        ax.scatter(*xy[contact].T, s=4, color="#e3a039", linewidths=0)
-    ax.set(xlim=(-8, 8), ylim=(-8, 8), title=title, aspect="equal")
-    ax.set_axis_off()
+    sigma_nm = 0.032
+    density = gaussian_filter(density, sigma_nm / ((right - left) / pixels))
+    ax.imshow(
+        density,
+        origin="lower",
+        extent=bounds,
+        cmap="gray",
+        vmin=0,
+        vmax=density.max(),
+        interpolation="nearest",
+    )
+    ax.set_title(title, loc="left", fontsize=13, pad=10)
+    ax.set(xticks=[], yticks=[], aspect="equal")
+    length = 5 if right - left > 5 else 0.5
+    x, y = left + 0.08 * (right - left), bottom + 0.09 * (top - bottom)
+    ax.plot([x, x + length], [y, y], color="white", lw=3)
+    ax.text(
+        x + length / 2,
+        y + 0.035 * (top - bottom),
+        f"{length:g} nm",
+        color="white",
+        ha="center",
+        fontsize=11,
+    )
 
 
 def main(target: Path) -> None:
@@ -52,39 +74,32 @@ def main(target: Path) -> None:
     if len(changed):
         counts = [np.sum(np.max(abs(changed - x), axis=1) < 1.3) for x in changed]
         center = changed[int(np.argmax(counts))]
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5.6))
-    draw(axes[0], parent, f"Frozen winner · {len(p):,} carbon sites")
-    draw(axes[1], child, f"Best local offspring · {len(c):,} carbon sites")
-    draw(axes[2], parent, "Atomic edge changes · magnified")
-    for ax in axes[:2]:
+    fig, axes = plt.subplots(2, 2, figsize=(10, 10))
+    draw(axes[0, 0], parent, f"a  Winner Â· {len(p):,} carbon sites")
+    draw(axes[0, 1], child, f"b  Local offspring Â· {len(c):,} carbon sites")
+    bounds = (center[0] - 1.3, center[0] + 1.3, center[1] - 1.3, center[1] + 1.3)
+    draw(axes[1, 0], parent, "c  Winner edge Â· enlarged", bounds)
+    draw(axes[1, 1], child, "d  Offspring edge Â· enlarged", bounds)
+    for ax, data in zip(axes[0], (parent, child)):
         ax.add_patch(
-            Rectangle(center - 1.3, 2.6, 2.6, fill=False, edgecolor="#b72f65", linewidth=1.4)
+            Rectangle(center - 1.3, 2.6, 2.6, fill=False, edgecolor="#ffbc47", linewidth=1.5)
         )
-        ax.plot([-6.6, -1.6], [-7.5, -7.5], color="#283747", lw=3)
-        ax.text(-4.1, -7.1, "5 nm", ha="center", fontsize=10)
-    ax = axes[2]
-    for points, color, marker, label in [
-        (added, "#3676d1", "o", "Added carbon"),
-        (removed, "#cb345b", "x", "Removed carbon"),
-    ]:
-        if points:
-            xy = np.array(points)
-            ax.scatter(*xy.T, s=25, color=color, marker=marker, label=label, zorder=5)
-    ax.set(xlim=(center[0] - 1.3, center[0] + 1.3), ylim=(center[1] - 1.3, center[1] + 1.3))
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.14), frameon=False, fontsize=9)
-    ax.text(0.5, -0.02, "Window width: 2.6 nm", transform=ax.transAxes, ha="center", fontsize=10)
-    fig.suptitle(
-        "Simulated graphene lattice · actual transport geometry", fontsize=17, weight="bold"
-    )
+        xy = np.array(data["positions_nm"])
+        for contact in data["contacts"]:
+            ax.scatter(*xy[contact].T, s=2, color="#ffbc47", linewidths=0)
+        ax.set(xlim=(-8, 8), ylim=(-8, 8))
+    fig.suptitle("Graphene device and atomic edge detail", fontsize=18, weight="bold")
     fig.text(
         0.5,
-        0.02,
-        f"White opening = etched void · gold = lead interface atoms · {len(added)} added / {len(removed)} removed sites in whole device\nIdeal unrelaxed lattice; not a microscope image. Bonds show Hamiltonian connectivity, not electron trajectories.",
+        0.025,
+        f"Bright spots: carbon positions Â· black opening: etched void Â· gold: contacts and zoom window\n"
+        f"Offspring: {len(added)} sites added, {len(removed)} removed across the device.\n"
+        "Position rendering (Gaussian width 0.032 nm); not simulated microscope contrast.",
         ha="center",
         fontsize=10,
     )
-    fig.tight_layout(rect=(0, 0.10, 1, 0.93))
-    fig.savefig(target / "atomic-lattice.png", dpi=220)
+    fig.tight_layout(rect=(0, 0.10, 1, 0.95), h_pad=2, w_pad=2)
+    fig.savefig(target / "atomic-lattice.png", dpi=200)
     plt.close(fig)
     (target / "atomic-lattice.json").write_text(
         json.dumps(dict(parent=parent, offspring=child, added=added, removed=removed), indent=2),

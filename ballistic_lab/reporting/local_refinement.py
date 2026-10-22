@@ -55,7 +55,7 @@ def render(destination: Path) -> str:
             lines += [
                 f"![Actual simulated graphene lattice and local edge changes]({target.as_posix()}/atomic-lattice.png)",
                 "",
-                "Actual carbon sites and hopping bonds from the transport builder. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity]("
+                "Actual carbon positions from the transport builder, shown as bright spots. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity]("
                 + target.as_posix()
                 + "/atomic-lattice.json).",
                 "",
@@ -70,7 +70,7 @@ def render(destination: Path) -> str:
     else:
         lines += ["Parent/offspring converged comparison pending.", ""]
     lines += [
-        f"[Frozen plan and completed rows]({target.as_posix()}) · [Protocol](local_lab/README.md).",
+        f"[Frozen plan and completed rows]({target.as_posix()}) Â· [Protocol](local_lab/README.md).",
         "",
     ]
     return "\n".join(lines)
