@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Polygon, Rectangle
 
+from ballistic_lab.reporting.robustness import render as render_robustness
 from followup_lab.plan import identity, leader
 
 
@@ -215,6 +216,8 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 {chr(10).join(table)}
 
 {comparison}
+
+{render_robustness(destination)}
 
 ![Matched control and leader trajectories]({rel}/leader-trajectories.png)
 

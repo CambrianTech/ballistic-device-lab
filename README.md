@@ -26,7 +26,7 @@ The newer **Shi et al. (2026)** device has its own [benchmark record and SEM fig
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 20:51 UTC**, through matched round **18**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 20:52 UTC**, through matched round **18**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -50,6 +50,20 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 | diversity-r0-profile-g15-1 | 3/3 | 27/27 | 27/27 |
 
 **Leader versus D00:** higher computed DC power in **10/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
+
+### Peak performance and robustness
+
+| Tested design | Matched cases | Higher power than D00 | Median power / D00 | Worst power / D00 |
+| --- | ---: | ---: | ---: | ---: |
+| triangle-control | 27/27 | 5 | 0.411× | 0.00267× |
+| D00 | 27/27 | 0 | 1× | 1× |
+| diversity-r0-profile-g15-1 | 27/27 | 10 | 0.35× | 2.65e-05× |
+| elite-r0-profile-g9-1 | 27/27 | 16 | 1.21× | 0.11× |
+| random-r0-beveled-g3-0 | 27/27 | 11 | 0.494× | 0.00343× |
+| random-r1-islands-g1-1 | 27/27 | 6 | 0.156× | 9.51e-05× |
+
+Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000018/robustness).
+
 
 ![Matched control and leader trajectories](results/continuous-dc/round-000018/leader-trajectories.png)
 
@@ -89,7 +103,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 
 </details>
 
-## Current findings — October 22, 2026, 20:51 UTC
+## Current findings — October 22, 2026, 20:52 UTC
 
 <details>
 <summary>Archived studies: earlier candidates and fixed experimental snapshots</summary>
