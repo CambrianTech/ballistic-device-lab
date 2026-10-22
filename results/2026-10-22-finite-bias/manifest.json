@@ -1,0 +1,28 @@
+{
+  "model": "frozen-potential reservoir-bias baseline; not self-consistent",
+  "fermi_ev": 0.9,
+  "temperature_k": 300,
+  "load_ohm": 10000.0,
+  "amplitudes_v": [
+    0.001,
+    0.01,
+    0.05
+  ],
+  "phase_counts": [
+    32,
+    64
+  ],
+  "dc_atol_v": 1e-09,
+  "dc_rtol": 0.01,
+  "inputs": {
+    "results\\2026-10-22-coverage\\empty-nominal.json.gz": "d4dd2dabf2b2271716a7965c82cf7010de1eb454d928f6b78094d61d0f12a3bd",
+    "results\\2026-10-22-convergence\\D00-nominal.json.gz": "cd32d9fb52e3edc02c53b376cba5b9f35b9a40f688d275f03be8a58858221f52",
+    "results\\2026-10-22-coverage\\D14-nominal.json.gz": "3bacd9a3994174f9af8da89453602eea917af03b5c7726e4d7880661e07874cc"
+  },
+  "source": {
+    "C:\\Users\\joelt\\development\\ballistic-device-lab\\ballistic_lab\\experiments\\finite_bias.py": "5e1e15e9fc284a0aa0922b6b83d81c8915f393f6c596ee2d56aa578ce8e1755f",
+    "ballistic_lab\\transport\\finite_bias.py": "f09e8922a647264b5e4dc169a81583d7cc3d91f6580642fc3b5f28c246317a5d",
+    "ballistic_lab\\transport\\circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6",
+    "ballistic_lab\\transport\\reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a"
+  }
+}

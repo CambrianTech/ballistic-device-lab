@@ -2,7 +2,7 @@
 
 **Can nanoscale geometry make a better graphene ballistic rectifier?** We are building a simulation and design-search pipeline to find out. These devices use asymmetric electron transport to convert an alternating electrical signal into DC. Their geometry matters because electrons can cross the active region before scattering randomizes their motion.
 
-The pipeline now connects **GPU trajectory search → frozen geometry candidates → graphene quantum transport → loaded terminal response**. Search has found shapes beyond triangles, and the quantum stage has changed which candidates look interesting. The next major step is self-consistent nonlinear transport: the stage that can test rectification and useful DC power.
+The pipeline now connects **GPU trajectory search → frozen geometry candidates → graphene quantum transport → loaded terminal response**. Search has found shapes beyond triangles, and the quantum stage has changed which candidates look interesting. A first fixed-potential finite-bias test now measures a DC component. The next major step is self-consistent nonlinear transport to test whether that result survives charge-induced changes to the device potential.
 
 ## A shape worth testing further
 
@@ -19,6 +19,8 @@ The pipeline now connects **GPU trajectory search → frozen geometry candidates
 
 \* Signed bottom-minus-top output under a 1 mV drive, 10 kΩ load, 300 K reservoir occupations and identical 14.76 nm footprint/contacts. Linear signal transfer, not DC rectification. D00 uses 4097 energy samples; D14 uses 1025; both meet the stated two-refinement tolerance. These are our simulated designs, not a reconstruction of a published device. [Source data](designs/quantum-comparison.json) · [Full operating-condition matrix](results/2026-10-22-coverage/README.md) · [Refinement checks](results/2026-10-22-convergence/README.md).
 
+**DC follow-up changes the ranking:** at 10 mV sinusoidal drive, the fixed-potential model gives **11.21 µV mean-output magnitude for D00 versus 2.062 µV for D14**. Both pass integration checks. Larger linear signal did not mean better rectification. [DC sweep, waveforms and assumptions](results/2026-10-22-finite-bias/README.md).
+
 The next comparison will put a sourced published layout through the same pipeline; refinement of that layout will be reported separately from its original baseline.
 
 ## Current findings — October 22, 2026
@@ -31,7 +33,7 @@ The next comparison will put a sourced published layout through the same pipelin
 | Matched quantum coverage | 15 atomic devices; 15,375 energy/device solves; 180 loaded outputs | Original study: **145/180** outputs passed both refinement checks.** |
 | Integration follow-up | Seven devices; 21,504 additional solves | **31/35 flagged outputs resolved**; latest combined status **176/180**.‡ |
 | Split-island candidate D14 | Three energies × three contact/atomic-cut conditions × four loads | **36/36 converged**; largest absolute transverse voltage in all nine conditions at 10 kΩ.† |
-| Rectification and efficiency | Nonlinear stage pending | DC output, V/W, bandwidth, noise and conversion efficiency are not yet established. |
+| Finite-bias DC baseline | Three shapes × three drive amplitudes; energy and phase refinement | Fixed-potential model favors D00 over D14; self-consistent device efficiency remains open. [Results](results/2026-10-22-finite-bias/README.md) |
 
 \* Angular steering is a dimensionless geometry diagnostic, not electrical efficiency. D12 is not clearly separated from independently optimized bevels.
 
@@ -114,7 +116,7 @@ alone are not the success criterion.
 | Partial | Output integration convergence | 31/35 flags resolved; four small D00 outputs need further quadrature/window checks |
 | Open | Edge disorder, orientation and size scaling | Matched ensembles with uncertainty and stability of candidate comparisons |
 | Open | Self-consistent nonlinear electrostatics / transport | Bias-dependent potential, gauge invariance, charge/current conservation and mesh convergence |
-| Partial | Loaded AC-to-DC response | Circuit solver and cycle accounting tested against analytic networks; nonlinear graphene provider still required |
+| Partial | Loaded AC-to-DC response | Finite-reservoir-bias provider connected and tested; self-consistent potential response still required |
 | Open | Contacts, dynamics, noise and thermal limits | Application-specific circuit, frequency and loss models with validation |
 | Open | Matched published-device benchmark | Reproduce reference trends before comparing searched designs |
 | Open | Quantum-informed search feedback | Validated electrical labels, equal-budget baseline and untouched holdout |
