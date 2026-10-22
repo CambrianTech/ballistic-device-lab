@@ -187,6 +187,18 @@ remain running for this local process to progress.
 
 ## Continuous leader validation
 
+### Bounded winner-neighborhood experiment
+
+`python -m local_lab.worker` independently freezes a completed-round leader and
+24 local mutations. It uses one CPU and exits after screening and refinement.
+Monitor `runs/winner-local/status.json`, results, logs and process liveness;
+do not duplicate it. Its OS lock, source manifest and STOP/resume contract are
+documented in [`local_lab/README.md`](../local_lab/README.md). Loaded local and
+transport sources must remain unchanged. The continuous reporter publishes its
+completed rows separately, without adding them to matched-arm counts or rankings.
+
+### Continuous operating-condition checks
+
 `python -m followup_lab.worker` is a separate one-CPU consumer of completed
 search snapshots. It never writes search histories or modifies the selection
 objective. The separately versioned `followup_lab/` orchestration package avoids

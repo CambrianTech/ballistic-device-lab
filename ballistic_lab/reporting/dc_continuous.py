@@ -20,6 +20,7 @@ from ballistic_lab.reporting.edge_sensitivity import render as render_edges
 from ballistic_lab.reporting.falsification import render as render_falsification
 from ballistic_lab.reporting.leader_evidence import render as render_evidence
 from ballistic_lab.reporting.leader_validation import render as render_validation
+from ballistic_lab.reporting.local_refinement import render as render_local
 
 ARMS = ("elite", "diversity", "random")
 LABELS = {
@@ -78,6 +79,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
         destination,
     )
     validation_block += render_edges(destination)
+    validation_block += render_local(destination)
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):
