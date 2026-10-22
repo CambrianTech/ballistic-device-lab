@@ -54,6 +54,14 @@ The search currently uses ExtraTrees regression and uncertainty-guided proposals
 
 ## What we have found
 
+### Explore the designs
+
+![Search-discovered rectifier geometry highlights](designs/highlights.png)
+
+The [design collection](designs/README.md) publishes **17 distinct frozen geometries** across triangles, beveled obstacles, and asymmetric cross-junctions, with all **25 evaluation records** retained. The beveled refinements lead the steering score; cross layouts offer shorter long-path tails. Both are useful directions for the next physics stage.
+
+Browse the shapes, compare their scores and tradeoffs, or [download their parameters and polygon vertices](designs/catalog.json). These are simulation candidates selected within the stated model, not fabricated devices or demonstrated electrical-efficiency winners.
+
 ### Geometry families
 
 We screened **2,304 candidates** across triangles, beveled obstacles, and asymmetric cross-junctions with equal budgets. Beveled shapes improved on the newly searched triangles in all three repeats, but **did not clearly beat our previously learned triangle**. The cross candidates had shorter long-path tails, so we retain a varied shortlist for the lattice stage.
