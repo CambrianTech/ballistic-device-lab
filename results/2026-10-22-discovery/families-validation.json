@@ -1,0 +1,293 @@
+{
+  "model_fingerprint": {
+    "__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "experiments/discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "experiments/families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "experiments/final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "experiments/learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "experiments/refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "experiments/rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "experiments/robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "experiments/validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "geometry/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "geometry/basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "geometry/families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "geometry/registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "metrics/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "metrics/angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "reporting/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "reporting/catalog.py": "1546ac1c9152a6d082f074593aa1d2ecff54a1d178e8ee8b62278c0042278b31",
+    "reporting/discovery.py": "b29ef3cfaa6cfec608872f1970c606ec31cd67d9b9f304f43a942854d291b4c9",
+    "reporting/families.py": "adee15e12bc327e803d536764aa6060cc8f9b9c1d98f708d58155e26b149f632",
+    "reporting/showcase.py": "b1a8ab88a5df05049afb7dfa3c341d2377b9713e4ef8ce5f379c409a2be46ddb",
+    "search/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "search/discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "search/families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "search/legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "search/refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "transport/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "transport/backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "transport/cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "transport/gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "validation/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "validation/families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "validation/receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "validation/registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2",
+    "transport/rays.cu": "46216034318dd905124e36af77b5608cfe07d972f05c7a2296ba1357c747273c"
+  },
+  "checks": [
+    {
+      "name": "grazing-reflection regression",
+      "details": {
+        "ray": 8034,
+        "destination": 0,
+        "path_length": 13.044216669631831
+      }
+    },
+    {
+      "name": "CPU parity and mixed-topology batching",
+      "details": {
+        "cases": [
+          {
+            "port": 0,
+            "geometry": 0,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 1,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 2,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 3,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 4,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 5,
+            "mismatches": 0
+          },
+          {
+            "port": 0,
+            "geometry": 6,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 0,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 1,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 2,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 3,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 4,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 5,
+            "mismatches": 0
+          },
+          {
+            "port": 1,
+            "geometry": 6,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 0,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 1,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 2,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 3,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 4,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 5,
+            "mismatches": 0
+          },
+          {
+            "port": 2,
+            "geometry": 6,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 0,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 1,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 2,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 3,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 4,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 5,
+            "mismatches": 0
+          },
+          {
+            "port": 3,
+            "geometry": 6,
+            "mismatches": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "bulk scattering and reciprocity",
+      "details": {
+        "cases": [
+          {
+            "geometry": 0,
+            "bulk_cpu_gpu_error": 0.001739501953125,
+            "reciprocity_error": 0.003204345703125
+          },
+          {
+            "geometry": 1,
+            "bulk_cpu_gpu_error": 0.0009613037109375,
+            "reciprocity_error": 0.0027008056640625
+          },
+          {
+            "geometry": 2,
+            "bulk_cpu_gpu_error": 0.0024261474609375,
+            "reciprocity_error": 0.00262451171875
+          },
+          {
+            "geometry": 3,
+            "bulk_cpu_gpu_error": 0.00115966796875,
+            "reciprocity_error": 0.0021820068359375
+          },
+          {
+            "geometry": 4,
+            "bulk_cpu_gpu_error": 0.0047149658203125,
+            "reciprocity_error": 0.004180908203125
+          },
+          {
+            "geometry": 5,
+            "bulk_cpu_gpu_error": 0.0027008056640625,
+            "reciprocity_error": 0.0019989013671875
+          },
+          {
+            "geometry": 6,
+            "bulk_cpu_gpu_error": 0.003997802734375,
+            "reciprocity_error": 0.001953125
+          }
+        ]
+      }
+    },
+    {
+      "name": "mirror symmetry and empty control",
+      "details": {
+        "scores": [
+          0.03325428277137056,
+          -0.03297052701389561,
+          0.0003263167549749388
+        ]
+      }
+    },
+    {
+      "name": "intersection-tolerance convergence",
+      "details": {
+        "epsilon": [
+          "1e-10",
+          "1e-12",
+          "1e-14"
+        ],
+        "scores": [
+          [
+            -6.401252530182939e-05,
+            0.06102853848199356,
+            0.05955243979553006,
+            0.03141563227721958,
+            0.03068228846127727,
+            0.017576640122804927,
+            -0.0020868997890928632,
+            0.024961757754567653
+          ],
+          [
+            -6.401252530182939e-05,
+            0.06102853848199356,
+            0.05955243979553006,
+            0.03141563227721958,
+            0.03068228846127727,
+            0.017576640122804927,
+            -0.0020868997890928632,
+            0.024961757754567653
+          ],
+          [
+            -6.401252530182939e-05,
+            0.06102853848199356,
+            0.05955243979553006,
+            0.03141563227721958,
+            0.03068228846127727,
+            0.017576640122804927,
+            -0.0020868997890928632,
+            0.024961757754567653
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -50,11 +50,21 @@ Geometry can influence how carriers reach different terminals. We want to test w
 | Self-consistent nonlinear transport | Planned | Does applied voltage produce useful rectification? |
 | Matched literature and circuit benchmarks | Planned | Is it competitive in electrical performance, bandwidth, and noise? |
 
-The search currently uses ExtraTrees regression and uncertainty-guided proposals with random exploration. It is active learning, not reinforcement learning. RANSAC may be useful for robust fitting of measured curves later; it is not the optimizer implemented here.
+Search methods include ExtraTrees surrogate proposals, local mutation, and evolutionary population search with recombination and global exploration. Each is compared with an equal-budget random control. None is reinforcement learning. RANSAC may help fit measured curves later; it is not the geometry optimizer.
 
 ## What we have found
 
 ### Explore the designs
+
+![Free-profile, radial and split-island candidates](results/2026-10-22-discovery/discovery-gallery.png)
+
+**What happens when we stop prescribing a triangle?** A 98,304-candidate search explored free boundary profiles, asymmetric radial polygons, and separate islands alongside beveled controls. It produced shield-like obstacles, staggered islands, and both single-tip and double-tip profiles. Population search beat equal-budget random sampling in every family and repeat on the nominal holdout test.
+
+The strongest free-profile candidate scored **0.08011**, versus **0.07644** for the fixed bevel anchor—a **4.8% improvement in angular steering**. It also exceeded that anchor's mean score in all nine tested scattering conditions. Its small lead over the independently optimized bevels is not a clear separation: the paired seed differences change sign. One profile run settled into a weaker double-tip shape, illustrating why we keep multiple repeats and publish failures.
+
+The broader search still often converges toward a wide upper face and a downward tip. That is evidence about this objective and these boundary conditions, not a universal design law. Several runs plateaued as their budget grew; the next useful challenge is higher-fidelity transport rather than assuming more proxy optimization will produce better electrical devices.
+
+[Browse all expanded-family finalists and download their geometry](results/2026-10-22-discovery/README.md) · [Read the search protocol and physics limits](docs/DISCOVERY.md)
 
 ![Search-discovered rectifier geometry highlights](designs/highlights.png)
 

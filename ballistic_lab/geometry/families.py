@@ -72,6 +72,43 @@ def cross_junction(parameters: FloatArray) -> Geometry:
     return [upper, upper * reflection, lower, lower * reflection]
 
 
+@geometry_family("profile", ((0.25, 1.5), (0.25, 1.1), (-0.25, 0.25)) + ((0.05, 1.0),) * 7)
+def profile(parameters: FloatArray) -> Geometry:
+    """Seven independently movable lower-boundary knots; simple by construction."""
+    width, height, offset = parameters[:3]
+    x = np.linspace(-width / 2, width / 2, 7)
+    top = offset + height / 2
+    lower = np.column_stack((x, top - height * parameters[3:]))
+    return [np.vstack(([-width / 2, top], [width / 2, top], lower[::-1]))]
+
+
+@geometry_family("islands", ((0.15, 0.7), (0.2, 0.8), (-0.3, 0.3), (-0.6, 0.6)) * 2)
+def islands(parameters: FloatArray) -> Geometry:
+    """Two independently shaped obstacles in disjoint left/right strips."""
+    return [
+        np.asarray(triangle_vertices(parameters[:4])) + [-0.5, 0],
+        np.asarray(triangle_vertices(parameters[4:])) + [0.5, 0],
+    ]
+
+
+@geometry_family(
+    "radial", ((0.2, 0.75), (0.2, 0.75), (-0.2, 0.2), (-0.2, 0.2)) + ((0.35, 1.0),) * 8
+)
+def radial(parameters: FloatArray) -> Geometry:
+    """Star-shaped polygon: elliptical envelope with eight free radial lengths.
+
+    Fixed ordered angles and positive radii prevent self-intersection while
+    admitting asymmetric, rounded, and multi-lobed obstacles.
+    """
+    rx, ry, cx, cy = parameters[:4]
+    angle = np.arange(8) * np.pi / 4
+    return [
+        np.column_stack(
+            (cx + rx * parameters[4:] * np.cos(angle), cy + ry * parameters[4:] * np.sin(angle))
+        )
+    ]
+
+
 def geometry(family: str, parameters: FloatArray) -> Geometry:
     return FAMILIES[family].build(parameters)
 

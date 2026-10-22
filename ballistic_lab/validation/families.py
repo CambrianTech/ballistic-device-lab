@@ -20,6 +20,9 @@ def fixtures() -> list:
         geometry("triangle", [1.2, 0.6, 0, 0]),
         geometry("beveled", [1.2, 0.6, 0, 0.1, 0.5, 0.5]),
         geometry("cross", REFERENCE),
+        geometry("profile", [1.3, 0.7, 0, 0.2, 0.8, 0.3, 1, 0.2, 0.7, 0.3]),
+        geometry("islands", [0.6, 0.5, 0.1, 0.2, 0.5, 0.7, -0.1, -0.3]),
+        geometry("radial", [0.7, 0.6, 0, 0, 1, 0.4, 0.8, 0.5, 0.9, 0.6, 1, 0.4]),
     ]
 
 

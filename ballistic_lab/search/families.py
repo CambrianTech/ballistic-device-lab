@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from ballistic_lab.geometry.families import FAMILIES, geometry, sample
+from ballistic_lab.geometry.families import geometry, sample
 from ballistic_lab.metrics.angular import measure_response
 from ballistic_lab.models import Candidate, RayConfig, SearchPlan, TransportBackend
 
@@ -12,7 +12,7 @@ def search_families(
 ) -> tuple[list[Candidate], list[dict]]:
     candidates, records = [], []
     for repeat in range(plan.repeats):
-        for family in FAMILIES:
+        for family in ("triangle", "beveled", "cross"):
             rng = np.random.default_rng(14000 + repeat)
             parameters = sample(family, rng, plan.budget)
             geometries = [geometry(family, values) for values in parameters]

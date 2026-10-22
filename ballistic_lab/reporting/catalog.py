@@ -14,7 +14,14 @@ from ballistic_lab.geometry.families import geometry
 
 BACKGROUND = "#0b1426"
 INK = "#e2eaf4"
-ACCENTS = {"triangle": "#51d6ca", "beveled": "#ffa857", "cross": "#aab0ff"}
+ACCENTS = {
+    "triangle": "#51d6ca",
+    "beveled": "#ffa857",
+    "cross": "#aab0ff",
+    "profile": "#ff83b5",
+    "islands": "#9ddd78",
+    "radial": "#70bcff",
+}
 
 
 def records(root: Path) -> list[dict]:
@@ -73,7 +80,12 @@ def card(ax, record: dict) -> None:
     )
 
 
-def gallery(selected: list[dict], output: Path, title: str) -> None:
+def gallery(
+    selected: list[dict],
+    output: Path,
+    title: str,
+    note: str = "F and R use different holdout seeds",
+) -> None:
     rows = (len(selected) + 2) // 3
     fig, axes = plt.subplots(rows, 3, figsize=(12, rows * 4.0 + 0.8), facecolor=BACKGROUND)
     for ax, record in zip(np.asarray(axes).flat, selected):
@@ -85,7 +97,7 @@ def gallery(selected: list[dict], output: Path, title: str) -> None:
         0.5,
         0.012,
         "Normalized geometry · shaded: excluded material · white: contacts\n"
-        "Angular steering proxy, not electrical efficiency · F and R use different holdout seeds",
+        "Angular steering proxy, not electrical efficiency · " + note,
         ha="center",
         color=INK,
         fontsize=10,
