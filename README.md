@@ -6,6 +6,22 @@
 
 The pipeline connects **geometry search → graphene quantum transport → loaded AC-to-DC response → convergence checks**. A continuous CPU search now compares top-score selection, diversity-preserving selection and random sampling directly on simulated DC power. Earlier GPU trajectory studies provide a cheaper geometry screen. The next major physics step is self-consistent nonlinear transport to test whether promising results survive charge-induced changes to the device potential.
 
+## Engineering targets
+
+**First goal: a zero-bias signal detector with at least 10× lower noise-equivalent power (NEP) than a conventional comparator, while retaining useful bandwidth, dynamic range and fabrication tolerance.** Lower NEP means detecting a weaker signal at the same noise bandwidth.
+
+| Requirement | Target | Current evidence |
+| --- | --- | --- |
+| Sensitivity | **≤0.35 pW/√Hz**, 10× below the WR10 Schottky reference's typical 3.5 pW/√Hz | **1.239 pW/√Hz** in the preliminary equilibrium audit; about 3.5× above our target* |
+| Carrier-frequency coverage | Evaluate the **75–110 GHz** reference band with a matched input-power definition | Quasistatic transport only; frequency response unresolved |
+| Readout bandwidth and dynamic range | Match the selected comparator's characterized operating envelope | Acceptance values pending matched characterization; neither is established by DC response |
+| Robustness | Meet the detector requirements across a frozen operating and fabrication envelope, including held-out cases | Contact, operating-point and edge checks are underway; nominal power superiority does not persist across all conditions |
+| Physical credibility | Self-consistent graphene charge/electrostatics, contact and scattering models, frequency response and complete noise budget | Partial physics layers implemented; production charge feedback and remaining models still open |
+
+\* The audit concerns **diversity-r0-profile-g15-1**, at 300 K with a 10 kΩ load and ideal electrical inputs. It includes equilibrium device/load thermal noise, but does not yet include the full detector system. The commercial specification and this estimate are not matched measurements. [Audit and assumptions](results/physics-reference/detector-audit/README.md) · [Conventional reference specifications](references/conventional-detectors/README.md).
+
+The sensitivity threshold is our engineering goal; a qualifying comparison also requires frozen temperature, input reference plane, bandwidth, load and readout conditions. **No candidate is qualified yet.** The running search still ranks nominal DC power. Application-based selection will enter a separately versioned campaign after the required physics gates pass. Efficient power conversion remains a separate objective, assessed by delivered DC power and efficiency. [Qualification pipeline](docs/DEVICE-ROLE.md).
+
 ### The fabricated device behind the literature reference
 
 ![Auton et al. Figure 1: optical device image and AFM inset at left, schematic and electrical characterization at right](docs/assets/literature/auton-2016-figure-1.jpg)

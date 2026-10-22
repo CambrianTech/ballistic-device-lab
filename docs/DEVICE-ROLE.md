@@ -6,6 +6,20 @@ power, but its signal must be distinguishable from noise. The separate hypothesi
 of efficient power rectification is evaluated using actual delivered DC power and
 terminal input power. A high voltage response alone qualifies neither role.
 
+## Engineering target
+
+The first detector goal is NEP ≤0.35 pW/√Hz: at least 10× below the
+WR10 zero-bias Schottky comparator's typical 3.5 pW/√Hz. Evaluate its
+75–110 GHz carrier band and freeze matching temperature, input reference plane,
+load, readout bandwidth, noise and dynamic-range conditions before acceptance.
+Bandwidth, dynamic-range and fabrication-envelope thresholds remain to be
+specified from characterization; missing requirements cannot count as passes.
+See [conventional reference specifications](../references/conventional-detectors/README.md).
+
+The preliminary 1.239 pW/√Hz equilibrium estimate does not meet the sensitivity
+goal and is not yet a matched system comparison. This target does not change the
+running nominal-DC-power campaign's score.
+
 ## Qualification sequence
 
 Application requirements govern survival in future campaigns. Keep separate
