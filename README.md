@@ -6,6 +6,16 @@ Our present implementation is a **classical trajectory model and geometry search
 
 The reusable framework supports this specific investigation: screen many inexpensive candidates, challenge the survivors with scattering and fabrication variation, then spend detailed graphene lattice simulation on a small, diverse shortlist.
 
+![Simulated electron trajectories with and without bulk scattering](results/2026-10-22-refinement/trajectories.png)
+
+These are actual classical ray paths from the CPU solver, in normalized geometry. The shaded obstacle is excluded material. They illustrate transport, not measured current or a quantum wavefunction.
+
+## Why ballistic rectifiers matter
+
+A rectifier can turn a rapidly oscillating signal into a readable DC output. Graphene ballistic rectifiers use asymmetric carrier transport without a conventional p–n or Schottky junction barrier. Their planar geometry makes them interesting candidates for compact high-frequency detectors and receiver circuits; [experimental detection at 3 THz](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) provides a concrete reason to investigate them.
+
+Efficient power conversion is also an attractive target: less dissipated power means less heat to remove. But a sensitive detector and a useful power rectifier have different requirements. For power conversion, we must establish current capacity, contact losses, voltage handling, and useful output under load. A nanoscale rectifier alone does not supply a complete converter's voltage transformation, isolation, regulation, and filtering. Widespread consumer use is a possibility to investigate, not an established outcome of this project.
+
 ## Where published research stands—and where we stand
 
 These are selected experimental reference points, not an exhaustive ranking of the field. Low-frequency electrical measurements and antenna-coupled THz measurements have different input-power definitions and must not be ranked directly.
@@ -44,7 +54,7 @@ The search currently uses ExtraTrees regression and uncertainty-guided proposals
 
 ## What we have found
 
-### New: comparing geometry families
+### Geometry families
 
 We screened **2,304 candidates** across triangles, beveled obstacles, and asymmetric cross-junctions with equal budgets. Beveled shapes improved on the newly searched triangles in all three repeats, but **did not clearly beat our previously learned triangle**. The cross candidates had shorter long-path tails, so we retain a varied shortlist for the lattice stage.
 
@@ -56,7 +66,15 @@ White is the conducting region, gray is excluded/etched material, and orange mar
 
 Bars show the angular-response proxy; error bars are standard deviations across four fresh simulation seeds, not experimental error bars or confidence intervals. [Read the benchmark, numerical fix, limitations, and next simulation gate](docs/TOPOLOGY-BENCHMARK.md).
 
-### Earlier search evidence
+### Feedback-guided refinement
+
+Equal-budget local mutation and global sampling each evaluated 256 candidates per family per repeat, with three repeats and identical inherited anchors. All three beveled mutation finalists improved on their anchor under fresh-seed evaluation: their mean score was **0.07611 versus 0.07305**, about **4.2% higher**, at mean free path/cavity width = 1 and specularity = 0.8. Triangle mutations were inconsistent. This is a gain in the geometry proxy, not a power-efficiency gain.
+
+![Feedback-guided search progress](results/2026-10-22-refinement/search-progress.png)
+
+Each line is one repeat's best training score. Training progress alone is insufficient; all selected candidates were frozen before evaluation with four fresh seeds and three bulk-scattering conditions. [Protocol, complete results, and limitations](docs/REFINEMENT.md).
+
+### Surrogate-assisted search
 
 Saved evidence is in [results/2026-10-22](results/2026-10-22/). These are computational results within the stated model.
 
@@ -73,9 +91,32 @@ The last comparison is one search repeat, with four validation seeds and 65,536 
 
 The cavity is a square of side 2 in normalized units, with four centered absorbing contacts of width 0.6. A triangular obstacle has four parameters: width, height, vertical offset, and tip skew. Boundaries mix specular and cosine-distributed diffuse reflections. Optional bulk scattering uses exponentially distributed flight lengths followed by isotropic elastic scattering.
 
-For the small-perturbation score, s = sin(theta) has distribution p_beta(s) = [1 + beta(1 - 2s²)] / [2(1 + beta/3)]. We estimate the derivative of bottom-minus-top exit probability at beta = 0 using weights 2/3 - 2s², averaged over left and right injection. This provides a controlled geometry diagnostic without assuming an electrical voltage-to-angle law.
+For the small-perturbation score, $s=\sin\theta$ follows
+
+$$
+p_\beta(s)=\frac{1+\beta(1-2s^2)}{2(1+\beta/3)},\qquad -1\le s\le1.
+$$
+
+With $q=+1$ for a bottom exit, $-1$ for a top exit, and zero otherwise, the score is
+
+$$
+S=\left.\frac{\partial\langle q\rangle_\beta}{\partial\beta}\right|_{\beta=0}
+=\left\langle q\left(\frac23-2s^2\right)\right\rangle_0.
+$$
+
+We average this estimator over left and right injection. This provides a controlled geometry diagnostic without assuming an electrical voltage-to-angle law. The electrical target is a separate quantity:
+
+$$
+\eta=\frac{P_{\mathrm{DC,load}}}{P_{\mathrm{AC,input}}}.
+$$
 
 There is no calibrated carrier density, atomic lattice, self-consistent electrostatic potential, quantum interference, frequency response, or temperature-dependent material model yet. Static linear transmission alone does not establish DC rectification. No equilibrium thermal-noise power harvesting is claimed. Shape tolerances are illustrative, not a fabrication specification. Surrogate uncertainty is a search heuristic, not a calibrated confidence interval.
+
+### Physics beyond the trajectory screen
+
+[Kwant](https://kwant-project.org/doc/latest/tutorial/graphene) is our selected starting point for a graphene tight-binding transport backend: lattice sites, contacts, scattering matrices, and energy-dependent transmission. [Tkwant](https://tkwant.kwant-project.org/doc/stable/) is a candidate for time-dependent transport after the static model is validated. These are **planned integrations**, not capabilities of the current solver. [Physics gates and library choices](docs/PHYSICS-ROADMAP.md) define the checks required before an electrical-performance claim.
+
+The design loop is **propose → simulate → challenge → update**. Global sampling, feedback-guided mutation, and surrogate-assisted search are implemented. A future learned generator can propose candidates through the same physics evaluation; neither resemblance to good designs nor a surrogate prediction counts as validation. We compare search methods with equal budgets and keep holdout results out of their feedback.
 
 ## Run
 
@@ -101,6 +142,16 @@ python robust_search.py
 ```
 
 Run in that order: later stages consume earlier results. Outputs go to `runs/latest/`; set `BALLISTIC_OUTPUT_DIR` to a fresh directory for a new experiment. The learning search refuses to overwrite an existing learning log. Historical reports in the results snapshot retain their original prototype commands; use the commands above for this repository. GPU pool allocation is capped at 512 MiB; CUDA context/driver overhead is additional.
+
+The refinement experiment runs independently from its committed anchor snapshot:
+
+```sh
+python validate_families.py
+python -m ballistic_lab.experiments.refinement
+python -m ballistic_lab.reporting.showcase runs/latest
+```
+
+Use the configured output directory in the last command if `BALLISTIC_OUTPUT_DIR` is set.
 
 ## Comparing against published work
 

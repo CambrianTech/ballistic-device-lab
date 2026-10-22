@@ -42,7 +42,10 @@ def search_families(
 
 
 def validate_candidates(
-    candidates: list[Candidate], plan: SearchPlan, backend: TransportBackend
+    candidates: list[Candidate],
+    plan: SearchPlan,
+    backend: TransportBackend,
+    seed_base: int = 60000,
 ) -> list[dict]:
     """No ranking or reselection occurs here; all frozen candidates are returned."""
     geometries = [
@@ -57,7 +60,7 @@ def validate_candidates(
                 specularity=specularity,
             )
             responses = [
-                measure_response(geometries, backend, config, 60000 + seed * 10)
+                measure_response(geometries, backend, config, seed_base + seed * 10)
                 for seed in range(plan.validation_seeds)
             ]
             scores = np.array([response.derivative for response in responses])
