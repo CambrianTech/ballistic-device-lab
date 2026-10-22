@@ -4,6 +4,7 @@ This package is separate while the continuous workers hold immutable source mani
 
 Implemented:
 
+- `graphene_charge`: equilibrium Dirac-sheet density, quantum capacitance and a self-consistent uniform gate reference. [Equations, validation and limits](GRAPHENE_CHARGE.md). This is not a finite-bias local-charge provider for the rectifier.
 - `stages.run_stages`: dependency-ordered execution, configuration/source receipts and executable validation gates; missing dependencies and failed checks block downstream work. `dc_stage` connects the existing quasistatic circuit solver with phase-doubling acceptance. See [stage architecture and build sequence](STAGES.md). These are opt-in and do not modify the running search.
 
 - `self_consistent.solve_charge_field`: damped iteration between an explicit `ChargeProvider` and the 2D Poisson solver. Checks the unmixed potential residual and re-evaluates charge at the proposed field before accepting; returns iteration history or raises `ConvergenceError`. Inner solver failures propagate. Tested against a manufactured screened-charge solution, including a joint potential/reference shift and tiny-mixing false-convergence regression. This is a working coordinator, not an implemented graphene charge model.
