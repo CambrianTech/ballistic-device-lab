@@ -1,0 +1,61 @@
+{
+  "candidate": {
+    "key": "D00",
+    "family": "beveled",
+    "parameters": [
+      1.4983482475312286,
+      0.590723015622337,
+      0.006350021901973889,
+      0.06746432683842583,
+      0.3930223746131896,
+      0.5004039714525483
+    ],
+    "origin": "archived control",
+    "obstacles": [
+      [
+        [
+          -0.7491741237656143,
+          0.30171152971314236
+        ],
+        [
+          0.7491741237656143,
+          0.30171152971314236
+        ],
+        [
+          0.3995760986345545,
+          0.06954416737458716
+        ],
+        [
+          0.05054252794461469,
+          -0.2890114859091946
+        ],
+        [
+          -0.34899273521308133,
+          0.06954416737458716
+        ]
+      ]
+    ]
+  },
+  "status": "pass",
+  "checks": {
+    "connected_graph": true,
+    "fresh_transmission": true,
+    "fresh_dc": true,
+    "terminal_exchange": true
+  },
+  "energy_count": 2049,
+  "fresh_dc_v": -1.1205313672620173e-05,
+  "previous_dc_v": -1.1205313672614176e-05,
+  "voltage_difference_v": 5.9969932665604464e-18,
+  "transmission_difference": 1.7752610492749454e-10,
+  "terminal_exchange_error_v": 2.303929616531697e-18,
+  "unresolved": [
+    "exact atomistic reflection",
+    "controlled atomic edge ensemble",
+    "self-consistent graphene electrostatics",
+    "phonons and realistic contacts",
+    "frequency response",
+    "matched published-device comparison"
+  ],
+  "identity": "0f0f68c83118b48d1796ae274db0b60c711937bfdddccd4e69e86022468b959e"
+}

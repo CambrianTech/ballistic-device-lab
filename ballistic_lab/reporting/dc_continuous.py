@@ -79,7 +79,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
         destination,
     )
     validation_block += render_edges(destination)
-    validation_block += render_local(destination)
+    local_block = render_local(destination)
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):
@@ -195,6 +195,8 @@ Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{ind
 \\* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
 [Completed-round data and progress]({rel}/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+
+{local_block}
 
 {validation_block}
 
