@@ -14,6 +14,7 @@ class LatticeRequest:
     hopping_ev: float = 2.7
     onsite_ev: float = 0.0
     tolerance: float = 1e-7
+    lattice_offset: tuple[float, float] = (0.0, 0.0)
 
     def __post_init__(self):
         object.__setattr__(self, "energies_ev", tuple(self.energies_ev))
@@ -24,6 +25,9 @@ class LatticeRequest:
                 raise ValueError("Lattice constant, hopping and tolerance must be positive")
         if not np.isfinite(self.onsite_ev):
             raise ValueError("Onsite energy must be finite")
+        object.__setattr__(self, "lattice_offset", tuple(self.lattice_offset))
+        if len(self.lattice_offset) != 2 or not np.isfinite(self.lattice_offset).all():
+            raise ValueError("Lattice offset needs two finite coordinates in lattice units")
 
 
 def build_system(device: SquareDevice, request: LatticeRequest, *, ribbon=False):
@@ -37,7 +41,12 @@ def build_system(device: SquareDevice, request: LatticeRequest, *, ribbon=False)
     from matplotlib.path import Path
 
     half = device.physical_width() / request.lattice_constant_m / 2
-    lat = kwant.lattice.honeycomb(norbs=1)
+    dx, dy = request.lattice_offset
+    lat = kwant.lattice.general(
+        [(1, 0), (0.5, np.sqrt(3) / 2)],
+        [(dx, dy), (dx, dy + 1 / np.sqrt(3))],
+        norbs=1,
+    )
     system = kwant.Builder()
     system[lat.shape(lambda p: abs(p[0]) < half and abs(p[1]) < half, (0, 0))] = request.onsite_ev
     paths = [Path(poly) for poly in device.geometry()]
@@ -52,7 +61,7 @@ def build_system(device: SquareDevice, request: LatticeRequest, *, ribbon=False)
         symmetry = kwant.TranslationalSymmetry(lat.vec(translation))
         lead = kwant.Builder(symmetry)
         transverse = 1 if port < 2 else 0
-        contact_half = half if ribbon else 0.3 * half
+        contact_half = half if ribbon else device.contact_width_fraction * half
         lead[lat.shape(lambda p: abs(p[transverse]) < contact_half, (0, 0))] = request.onsite_ev
         lead[lat.neighbors()] = -request.hopping_ev
         system.attach_lead(lead)

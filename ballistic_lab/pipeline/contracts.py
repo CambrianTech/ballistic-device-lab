@@ -15,7 +15,7 @@ Vertices = tuple[tuple[tuple[float, float], ...], ...]
 
 @dataclass(frozen=True, slots=True)
 class SquareDevice:
-    """Four centered contacts of width 0.3W; obstacles in [-1,1]^2.
+    """Four centered contacts; obstacles in [-1,1]^2.
 
     Port order is left, right, top, bottom. Width is optional for normalized
     ray screening, mandatory when a solver needs physical dimensions.
@@ -24,6 +24,7 @@ class SquareDevice:
 
     obstacles: Vertices
     width_m: float | None = None
+    contact_width_fraction: float = 0.3
 
     def __post_init__(self) -> None:
         # Copy even caller-supplied mutable arrays into immutable scalar tuples.
@@ -38,6 +39,8 @@ class SquareDevice:
         object.__setattr__(self, "obstacles", tuple(polygons))
         if self.width_m is not None and (not isfinite(self.width_m) or self.width_m <= 0):
             raise ValueError("Physical width must be finite and positive")
+        if not 0 < self.contact_width_fraction < 1:
+            raise ValueError("Contact width fraction must lie strictly between zero and one")
 
     @classmethod
     def from_geometry(cls, geometry: Geometry, width_m: float | None = None) -> "SquareDevice":
@@ -54,7 +57,7 @@ class SquareDevice:
 
     @property
     def fingerprint(self) -> str:
-        payload = {"schema": "square-four-contact-v1", **asdict(self)}
+        payload = {"schema": "square-four-contact-v2", **asdict(self)}
         return sha256(json.dumps(payload, sort_keys=True, allow_nan=False).encode()).hexdigest()
 
 

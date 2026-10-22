@@ -52,6 +52,8 @@ class RayStage:
     backend: TransportBackend
 
     def evaluate(self, device: SquareDevice, request: RayRequest) -> RayResult:
+        if device.contact_width_fraction != 0.3:
+            raise ValueError("Ray backend supports only contact width 0.3W")
         scores, tails = [], []
         for seed in request.seeds:
             response = measure_response([device.geometry()], self.backend, request.config, seed)
