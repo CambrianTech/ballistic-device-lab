@@ -1,0 +1,20 @@
+{
+  "candidate": "elite-r0-profile-g9-1",
+  "fingerprint": "e248cf377daf92f07e287beb92be41776e3e22c3565b32068b4a4d31eb5cd693",
+  "independent": {
+    "dc_v": -1.3507400528959022e-05,
+    "dc_power_w": 1.8244986904972245e-14,
+    "max_kcl_a": 3.906360442781673e-20
+  },
+  "production": {
+    "dc_v": -1.350813801324914e-05,
+    "dc_power_w": 1.8246979258498642e-14,
+    "input_power_w": 5.31636457713258e-09,
+    "efficiency": 3.432228733331205e-06,
+    "max_kcl_a": 2.2015412003098832e-20
+  },
+  "difference_v": 7.374842901179668e-10,
+  "tolerance_v": 1.3608138013249138e-08,
+  "passed": true,
+  "scope": "Independent quadrature and load solver on the same fixed-potential spectrum; not independent physics or experimental validation"
+}
