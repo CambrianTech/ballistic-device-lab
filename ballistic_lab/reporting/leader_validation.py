@@ -1,5 +1,6 @@
 """Render only completed validation cases; incomplete conditions remain visible."""
 
+import csv
 import json
 from pathlib import Path
 
@@ -47,6 +48,25 @@ def render(snapshot, destination):
         table.append(
             f"| {label} | {len([k for k in records if k != 'rays'])}/3 | {passed}/{len(cases)} | {len(records.get('rays', {}).get('records', []))}/27 |"
         )
+    control_data = data[labels.index("D00")]
+    matched, higher = 0, 0
+    for condition in ("nominal", "wide-contact", "atomic-offset"):
+        controls = {
+            (r["fermi_ev"], r["load_ohm"]): r
+            for r in control_data.get(condition, {}).get("results", [])
+        }
+        for result in data[-1].get(condition, {}).get("results", []):
+            reference = controls.get((result["fermi_ev"], result["load_ohm"]))
+            if reference and all(
+                r["energy_converged"] and r["phase_converged"] for r in (result, reference)
+            ):
+                matched += 1
+                higher += result["dc_power_w"] > reference["dc_power_w"]
+    comparison = (
+        f"**Leader versus D00:** higher computed DC power in **{higher}/{matched}** "
+        f"matched, numerically converged cases so far, out of 27 planned conditions. "
+        "This counts the computed ordering, not statistical significance or physical validation."
+    )
     # One fixed, identical illustrative injection for each geometry; no selected pretty rays.
     fig, axes = plt.subplots(1, len(items), figsize=(12, 4.5), layout="constrained")
     for ax, item, records in zip(axes, items, data, strict=True):
@@ -112,6 +132,53 @@ def render(snapshot, destination):
     fig.suptitle("Leader validation · fixed potential · red × = unresolved convergence")
     fig.savefig(destination / "leader-coverage.png", dpi=170)
     plt.close(fig)
+    exported = []
+    fig, axes = plt.subplots(3, 1, figsize=(12, 8), layout="constrained")
+    for ax, name in zip(axes, ("nominal", "wide-contact", "atomic-offset"), strict=True):
+        matrix = np.full((len(items), 9), np.nan)
+        for index, (label, records) in enumerate(zip(labels, data, strict=True)):
+            for column, row in enumerate(records.get(name, {}).get("results", [])):
+                passed = row["energy_converged"] and row["phase_converged"]
+                matrix[index, column] = abs(row["dc_v"]) * 1e6
+                exported.append(dict(design=label, condition=name, **row))
+                ax.text(
+                    column,
+                    index,
+                    f"{matrix[index, column]:.2f}" + ("" if passed else " ×"),
+                    ha="center",
+                    va="center",
+                    fontsize=8,
+                )
+        cmap = plt.get_cmap("YlGnBu").copy()
+        cmap.set_bad("#eeeeee")
+        # Pale backgrounds keep numerical labels readable; color is within-panel only.
+        finite = matrix[np.isfinite(matrix)]
+        ax.imshow(
+            matrix,
+            cmap=cmap,
+            aspect="auto",
+            vmin=0,
+            vmax=max(float(finite.max()) * 2, 1) if finite.size else 1,
+        )
+        for row, column in zip(*np.where(np.isnan(matrix)), strict=True):
+            ax.text(column, row, "pending", ha="center", va="center", fontsize=7, color="#666666")
+        ax.set(
+            title=name,
+            yticks=range(len(items)),
+            yticklabels=["Triangle", "D00", "Leader"],
+            xticks=range(9),
+            xticklabels=[f"{f:g} eV / {load}k" for f in (0.75, 0.9, 1.05) for load in (1, 10, 100)],
+        )
+    fig.suptitle(
+        "Full DC validation matrix · magnitude in µV\n× = unresolved convergence; grey = pending; 10 mV peak, fixed potential"
+    )
+    fig.savefig(destination / "leader-matrix.png", dpi=170)
+    plt.close(fig)
+    if exported:
+        with (archived / "matrix.csv").open("w", newline="", encoding="utf-8") as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(exported[0]))
+            writer.writeheader()
+            writer.writerows(exported)
     fig, ax = plt.subplots(figsize=(10, 4.5), layout="constrained")
     conditions = [(s, m) for s in (0.5, 0.8, 1.0) for m in (1.0, 2.0, 4.0)]
     for label, records in zip(labels, data, strict=True):
@@ -147,6 +214,8 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 
 {chr(10).join(table)}
 
+{comparison}
+
 ![Matched control and leader trajectories]({rel}/leader-trajectories.png)
 
 Orange paths enter from the left; purple paths enter from the right; gold segments are contacts. Trajectory paths are a classical diagnostic, not a quantum current map or DC-efficiency measurement. Neither control is a reproduced paper device.
@@ -154,6 +223,13 @@ Orange paths enter from the left; purple paths enter from the right; gold segmen
 ![Updating classical scattering comparison]({rel}/leader-scattering.png)
 
 ![Updating leader energy and contact checks]({rel}/leader-coverage.png)
+
+<details>
+<summary>All 27 DC conditions per design: loads, energies and contact cuts</summary>
+
+![Full current validation matrix]({rel}/leader-matrix.png)
+
+</details>
 
 Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data]({rel}/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
 

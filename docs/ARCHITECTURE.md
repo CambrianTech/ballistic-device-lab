@@ -222,3 +222,11 @@ from worker source hashes and may be updated independently.
 The existing continuous reporter also publishes completed validation cases,
 matched trajectories, scattering and contact/energy charts. Pending conditions
 remain explicit. Archived earlier studies retain their original figures.
+
+The reporter derives candidate counts from completed matched snapshots and exports
+the complete DC validation matrix as both a figure and CSV. Each new leader and
+the D00 control also receive an independent numerical score check using pair
+currents, Gaussian quadrature and a separate load solver. Receipts and exact input
+spectra are published under the snapshot's `evidence/` directory. Cached audits
+are keyed by input and implementation hashes. These checks test numerical
+agreement within the fixed-potential model, not experimental device performance.

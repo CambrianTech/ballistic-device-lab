@@ -8,13 +8,13 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 ## Direct DC search
 
-**Continuous search: 10 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 240 candidates, including the same 40 starting designs.*
+**Continuous search: 13 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 300 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000010/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000013/diversity.png)
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 20:17 UTC**, through matched round **10**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 20:30 UTC**, through matched round **13**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -25,7 +25,7 @@ Last published: **2026-10-22 20:17 UTC**, through matched round **10**. The 15-m
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000010/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000013/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 ### Current leader: broader checks
 
@@ -33,20 +33,39 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 
 | Design | Completed contact/edge conditions | Converged DC cases | Ray scattering cases |
 | --- | ---: | ---: | ---: |
-| triangle-control | 1/3 | 9/9 | 27/27 |
-| D00 | 0/3 | 0/0 | 27/27 |
-| elite-r0-profile-g9-1 | 0/3 | 0/0 | 27/27 |
+| triangle-control | 3/3 | 27/27 | 27/27 |
+| D00 | 3/3 | 27/27 | 27/27 |
+| elite-r0-profile-g9-1 | 3/3 | 27/27 | 27/27 |
 
-![Matched control and leader trajectories](results/continuous-dc/round-000010/leader-trajectories.png)
+**Leader versus D00:** higher computed DC power in **16/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
+
+![Matched control and leader trajectories](results/continuous-dc/round-000013/leader-trajectories.png)
 
 Orange paths enter from the left; purple paths enter from the right; gold segments are contacts. Trajectory paths are a classical diagnostic, not a quantum current map or DC-efficiency measurement. Neither control is a reproduced paper device.
 
-![Updating classical scattering comparison](results/continuous-dc/round-000010/leader-scattering.png)
+![Updating classical scattering comparison](results/continuous-dc/round-000013/leader-scattering.png)
 
-![Updating leader energy and contact checks](results/continuous-dc/round-000010/leader-coverage.png)
+![Updating leader energy and contact checks](results/continuous-dc/round-000013/leader-coverage.png)
 
-Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000010/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
+<details>
+<summary>All 27 DC conditions per design: loads, energies and contact cuts</summary>
 
+![Full current validation matrix](results/continuous-dc/round-000013/leader-matrix.png)
+
+</details>
+
+Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000013/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
+
+
+
+### Independent numerical check
+
+| Independent score check | Difference (nV) | Result |
+| --- | ---: | --- |
+| D00 | 0.1241 | Pass |
+| elite-r0-profile-g9-1 | 0.7375 | Pass |
+
+[Audit receipts and exact input spectra](results/continuous-dc/round-000013/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
 
 
 <details>
@@ -58,7 +77,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 
 </details>
 
-## Current findings — October 22, 2026, 20:17 UTC
+## Current findings — October 22, 2026, 20:30 UTC
 
 <details>
 <summary>Archived studies: earlier candidates and fixed experimental snapshots</summary>
@@ -142,7 +161,7 @@ Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory sear
 
 **Feedback changes which proposals are explored; a direct-DC advantage over random search is not yet established.** The diversity archive uses blocked area and vertical reflection asymmetry, not literature novelty. The current search is evolutionary sampling within five parameterized families; it does not train a quantum surrogate or improve its physics automatically. Reinforcement learning and GANs are not implemented. Earlier trajectory studies used ExtraTrees and elite recombination; their evidence applies to the angular proxy. RANSAC is useful for robust curve fitting, not the optimizer used here.
 
-![Feedback-guided search progress](results/continuous-dc/round-000010/progress.png)
+![Feedback-guided search progress](results/continuous-dc/round-000013/progress.png)
 
 Current direct-DC progress: best converged result retained after each completed matched round. Flat sections mean no better converged design was found; exploration continues. [Earlier trajectory-proxy study](docs/REFINEMENT.md).
 

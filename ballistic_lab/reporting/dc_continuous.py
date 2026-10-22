@@ -14,6 +14,7 @@ from matplotlib.patches import Polygon, Rectangle
 
 from ballistic_lab.reporting.dc_search import promoted
 from ballistic_lab.reporting.diversity_gallery import render as render_gallery
+from ballistic_lab.reporting.leader_evidence import render as render_evidence
 from ballistic_lab.reporting.leader_validation import render as render_validation
 
 ARMS = ("elite", "diversity", "random")
@@ -59,6 +60,8 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     )
     control = next(r for r in baseline if r["candidate"]["key"] == "D00")
     best = winners(snapshot)
+    leader = max((row for row in best.values() if row), key=lambda r: r["phase64"]["dc_power_w"])
+    evidence_block = render_evidence([control, leader], destination)
     render_gallery(snapshot, control, destination)
     validation_block = render_validation(snapshot, destination)
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
@@ -178,6 +181,10 @@ Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{ind
 [Completed-round data and progress]({rel}/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 {validation_block}
+
+### Independent numerical check
+
+{evidence_block}
 
 <details>
 <summary>Earlier six-design gallery</summary>
