@@ -6,13 +6,13 @@ The pipeline now connects **GPU trajectory search → frozen geometry candidates
 
 ## Direct DC search
 
-Best converged candidate in this pilot: **D00**.
+Best converged candidate: **D00**. Best new design: **r1-triangle-g1-0**, 10.070 µV versus D00’s 11.205 µV (89.9% of its DC voltage).
 
-![Automatically selected DC finalists](results/2026-10-22-dc-search/finalists.png)
+![Automatically selected wider-search finalists](results/2026-10-22-dc-wide/finalists.png)
 
-The pipeline selects this result by DC load power and convergence gates. A triangle win, another shape winning, or no qualified winner are all valid outcomes. This 15-candidate pilot uses a fixed internal potential; self-consistent electrostatics remains open.
+**80 new designs, 5 families, 2 seeds.** DC power and convergence gates select the displayed result automatically. The full ranking includes every unsuccessful and unresolved candidate. These remain fixed-potential simulations.
 
-[Full ranking, controls and selection rules](results/2026-10-22-dc-search/README.md) · [Earlier bevel/island DC test](results/2026-10-22-finite-bias/README.md)
+[Full ranking and search coverage](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md) · [Earlier pilot](results/2026-10-22-dc-search/README.md)
 
 ## Current findings — October 22, 2026
 

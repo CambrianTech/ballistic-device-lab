@@ -106,3 +106,30 @@ Independent tests cover a known resistor chain, a piecewise-linear diode bridge
 with analytic output, cycle quadrature convergence, conservation failures and
 floating/disconnected outputs. The bridge is a circuit oracle, not a graphene
 result. The self-consistent graphene current provider remains to be implemented.
+
+## Direct DC search and generated documentation
+
+`search/dc_space.py` owns the seeded proposal policy and family bounds.
+`experiments/dc_wide.py` evaluates those proposals through the shared finite-bias
+current/circuit interfaces, freezes each batch before scoring, and refines the
+automatic shortlist. Controls never enter the mutation parent pool.
+
+`validation/dc_score.py` provides an independent numerical oracle: pair-current
+integration and a different quadrature/load solver. `experiments/dc_audit.py`
+also rebuilds the incumbent under an anonymous ID, checking that cached-control
+handling does not change its score. This validates implementation within the
+fixed-potential assumptions, not the missing electrostatic feedback.
+
+`pipeline/dc_publish.py` accepts a completed run, archives its inputs without
+overwriting a conflicting snapshot, and calls `reporting/dc_wide.py`. The
+reporter applies convergence gates and ranks DC power; it generates the
+finalist gallery, all-proposal plot, full table and README feature together.
+There is no manually chosen hero geometry. Unresolved finalists stay visible.
+
+`python -m ballistic_lab.pipeline.dc_workflow` runs audit → search → refinement
+→ publication from fresh `runs/dc-audit` and `runs/dc-wide` directories. A
+timestamped archive preserves earlier studies. `python -m
+ballistic_lab.pipeline.dc_publish` publishes an already completed current run.
+The workflow is a bounded explicit invocation, not a background job. Repeated
+searches with unchanged seeds reproduce the same proposals; this does not
+claim unbounded learning across invocations.

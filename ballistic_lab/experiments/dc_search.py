@@ -89,8 +89,8 @@ def cycle_metrics(spectrum, phases=32):
     )
 
 
-def evaluate(item, counts=(257,)):
-    path = OUTPUT / f"{item['key']}.json.gz"
+def evaluate(item, counts=(257,), output: Path = OUTPUT):
+    path = output / f"{item['key']}.json.gz"
     if path.exists():
         with gzip.open(path, "rt", encoding="utf-8") as stream:
             record = json.load(stream)

@@ -1,0 +1,85 @@
+{
+  "independent": [
+    {
+      "candidate": "D00",
+      "production": {
+        "dc_v": -1.1205313672614176e-05,
+        "dc_power_w": 1.255590545016742e-14,
+        "input_power_w": 5.429889741169579e-09,
+        "efficiency": 2.312368399484834e-06,
+        "max_kcl_a": 3.5050951276321995e-20
+      },
+      "independent": {
+        "dc_v": -1.1205189594928406e-05,
+        "dc_power_w": 1.255562738582918e-14,
+        "max_kcl_a": 1.8494104135460593e-20
+      },
+      "difference_v": 1.2407768576994072e-10,
+      "passed": true
+    },
+    {
+      "candidate": "triangle-control",
+      "production": {
+        "dc_v": -3.872168020312856e-06,
+        "dc_power_w": 1.4993685177533583e-15,
+        "input_power_w": 4.938887078561711e-09,
+        "efficiency": 3.0358428810038723e-07,
+        "max_kcl_a": 2.1350565585759336e-20
+      },
+      "independent": {
+        "dc_v": -3.872076066405603e-06,
+        "dc_power_w": 1.499297306403109e-15,
+        "max_kcl_a": 3.285530373787655e-20
+      },
+      "difference_v": 9.195390725290023e-11,
+      "passed": true
+    },
+    {
+      "candidate": "triangle-feedback",
+      "production": {
+        "dc_v": -5.666491519411706e-06,
+        "dc_power_w": 3.210912613956479e-15,
+        "input_power_w": 5.81872640003445e-09,
+        "efficiency": 5.518239547983333e-07,
+        "max_kcl_a": 1.924642490257757e-20
+      },
+      "independent": {
+        "dc_v": -5.666475673064745e-06,
+        "dc_power_w": 3.210894655343455e-15,
+        "max_kcl_a": 5.473965931267401e-20
+      },
+      "difference_v": 1.5846346961730638e-11,
+      "passed": true
+    }
+  ],
+  "anonymous_reference_difference_v": 3.2695471764015993e-19,
+  "ranking_and_score_passed": true,
+  "inputs": {
+    "results\\2026-10-22-dc-search\\D00.json.gz": "cdf6c362ac86265bc44e6c7f2ad61a982a927a8ce96114a7fcbea921e819c15e",
+    "results\\2026-10-22-dc-search\\D14.json.gz": "3cdd0a008b7da138a9422307b800bddf133ef03f4137c72ac655a378d4a76089",
+    "results\\2026-10-22-dc-search\\feedback-proposals.json": "8290fd4e0ce9fbc87b169dd177e16c13edf4525806016c87d8bd3f721a953a2d",
+    "results\\2026-10-22-dc-search\\initial-summary.json": "642493f94b650a856a4e0f6b4b70ba8e863c7688aa459f36afbc5d89c5b84340",
+    "results\\2026-10-22-dc-search\\input-audit.json": "9b9003ed785b1200dfdf9d9cbad34fc05627236227ad8c8763d9c4e3c327948d",
+    "results\\2026-10-22-dc-search\\islands-feedback.json.gz": "33fee7a596513f8573576b58a37cebd0bbd1aeb40ec59b5bddce053f55ce6061",
+    "results\\2026-10-22-dc-search\\islands-global-0.json.gz": "e76e7a8b23f0b0e395d2afd8d356fd7b16df18dad71ed0f520803aebec980d32",
+    "results\\2026-10-22-dc-search\\islands-global-1.json.gz": "775dca9fc3e7c9d3e3e5ede139f9248a69b3750d34d87da1f0392e42ea4aa041",
+    "results\\2026-10-22-dc-search\\manifest.json": "8c2c3c87fac3ef944c10fcc4f3d5f3c77c7f08d33ad72dfc50dc4bbb363c4ebe",
+    "results\\2026-10-22-dc-search\\profile-feedback.json.gz": "c300d07ae5256d5699c71bf57a33dc3cefba04e9bba637f17d7e3692b0deb9bb",
+    "results\\2026-10-22-dc-search\\profile-global-0.json.gz": "af27c292702997f04d5e57f23502aef6deb86d20e42f9727267cf91a24262697",
+    "results\\2026-10-22-dc-search\\profile-global-1.json.gz": "6364e7809c3a7de80d69a538a8fbfd7dab82732bb7c6e6cdea990b81be391e3f",
+    "results\\2026-10-22-dc-search\\radial-feedback.json.gz": "0408547af00282d181aea1493f66a75e8322bf3f8bee70e3e80819302c6660e0",
+    "results\\2026-10-22-dc-search\\radial-global-0.json.gz": "df77a5a16bce86b49ce1bd8ac3c466d8480a6c572a41eec36bd118d89e0c97d5",
+    "results\\2026-10-22-dc-search\\radial-global-1.json.gz": "8704f7398dbc31b11b8863993b157a89054309d0ccd0fe8f3337041a022a95c2",
+    "results\\2026-10-22-dc-search\\refinement-manifest.json": "8eff2c70cebbc6c0d37fe97c634cd5a727a74f3570501fa1e7087f2b733489c5",
+    "results\\2026-10-22-dc-search\\selection.json": "494dd0c414975c7f8bc0c3dfa798192369394e79bc52a64dbde2c91a2704d4fb",
+    "results\\2026-10-22-dc-search\\summary.json": "c9d9de63251be99022401cae395be534c8093395a50ac4965f3e6fada315b3b7",
+    "results\\2026-10-22-dc-search\\triangle-control.json.gz": "c81e30d64364caba47483a35e97dff1945970e2c78a0cfc303b76206aab3e872",
+    "results\\2026-10-22-dc-search\\triangle-feedback.json.gz": "bf3e04d757a295f596e3f343bb434c25ceec65448061b00ab199587f28c08857",
+    "results\\2026-10-22-dc-search\\triangle-global-0.json.gz": "c799ab6f5041a763629846c2ed026813e471e2b73de4a5269bfe94b7a77b3a0a",
+    "results\\2026-10-22-dc-search\\triangle-global-1.json.gz": "a7501ef7a0ed7e1e4071d301b0b3ebb3f261829bd71329f286660cf539085bf1"
+  },
+  "source": {
+    "C:\\Users\\joelt\\development\\ballistic-device-lab\\ballistic_lab\\experiments\\dc_audit.py": "812c8a13c33155650bc2ccfc4637a8c31bd050dfabccad07df308e92df335e11",
+    "ballistic_lab\\validation\\dc_score.py": "627533f7d0e3bde68f985c0eaa79c196bd2cb44b8415197a5615f30305f2249d"
+  }
+}
