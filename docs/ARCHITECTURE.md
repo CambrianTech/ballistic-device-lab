@@ -235,6 +235,14 @@ agreement within the fixed-potential model, not experimental device performance.
 
 ### Automated falsification queue
 
+The separate `python -m edge_lab.worker` adds a one-CPU atomic-edge vacancy
+ensemble with its own lock, source manifest, queue and 32-energy STOP checkpoints
+under `runs/edge-sensitivity/`. Monitor its process, status and logs independently.
+Do not edit loaded edge, verification or transport modules. See
+[`edge_lab/README.md`](../edge_lab/README.md) for the pilot sampling and convergence
+contract. The continuous reporter publishes completed receipts and unresolved cases;
+the ensemble never changes search scoring.
+
 `python -m verification_lab.worker` is a separate single-CPU consumer of completed
 rounds. It replays D00, triangle-control and each observed overall leader on the
 entire accepted energy grid, rebuilding rather than using search spectra as inputs.
