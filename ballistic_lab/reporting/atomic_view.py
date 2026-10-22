@@ -107,5 +107,40 @@ def main(target: Path) -> None:
     )
 
 
+def comparison(target: Path) -> None:
+    rows = json.loads((target / "atomic-comparison-input.json").read_text(encoding="utf-8"))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5.6))
+    records = []
+    for ax, row, label in zip(
+        axes, rows, ("a  Synthetic control D00", "b  Search winner"), strict=True
+    ):
+        data = lattice(row["candidate"])
+        records.append(data)
+        draw(ax, data, label)
+        ax.text(
+            0.5,
+            -0.07,
+            f"{abs(row['phase64']['dc_v']) * 1e6:.3f} microvolts DC",
+            transform=ax.transAxes,
+            ha="center",
+            fontsize=12,
+        )
+    fig.suptitle("Control versus winner / same simulated conditions", fontsize=16, weight="bold")
+    fig.text(
+        0.5,
+        0.025,
+        "14.76 nm device width / 10 mV peak drive / 10 kilohm load\nBright: carbon positions. Black opening: etched void. Fixed-potential model; not microscopy.",
+        ha="center",
+        fontsize=10,
+    )
+    fig.tight_layout(rect=(0, 0.12, 1, 0.92))
+    fig.savefig(target / "atomic-comparison.png", dpi=200)
+    plt.close(fig)
+    (target / "atomic-comparison.json").write_text(json.dumps(records), encoding="utf-8")
+
+
 if __name__ == "__main__":
-    main(Path(sys.argv[1]))
+    if len(sys.argv) > 2 and sys.argv[2] == "comparison":
+        comparison(Path(sys.argv[1]))
+    else:
+        main(Path(sys.argv[1]))

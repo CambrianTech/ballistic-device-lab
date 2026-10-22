@@ -1,8 +1,10 @@
 """Publish immutable completed rounds; never read a partial worker state."""
 
 import json
+import os
 import re
 import shutil
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -80,6 +82,41 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     )
     validation_block += render_edges(destination)
     local_block = render_local(destination)
+    runtime = Path(
+        os.environ.get("BALLISTIC_KWANT_PYTHON", "../ballistic-quantum-runtime/env/python.exe")
+    ).resolve()
+    atomic_block = ""
+    if runtime.exists():
+        (destination / "atomic-comparison-input.json").write_text(
+            json.dumps([control, leader]), encoding="utf-8"
+        )
+        env = os.environ.copy()
+        env["PATH"] = (
+            str(runtime.parent)
+            + os.pathsep
+            + str(runtime.parent / "Library/bin")
+            + os.pathsep
+            + env.get("PATH", "")
+        )
+        env.update(OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
+        subprocess.run(
+            [
+                str(runtime),
+                "-m",
+                "ballistic_lab.reporting.atomic_view",
+                str(destination),
+                "comparison",
+            ],
+            env=env,
+            check=True,
+        )
+        atomic_block = f"### The device at atomic scale\n\n![Synthetic control versus current winner]({destination.as_posix()}/atomic-comparison.png)\n\nD00 is our synthetic control, not a reconstructed paper device. Both panels use the same scale and operating conditions.\n"
+    local_block = (
+        "<details>\n<summary>Local refinement: small mutations and atomic edge close-ups</summary>\n\n"
+        + local_block
+        + "\n</details>\n"
+    )
+
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):
@@ -195,6 +232,8 @@ Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{ind
 \\* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
 [Completed-round data and progress]({rel}/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+
+{atomic_block}
 
 {local_block}
 

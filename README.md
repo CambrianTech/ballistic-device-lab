@@ -20,7 +20,7 @@ The nominal test uses a **14.76 nm-wide device, 10 mV peak input, a 10 kΩ load 
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 23:46 UTC**, through matched round **63**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 23:49 UTC**, through matched round **63**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -32,6 +32,16 @@ Last published: **2026-10-22 23:46 UTC**, through matched round **63**. The 15-m
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
 [Completed-round data and progress](results/continuous-dc/round-000063/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+
+### The device at atomic scale
+
+![Synthetic control versus current winner](results/continuous-dc/round-000063/atomic-comparison.png)
+
+D00 is our synthetic control, not a reconstructed paper device. Both panels use the same scale and operating conditions.
+
+
+<details>
+<summary>Local refinement: small mutations and atomic edge close-ups</summary>
 
 ### Winner-neighborhood experiment
 
@@ -47,6 +57,8 @@ Actual carbon positions from the transport builder, shown as bright spots. The h
 | Best converged offspring: local-s0.01-4 | 0.07632 |
 
 [Frozen plan and completed rows](results/continuous-dc/round-000063/winner-local) Â· [Protocol](local_lab/README.md).
+
+</details>
 
 
 ### What useful function are we testing?
@@ -142,7 +154,7 @@ One- and three-atom edge-vacancy pilot; three fixed seeds per damage level. Inta
 | diversity-r0-profile-g15-1 | 3 | 0 / 3 | 0 | Pending / unresolved |
 | triangle-control | 0 | 1 / 1 | 1 | 3.871–3.871 |
 | triangle-control | 1 | 3 / 3 | 3 | 3.452–4.557 |
-| triangle-control | 3 | 0 / 3 | 0 | Pending / unresolved |
+| triangle-control | 3 | 1 / 3 | 1 | 3.632–3.632 |
 
 Small pilot, not a fabrication-yield estimate. See [model and restart contract](edge_lab/README.md). Self-consistent electrostatics remains pending.
 
