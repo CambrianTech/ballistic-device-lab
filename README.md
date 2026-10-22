@@ -14,13 +14,13 @@ The nominal test uses a **14.76 nm-wide device, 10 mV peak input, a 10 kΩ load 
 
 ## Direct DC search
 
-**Continuous search: 55 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 1140 candidates, including the same 40 starting designs.*
+**Continuous search: 59 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 1220 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000055/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000059/diversity.png)
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 23:18 UTC**, through matched round **55**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 23:31 UTC**, through matched round **59**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -31,7 +31,7 @@ Last published: **2026-10-22 23:18 UTC**, through matched round **55**. The 15-m
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000055/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000059/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 ### What useful function are we testing?
 
@@ -75,25 +75,25 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 | random-r0-beveled-g3-0 | 27/27 | 11 | 0.494× | 0.00343× |
 | random-r1-islands-g1-1 | 27/27 | 6 | 0.156× | 9.51e-05× |
 
-Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000055/robustness).
+Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000059/robustness).
 
 
-![Matched control and leader trajectories](results/continuous-dc/round-000055/leader-trajectories.png)
+![Matched control and leader trajectories](results/continuous-dc/round-000059/leader-trajectories.png)
 
 Orange paths enter from the left; purple paths enter from the right; gold segments are contacts. Trajectory paths are a classical diagnostic, not a quantum current map or DC-efficiency measurement. Neither control is a reproduced paper device.
 
-![Updating classical scattering comparison](results/continuous-dc/round-000055/leader-scattering.png)
+![Updating classical scattering comparison](results/continuous-dc/round-000059/leader-scattering.png)
 
-![Updating leader energy and contact checks](results/continuous-dc/round-000055/leader-coverage.png)
+![Updating leader energy and contact checks](results/continuous-dc/round-000059/leader-coverage.png)
 
 <details>
 <summary>All 27 DC conditions per design: loads, energies and contact cuts</summary>
 
-![Full current validation matrix](results/continuous-dc/round-000055/leader-matrix.png)
+![Full current validation matrix](results/continuous-dc/round-000059/leader-matrix.png)
 
 </details>
 
-Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000055/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
+Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000059/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
 
 ### Automated falsification checks
 
@@ -109,7 +109,7 @@ conventions; it is **not** a physical mirror-geometry test. These numerical pass
 do not validate missing physics. Exact atomic reflection, controlled edge ensembles,
 self-consistent graphene electrostatics, realistic scattering/contacts, frequency
 response and matched paper-device comparison remain **unresolved**.
-[Completed receipts and fresh spectra](results/continuous-dc/round-000055/falsification).
+[Completed receipts and fresh spectra](results/continuous-dc/round-000059/falsification).
 
 
 ### Atomic-edge sensitivity
@@ -122,23 +122,23 @@ One- and three-atom edge-vacancy pilot; three fixed seeds per damage level. Inta
 | D00 | 1 | 2 / 3 | 2 | 10.586–11.331 |
 | D00 | 3 | 0 / 3 | 0 | Pending / unresolved |
 | diversity-r0-profile-g15-1 | 0 | 1 / 1 | 1 | 28.216–28.216 |
-| diversity-r0-profile-g15-1 | 1 | 1 / 3 | 1 | 28.363–28.363 |
+| diversity-r0-profile-g15-1 | 1 | 2 / 3 | 2 | 28.363–28.385 |
 | diversity-r0-profile-g15-1 | 3 | 0 / 3 | 0 | Pending / unresolved |
 | triangle-control | 0 | 1 / 1 | 1 | 3.871–3.871 |
-| triangle-control | 1 | 2 / 3 | 2 | 3.452–3.874 |
+| triangle-control | 1 | 3 / 3 | 3 | 3.452–4.557 |
 | triangle-control | 3 | 0 / 3 | 0 | Pending / unresolved |
 
 Small pilot, not a fabrication-yield estimate. See [model and restart contract](edge_lab/README.md). Self-consistent electrostatics remains pending.
 ### Winner-neighborhood experiment
 
-Separate budget: **24/24 offspring evaluated**, 1 numerically converged so far. Parent: `diversity-r0-profile-g15-1`. These evaluations do not enter the three-method comparison.
+Separate budget: **24/24 offspring evaluated**, 4 numerically converged so far. Parent: `diversity-r0-profile-g15-1`. These evaluations do not enter the three-method comparison.
 
 | Local experiment | Converged DC power (pW) |
 | --- | ---: |
 | Parent | 0.07961 |
 | Best converged offspring: local-s0.01-4 | 0.07632 |
 
-[Frozen plan and completed rows](results/continuous-dc/round-000055/winner-local) · [Protocol](local_lab/README.md).
+[Frozen plan and completed rows](results/continuous-dc/round-000059/winner-local) · [Protocol](local_lab/README.md).
 
 
 ### Independent numerical check
@@ -148,7 +148,7 @@ Separate budget: **24/24 offspring evaluated**, 1 numerically converged so far. 
 | D00 | 0.1241 | Pass |
 | diversity-r0-profile-g15-1 | 0.4037 | Pass |
 
-[Audit receipts and exact input spectra](results/continuous-dc/round-000055/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
+[Audit receipts and exact input spectra](results/continuous-dc/round-000059/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
 
 
 </details>
@@ -214,7 +214,7 @@ A separate bounded experiment evaluates **24 mutations around a frozen winner**:
 
 This experiment has its own checkpoints and source manifest. Its extra evaluations are **not added to the matched three-method scores or candidate counts**. Results and completion status are published separately. [Local experiment contract](local_lab/README.md).
 
-![Feedback-guided search progress](results/continuous-dc/round-000055/progress.png)
+![Feedback-guided search progress](results/continuous-dc/round-000059/progress.png)
 
 Flat stretches mean no better converged candidate has been found. They do not establish a local or global optimum. [Search implementation](ballistic_lab/search/dc_space.py) · [Diversity selection](ballistic_lab/search/diversity.py).
 

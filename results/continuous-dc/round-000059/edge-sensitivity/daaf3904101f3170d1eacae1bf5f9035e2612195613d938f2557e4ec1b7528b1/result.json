@@ -1,0 +1,64 @@
+{
+  "candidate": {
+    "key": "triangle-control",
+    "family": "triangle",
+    "parameters": [
+      1.0,
+      0.7,
+      0.0,
+      0.0
+    ],
+    "origin": "fixed control",
+    "obstacles": [
+      [
+        [
+          -0.5,
+          0.35
+        ],
+        [
+          0.5,
+          0.35
+        ],
+        [
+          0.0,
+          -0.35
+        ]
+      ]
+    ]
+  },
+  "seed": 303,
+  "vacancies": 1,
+  "eligible_sites": 85,
+  "removed_indices": [
+    5289
+  ],
+  "removed_positions": [
+    [
+      -6.0,
+      10.96965511460289
+    ]
+  ],
+  "components": 1,
+  "status": "converged",
+  "levels": [
+    {
+      "count": 1025,
+      "dc_v": -4.55854413577389e-06,
+      "dc_power_w": 2.078032463779852e-15
+    },
+    {
+      "count": 2049,
+      "dc_v": -4.558252386730572e-06,
+      "dc_power_w": 2.0777664821134953e-15
+    },
+    {
+      "count": 4097,
+      "dc_v": -4.557174926849255e-06,
+      "dc_power_w": 2.0767843313903514e-15
+    }
+  ],
+  "energy_converged": true,
+  "phase_converged": true,
+  "dc_v": -4.55717492685434e-06,
+  "dc_power_w": 2.0767843313949863e-15
+}
