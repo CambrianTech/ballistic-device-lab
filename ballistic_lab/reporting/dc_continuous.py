@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle
 
 from ballistic_lab.reporting.dc_search import promoted
+from ballistic_lab.reporting.diversity_gallery import render as render_gallery
 
 ARMS = ("elite", "diversity", "random")
 LABELS = {
@@ -53,6 +54,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     )
     control = next(r for r in baseline if r["candidate"]["key"] == "D00")
     best = winners(snapshot)
+    render_gallery(snapshot, control, destination)
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):
@@ -157,7 +159,9 @@ Regenerate with `python -m ballistic_lab.reporting.dc_continuous`. The reporter 
 
 **Continuous search: {index} completed matched round(s).** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated {counts["elite"]} candidates, including the same 40 starting designs.*
 
-![Frozen control and current converged winners]({rel}/comparison.png)
+![Automatically selected representatives from every shape family]({rel}/diversity.png)
+
+**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus the strongest screened candidate in each family. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
 {chr(10).join(table)}
 
@@ -165,11 +169,14 @@ Regenerate with `python -m ballistic_lab.reporting.dc_continuous`. The reporter 
 
 [Completed-round data and progress]({rel}/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
-### Shape gallery — wider-search snapshot
+<details>
+<summary>Earlier six-design gallery</summary>
 
 ![Six automatically selected wider-search finalists](results/2026-10-22-dc-wide/finalists.png)
 
-The earlier 80-design search illustrates the range of geometries. Its signed voltages and numerical pass labels belong to that frozen study; the table above tracks the latest completed continuous-search round.
+Frozen wider-search snapshot, retained for comparison with the evolving gallery above.
+
+</details>
 
 """
     root.write_text(text[:start] + block + text[end:], encoding="utf-8")

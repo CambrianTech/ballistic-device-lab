@@ -1,5 +1,7 @@
 # Ballistic Device Lab: Searching for Better Graphene Rectifiers
 
+**A continuously running search for better graphene rectifier geometries.** New candidates are simulated and refined in the background; completed rounds refresh the comparison tables and shape gallery through the reporting pipeline.
+
 **Can nanoscale geometry make a better graphene ballistic rectifier?** We are building a simulation and design-search pipeline to find out. These devices use asymmetric electron transport to convert an alternating electrical signal into DC. Their geometry matters because electrons can cross the active region before scattering randomizes their motion.
 
 The pipeline connects **geometry search → graphene quantum transport → loaded AC-to-DC response → convergence checks**. A continuous CPU search now compares top-score selection, diversity-preserving selection and random sampling directly on simulated DC power. Earlier GPU trajectory studies provide a cheaper geometry screen. The next major physics step is self-consistent nonlinear transport to test whether promising results survive charge-induced changes to the device potential.
@@ -8,7 +10,9 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 **Continuous search: 2 completed matched round(s).** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 80 candidates, including the same 40 starting designs.*
 
-![Frozen control and current converged winners](results/continuous-dc/round-000002/comparison.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000002/diversity.png)
+
+**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus the strongest screened candidate in each family. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -21,11 +25,14 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 [Completed-round data and progress](results/continuous-dc/round-000002/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
-### Shape gallery — wider-search snapshot
+<details>
+<summary>Earlier six-design gallery</summary>
 
 ![Six automatically selected wider-search finalists](results/2026-10-22-dc-wide/finalists.png)
 
-The earlier 80-design search illustrates the range of geometries. Its signed voltages and numerical pass labels belong to that frozen study; the table above tracks the latest completed continuous-search round.
+Frozen wider-search snapshot, retained for comparison with the evolving gallery above.
+
+</details>
 
 ## Current findings — October 22, 2026
 
