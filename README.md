@@ -36,6 +36,13 @@ distinguish AC resistor heating from useful DC output. Candidate output voltages
 remain provisional because their energy-grid convergence is not yet sufficient;
 the pipeline records that failure instead of promoting a misleading winner.
 
+![257-point spectra and output convergence](results/2026-10-22-linear-load/dense-spectra.png)
+
+The dense spectra expose resonances hidden by the nine-point checkpoint.
+They also show why shape-only rankings need additional tests: the profile's ray
+advantage does not translate into the largest linear loaded output at the one
+Fermi energy and contact configuration tested. That output is AC, not rectified DC.
+
 A rectifier can turn a rapidly oscillating signal into a readable DC output. Graphene ballistic rectifiers use asymmetric carrier transport without a conventional p–n or Schottky junction barrier. Their planar geometry makes them interesting candidates for compact high-frequency detectors and receiver circuits; [experimental detection at 3 THz](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) provides a concrete reason to investigate them.
 
 Efficient power conversion is also an attractive target: less dissipated power means less heat to remove. But a sensitive detector and a useful power rectifier have different requirements. For power conversion, we must establish current capacity, contact losses, voltage handling, and useful output under load. A nanoscale rectifier alone does not supply a complete converter's voltage transformation, isolation, regulation, and filtering. Widespread consumer use is a possibility to investigate, not an established outcome of this project.

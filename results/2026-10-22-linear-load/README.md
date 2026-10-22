@@ -32,6 +32,16 @@ linear and quasistatic, without capacitance or electromagnetic propagation.
 
 ## Results and numerical limits
 
+![Dense spectra and output convergence](dense-spectra.png)
+
+These curves show all 257 computed energies for each of three geometries,
+without smoothing. Sharp structures explain why nine-point screening curves
+were insufficient. The shaded window is EF +/-2kBT; actual thermal integration
+uses the full recorded window. Panel C is single-contact injection, whereas
+panel D solves balanced left/right drive and a load. They are different
+observables, so their rankings need not agree. More points are needed to
+converge narrow features, not merely to make the figure look smooth.
+
 | Geometry | Output at 10 kilohms, microvolts | Change from coarser grid | Conductance-matrix change |
 | --- | ---: | ---: | ---: |
 | Empty | approximately zero | numerical roundoff | 0.050% |
@@ -70,6 +80,7 @@ python -m unittest discover -s tests -p test_reservoirs.py
 python -m unittest discover -s tests -p test_quantum.py
 python -m ballistic_lab.experiments.linear_load
 python -m ballistic_lab.reporting.linear_load
+python -m ballistic_lab.reporting.spectra
 ```
 
 Run the experiment in the isolated quantum environment. Existing run files are
