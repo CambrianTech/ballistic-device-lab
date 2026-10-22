@@ -36,7 +36,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 
 </details>
 
-## Current findings — October 22, 2026
+## Current findings — October 22, 2026, 20:00 UTC
 
 | Study | Coverage | Finding |
 | --- | --- | --- |

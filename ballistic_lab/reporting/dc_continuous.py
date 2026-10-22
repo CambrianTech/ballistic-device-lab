@@ -186,7 +186,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 """
     findings = text[end:].split("\n", 1)[1]
     root.write_text(
-        text[:start] + block + f"## Current findings — {date_label}\n" + findings,
+        text[:start] + block + f"## Current findings — {date_label}, {published:%H:%M UTC}\n" + findings,
         encoding="utf-8",
     )
 
