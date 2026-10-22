@@ -26,6 +26,45 @@ Define a pure factory with `@geometry_family(name, bounds)`. Keep contacts and o
 
 ## Adding a transport backend
 
+### Physics-stage boundary
+
+`pipeline/contracts.py` defines `PhysicsStage[Request, Result]`, separate from
+the ray-only `TransportBackend`. Each solver has its own typed request and
+result; a lattice solver must not fabricate ray trajectories to fit an interface.
+
+`SquareDevice` snapshots obstacle vertices into immutable tuples, fixes the
+existing square/contact convention, and fingerprints geometry plus physical
+scale. Its optional `width_m` preserves normalized screening; physical solvers
+must call `physical_width()` and reject unspecified scale. Geometry arrays handed
+to solvers are copies. This contract checks dimensions and finite coordinates;
+family validation remains responsible for polygon topology and nonintersection.
+
+`pipeline/ray.py` is the first working stage adapter. `RayRequest` records ray
+configuration and independent seed bases (including the second port's seed).
+`RayResult` retains all per-seed observations, device identity, backend identity,
+and Monte Carlo standard error. Its observable explicitly names angular response,
+not power efficiency. The adapter calls the existing estimator without changing
+its mathematics. It propagates solver failures instead of returning a score.
+Existing search entry points retain their batched path for performance and exact
+historical reproduction; the stage adapter is the boundary for staged evaluations.
+
+Future stages receive the same device plus their own material and operating
+configuration. Lattice transmission matrices, driven currents, and circuit power
+budgets remain different result types. Promotion must name the observable and
+comparison conditions explicitly; there is no universal cross-physics fitness.
+Self-consistent electrostatics and transport belong inside one coupled stage,
+with residuals and convergence failure in its result contract. Those solvers are
+not implemented yet. Neither physical constants nor an assumed temperature are
+silently supplied by the common device type.
+
+The current adapter does not replace experiment-level source receipts: search
+orchestration still requires the existing exact-source validation gate. Stage
+results alone are not evidence of validated physics. Tests check exact estimator
+parity, immutable geometry, mandatory physical scale, independent seeds, and
+failure propagation before a further solver is integrated.
+
+### Ray backend boundary
+
 Implement `TransportBackend.trace(geometries, port, config, seed) -> TraceBatch`. The angular metric currently requires the existing uniform-contact and cosine-flux injection RNG contract. A different injection sampler requires a corresponding estimator; sharing a method signature does not make incompatible physics interchangeable.
 
 ## Required validation
