@@ -22,6 +22,12 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 The sensitivity threshold is our engineering goal; a qualifying comparison also requires frozen temperature, input reference plane, bandwidth, load and readout conditions. **No candidate is qualified yet.** The running search still ranks nominal DC power. Application-based selection will enter a separately versioned campaign after the required physics gates pass. Efficient power conversion remains a separate objective, assessed by delivered DC power and efficiency. [Qualification pipeline](docs/DEVICE-ROLE.md).
 
+### Building the missing electrostatics
+
+![3D sheet-charge fields and analytic convergence](results/physics-reference/electrostatics-3d/fields-and-convergence.png)
+
+The new 3D Poisson layer resolves fields above and below a prescribed charged sheet, with dielectric face maps and fixed-potential gates. The right panel checks accuracy against an analytic solution: halving mesh spacing reduces the error by approximately four. These are field-solver verification fixtures; graphene charge feedback and the actual device stack remain to be connected. [Rebuild the plots and inspect raw data](results/physics-reference/electrostatics-3d/README.md).
+
 ### The fabricated device behind the literature reference
 
 ![Auton et al. Figure 1: optical device image and AFM inset at left, schematic and electrical characterization at right](docs/assets/literature/auton-2016-figure-1.jpg)

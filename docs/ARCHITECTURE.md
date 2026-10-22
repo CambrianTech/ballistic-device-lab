@@ -303,6 +303,13 @@ same materials, physical scale, excitation and output load.
 
 ## Implemented extension building blocks
 
+The isolated `physics_layers.poisson3d` now supports a 3D dielectric domain and
+conservative mesh-aligned sheet deposition. All axes use explicit SI spacing;
+charge on fixed-potential nodes is rejected. Analytic and mesh-refinement fixtures
+plus reproducible field plots validate this subsolver. Actual device-stack mapping,
+atomistic site-to-mesh interpolation and finite-bias graphene charge feedback are
+still required before campaign integration. Existing 2D coordination is unchanged.
+
 [`physics_layers/`](../physics_layers/README.md) holds independently tested additions
 outside the live campaign's source manifest: a planar variable-permittivity Poisson
 solver, explicit terminal phasor power accounting, and passive optical energy-balance

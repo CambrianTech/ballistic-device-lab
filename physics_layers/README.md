@@ -4,6 +4,8 @@ This package is separate while the continuous workers hold immutable source mani
 
 Implemented:
 
+- `poisson3d.Poisson3DStage`: SI sparse 3D field solver with independent spacings, dielectric face maps, outer/internal Dirichlet electrodes and immutable arrays. `deposit_sheet` conserves a mesh-aligned sheet's charge and rejects electrode overlap. Tests verify an analytic sheet, displacement jump, layered dielectrics, gauge shifts and second-order manufactured convergence. [Reproducible field maps and convergence](../results/physics-reference/electrostatics-3d/README.md). This is prescribed charge, not a completed graphene charge closure. Run `python -m unittest tests.test_poisson3d` and `python -m physics_layers.electrostatic_demo`.
+
 - `noise.equilibrium_output_noise`: correlated multiterminal equilibrium thermal noise with a warm output load and voltage-clamped inputs. Analytic resistor-network tests verify normalization and loading. [Model](NOISE.md); run `python -m physics_layers.detector_audit` for the controls and selected leader. This does not implement driven noise or frequency response.
 
 - `negf_reference`: small site-resolved nonequilibrium charge/current solver and Hartree feedback verification backend. [Model, tests and runnable two-site comparison](NEGF_REFERENCE.md). Wide-band contacts and a supplied interaction matrix are explicit approximations; this does not complete graphene/Poisson integration.
