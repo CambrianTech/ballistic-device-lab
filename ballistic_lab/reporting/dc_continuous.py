@@ -11,6 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle
+from matplotlib.ticker import MaxNLocator
 
 from ballistic_lab.reporting.dc_search import promoted
 from ballistic_lab.reporting.device_role import render as render_role
@@ -43,7 +44,6 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     snapshot = snapshots[-1]
     index = snapshot["round"]
     published = datetime.now(timezone.utc)
-    date_label = f"{published:%B} {published.day}, {published.year}"
     destination = Path("results/continuous-dc") / f"round-{index:06d}"
     destination.mkdir(parents=True, exist_ok=True)
     # Frozen receipts: conflicting contents are rejected, not overwritten.
@@ -67,7 +67,12 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     evidence_block = render_evidence([control, leader], destination)
     render_gallery(snapshot, control, destination)
     validation_block = render_role([control, leader], destination)
-    validation_block += render_validation(snapshot, destination)
+    broader_checks = render_validation(snapshot, destination)
+    summary = re.search(r"\*\*Leader versus D00:\*\*[^\n]+", broader_checks)
+    if summary:
+        validation_block += "\n\n" + summary.group(0) + "\n\n"
+    validation_block += "<details>\n<summary>Validation dashboard: robustness, trajectories, edge damage and numerical checks</summary>\n\n"
+    validation_block += broader_checks
     validation_block += render_falsification(
         [control, leader] + [r for r in baseline if r["candidate"]["key"] == "triangle-control"],
         destination,
@@ -123,8 +128,8 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     ax.set(
         xlabel="Completed matched round",
         ylabel="Best converged DC magnitude (µV)",
-        xticks=[s["round"] for s in snapshots],
     )
+    ax.xaxis.set_major_locator(MaxNLocator(nbins=8, integer=True))
     ax.grid(alpha=0.2)
     ax.legend(fontsize=8)
     fig.tight_layout()
@@ -195,6 +200,8 @@ Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{ind
 
 {evidence_block}
 
+</details>
+
 <details>
 <summary>Earlier six-design gallery</summary>
 
@@ -216,10 +223,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
         "Current direct-DC progress: best converged result retained after each completed matched round. Flat sections mean no better converged design was found; exploration continues. [Earlier trajectory-proxy study](docs/REFINEMENT.md).",
     )
     root.write_text(
-        text[:start]
-        + block
-        + f"## Current findings — {date_label}, {published:%H:%M UTC}\n"
-        + findings,
+        text[:start] + block + "## Current findings and targets\n" + findings,
         encoding="utf-8",
     )
 
