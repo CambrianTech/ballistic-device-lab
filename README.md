@@ -8,22 +8,24 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 ## Direct DC search
 
-**Continuous search: 2 completed matched round(s).** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 80 candidates, including the same 40 starting designs.*
+**Continuous search: 3 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 100 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000002/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000003/diversity.png)
 
-**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus the strongest screened candidate in each family. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
+**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
+
+Last published: **2026-10-22 19:48 UTC**, through matched round **3**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
 | Frozen control D00 | D00 | 11.205 | 0.01256 |
-| Top-score selection | elite-r1-triangle-g1-0 | 10.070 | 0.01014 |
-| Diversity archive | diversity-r1-triangle-g1-0 | 10.070 | 0.01014 |
-| Random search | random-r1-islands-g1-1 | 10.097 | 0.01019 |
+| Top-score selection | elite-r0-beveled-g3-0 | 11.846 | 0.01403 |
+| Diversity archive | diversity-r0-beveled-g3-0 | 11.846 | 0.01403 |
+| Random search | random-r0-beveled-g3-0 | 11.846 | 0.01403 |
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000002/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000003/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 <details>
 <summary>Earlier six-design gallery</summary>

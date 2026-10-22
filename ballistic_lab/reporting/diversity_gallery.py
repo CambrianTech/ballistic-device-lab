@@ -9,9 +9,13 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle
 
+from ballistic_lab.reporting.dc_search import promoted
+
 
 def render(snapshot: dict, control: dict, destination: Path) -> None:
     rows = [r for history in snapshot["histories"].values() for r in history]
+    finalists = promoted(rows)
+    best = finalists[0] if finalists else None
     selected = [control]
     for family in ("triangle", "beveled", "profile", "islands", "radial"):
         pool = [r for r in rows if r["candidate"]["family"] == family]
@@ -25,6 +29,10 @@ def render(snapshot: dict, control: dict, destination: Path) -> None:
                 ),
             )
         )
+    if best:
+        for index, row in enumerate(selected[1:], start=1):
+            if row["candidate"]["family"] == best["candidate"]["family"]:
+                selected[index] = best
     fig, axes = plt.subplots(2, 3, figsize=(12, 8))
     for ax, row in zip(axes.flat, selected, strict=True):
         item = row["candidate"]
@@ -42,7 +50,18 @@ def render(snapshot: dict, control: dict, destination: Path) -> None:
         ):
             ax.plot([x, x + dx], [y, y + dy], color="#e49b35", lw=4)
         title = "Frozen control D00" if item["key"] == "D00" else item["family"].capitalize()
-        ax.set_title(f"{title}\n{metric['dc_v'] * 1e6:+.3f} µV DC · {label}", fontsize=11)
+        is_best = best is not None and item["key"] == best["candidate"]["key"]
+        highlight = "#315fa3" if item["key"] == "D00" else "#087f8c" if is_best else None
+        if is_best:
+            title = f"Best converged search · {item['family']}"
+        if highlight:
+            ax.add_patch(Rectangle((-1, -1), 2, 2, fill=False, edgecolor=highlight, lw=3))
+        ax.set_title(
+            f"{title}\n{metric['dc_v'] * 1e6:+.3f} µV DC · {label}",
+            fontsize=11,
+            fontweight="bold" if highlight else "normal",
+            color=highlight or "black",
+        )
         ax.text(0, -1.18, item["key"], ha="center", fontsize=7)
         ax.set(xlim=(-1.1, 1.1), ylim=(-1.3, 1.1), aspect="equal")
         ax.axis("off")
@@ -62,7 +81,8 @@ def render(snapshot: dict, control: dict, destination: Path) -> None:
     (destination / "gallery-selection.json").write_text(
         json.dumps(
             dict(
-                rule="Frozen D00 plus highest 257-grid DC power in each family across methods; ties prefer convergence then key. Display refined voltage only when both gates pass.",
+                rule="Frozen D00 plus highest 257-grid DC power in each family across methods; ties prefer convergence then key. The best converged search candidate replaces its family representative. Display refined voltage only when both gates pass.",
+                best_converged_search=best["candidate"]["key"] if best else None,
                 candidates=[r["candidate"]["key"] for r in selected],
             ),
             indent=2,

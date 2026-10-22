@@ -2,6 +2,7 @@
 
 import json
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
 
 import matplotlib
@@ -35,6 +36,8 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     snapshots = [json.loads(p.read_text(encoding="utf-8")) for p in paths]
     snapshot = snapshots[-1]
     index = snapshot["round"]
+    published = datetime.now(timezone.utc)
+    date_label = f"{published:%B} {published.day}, {published.year}"
     destination = Path("results/continuous-dc") / f"round-{index:06d}"
     destination.mkdir(parents=True, exist_ok=True)
     # Frozen receipts: conflicting contents are rejected, not overwritten.
@@ -157,11 +160,13 @@ Regenerate with `python -m ballistic_lab.reporting.dc_continuous`. The reporter 
     rel = destination.as_posix()
     block = f"""## Direct DC search
 
-**Continuous search: {index} completed matched round(s).** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated {counts["elite"]} candidates, including the same 40 starting designs.*
+**Continuous search: {index} completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated {counts["elite"]} candidates, including the same 40 starting designs.*
 
 ![Automatically selected representatives from every shape family]({rel}/diversity.png)
 
-**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus the strongest screened candidate in each family. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
+**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
+
+Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{index}**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 {chr(10).join(table)}
 
@@ -179,7 +184,11 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 </details>
 
 """
-    root.write_text(text[:start] + block + text[end:], encoding="utf-8")
+    findings = text[end:].split("\n", 1)[1]
+    root.write_text(
+        text[:start] + block + f"## Current findings — {date_label}\n" + findings,
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":
