@@ -9,8 +9,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.ndimage import gaussian_filter
 from matplotlib.patches import Rectangle
+from scipy.ndimage import gaussian_filter
 
 from ballistic_lab.pipeline.contracts import SquareDevice
 from ballistic_lab.transport.quantum import LatticeRequest, build_system
