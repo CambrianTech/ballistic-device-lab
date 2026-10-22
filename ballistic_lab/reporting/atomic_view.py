@@ -9,6 +9,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.colors import LinearSegmentedColormap, PowerNorm
 from matplotlib.patches import Rectangle
 from scipy.ndimage import gaussian_filter
 
@@ -43,9 +44,10 @@ def draw(ax, data: dict, title: str, bounds=(-8, 8, -8, 8)) -> None:
         density,
         origin="lower",
         extent=bounds,
-        cmap="afmhot",
-        vmin=0,
-        vmax=density.max(),
+        cmap=LinearSegmentedColormap.from_list(
+            "bright_atoms", ["#000000", "#b88032", "#ffdc83", "#ffffff"]
+        ),
+        norm=PowerNorm(gamma=0.65, vmin=0, vmax=density.max()),
         interpolation="nearest",
     )
     ax.set_title(title, loc="left", fontsize=13, pad=10)
@@ -109,10 +111,10 @@ def main(target: Path) -> None:
 
 def comparison(target: Path) -> None:
     rows = json.loads((target / "atomic-comparison-input.json").read_text(encoding="utf-8"))
-    fig, axes = plt.subplots(1, 2, figsize=(10, 5.6))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 10))
     records = []
     for ax, row, label in zip(
-        axes, rows, ("a  Synthetic control D00", "b  Search winner"), strict=True
+        axes[0], rows, ("a  Synthetic control D00", "b  Search winner"), strict=True
     ):
         data = lattice(row["candidate"])
         records.append(data)
@@ -124,6 +126,25 @@ def comparison(target: Path) -> None:
             transform=ax.transAxes,
             ha="center",
             fontsize=12,
+        )
+    for column, (data, row) in enumerate(zip(records, rows, strict=True)):
+        polygon = np.array(row["candidate"]["obstacles"][0]) * 7.38
+        midpoints = (polygon + np.roll(polygon, -1, axis=0)) / 2
+        center = midpoints[np.argmin(midpoints[:, 1])]
+        bounds = (center[0] - 1.3, center[0] + 1.3, center[1] - 1.3, center[1] + 1.3)
+        axes[0, column].add_patch(
+            Rectangle(
+                center - 1.3,
+                2.6,
+                2.6,
+                fill=False,
+                edgecolor="#49dbe8",
+                linewidth=1.5,
+                linestyle="--",
+            )
+        )
+        draw(
+            axes[1, column], data, ("c  Control edge" if column == 0 else "d  Winner edge"), bounds
         )
     fig.suptitle("Control versus winner / same simulated conditions", fontsize=16, weight="bold")
     fig.text(
