@@ -1,0 +1,93 @@
+GPU ACTIVE-LEARNING GEOMETRY SEARCH -- completed 2026-10-22
+
+Outcome
+Across three independent search repeats, learned proposals beat equal-budget
+uniform random search on fresh-seed evaluation of frozen winners.
+Mean steering-response score: learned .354063, random .312915, previous
+triangle .226597. Learned-minus-random in the three repeats:
+.0291214, .0321741, .0621490 (2.91, 3.22, 6.21 percentage points).
+These scores are probabilities, NOT efficiencies or predicted DC voltages.
+
+Work completed
+2,724 geometry evaluations including repeats and diagnostic sets; 119,537,664
+ray trajectories in the saved learning dataset. CPU/GPU validation is additional.
+All samples retained in learning-data.jsonl, including poor geometries. No
+RANSAC rejection, reinforcement learning, or unreported discarded samples.
+This is a surrogate-assisted search over four continuous geometry variables.
+
+GPU verification
+Actual NVIDIA RTX 5090 via CuPy 14.2.0 in an isolated local .venv. GPU allocator
+pool capped at 512 MiB (not a cap on driver/context overhead). Observed pool
+at initial benchmark: about 5.1 MB. Existing inference process untouched.
+Warm representative 32-geometry/8192-ray benchmark: CPU .452806 seconds,
+GPU .014874 seconds, 30.44x. Timing includes transfers and reductions but
+excludes initial compilation. First cold batch took 1.75 seconds, so this
+speedup applies to repeated workloads, not startup.
+65,536 specular test rays spanning four geometries and four terminals:
+zero CPU/GPU exit mismatches. Straight-on empty-box tests passed exactly.
+Diffuse/specular mixture comparisons agreed within .0032 exit probability.
+Final optimized-geometry checks added 786,432 rays with zero exit mismatches.
+See gpu-validation.json and final-checks.json for receipts.
+
+Numerical incident and repair
+One fresh holdout sample exceeded the original 10,000-reflection cap. The
+evaluator stopped with an error, never scored or dropped the ray. The cap was
+raised to 100,000 in BOTH CPU and GPU implementations. Frozen geometry files
+were preserved, and only the missing holdout evaluation was resumed. Independent
+CPU/GPU replay of that seed and those geometries passed. Rare long trajectories
+also emphasize that omitted bulk scattering remains a physical limitation.
+Elapsed run time is null in the final JSON because the resumed run spans an
+interruption; no fabricated combined compute-time figure is reported.
+
+Objective and search
+Same scale-free square/contact setup as METHODS.txt. Triangle width [.25,1.5],
+height [.25,1.1], vertical center [-.35,.35], tip skew [-.6,.6] times half-width.
+All triangles lie within the cavity and clear contact openings.
+Score averages the change in bottom-minus-top exit probability between the
+cosine input and imposed +/-20.5 degree collimation, at wall specularity 1 and .8.
+Four thousand ninety-six rays per terminal/condition; eight conditions per score.
+192 pilot training and 128 pilot validation geometries. Predictive gate R2>.25;
+observed .40764, mean absolute error .03807. Benchmark gate GPU speedup>2 passed.
+Pilot data were not given to either benchmark arm; only used for go/no-go and
+feature diagnostics. This shared setup cost is additional to the arm budgets.
+
+Each of three repeats: 64 shared initial geometries, followed by five rounds
+of 64 new geometries per arm, 384 evaluations per arm. Random arm samples the
+same bounds uniformly. Learned arm fits 128 bootstrapped ExtraTrees with leaf
+minimum 2. Proposal pool: 4096 global + 4096 local perturbations around eight
+high scorers. Acquire 48 using mean+.75*tree-standard-deviation, with spatial
+diversity filters, and 16 fresh random explorations. Ensemble dispersion is a
+heuristic exploration signal, not a calibrated confidence interval.
+Same simulation seed per round for both arms. Winners selected using training
+scores only and written to frozen-winners-N.json before holdout. Four new seeds,
+65536 rays per condition, validate each winner and the previous triangle.
+All three repeats beat random; three repeats are not a general proof of superiority.
+The advantage is for this acquisition method and geometry range, not all searches.
+
+Reduced-set finding
+Pilot permutation importance ranked width, height, offset, skew in that order.
+Dropping offset/skew reduced pilot-validation R2 from .408 to .148. Because that
+set also selected features, an additional independent 256-geometry test was run:
+four-variable R2=.35340; width/height-only R2=.11957. Thus no variables were
+removed. Strongest predictor does not mean sufficient predictor. No RANSAC
+filter is warranted merely because some shapes are unusual.
+
+Limits / next useful modeling step
+Only classical geometric sensitivity is learned. The injection distribution is
+imposed; it is not derived from drive voltage or current. No self-consistent
+electrostatics, finite mean free path, material quantum physics, receiver noise,
+loaded DC output or wall-plug power is computed. More search cannot supply
+those missing constitutive physics. Next simulation priority is finite bulk
+scattering and bias-dependent injection, rather than unlimited optimization of
+the same ideal billiard model. No global optimum or practical rectifier claimed.
+
+Artifacts and reproduction
+gpu_trace.py: GPU kernel + batching; validate_gpu.py: CPU parity and timing.
+learn_search.py: gated pilot/search; final_checks.py: optimized parity and
+independent dimension check. learning-results.png/pdf: comparison plots.
+requirements-gpu.txt: pinned environment snapshot; installed via documented
+CuPy wheel extras https://docs.cupy.dev/en/stable/install.html.
+From project parent, use .\ballistic-geometry-screen\.venv\Scripts\python.exe.
+learn_search.py with existing dataset resumes frozen holdouts instead of
+overwriting data; a new full search should use a separate output directory.
+No background job or scheduled automation remains running for this search.

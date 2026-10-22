@@ -1,0 +1,92 @@
+{
+  "optimized_cpu_gpu_checks": [
+    {
+      "design": 0,
+      "port": 0,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 740.0013338461106
+    },
+    {
+      "design": 0,
+      "port": 0,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 21159.847309668963
+    },
+    {
+      "design": 0,
+      "port": 1,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 3825.3460875875326
+    },
+    {
+      "design": 0,
+      "port": 1,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 1212.0008116412541
+    },
+    {
+      "design": 1,
+      "port": 0,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 1020.2590785413954
+    },
+    {
+      "design": 1,
+      "port": 0,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 862.0011443005707
+    },
+    {
+      "design": 1,
+      "port": 1,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 542.9092314759207
+    },
+    {
+      "design": 1,
+      "port": 1,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 1212.0008116412541
+    },
+    {
+      "design": 2,
+      "port": 0,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 666.1819511701148
+    },
+    {
+      "design": 2,
+      "port": 0,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 1207.4002665992457
+    },
+    {
+      "design": 2,
+      "port": 1,
+      "spread": 1.0,
+      "mismatch": 0.0,
+      "max_path": 424.00231790022644
+    },
+    {
+      "design": 2,
+      "port": 1,
+      "spread": 0.35,
+      "mismatch": 0.0,
+      "max_path": 1775.4001813306859
+    }
+  ],
+  "independent_dimension_test": {
+    "full_r2": 0.3534020059185534,
+    "width_height_r2": 0.1195699545827924
+  }
+}

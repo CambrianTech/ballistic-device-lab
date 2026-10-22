@@ -1,0 +1,14 @@
+[
+  {
+    "mfp": 0.2,
+    "max_probability_error": 0.00274658203125
+  },
+  {
+    "mfp": 2.0,
+    "max_probability_error": 0.0036468505859375
+  },
+  {
+    "mfp": 20.0,
+    "max_probability_error": 0.00311279296875
+  }
+]

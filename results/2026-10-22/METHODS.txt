@@ -1,0 +1,69 @@
+BALLISTIC GEOMETRY SCREEN -- exploratory simulation, 2026-10-22
+
+Scope
+Classical ray tracing in a square four-terminal cavity, with an empty junction,
+triangular excluded region, or wall-attached wedges. This is a geometry and
+collimation-sensitivity screen, not a prediction of graphene rectification,
+conversion efficiency, receiver sensitivity, or a patentable new device.
+
+Reference
+Auton et al., Graphene ballistic nano-rectifier with very high responsivity,
+Nature Communications 7,11670 (2016), doi:10.1038/ncomms11670.
+Author manuscript:
+https://pure.manchester.ac.uk/ws/portalfiles/portal/33718005/CLEAN_Main_Text_Graphene_ballistic.pdf
+The article attributes the nonlinear effect to current-induced collimation
+changing transmission probabilities (page 4). Its experimental performance is
+not used to calibrate this model. Our geometries are illustrative, not replicas.
+
+Model and normalization
+Square side 2 normalized units; four equal centered contact openings width .6.
+Specular ray reflection off impenetrable polygon boundaries. Injection positions
+are uniform across each contact. Equilibrium flux uses theta=asin(U[-1,1]),
+which samples cosine angular flux rather than uniform angle. Imposed collimation
+uses theta=asin(U[-.35,.35]), restricting incidence to about +/-20.5 degrees.
+Both injected populations have the same number of rays. The missing relation
+between current/voltage and this angular distribution is NOT assumed.
+Diffuse wall scattering samples a cosine law into the accessible half plane.
+All rays must exit; unresolved trajectories raise an error rather than being
+discarded. A high reflection cap accommodates rare grazing trajectories.
+No bulk scattering, electrostatic forces, graphene band structure, quantum
+interference, phonons, contact resistance or finite frequency response included.
+Room temperature is not an input to this scale-free geometric calculation.
+
+Score
+S = mean over L/R injection of [P(exit Bottom)-P(exit Top)].
+Objective = S(collimated)-S(equilibrium angular distribution).
+This is a probability difference, NOT a percent efficiency or net equilibrium
+current. Reservoirs at the output terminals also inject carriers; one-sided
+steering does not imply spontaneous current.
+
+Search and validation
+36 triangles: width .3,.6,.9,1.2; height .3,.6,.9; vertical offset -.25,0,.25.
+4096 rays per input per angular condition; same seeds across candidates.
+Maximize signed positive objective; a mirrored geometry supplies opposite sign.
+This coarse grid does not establish a global optimum (winner reaches width bound).
+Freeze winner then validate with 32768 rays/input/condition, four new seeds,
+at specularity 1,.8,.5,0. Error bars are seed standard deviations, not confidence
+intervals or fabrication uncertainty. No selection using holdout trials.
+Baseline reciprocal matrices: 32768 rays/contact, cosine input all four contacts.
+Raw reciprocity residuals are reported. Linear electrical diagnostic averages
+each matrix with its transpose, removes diagonal reflections and forms the
+conductance graph Laplacian. Solve floating top/bottom voltages for L/R +/-0.5.
+Reverse drive gives negative output, so average DC is zero by linearity. This
+is a deliberate sanity check, not a simulated nonlinear rectification result.
+Additional checks: straight-junction symmetry and sign reversal under vertical
+reflection. Probability conservation follows from every ray exiting once.
+
+Interpretation
+The selected triangle changes directional steering by about 24 percentage
+points under the imposed collimation change. This survives sampling variation
+and is reduced by diffuse boundary scattering. It establishes geometric
+sensitivity within this billiard model only. A useful next electrical model
+must solve bias-dependent injection/collimation and self-consistent potentials,
+then measure loaded DC output and input power. Do not infer watts, responsivity,
+bandwidth, or advantage over existing rectifiers from this result.
+
+Reproduction (PowerShell, from C:/Users/joelt/development)
+& ./etc-tunneling-screen/.venv/Scripts/python.exe ./ballistic-geometry-screen/simulate.py
+Uses existing NumPy/Matplotlib environment. CPU only; no GPU dependencies.
+Outputs results.json, geometries.png/pdf, robustness.png. Seeds in source.
