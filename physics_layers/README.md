@@ -4,6 +4,7 @@ This package is separate while the continuous workers hold immutable source mani
 
 Implemented:
 
+- `negf_reference`: small site-resolved nonequilibrium charge/current solver and Hartree feedback verification backend. [Model, tests and runnable two-site comparison](NEGF_REFERENCE.md). Wide-band contacts and a supplied interaction matrix are explicit approximations; this does not complete graphene/Poisson integration.
 - `graphene_charge`: equilibrium Dirac-sheet density, quantum capacitance and a self-consistent uniform gate reference. [Equations, validation and limits](GRAPHENE_CHARGE.md). This is not a finite-bias local-charge provider for the rectifier.
 - `stages.run_stages`: dependency-ordered execution, configuration/source receipts and executable validation gates; missing dependencies and failed checks block downstream work. `dc_stage` connects the existing quasistatic circuit solver with phase-doubling acceptance. See [stage architecture and build sequence](STAGES.md). These are opt-in and do not modify the running search.
 
