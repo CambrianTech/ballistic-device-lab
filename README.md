@@ -14,6 +14,8 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 This paper informed our earlier asymmetric-cross reference. **D00 and triangle-control below are our synthetic controls**, not digitizations of this device. [Geometry provenance and differences](docs/TOPOLOGY-BENCHMARK.md#what-was-reconstructed-from-literature).
 
+A [scale-calibrated manual AFM reconstruction](references/auton-2016/README.md) now preserves the photographed junction contour as a separate reference, with pixel coordinates and boundary uncertainty documented. Electrical benchmarking of that reference remains pending.
+
 ## Direct DC search
 
 **Continuous search: 13 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 300 candidates, including the same 40 starting designs.*
