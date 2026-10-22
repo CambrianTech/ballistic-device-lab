@@ -22,25 +22,37 @@ The newer **Shi et al. (2026)** device has its own [benchmark record and SEM fig
 
 ## Direct DC search
 
-**Continuous search: 40 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 840 candidates, including the same 40 starting designs.*
+**Continuous search: 42 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 880 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000040/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000042/diversity.png)
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 22:16 UTC**, through matched round **40**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 22:25 UTC**, through matched round **42**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
 | Frozen control D00 | D00 | 11.205 | 0.01256 |
 | Top-score selection | elite-r0-triangle-g17-1 | 22.971 | 0.05277 |
 | Diversity archive | diversity-r0-profile-g15-1 | 28.215 | 0.07961 |
-| Random search | random-r0-triangle-g28-1 | 16.867 | 0.02845 |
+| Random search | random-r0-triangle-g41-0 | 17.860 | 0.03190 |
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000040/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000042/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
+### What useful function are we testing?
+
+**First target: a zero-DC-bias electrical signal detector.** Rectification turns an alternating input into a measurable DC signal. Power recovery is tracked separately.
+
+| Design | Terminal input (nW) | Loaded voltage response (V/W) | Useful DC (pW) | DC efficiency (%) |
+| --- | ---: | ---: | ---: | ---: |
+| D00 | 5.430 | 2064 | 0.01256 | 0.000231 |
+| diversity-r0-profile-g15-1 | 3.222 | 8757 | 0.07961 | 0.002471 |
+
+These are finite-amplitude, quasistatic electrical-terminal values at 10 mV peak, 10 kΩ, 300 K and 0.9 eV in the frozen-potential model. Responsivity is |mean output voltage| / mean terminal input power; efficiency is mean(output voltage)² / (load resistance × mean input power). They are not optical responsivities, small-signal derivatives or measured performance.
+
+**Decision gates:** detector usefulness requires output-noise density, noise-equivalent input power, usable dynamic range and frequency response. Power-converter usefulness requires efficiency and delivered power across excitation and load. Neither application is qualified yet. The present search still optimizes nominal DC load power; this report does not silently change its objective. [Application qualification plan](docs/DEVICE-ROLE.md).
 ### Current leader: broader checks
 
 Each new converged leader enters a separate one-CPU validation queue with D00 and the synthetic triangle. Identical geometries are tested once. Search continues independently; these checks do not change its objective. Pending and unresolved results stay visible.
@@ -64,25 +76,25 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 | random-r0-beveled-g3-0 | 27/27 | 11 | 0.494× | 0.00343× |
 | random-r1-islands-g1-1 | 27/27 | 6 | 0.156× | 9.51e-05× |
 
-Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000040/robustness).
+Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000042/robustness).
 
 
-![Matched control and leader trajectories](results/continuous-dc/round-000040/leader-trajectories.png)
+![Matched control and leader trajectories](results/continuous-dc/round-000042/leader-trajectories.png)
 
 Orange paths enter from the left; purple paths enter from the right; gold segments are contacts. Trajectory paths are a classical diagnostic, not a quantum current map or DC-efficiency measurement. Neither control is a reproduced paper device.
 
-![Updating classical scattering comparison](results/continuous-dc/round-000040/leader-scattering.png)
+![Updating classical scattering comparison](results/continuous-dc/round-000042/leader-scattering.png)
 
-![Updating leader energy and contact checks](results/continuous-dc/round-000040/leader-coverage.png)
+![Updating leader energy and contact checks](results/continuous-dc/round-000042/leader-coverage.png)
 
 <details>
 <summary>All 27 DC conditions per design: loads, energies and contact cuts</summary>
 
-![Full current validation matrix](results/continuous-dc/round-000040/leader-matrix.png)
+![Full current validation matrix](results/continuous-dc/round-000042/leader-matrix.png)
 
 </details>
 
-Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000040/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
+Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000042/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
 
 ### Automated falsification checks
 
@@ -98,7 +110,7 @@ conventions; it is **not** a physical mirror-geometry test. These numerical pass
 do not validate missing physics. Exact atomic reflection, controlled edge ensembles,
 self-consistent graphene electrostatics, realistic scattering/contacts, frequency
 response and matched paper-device comparison remain **unresolved**.
-[Completed receipts and fresh spectra](results/continuous-dc/round-000040/falsification).
+[Completed receipts and fresh spectra](results/continuous-dc/round-000042/falsification).
 
 
 ### Atomic-edge sensitivity
@@ -113,7 +125,7 @@ One- and three-atom edge-vacancy pilot; three fixed seeds per damage level. Inta
 | diversity-r0-profile-g15-1 | 0 | 0 / 1 | 0 | Pending / unresolved |
 | diversity-r0-profile-g15-1 | 1 | 0 / 3 | 0 | Pending / unresolved |
 | diversity-r0-profile-g15-1 | 3 | 0 / 3 | 0 | Pending / unresolved |
-| triangle-control | 0 | 0 / 1 | 0 | Pending / unresolved |
+| triangle-control | 0 | 1 / 1 | 1 | 3.871–3.871 |
 | triangle-control | 1 | 0 / 3 | 0 | Pending / unresolved |
 | triangle-control | 3 | 0 / 3 | 0 | Pending / unresolved |
 
@@ -127,7 +139,7 @@ Small pilot, not a fabrication-yield estimate. See [model and restart contract](
 | D00 | 0.1241 | Pass |
 | diversity-r0-profile-g15-1 | 0.4037 | Pass |
 
-[Audit receipts and exact input spectra](results/continuous-dc/round-000040/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
+[Audit receipts and exact input spectra](results/continuous-dc/round-000042/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
 
 
 <details>
@@ -139,7 +151,7 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 
 </details>
 
-## Current findings — October 22, 2026, 22:16 UTC
+## Current findings — October 22, 2026, 22:25 UTC
 
 <details>
 <summary>Archived studies: earlier candidates and fixed experimental snapshots</summary>
@@ -223,7 +235,7 @@ Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory sear
 
 **Feedback changes which proposals are explored; a direct-DC advantage over random search is not yet established.** The diversity archive uses blocked area and vertical reflection asymmetry, not literature novelty. The current search is evolutionary sampling within five parameterized families; it does not train a quantum surrogate or improve its physics automatically. Reinforcement learning and GANs are not implemented. Earlier trajectory studies used ExtraTrees and elite recombination; their evidence applies to the angular proxy. RANSAC is useful for robust curve fitting, not the optimizer used here.
 
-![Feedback-guided search progress](results/continuous-dc/round-000040/progress.png)
+![Feedback-guided search progress](results/continuous-dc/round-000042/progress.png)
 
 Current direct-DC progress: best converged result retained after each completed matched round. Flat sections mean no better converged design was found; exploration continues. [Earlier trajectory-proxy study](docs/REFINEMENT.md).
 

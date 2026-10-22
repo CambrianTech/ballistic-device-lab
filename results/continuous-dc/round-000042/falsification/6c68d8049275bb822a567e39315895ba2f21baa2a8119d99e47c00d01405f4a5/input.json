@@ -1,0 +1,73 @@
+{
+  "candidate": {
+    "key": "triangle-control",
+    "family": "triangle",
+    "parameters": [
+      1.0,
+      0.7,
+      0.0,
+      0.0
+    ],
+    "origin": "fixed control",
+    "obstacles": [
+      [
+        [
+          -0.5,
+          0.35
+        ],
+        [
+          0.5,
+          0.35
+        ],
+        [
+          0.0,
+          -0.35
+        ]
+      ]
+    ]
+  },
+  "levels": [
+    {
+      "count": 257,
+      "dc_v": -3.978945264174563e-06,
+      "dc_power_w": 1.5832005415297187e-15,
+      "input_power_w": 4.9448672396923225e-09,
+      "efficiency": 3.201704848254385e-07,
+      "max_kcl_a": 1.9065892733887873e-20
+    },
+    {
+      "count": 513,
+      "dc_v": -3.8914606430661156e-06,
+      "dc_power_w": 1.5143465936532544e-15,
+      "input_power_w": 4.9430325115552785e-09,
+      "efficiency": 3.0635982873128617e-07,
+      "max_kcl_a": 1.608245905956224e-20
+    },
+    {
+      "count": 1025,
+      "dc_v": -3.875360660906705e-06,
+      "dc_power_w": 1.5018420252103253e-15,
+      "input_power_w": 4.939232751397159e-09,
+      "efficiency": 3.040638295058073e-07,
+      "max_kcl_a": 1.984447648545341e-20
+    },
+    {
+      "count": 2049,
+      "dc_v": -3.872168020313426e-06,
+      "dc_power_w": 1.4993685177538e-15,
+      "input_power_w": 4.938887078561723e-09,
+      "efficiency": 3.0358428810047596e-07,
+      "max_kcl_a": 2.1350565585759336e-20
+    }
+  ],
+  "device_fingerprint": "2f1044938f375c0ca952b5bce71b4dba897033759fef0a4f82856dd388d4acc9",
+  "energy_converged": true,
+  "phase64": {
+    "dc_v": -3.872168020312856e-06,
+    "dc_power_w": 1.4993685177533583e-15,
+    "input_power_w": 4.938887078561711e-09,
+    "efficiency": 3.0358428810038723e-07,
+    "max_kcl_a": 2.1350565585759336e-20
+  },
+  "phase_converged": true
+}

@@ -1,0 +1,12 @@
+{
+  "rule": "Frozen D00 plus highest 257-grid DC power in each family across methods; ties prefer convergence then key. The best converged search candidate replaces its family representative. Display refined voltage only when both gates pass.",
+  "best_converged_search": "diversity-r0-profile-g15-1",
+  "candidates": [
+    "D00",
+    "elite-r0-triangle-g17-1",
+    "elite-r0-beveled-g42-1",
+    "diversity-r0-profile-g15-1",
+    "random-r1-islands-g1-1",
+    "elite-r1-radial-g8-1"
+  ]
+}

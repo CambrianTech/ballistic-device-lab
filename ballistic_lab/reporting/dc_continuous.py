@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle
 
 from ballistic_lab.reporting.dc_search import promoted
+from ballistic_lab.reporting.device_role import render as render_role
 from ballistic_lab.reporting.diversity_gallery import render as render_gallery
 from ballistic_lab.reporting.edge_sensitivity import render as render_edges
 from ballistic_lab.reporting.falsification import render as render_falsification
@@ -65,7 +66,8 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     leader = max((row for row in best.values() if row), key=lambda r: r["phase64"]["dc_power_w"])
     evidence_block = render_evidence([control, leader], destination)
     render_gallery(snapshot, control, destination)
-    validation_block = render_validation(snapshot, destination)
+    validation_block = render_role([control, leader], destination)
+    validation_block += render_validation(snapshot, destination)
     validation_block += render_falsification(
         [control, leader] + [r for r in baseline if r["candidate"]["key"] == "triangle-control"],
         destination,
