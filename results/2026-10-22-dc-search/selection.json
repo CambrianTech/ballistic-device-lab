@@ -1,0 +1,24 @@
+{
+  "ranking": [
+    "D00",
+    "triangle-feedback",
+    "profile-global-1",
+    "triangle-control",
+    "triangle-global-0",
+    "triangle-global-1",
+    "radial-feedback",
+    "profile-feedback",
+    "D14",
+    "islands-feedback",
+    "radial-global-0",
+    "profile-global-0",
+    "islands-global-1",
+    "radial-global-1",
+    "islands-global-0"
+  ],
+  "selected": [
+    "D00",
+    "triangle-control",
+    "triangle-feedback"
+  ]
+}

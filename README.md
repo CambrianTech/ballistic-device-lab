@@ -4,24 +4,15 @@
 
 The pipeline now connects **GPU trajectory search → frozen geometry candidates → graphene quantum transport → loaded terminal response**. Search has found shapes beyond triangles, and the quantum stage has changed which candidates look interesting. A first fixed-potential finite-bias test now measures a DC component. The next major step is self-consistent nonlinear transport to test whether that result survives charge-induced changes to the device potential.
 
-## A shape worth testing further
+## Direct DC search
 
-![Our bevel reference and search-discovered split-island geometry at identical scale](designs/quantum-comparison.png)
+Best converged candidate in this pilot: **D00**.
 
-**The split-island candidate produces a larger transverse signal at all three nominal operating points.** Both designs went through the same graphene transport and loaded-terminal pipeline.
+![Automatically selected DC finalists](results/2026-10-22-dc-search/finalists.png)
 
-| Simulated operating point | Our bevel reference D00 | Split islands D14 |
-| --- | ---: | ---: |
-| Fermi energy 0.75 eV | +6.34 µV | -108.45 µV |
-| Fermi energy 0.90 eV | +7.18 µV | -87.81 µV |
-| Fermi energy 1.05 eV | +9.27 µV | -64.78 µV |
-| Output convergence at these points | Passed | Passed |
+The pipeline selects this result by DC load power and convergence gates. A triangle win, another shape winning, or no qualified winner are all valid outcomes. This 15-candidate pilot uses a fixed internal potential; self-consistent electrostatics remains open.
 
-\* Signed bottom-minus-top output under a 1 mV drive, 10 kΩ load, 300 K reservoir occupations and identical 14.76 nm footprint/contacts. Linear signal transfer, not DC rectification. D00 uses 4097 energy samples; D14 uses 1025; both meet the stated two-refinement tolerance. These are our simulated designs, not a reconstruction of a published device. [Source data](designs/quantum-comparison.json) · [Full operating-condition matrix](results/2026-10-22-coverage/README.md) · [Refinement checks](results/2026-10-22-convergence/README.md).
-
-**DC follow-up changes the ranking:** at 10 mV sinusoidal drive, the fixed-potential model gives **11.21 µV mean-output magnitude for D00 versus 2.062 µV for D14**. Both pass integration checks. Larger linear signal did not mean better rectification. [DC sweep, waveforms and assumptions](results/2026-10-22-finite-bias/README.md).
-
-The next comparison will put a sourced published layout through the same pipeline; refinement of that layout will be reported separately from its original baseline.
+[Full ranking, controls and selection rules](results/2026-10-22-dc-search/README.md) · [Earlier bevel/island DC test](results/2026-10-22-finite-bias/README.md)
 
 ## Current findings — October 22, 2026
 
@@ -90,7 +81,7 @@ Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory sear
 4. **Freeze and challenge.** Selected geometries face fresh seeds, scattering variation and higher-fidelity transport. Holdout results are excluded from the search that selected them.
 5. **Choose the next objective.** Quantum results inform the next study, including which geometry families to retain and which electrical observable needs modeling.
 
-**The implemented feedback loop improves proposals within a run.** It does not yet retrain on quantum outputs or automatically improve the physics model. Cross-stage learning is a planned extension: attach validated electrical targets to candidate records, train against those targets, then evaluate a newly frozen holdout. Reinforcement learning and GANs are optional future proposal methods; neither is currently implemented. RANSAC is useful for robust curve fitting, not the optimizer used here.
+**The implemented feedback loop improves proposals within a run.** A direct-DC pilot now selects mutation parents using finite-bias quantum results, with automatic finalist refinement and README promotion gates. It does not train a quantum surrogate or improve the physics model automatically. Equal-budget repeat studies and untouched operating-condition holdouts remain required before claiming a benefit from this new objective. Reinforcement learning and GANs are optional future proposal methods; neither is currently implemented. RANSAC is useful for robust curve fitting, not the optimizer used here.
 
 ![Feedback-guided search progress](results/2026-10-22-refinement/search-progress.png)
 
@@ -119,7 +110,7 @@ alone are not the success criterion.
 | Partial | Loaded AC-to-DC response | Finite-reservoir-bias provider connected and tested; self-consistent potential response still required |
 | Open | Contacts, dynamics, noise and thermal limits | Application-specific circuit, frequency and loss models with validation |
 | Open | Matched published-device benchmark | Reproduce reference trends before comparing searched designs |
-| Open | Quantum-informed search feedback | Validated electrical labels, equal-budget baseline and untouched holdout |
+| Partial | Quantum-informed search feedback | Direct-DC mutation pilot implemented; equal-budget repeats and untouched holdouts remain open |
 
 These are engineering milestones with explicit checks. A stage is completed when its evidence passes, not when an API exists. [Detailed physics gates](docs/PHYSICS-ROADMAP.md) · [Software interfaces](docs/ARCHITECTURE.md).
 

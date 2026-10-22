@@ -1,0 +1,550 @@
+{
+  "seed": 221026,
+  "feedback_seed": 221027,
+  "initial": [
+    {
+      "key": "triangle-control",
+      "family": "triangle",
+      "parameters": [
+        1.0,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "origin": "fixed control",
+      "obstacles": [
+        [
+          [
+            -0.5,
+            0.35
+          ],
+          [
+            0.5,
+            0.35
+          ],
+          [
+            0.0,
+            -0.35
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "triangle-global-0",
+      "family": "triangle",
+      "parameters": [
+        1.4205338847520046,
+        0.29919670333487614,
+        0.16674335168656362,
+        0.1648660521614591
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.7102669423760023,
+            0.3163417033540017
+          ],
+          [
+            0.7102669423760023,
+            0.3163417033540017
+          ],
+          [
+            0.11709890677032207,
+            0.017145000019125556
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "triangle-global-1",
+      "family": "triangle",
+      "parameters": [
+        1.0789302300830803,
+        0.36251005578385476,
+        -0.03619021600332484,
+        -0.4825965854821497
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.5394651150415402,
+            0.14506481188860254
+          ],
+          [
+            0.5394651150415402,
+            0.14506481188860254
+          ],
+          [
+            -0.26034402250578237,
+            -0.21744524389525222
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "profile-global-0",
+      "family": "profile",
+      "parameters": [
+        1.4565425733269972,
+        0.3625932396497411,
+        -0.10293102760033462,
+        0.7527672879290795,
+        0.6770063651538398,
+        0.518547456773467,
+        0.2656039498037629,
+        0.15961945001244518,
+        0.3875709087099454,
+        0.9832038857972693
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.7282712866634986,
+            0.07836559222453593
+          ],
+          [
+            0.7282712866634986,
+            0.07836559222453593
+          ],
+          [
+            0.7282712866634986,
+            -0.27813748996291
+          ],
+          [
+            0.48551419110899907,
+            -0.062164999158597245
+          ],
+          [
+            0.24275709555449954,
+            0.020488658733413524
+          ],
+          [
+            0.0,
+            -0.017940604398577684
+          ],
+          [
+            -0.24275709555449954,
+            -0.10965621003908957
+          ],
+          [
+            -0.48551419110899907,
+            -0.16711233898009045
+          ],
+          [
+            -0.7282712866634986,
+            -0.19458273740801846
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "profile-global-1",
+      "family": "profile",
+      "parameters": [
+        0.511885751229118,
+        1.0244574759434086,
+        0.06647908327642726,
+        0.559064347099463,
+        0.5974376533339624,
+        0.293327920581482,
+        0.4374152988123765,
+        0.7195978045498347,
+        0.7246552162149758,
+        0.3043912774140863
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.255942875614559,
+            0.5787078212481316
+          ],
+          [
+            0.255942875614559,
+            0.5787078212481316
+          ],
+          [
+            0.255942875614559,
+            0.26687190148930684
+          ],
+          [
+            0.17062858374303935,
+            -0.1636706324846875
+          ],
+          [
+            0.08531429187151968,
+            -0.15848952929541038
+          ],
+          [
+            0.0,
+            0.1305944482877725
+          ],
+          [
+            -0.08531429187151965,
+            0.2782058401054979
+          ],
+          [
+            -0.1706285837430393,
+            -0.03334164911993265
+          ],
+          [
+            -0.255942875614559,
+            0.005970171328666063
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "islands-global-0",
+      "family": "islands",
+      "parameters": [
+        0.36836274813767506,
+        0.7110122732931923,
+        0.27902596034782695,
+        0.39614172108054335,
+        0.23684335482433494,
+        0.38540724697896156,
+        -0.0211751903966253,
+        0.005166751408867909
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.6841813740688375,
+            0.634532096994423
+          ],
+          [
+            -0.3158186259311625,
+            0.634532096994423
+          ],
+          [
+            -0.42703807348539136,
+            -0.07648017629876919
+          ]
+        ],
+        [
+          [
+            0.38157832258783253,
+            0.17152843309285548
+          ],
+          [
+            0.6184216774121675,
+            0.17152843309285548
+          ],
+          [
+            0.5006118553686099,
+            -0.21387881388610608
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "islands-global-1",
+      "family": "islands",
+      "parameters": [
+        0.4696668568823025,
+        0.22347927924954497,
+        0.1257208376276015,
+        -0.27501195089211095,
+        0.6664550876920986,
+        0.36833492019403624,
+        -0.221558482340732,
+        -0.34031411558461644
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            -0.7348334284411513,
+            0.23746047725237399
+          ],
+          [
+            -0.26516657155884876,
+            0.23746047725237399
+          ],
+          [
+            -0.564581999290284,
+            0.013981198002829015
+          ]
+        ],
+        [
+          [
+            0.1667724561539507,
+            -0.03739102224371388
+          ],
+          [
+            0.8332275438460492,
+            -0.03739102224371388
+          ],
+          [
+            0.38659796312759775,
+            -0.4057259424377501
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "radial-global-0",
+      "family": "radial",
+      "parameters": [
+        0.47446229973996956,
+        0.46537608127034263,
+        0.16506684891240342,
+        0.09569717164984776,
+        0.6306907408690747,
+        0.6575370043601527,
+        0.8346911267187473,
+        0.5218861931079207,
+        0.48737640197658794,
+        0.4695989848424352,
+        0.45647481648033766,
+        0.597336672431206
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            0.46430582824984984,
+            0.09569717164984776
+          ],
+          [
+            0.3856675612470681,
+            0.31207325693210675
+          ],
+          [
+            0.16506684891240345,
+            0.4841424572733454
+          ],
+          [
+            -0.010023625378491913,
+            0.26743456540677957
+          ],
+          [
+            -0.06617487960840035,
+            0.09569717164984778
+          ],
+          [
+            0.007518498202189777,
+            -0.05883404000660547
+          ],
+          [
+            0.1650668489124034,
+            -0.1167352896423706
+          ],
+          [
+            0.3654706202106744,
+            -0.10086875531568879
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "radial-global-1",
+      "family": "radial",
+      "parameters": [
+        0.25924918185328827,
+        0.26167288432016683,
+        -0.06883302629735516,
+        -0.14579850927358864,
+        0.38339888984431014,
+        0.5784702465340704,
+        0.9450188358318465,
+        0.7559842188296553,
+        0.5287298465310708,
+        0.9120135090960407,
+        0.8704689831256783,
+        0.4681835610203525
+      ],
+      "origin": "global proposal",
+      "obstacles": [
+        [
+          [
+            0.030562822218241234,
+            -0.14579850927358864
+          ],
+          [
+            0.03721031972230597,
+            -0.03876377142963487
+          ],
+          [
+            -0.06883302629735515,
+            0.10148729523541686
+          ],
+          [
+            -0.20741767534902372,
+            -0.005918242031818649
+          ],
+          [
+            -0.20590580643194994,
+            -0.14579850927358862
+          ],
+          [
+            -0.236020474051387,
+            -0.31454898078204796
+          ],
+          [
+            -0.0688330262973552,
+            -0.37357663879932757
+          ],
+          [
+            0.01699291144009117,
+            -0.2324268276994884
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "D00",
+      "family": "beveled",
+      "parameters": [
+        1.4983482475312286,
+        0.590723015622337,
+        0.006350021901973889,
+        0.06746432683842583,
+        0.3930223746131896,
+        0.5004039714525483
+      ],
+      "origin": "archived control",
+      "obstacles": [
+        [
+          [
+            -0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.3995760986345545,
+            0.06954416737458716
+          ],
+          [
+            0.05054252794461469,
+            -0.2890114859091946
+          ],
+          [
+            -0.34899273521308133,
+            0.06954416737458716
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "D14",
+      "family": "islands",
+      "parameters": [
+        0.6932258551402823,
+        0.28510239346478905,
+        -0.23692668567609976,
+        0.4717664447628461,
+        0.6929744528113837,
+        0.27587976197873504,
+        0.15338799622240756,
+        -0.3429750027875507
+      ],
+      "origin": "archived control",
+      "obstacles": [
+        [
+          [
+            -0.8466129275701412,
+            -0.09437548894370523
+          ],
+          [
+            -0.15338707242985883,
+            -0.09437548894370523
+          ],
+          [
+            -0.3364796514513926,
+            -0.3794778824084943
+          ]
+        ],
+        [
+          [
+            0.15351277359430815,
+            0.2913278772117751
+          ],
+          [
+            0.8464872264056919,
+            0.2913278772117751
+          ],
+          [
+            0.3811635425576571,
+            0.015448115233040044
+          ]
+        ]
+      ]
+    }
+  ],
+  "objective": "maximize DC component power into 10 kohm at 10 mV peak, 0.9 eV, 300 K",
+  "screening_grid": 257,
+  "refinement_grids": [
+    513,
+    1025
+  ],
+  "selection": "fixed triangle plus top two screened candidates; no manual promotion",
+  "source": {
+    "ballistic_lab\\models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "ballistic_lab\\paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "ballistic_lab\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\experiments\\classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "ballistic_lab\\experiments\\convergence.py": "babb3121c42c33a1813e8090788dc55c0ebe68cebb8f1ec3f475f086ac7cb47d",
+    "ballistic_lab\\experiments\\coverage.py": "ec0b8b086b918237b0d10b737b80dec40c037dec8ad7f8900f0e25a7b4cdab7e",
+    "ballistic_lab\\experiments\\dc_search.py": "075937560e1132497814c715ce1cbddd807d03759b626b5a5b41eb54126acafb",
+    "ballistic_lab\\experiments\\discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "ballistic_lab\\experiments\\families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "ballistic_lab\\experiments\\final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "ballistic_lab\\experiments\\finite_bias.py": "5e1e15e9fc284a0aa0922b6b83d81c8915f393f6c596ee2d56aa578ce8e1755f",
+    "ballistic_lab\\experiments\\lattice.py": "deed9b0a189abef92af154108a19dec5aa3549ccfb597ba908ff1b1a9239c6cd",
+    "ballistic_lab\\experiments\\learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "ballistic_lab\\experiments\\linear_load.py": "4732589454671763d6c8e61400352e89cb2e861fe32f106deca716fc7b6ab4fa",
+    "ballistic_lab\\experiments\\refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "ballistic_lab\\experiments\\rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "ballistic_lab\\experiments\\robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "ballistic_lab\\experiments\\validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "ballistic_lab\\experiments\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\geometry\\basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "ballistic_lab\\geometry\\families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "ballistic_lab\\geometry\\registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "ballistic_lab\\geometry\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\metrics\\angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "ballistic_lab\\metrics\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\pipeline\\contracts.py": "5631408c6c636362a4dcf983095037bfedf6e78913286902dc23c053851331e9",
+    "ballistic_lab\\pipeline\\ray.py": "00bdab69e66c820f669daeb42a00bb4baba30bd81583355d4f3a495910817eb8",
+    "ballistic_lab\\pipeline\\__init__.py": "921e745a0387347e3c4b601ade67e2daa100dcaabb74db42dbf50c9eba734637",
+    "ballistic_lab\\reporting\\catalog.py": "1546ac1c9152a6d082f074593aa1d2ecff54a1d178e8ee8b62278c0042278b31",
+    "ballistic_lab\\reporting\\comparison.py": "83e75b86b46b982ce8c3a2b99f9c5a1503b4679656d0c4f6f71dde6421c61cb3",
+    "ballistic_lab\\reporting\\convergence.py": "5bdc474f3711da264ec033c2a8409927261a155a21b518b096bc6402a53e2196",
+    "ballistic_lab\\reporting\\coverage.py": "7cd766997d6b7ca3a2b8afe6008b9bf653cf5013293b7397b70abb5ae722903c",
+    "ballistic_lab\\reporting\\dc_search.py": "2ea518466261e3dce219ba7390a6653e0d6ab59a143566d3ce7ff952bc55727a",
+    "ballistic_lab\\reporting\\discovery.py": "b29ef3cfaa6cfec608872f1970c606ec31cd67d9b9f304f43a942854d291b4c9",
+    "ballistic_lab\\reporting\\families.py": "adee15e12bc327e803d536764aa6060cc8f9b9c1d98f708d58155e26b149f632",
+    "ballistic_lab\\reporting\\finite_bias.py": "4bcb789fd073e1a1d807446bfdd8349fe4a9eb8af96208cbd162ccdcb11d48e2",
+    "ballistic_lab\\reporting\\lattice.py": "ddb2e7aac61c4dda77cffeda6cfb1bb677b5e38ce5fdffedc784b8b5c8935de3",
+    "ballistic_lab\\reporting\\linear_load.py": "f961cb166fce0e797c41b3b22843c72f8376394cb205ceac3416a36dcae42200",
+    "ballistic_lab\\reporting\\showcase.py": "b1a8ab88a5df05049afb7dfa3c341d2377b9713e4ef8ce5f379c409a2be46ddb",
+    "ballistic_lab\\reporting\\spectra.py": "3a0fa8537f308cd8d7399c847edfe0cd4bae6af01ecb471928e7336086271d32",
+    "ballistic_lab\\reporting\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\search\\discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "ballistic_lab\\search\\families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "ballistic_lab\\search\\legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "ballistic_lab\\search\\refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "ballistic_lab\\search\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\transport\\backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "ballistic_lab\\transport\\circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6",
+    "ballistic_lab\\transport\\cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "ballistic_lab\\transport\\finite_bias.py": "f09e8922a647264b5e4dc169a81583d7cc3d91f6580642fc3b5f28c246317a5d",
+    "ballistic_lab\\transport\\gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "ballistic_lab\\transport\\quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+    "ballistic_lab\\transport\\reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+    "ballistic_lab\\transport\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\validation\\families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "ballistic_lab\\validation\\receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "ballistic_lab\\validation\\registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2",
+    "ballistic_lab\\validation\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a"
+  }
+}

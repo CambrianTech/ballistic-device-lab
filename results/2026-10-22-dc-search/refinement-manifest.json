@@ -1,0 +1,10 @@
+{
+  "rule": "Refine every unresolved selected finalist to 2049 then 4097; stop on both gates passing; no new candidates",
+  "original_summary_sha256": "642493f94b650a856a4e0f6b4b70ba8e863c7688aa459f36afbc5d89c5b84340",
+  "source_sha256": "c99861f310088779a89937f49c917569f5975a612b1590366b37884442b6a612",
+  "targets": [
+    "triangle-control",
+    "D00",
+    "triangle-feedback"
+  ]
+}

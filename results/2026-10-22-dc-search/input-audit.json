@@ -1,0 +1,9 @@
+{
+  "input_sha256": {
+    "results\\2026-10-22-discovery\\designs.json": "c605c13a739626f9200adcc683bcf4b9ab60248ae3306fa79aed0913c21b31b0",
+    "results\\2026-10-22-convergence\\D00-nominal.json.gz": "cd32d9fb52e3edc02c53b376cba5b9f35b9a40f688d275f03be8a58858221f52",
+    "results\\2026-10-22-coverage\\D14-nominal.json.gz": "3bacd9a3994174f9af8da89453602eea917af03b5c7726e4d7880661e07874cc"
+  },
+  "archived_quantum_source_and_contracts_match": true,
+  "failed_width_attempt": "Preserved locally in runs/dc-search-width-check; all new spectra rerun at exact CoveragePlan width before comparison."
+}
