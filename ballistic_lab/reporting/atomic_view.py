@@ -43,7 +43,7 @@ def draw(ax, data: dict, title: str, bounds=(-8, 8, -8, 8)) -> None:
         density,
         origin="lower",
         extent=bounds,
-        cmap="gray",
+        cmap="afmhot",
         vmin=0,
         vmax=density.max(),
         interpolation="nearest",
