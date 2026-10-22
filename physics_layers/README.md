@@ -35,3 +35,22 @@ Its algebraic residual checks the discrete equation; mesh refinement is a separa
 Build device-specific mesh adapters outside the solver so later geometries reuse the
 same numerical implementation. Keep physical units, boundaries and material maps
 explicit; integration with search waits for charge closure and transport validation.
+
+### Atomic charge / 3D grid interface
+
+`site_mesh.SiteMeshMap` deposits signed excess site charges (coulombs) onto the
+Cartesian Poisson grid and interpolates voltage back to those same sites. Coordinates
+are explicitly `(z, y, x)` in metres. Trilinear weights form an adjoint pair:
+`rho = W.T @ q / cell_volume`, `phi_sites = W @ phi_grid`.
+This preserves total charge and the discrete charge-potential pairing. Nonzero
+charge support touching a fixed-potential node is rejected, including cancelling
+positive/negative charges. Tests cover unequal spacings, arbitrary origins, linear
+fields, gauge offsets, exact grid-plane deposition, immutable geometry, and
+reciprocity/positive energy through the 3D Poisson solver.
+
+This completes a numerical interface, not graphene charge closure. A finite-bias
+occupation solver, neutral/reference charge convention, actual dielectric/contact
+stack and mesh/domain convergence are still required. Point-charge deposition
+regularizes charge over a mesh cell; its self-interaction is mesh-dependent and
+must not be mistaken for a calibrated atomic Coulomb model. The live search is
+unchanged. Run `python -m unittest tests.test_site_mesh tests.test_poisson3d`.
