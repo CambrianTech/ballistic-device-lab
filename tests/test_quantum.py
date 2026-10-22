@@ -29,3 +29,20 @@ class LatticeIntegrationChecks(unittest.TestCase):
         )
         self.assertEqual(len(result.spectrum), 3)
         self.assertTrue(any(sum(row["modes"]) for row in result.spectrum))
+
+    def test_terminal_matrix_matches_kwant(self):
+        import kwant
+        import numpy as np
+
+        from ballistic_lab.transport.quantum import build_system
+        from ballistic_lab.transport.reservoirs import G_QUANTUM, conductance_matrix
+
+        system = build_system(SquareDevice((), 20 * 0.246e-9), LatticeRequest((0.9,)))
+        scattering = kwant.smatrix(system, 0.9)
+        t = [[scattering.transmission(i, j) for j in range(4)] for i in range(4)]
+        modes = [scattering.num_propagating(i) for i in range(4)]
+        np.testing.assert_allclose(
+            conductance_matrix(t, modes) / (2 * G_QUANTUM),
+            scattering.conductance_matrix(),
+            atol=1e-10,
+        )

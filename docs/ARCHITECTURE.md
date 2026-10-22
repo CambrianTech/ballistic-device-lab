@@ -10,6 +10,9 @@ The research pipeline separates model definitions from experiment orchestration.
 | `transport/cpu.py` | Independent NumPy trajectory implementation |
 | `transport/gpu.py`, `rays.cu` | Batched CUDA implementation and readable kernel source |
 | `transport/backend.py` | Typed adapter from low-level CUDA arrays to `TraceBatch` |
+| `transport/quantum.py` | Optional coherent Kwant lattice stage and conservation gates |
+| `transport/reservoirs.py` | Linear terminal conductance, thermal occupations, passive load and power balance |
+| `experiments/linear_load.py` | Dense energy sweep and output-sensitive convergence gate; no nonlinear rectification |
 | `metrics/angular.py` | Angular-response estimator against the backend protocol |
 | `search/families.py` | Equal-budget candidate generation and evaluation of frozen candidates |
 | `validation/registry.py` | `@validation_check` names executable validation contracts |

@@ -30,6 +30,12 @@ the leads support. Lines connect sparse samples; thresholds are not resolved.
 
 ### Device motivation
 
+The [linear terminal/load checkpoint](results/2026-10-22-linear-load/README.md)
+adds currents, voltages, reservoir temperature and resistor loading. Its tests
+distinguish AC resistor heating from useful DC output. Candidate output voltages
+remain provisional because their energy-grid convergence is not yet sufficient;
+the pipeline records that failure instead of promoting a misleading winner.
+
 A rectifier can turn a rapidly oscillating signal into a readable DC output. Graphene ballistic rectifiers use asymmetric carrier transport without a conventional p–n or Schottky junction barrier. Their planar geometry makes them interesting candidates for compact high-frequency detectors and receiver circuits; [experimental detection at 3 THz](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) provides a concrete reason to investigate them.
 
 Efficient power conversion is also an attractive target: less dissipated power means less heat to remove. But a sensitive detector and a useful power rectifier have different requirements. For power conversion, we must establish current capacity, contact losses, voltage handling, and useful output under load. A nanoscale rectifier alone does not supply a complete converter's voltage transformation, isolation, regulation, and filtering. Widespread consumer use is a possibility to investigate, not an established outcome of this project.

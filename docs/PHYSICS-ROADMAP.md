@@ -26,6 +26,11 @@ acceleration. Pybinding and Tkwant remain unintegrated options.
 
 ## Required progression
 
+The [linear reservoir/load checkpoint](../results/2026-10-22-linear-load/README.md)
+implements thermal occupation averaging and linear loaded terminal equations.
+It does not complete the nonlinear or loaded-rectification gates below. Its
+candidate output-voltage integration has not met the promotion tolerance yet.
+
 | Gate | Model and evidence required |
 | --- | --- |
 | Lattice | Explicit physical dimensions, carbon lattice orientation, hopping parameters, lead doping, and edge termination; reproduce a clean ribbon's mode count and transmission before adding obstacles. |
