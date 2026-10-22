@@ -280,6 +280,8 @@ same materials, physical scale, excitation and output load.
 outside the live campaign's source manifest: a planar variable-permittivity Poisson
 solver, explicit terminal phasor power accounting, and passive optical energy-balance
 checks. These are working building blocks, not an integrated device solver.
-Geometry-aware electrostatics, self-consistent charge/transport, Maxwell fields and
+The extension also includes a verified Cartesian 2D Poisson solver with dielectric
+face maps and internal electrodes. Mapping the actual graphene sheet and dielectric
+stack, self-consistent charge/transport, Maxwell fields and
 finite-frequency coupling remain the next stages. Their integration requires a new
 validated campaign rather than changing the meaning of existing search results.
