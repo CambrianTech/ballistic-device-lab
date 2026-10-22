@@ -1,0 +1,23 @@
+{
+  "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+  "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+  "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+  "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+  "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+  "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+  "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+  "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+  "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+  "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+  "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+  "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+  "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd",
+  "ballistic_lab\\transport\\backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+  "ballistic_lab\\transport\\circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6",
+  "ballistic_lab\\transport\\cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+  "ballistic_lab\\transport\\finite_bias.py": "f09e8922a647264b5e4dc169a81583d7cc3d91f6580642fc3b5f28c246317a5d",
+  "ballistic_lab\\transport\\gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+  "ballistic_lab\\transport\\quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+  "ballistic_lab\\transport\\reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+  "ballistic_lab\\transport\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a"
+}

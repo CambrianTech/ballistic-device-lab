@@ -8,6 +8,18 @@ terminal input power. A high voltage response alone qualifies neither role.
 
 ## Qualification sequence
 
+Application requirements govern survival in future campaigns. Keep separate
+archives for detection (noise-equivalent input power subject to bandwidth,
+dynamic-range and robustness requirements) and power recovery (useful DC power
+and efficiency subject to input/load and thermal requirements). A geometry may
+survive in either archive. Missing required physics yields an unqualified result,
+not a favorable score. Numeric requirements must be frozen with the reference
+device and use case before optimization; do not move them after seeing results.
+
+The first equilibrium-noise implementation and weak-excitation audit are now
+available in [the detector audit](../results/physics-reference/detector-audit/README.md).
+It is a partial physical model, not an application acceptance certificate.
+
 1. Retain absolute terminal input power, loaded DC voltage, DC load power and
    conversion efficiency. These are already computed by the circuit solver and
    now published automatically beside the nominal leader and controls.

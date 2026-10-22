@@ -1,0 +1,366 @@
+[
+  {
+    "candidate": {
+      "key": "triangle-control",
+      "family": "triangle",
+      "parameters": [
+        1.0,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "origin": "fixed control",
+      "obstacles": [
+        [
+          [
+            -0.5,
+            0.35
+          ],
+          [
+            0.5,
+            0.35
+          ],
+          [
+            0.0,
+            -0.35
+          ]
+        ]
+      ]
+    },
+    "source_path": "results\\2026-10-22-dc-wide\\triangle-control.json.gz",
+    "source_sha256": "c81e30d64364caba47483a35e97dff1945970e2c78a0cfc303b76206aab3e872",
+    "fine": {
+      "noise": {
+        "device_v2_per_hz": 4.050460148220937e-17,
+        "load_v2_per_hz": 3.002282047547376e-17,
+        "total_v2_per_hz": 7.052742195768313e-17,
+        "equivalent_resistance_ohm": 4256.900315098378
+      },
+      "thermal_mass": 0.9999999827258456,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -3.880331981886315e-08,
+          "input_w": 4.9371015456062855e-11,
+          "dc_power_w": 1.5056976289649778e-19
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -1.5520335757896424e-07,
+          "input_w": 1.974862293898633e-10,
+          "dc_power_w": 2.4088082203783836e-18
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -9.695871959603463e-07,
+          "input_w": 1.234383728735613e-09,
+          "dc_power_w": 9.40099330570247e-17
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -3.872168020312856e-06,
+          "input_w": 4.938887078561711e-09,
+          "dc_power_w": 1.4993685177533583e-15
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 785.8749595576702,
+      "equilibrium_nep_estimate_w_per_root_hz": 1.0686255497512812e-11
+    },
+    "coarse": {
+      "noise": {
+        "device_v2_per_hz": 4.05045505069612e-17,
+        "load_v2_per_hz": 3.002252846485367e-17,
+        "total_v2_per_hz": 7.052707897181487e-17,
+        "equivalent_resistance_ohm": 4256.879613127285
+      },
+      "thermal_mass": 0.9999999827244259,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -3.8835270685336174e-08,
+          "input_w": 4.937446397826223e-11,
+          "dc_power_w": 1.5081782492033313e-19
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -1.5533115806320985e-07,
+          "input_w": 1.9750002447497942e-10,
+          "dc_power_w": 2.4127768665257884e-18
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -9.70385819565768e-07,
+          "input_w": 1.2344699915886797e-09,
+          "dc_power_w": 9.416486388143273e-17
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -3.8753606608984845e-06,
+          "input_w": 4.93923275139715e-09,
+          "dc_power_w": 1.5018420252039537e-15
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 786.4671498100796,
+      "equilibrium_nep_estimate_w_per_root_hz": 1.0678183047306936e-11
+    },
+    "nep_grid_converged": true,
+    "qualification": "incomplete: equilibrium noise only; frequency response and self-consistent electrostatics absent"
+  },
+  {
+    "candidate": {
+      "key": "D00",
+      "family": "beveled",
+      "parameters": [
+        1.4983482475312286,
+        0.590723015622337,
+        0.006350021901973889,
+        0.06746432683842583,
+        0.3930223746131896,
+        0.5004039714525483
+      ],
+      "origin": "archived control",
+      "obstacles": [
+        [
+          [
+            -0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.3995760986345545,
+            0.06954416737458716
+          ],
+          [
+            0.05054252794461469,
+            -0.2890114859091946
+          ],
+          [
+            -0.34899273521308133,
+            0.06954416737458716
+          ]
+        ]
+      ]
+    },
+    "source_path": "results\\2026-10-22-dc-wide\\D00.json.gz",
+    "source_sha256": "cdf6c362ac86265bc44e6c7f2ad61a982a927a8ce96114a7fcbea921e819c15e",
+    "fine": {
+      "noise": {
+        "device_v2_per_hz": 4.135868801664848e-17,
+        "load_v2_per_hz": 3.830688939078914e-17,
+        "total_v2_per_hz": 7.966557740743763e-17,
+        "equivalent_resistance_ohm": 4808.461902544723
+      },
+      "thermal_mass": 0.9999999827262007,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -1.121752994295985e-07,
+          "input_w": 5.428631396735564e-11,
+          "dc_power_w": 1.2583297802120081e-18
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -4.4868657192292867e-07,
+          "input_w": 2.1714667858145927e-10,
+          "dc_power_w": 2.013196398239494e-17
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -2.803651201536572e-06,
+          "input_w": 1.3572289585512612e-09,
+          "dc_power_w": 7.860460059877464e-16
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -1.1205464111280859e-05,
+          "input_w": 5.429803157279252e-09,
+          "dc_power_w": 1.2556242594920332e-14
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 2066.2564110714784,
+      "equilibrium_nep_estimate_w_per_root_hz": 4.319675666872614e-12
+    },
+    "coarse": {
+      "noise": {
+        "device_v2_per_hz": 4.1358689472199925e-17,
+        "load_v2_per_hz": 3.8306925931859976e-17,
+        "total_v2_per_hz": 7.96656154040599e-17,
+        "equivalent_resistance_ohm": 4808.46419594818
+      },
+      "thermal_mass": 0.9999999827258456,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -1.1217379902176816e-07,
+          "input_w": 5.428717967356161e-11,
+          "dc_power_w": 1.2582961186976035e-18
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -4.4868056983074796e-07,
+          "input_w": 2.1715014142288458e-10,
+          "dc_power_w": 2.013142537436447e-17
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -2.803613667264428e-06,
+          "input_w": 1.3572506020308184e-09,
+          "dc_power_w": 7.860249595271893e-16
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -1.1205313672614176e-05,
+          "input_w": 5.429889741169579e-09,
+          "dc_power_w": 1.255590545016742e-14
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 2066.1958200596137,
+      "equilibrium_nep_estimate_w_per_root_hz": 4.3198033711521955e-12
+    },
+    "nep_grid_converged": true,
+    "qualification": "incomplete: equilibrium noise only; frequency response and self-consistent electrostatics absent"
+  },
+  {
+    "candidate": {
+      "key": "diversity-r0-profile-g15-1",
+      "family": "profile",
+      "repeat": 0,
+      "round": 15,
+      "parameters": [
+        1.3519658913596706,
+        1.0539188720590666,
+        0.22195582225332872,
+        0.872188663113843,
+        0.3554900049286602,
+        0.14080000477828558,
+        0.9452285326470868,
+        0.9350259429038524,
+        0.8177652093616535,
+        0.8531523118707902
+      ],
+      "origin": "mutation of diversity-r0-profile-g12-0",
+      "obstacles": [
+        [
+          [
+            -0.6759829456798353,
+            0.748915258282862
+          ],
+          [
+            0.6759829456798353,
+            0.748915258282862
+          ],
+          [
+            0.6759829456798353,
+            -0.1502380639385863
+          ],
+          [
+            0.45065529711989016,
+            -0.11294292877671841
+          ],
+          [
+            0.22532764855994514,
+            -0.2365262288083314
+          ],
+          [
+            0.0,
+            -0.24727893068260243
+          ],
+          [
+            -0.22532764855994508,
+            0.6005234760610201
+          ],
+          [
+            -0.45065529711989016,
+            0.3742576332601764
+          ],
+          [
+            -0.6759829456798353,
+            -0.1703008337687847
+          ]
+        ]
+      ],
+      "arm": "diversity"
+    },
+    "source_path": "runs\\dc-continuous\\spectra\\diversity-r0-profile-g15-1.json.gz",
+    "source_sha256": "fc595574ac032b064ec946dae8c7ed22c8c0b87a901f6cc2d96871d8675e6cd3",
+    "fine": {
+      "noise": {
+        "device_v2_per_hz": 3.3979340608505524e-17,
+        "load_v2_per_hz": 8.396892670644733e-17,
+        "total_v2_per_hz": 1.1794826731495284e-16,
+        "equivalent_resistance_ohm": 7119.131854834988
+      },
+      "thermal_mass": 0.9999999827244259,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -2.822655762167109e-07,
+          "input_w": 3.2212757671260724e-11,
+          "dc_power_w": 7.967385551695181e-18
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -1.1290481658968559e-06,
+          "input_w": 1.2885209335757329e-10,
+          "dc_power_w": 1.2747497609150541e-16
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -7.0559322379415004e-06,
+          "input_w": 8.053720680475926e-10,
+          "dc_power_w": 4.978617974642215e-15
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -2.8214876472414636e-05,
+          "input_w": 3.222151916164925e-09,
+          "dc_power_w": 7.96079254353617e-14
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 8762.297295055583,
+      "equilibrium_nep_estimate_w_per_root_hz": 1.2394465372051375e-12
+    },
+    "coarse": {
+      "noise": {
+        "device_v2_per_hz": 3.397967274180357e-17,
+        "load_v2_per_hz": 8.396781091024498e-17,
+        "total_v2_per_hz": 1.1794748365204855e-16,
+        "equivalent_resistance_ohm": 7119.084554440734
+      },
+      "thermal_mass": 0.9999999827187476,
+      "points": [
+        {
+          "amplitude_v": 0.001,
+          "dc_v": -2.8230979870446237e-07,
+          "input_w": 3.221440325431188e-11,
+          "dc_power_w": 7.969882244455407e-18
+        },
+        {
+          "amplitude_v": 0.002,
+          "dc_v": -1.1292250347391596e-06,
+          "input_w": 1.2885867575972964e-10,
+          "dc_power_w": 1.275149179081656e-16
+        },
+        {
+          "amplitude_v": 0.005,
+          "dc_v": -7.057036744350918e-06,
+          "input_w": 8.054132111095581e-10,
+          "dc_power_w": 4.9801767611119004e-15
+        },
+        {
+          "amplitude_v": 0.01,
+          "dc_v": -2.821928131610978e-05,
+          "input_w": 3.222316531284481e-09,
+          "dc_power_w": 7.963278379977425e-14
+        }
+      ],
+      "weak_interval_responsivity_v_per_w": 8763.222217718283,
+      "equilibrium_nep_estimate_w_per_root_hz": 1.2393116015455658e-12
+    },
+    "nep_grid_converged": true,
+    "qualification": "incomplete: equilibrium noise only; frequency response and self-consistent electrostatics absent"
+  }
+]
