@@ -2,17 +2,30 @@
 
 **Can nanoscale geometry make a better graphene ballistic rectifier?** We are building a simulation and design-search pipeline to find out. These devices use asymmetric electron transport to convert an alternating electrical signal into DC. Their geometry matters because electrons can cross the active region before scattering randomizes their motion.
 
-The pipeline now connects **GPU trajectory search → frozen geometry candidates → graphene quantum transport → loaded terminal response**. Search has found shapes beyond triangles, and the quantum stage has changed which candidates look interesting. A first fixed-potential finite-bias test now measures a DC component. The next major step is self-consistent nonlinear transport to test whether that result survives charge-induced changes to the device potential.
+The pipeline connects **geometry search → graphene quantum transport → loaded AC-to-DC response → convergence checks**. A continuous CPU search now compares top-score selection, diversity-preserving selection and random sampling directly on simulated DC power. Earlier GPU trajectory studies provide a cheaper geometry screen. The next major physics step is self-consistent nonlinear transport to test whether promising results survive charge-induced changes to the device potential.
 
 ## Direct DC search
 
-Best converged candidate: **D00**. Best new design: **r1-triangle-g1-0**, 10.070 µV versus D00’s 11.205 µV (89.9% of its DC voltage).
+**Continuous search: 2 completed matched round(s).** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 80 candidates, including the same 40 starting designs.*
 
-![Automatically selected wider-search finalists](results/2026-10-22-dc-wide/finalists.png)
+![Frozen control and current converged winners](results/continuous-dc/round-000002/comparison.png)
 
-**80 new designs, 5 families, 2 seeds.** DC power and convergence gates select the displayed result automatically. The full ranking includes every unsuccessful and unresolved candidate. These remain fixed-potential simulations.
+| Method | Best converged design | DC magnitude (µV) | DC power (pW) |
+| --- | --- | ---: | ---: |
+| Frozen control D00 | D00 | 11.205 | 0.01256 |
+| Top-score selection | elite-r1-triangle-g1-0 | 10.070 | 0.01014 |
+| Diversity archive | diversity-r1-triangle-g1-0 | 10.070 | 0.01014 |
+| Random search | random-r1-islands-g1-1 | 10.097 | 0.01019 |
 
-[Full ranking and search coverage](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md) · [Earlier pilot](results/2026-10-22-dc-search/README.md)
+\* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
+
+[Completed-round data and progress](results/continuous-dc/round-000002/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+
+### Shape gallery — wider-search snapshot
+
+![Six automatically selected wider-search finalists](results/2026-10-22-dc-wide/finalists.png)
+
+The earlier 80-design search illustrates the range of geometries. Its signed voltages and numerical pass labels belong to that frozen study; the table above tracks the latest completed continuous-search round.
 
 ## Current findings — October 22, 2026
 
@@ -58,7 +71,10 @@ flowchart LR
     E --> F[Kwant graphene lattice]
     F --> G[Reservoirs and loaded terminals]
     G --> H[Convergence and matched controls]
-    H -. planned .-> I[Nonlinear rectification and circuit model]
+    H --> I[Fixed-potential finite-bias DC]
+    I --> J[Elite / diversity / random proposals]
+    J --> F
+    I -. planned .-> K[Self-consistent potential and robustness]
 ```
 
 | Layer | Implemented method | Validation / evidence |
@@ -66,6 +82,7 @@ flowchart LR
 | Geometry | Registered polygon families; immutable device specifications | Bounds, shape validity, frozen vertices and device fingerprints |
 | Trajectories | Elastic ray transport, mixed specular/diffuse boundaries, exponential bulk free paths; CPU and CUDA | CPU/GPU agreement, particle conservation, reciprocity, symmetry, grazing-boundary regression |
 | Search | ExtraTrees surrogate proposals, local mutation, elite recombination and global sampling | Equal evaluation budgets, independent repeats, frozen finalists and fresh-seed holdouts |
+| Direct-DC search | Continuous elite, geometry-diversity and random arms; checkpointed candidates | Matched starting populations and proposal counts; independent score audit; automatic convergence gates |
 | Lattice | Kwant honeycomb nearest-neighbor tight binding; four leads; explicit physical dimensions | Hermiticity, unitarity, current conservation, reciprocity, clean-ribbon transmission, energy-offset invariance |
 | Reservoirs / load | Finite-temperature Landauer conductance; four-terminal resistor-load solution | Analytic network checks, gauge invariance, terminal current and power balance |
 | Coverage | Energy, contact width, atomic alignment and load matrix | Nested energy grids; per-output acceptance; all failures retained |
@@ -75,21 +92,21 @@ Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory sear
 
 ### How the search improves
 
-1. **Generate and simulate.** Each candidate receives a score from the transport solver. Parameters, seeds and scores are retained.
-2. **Use the feedback.** The surrogate ranks promising proposals from accumulated simulations. Population search instead recombines the best 16 candidates and mutates their parameters, retaining 25% fresh global samples per batch.
-3. **Keep an honest comparison.** Random search gets the same simulation budget. Multiple repeats reveal dependence on initialization.
-4. **Freeze and challenge.** Selected geometries face fresh seeds, scattering variation and higher-fidelity transport. Holdout results are excluded from the search that selected them.
-5. **Choose the next objective.** Quantum results inform the next study, including which geometry families to retain and which electrical observable needs modeling.
+1. **Generate and simulate.** Store geometry, provenance and finite-bias DC scores for every candidate.
+2. **Choose parents in two ways.** The elite arm retains top scorers within each family and seed stream. The diversity arm retains the best performer in each geometric neighborhood, keeping distinct branches eligible for refinement.
+3. **Keep exploring.** Guided arms pair mutations with fresh global samples. A random arm receives the same candidate count, and all arms start from the same population. Candidate counts and CPU cost are different budgets.
+4. **Refine before reporting.** The two strongest screening candidates per arm receive denser energy grids and a separate phase-averaging check. Historical validated results remain available; failed checks stay visible.
+5. **Compare completed rounds.** The worker runs continuously and checkpoints progress. Reports use only complete matched rounds. Operating-point and disorder holdouts are still needed before a device-performance claim.
 
-**The implemented feedback loop improves proposals within a run.** A direct-DC pilot now selects mutation parents using finite-bias quantum results, with automatic finalist refinement and README promotion gates. It does not train a quantum surrogate or improve the physics model automatically. Equal-budget repeat studies and untouched operating-condition holdouts remain required before claiming a benefit from this new objective. Reinforcement learning and GANs are optional future proposal methods; neither is currently implemented. RANSAC is useful for robust curve fitting, not the optimizer used here.
+**Feedback changes which proposals are explored; a direct-DC advantage over random search is not yet established.** The diversity archive uses blocked area and vertical reflection asymmetry, not literature novelty. The current search is evolutionary sampling within five parameterized families; it does not train a quantum surrogate or improve its physics automatically. Reinforcement learning and GANs are not implemented. Earlier trajectory studies used ExtraTrees and elite recombination; their evidence applies to the angular proxy. RANSAC is useful for robust curve fitting, not the optimizer used here.
 
 ![Feedback-guided search progress](results/2026-10-22-refinement/search-progress.png)
 
-Training curves show how proposals improve. Fresh-seed results determine whether those gains survive evaluation. [Refinement methods and results](docs/REFINEMENT.md).
+Historical **trajectory-proxy** training curves; these are not the current direct-DC campaign. Fresh-seed results test whether those proxy gains survive evaluation. [Refinement methods and results](docs/REFINEMENT.md).
 
 ### What makes the next round worthwhile?
 
-Search has beaten random selection under equal budgets, and quantum transport
+Trajectory-proxy search has beaten random selection under equal evaluation counts, and quantum transport
 has identified a different promising family. The next decision is whether a
 candidate improves **loaded DC output or detector performance** against matched
 controls by more than numerical and disorder uncertainty. If that advantage
@@ -110,7 +127,7 @@ alone are not the success criterion.
 | Partial | Loaded AC-to-DC response | Finite-reservoir-bias provider connected and tested; self-consistent potential response still required |
 | Open | Contacts, dynamics, noise and thermal limits | Application-specific circuit, frequency and loss models with validation |
 | Open | Matched published-device benchmark | Reproduce reference trends before comparing searched designs |
-| Partial | Quantum-informed search feedback | Direct-DC mutation pilot implemented; equal-budget repeats and untouched holdouts remain open |
+| Partial | Quantum-informed search feedback | Continuous three-arm comparison implemented; statistical search advantage and untouched holdouts remain open |
 
 These are engineering milestones with explicit checks. A stage is completed when its evidence passes, not when an API exists. [Detailed physics gates](docs/PHYSICS-ROADMAP.md) · [Software interfaces](docs/ARCHITECTURE.md).
 
@@ -126,7 +143,7 @@ Selected experimental reference points, not a complete ranking:
 | --- | --- | --- |
 | [Auton et al., 2016](https://www.nature.com/articles/ncomms11670) ([accepted manuscript](https://pure.manchester.ac.uk/ws/portalfiles/portal/33718005/CLEAN_Main_Text_Graphene_ballistic.pdf)) | Room-temperature graphene rectification; intrinsic voltage responsivity up to **23,000 V/W** and noise-equivalent power down to **0.64 pW/√Hz** | Low-frequency electrical excitation. Substrate parasitics limited measurements to 3 MHz; these sensitivity values are not a demonstrated THz result. |
 | [Shi et al., 2026](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) | Antenna-coupled graphene ballistic detection at **3 THz** | Figure 3 reports sample B's maximum responsivity changing from **77 V/W at 4 K** to **6 V/W at 300 K**. The abstract separately lists 100 V/W and 20 pW/√Hz at room temperature; this apparent discrepancy needs clarification before using those headline values as a matched benchmark. |
-| **This project** | Geometry discovery, coherent quantum transport and matched loaded-response coverage | Simulation-only; electrical rectification and matched device benchmarking are next-stage targets. |
+| **This project** | Geometry search, coherent quantum transport and fixed-potential loaded DC simulations | Simulation-only; self-consistent electrical rectification and matched experimental-device benchmarking remain open. |
 
 Responsivity (V/W) measures voltage sensitivity; efficiency measures useful DC power divided by AC input power. These are different targets. Our current contribution is the reproducible geometry-search and transport pipeline; a matched electrical comparison is an open milestone.
 
@@ -160,7 +177,7 @@ $$
 \eta=\frac{P_{\mathrm{DC,load}}}{\langle P_{\mathrm{AC,input}}\rangle}.
 $$
 
-Quantum transport uses an explicit carbon lattice, energy-dependent scattering matrices and thermal reservoir occupations. Its present linear conductance model cannot produce a mean DC response to a symmetric AC drive. [Hamiltonian and terminal-model details](docs/ARCHITECTURE.md).
+Quantum transport uses an explicit carbon lattice, energy-dependent scattering matrices and thermal reservoir occupations. The linear-response stage produces zero mean DC under symmetric AC. The finite-bias stage integrates shifted reservoir occupations and solves the output load through each cycle, producing a DC component while holding the internal device potential fixed. [Hamiltonian and terminal-model details](docs/ARCHITECTURE.md).
 
 ## Evidence archive
 
@@ -174,6 +191,9 @@ Quantum transport uses an explicit carbon lattice, energy-dependent scattering m
 | First loaded terminal calculation | [Linear-load checkpoint](results/2026-10-22-linear-load/README.md) |
 | Integration follow-up | [4097-point refinement](results/2026-10-22-convergence/README.md) |
 | Matched quantum matrix | [Coverage results](results/2026-10-22-coverage/README.md) |
+| Finite-bias baseline | [Loaded DC and energy/phase refinement](results/2026-10-22-finite-bias/README.md) |
+| Independent DC audit | [Separate quadrature and load solver](results/2026-10-22-dc-audit/README.md) |
+| Wider direct-DC search | [All 83 candidates and finalists](results/2026-10-22-dc-wide/README.md) |
 
 ## Run
 
@@ -213,6 +233,16 @@ Use the configured output directory in the last command if `BALLISTIC_OUTPUT_DIR
 The optional quantum environment is specified in `environment-quantum.yml`. Run `python -m ballistic_lab.experiments.coverage` from the repository root to reproduce the frozen study in `runs/coverage`; existing manifests reject changes to source or plan. Use a fresh checkout/output for an independent reproduction. Render its published figures with `python -m ballistic_lab.reporting.coverage` after placing results in the published snapshot directory.
 
 ## Code organization and validation
+
+The current continuous campaign runs in the Kwant environment:
+
+```sh
+python -m ballistic_lab.pipeline.dc_continuous
+# In a separate process, publish completed rounds:
+python -m ballistic_lab.reporting.dc_continuous
+```
+
+The worker continues between monitoring check-ins. It holds an exclusive lock and saves completed evaluations. Create `runs/dc-continuous/STOP` to stop after the current stage; remove it and rerun to resume. Source hashes reject incompatible resumes. The default campaign uses four CPU workers and the committed initial population. Configure BLAS for one thread per worker; see [operating details](docs/ARCHITECTURE.md#continuous-search-worker).
 
 `ballistic_lab/` separates geometry, transport, metrics, search, pipeline contracts, validation, reporting and experiment modules. Immutable dataclasses carry configurations/results; `@geometry_family` and `@validation_check` register extensions. Root scripts are compatibility entry points. Source fingerprints bind validation receipts and frozen runs to their implementation.
 
