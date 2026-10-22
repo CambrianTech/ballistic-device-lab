@@ -1,0 +1,23 @@
+{
+  "source_doi": "10.1002/smsc.202500654",
+  "samples": {
+    "A": {
+      "constriction_width_m": 1e-07
+    },
+    "B": {
+      "constriction_width_m": 4e-08
+    }
+  },
+  "illumination_frequency_hz": 3000000000000.0,
+  "hbn_bottom_m": 4e-08,
+  "hbn_top_m": 1.5e-08,
+  "hfo2_m": null,
+  "hfo2_conflict": {
+    "caption_methods_m": 2e-08,
+    "drawing_m": 3e-08
+  },
+  "exact_polygons": null,
+  "contact_extensions": null,
+  "matched_transport_complete": false,
+  "source_image_sha256": "6450f59014372cbb3773f7832920b96d4d2f00caef98833b81fab7f10e50c26a"
+}

@@ -16,6 +16,8 @@ This paper informed our earlier asymmetric-cross reference. **D00 and triangle-c
 
 A [scale-calibrated manual AFM reconstruction](references/auton-2016/README.md) now preserves the photographed junction contour as a separate reference, with pixel coordinates and boundary uncertainty documented. Electrical benchmarking of that reference remains pending.
 
+The newer **Shi et al. (2026)** device has its own [benchmark record and SEM figure](references/shi-2026/README.md): 40/100 nm constrictions and antenna-coupled 3 THz measurements. Its reconstruction and matched transport comparison are pending.
+
 ## Direct DC search
 
 **Continuous search: 14 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 320 candidates, including the same 40 starting designs.*

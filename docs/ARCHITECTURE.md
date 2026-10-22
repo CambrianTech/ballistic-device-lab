@@ -230,3 +230,46 @@ currents, Gaussian quadrature and a separate load solver. Receipts and exact inp
 spectra are published under the snapshot's `evidence/` directory. Cached audits
 are keyed by input and implementation hashes. These checks test numerical
 agreement within the fixed-potential model, not experimental device performance.
+
+## Electronic and photonic stage composition
+
+The existing `PhysicsStage[Request, Result]` protocol is the common execution
+boundary. Search, immutable candidate identities, provenance, caching, convergence
+receipts and report generation are reusable. Each solver retains its own physical
+request/result types; an optical scattering matrix is not an electron transmission
+matrix, even when both use similar numerical linear algebra.
+
+```mermaid
+flowchart LR
+    G[Geometry and material stack] --> E[Maxwell antenna or waveguide stage]
+    G --> T[Electrostatics and electron transport]
+    E -->|Fields or calibrated terminal drive| T
+    T --> C[Load and readout circuit]
+    E --> B[Power and noise accounting]
+    C --> B
+    B --> V[Matched comparison and convergence gates]
+    V --> S[Search and diversity archive]
+    S --> G
+```
+
+This is an extension design, not a claim that Maxwell or coupled nonlinear
+solvers are implemented. The live worker retains its existing objective.
+
+The electromagnetic result must specify frequency in Hz, polarization, incident
+power in W, port/reference-plane conventions, complex fields or terminal phasors,
+and reflected, transmitted and absorbed powers. Peak/RMS phasor convention is
+mandatory. A coupling adapter explicitly converts those outputs into the transport
+stage's drive; it must not assume perfect antenna matching or interpret carrier
+frequency as modulation bandwidth. Strong back-action requires iterative coupling
+and a convergence residual, rather than a one-way cascade.
+
+Electrical efficiency uses cycle-averaged input terminal power and useful DC load
+power. Optical efficiency names incident versus absorbed input and includes any
+bias supplies in total system accounting. Noise-equivalent power, voltage
+responsivity and efficiency remain distinct observables. Reject unsupported
+frequencies or missing coupling data instead of filling gaps with ideal values.
+
+For each added solver, require an analytic/reference fixture, mesh convergence,
+passivity/power balance where applicable, and an independently checked coupling
+normalization. Only promote a candidate against a reference evaluated with the
+same materials, physical scale, excitation and output load.
