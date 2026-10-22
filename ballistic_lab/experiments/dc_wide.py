@@ -23,12 +23,12 @@ def refine(item):
     return row
 
 
-def main():
+def main(plan: WideDCPlan | None = None):
     audit_path = Path("runs/dc-audit/audit.json")
     audit = json.loads(audit_path.read_text(encoding="utf-8"))
     if not audit["ranking_and_score_passed"] or not all(r["passed"] for r in audit["independent"]):
         raise RuntimeError("Scoring audit has not passed")
-    plan = WideDCPlan()
+    plan = plan or WideDCPlan()
     OUTPUT.mkdir(parents=True, exist_ok=False)
     controls = [r for r in initial_candidates() if r["key"] in ("D00", "D14", "triangle-control")]
     manifest = dict(

@@ -1,11 +1,13 @@
 """Seeded, family-balanced proposals for expensive direct-DC evaluations."""
 
 from dataclasses import dataclass
+from typing import Literal
 
 import numpy as np
 from scipy.stats import qmc
 
 from ballistic_lab.geometry.families import FAMILIES, geometry
+from ballistic_lab.search.diversity import archive
 
 
 @dataclass(frozen=True, slots=True)
@@ -15,6 +17,7 @@ class WideDCPlan:
     initial_per_family: int = 4
     feedback_rounds: int = 2
     workers: int = 4
+    parent_strategy: Literal["elite", "diversity"] = "elite"
 
 
 def proposals(plan: WideDCPlan, repeat: int, round_index: int, history: list[dict]) -> list[dict]:
@@ -41,6 +44,10 @@ def proposals(plan: WideDCPlan, repeat: int, round_index: int, history: list[dic
             elite = sorted(
                 pool, key=lambda r: (-r["levels"][0]["dc_power_w"], r["candidate"]["key"])
             )[:2]
+            if plan.parent_strategy == "diversity":
+                elite = archive(pool)
+            elif plan.parent_strategy != "elite":
+                raise ValueError(f"Unknown parent strategy: {plan.parent_strategy}")
             parent = elite[int(rng.integers(len(elite)))]["candidate"]
             child = (np.array(parent["parameters"]) - low) / width + rng.normal(
                 0, 0.16 / round_index, len(bounds)

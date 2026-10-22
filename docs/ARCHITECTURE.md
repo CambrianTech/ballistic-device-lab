@@ -133,3 +133,26 @@ ballistic_lab.pipeline.dc_publish` publishes an already completed current run.
 The workflow is a bounded explicit invocation, not a background job. Repeated
 searches with unchanged seeds reproduce the same proposals; this does not
 claim unbounded learning across invocations.
+
+## Optional diversity-preserving search
+
+`WideDCPlan(parent_strategy="diversity")` enables geometry-niche parent selection;
+`elite` remains the baseline. Pass the plan to `experiments.dc_wide.main(plan)`
+with a fresh output directory, as for other search runs. The manifest records it.
+
+`search/diversity.py` rasterizes the polygon union at 96 x 96 and describes blocked
+area fraction and top/bottom reflection mismatch. Fixed ten-bin axes define
+neighborhoods separately within each family and repeat. Each neighborhood keeps
+its highest screening DC-power candidate; mutation samples occupied neighborhoods
+uniformly. Fresh global proposals and the existing finalist convergence gates remain.
+These are geometry descriptors, not a claim of physical or literature novelty.
+
+The retrospective `results/2026-10-22-dc-wide/diversity-replay.json` retains 50 of
+80 candidates as eligible parents, versus 20 under top-two selection. This is an
+archive replay, not a new transport simulation or evidence of superior search.
+
+Next scheduled campaign: compare elite, diversity and random proposals under equal
+budgets and matched seeds, retain historical validated incumbents, and report both
+coverage and best converged DC power. Check descriptor bin/resolution sensitivity
+before treating coverage as robust. Do not silently replace the baseline with this
+experimental strategy or label screening archive members validated winners.
