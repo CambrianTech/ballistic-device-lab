@@ -6,6 +6,14 @@
 
 The pipeline connects **geometry search → graphene quantum transport → loaded AC-to-DC response → convergence checks**. A continuous CPU search now compares top-score selection, diversity-preserving selection and random sampling directly on simulated DC power. Earlier GPU trajectory studies provide a cheaper geometry screen. The next major physics step is self-consistent nonlinear transport to test whether promising results survive charge-induced changes to the device potential.
 
+### The fabricated device behind the literature reference
+
+![Auton et al. Figure 1: optical device image and AFM inset at left, schematic and electrical characterization at right](docs/assets/literature/auton-2016-figure-1.jpg)
+
+**The actual device is in panel (a), at left:** an optical image with an AFM inset of the active junction. Panel (b) illustrates the carrier paths. Figure 1 reproduced unchanged from **Auton et al., “Graphene ballistic nano-rectifier with very high responsivity,” Nature Communications 7, 11670 (2016)**, [doi:10.1038/ncomms11670](https://doi.org/10.1038/ncomms11670), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Image provenance and license](docs/assets/literature/README.md).
+
+This paper informed our earlier asymmetric-cross reference. **D00 and triangle-control below are our synthetic controls**, not digitizations of this device. [Geometry provenance and differences](docs/TOPOLOGY-BENCHMARK.md#what-was-reconstructed-from-literature).
+
 ## Direct DC search
 
 **Continuous search: 13 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 300 candidates, including the same 40 starting designs.*

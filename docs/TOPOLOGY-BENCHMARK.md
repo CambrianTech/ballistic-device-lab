@@ -21,6 +21,10 @@ The cross family has shorter long-path tails: nominal 99th-percentile trajectory
 
 ## What was reconstructed from literature
 
+![Published device image, AFM inset and characterization: Auton et al. Figure 1](assets/literature/auton-2016-figure-1.jpg)
+
+Figure 1 reproduced unchanged from Auton et al. (2016), [doi:10.1038/ncomms11670](https://doi.org/10.1038/ncomms11670), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The fabricated device and AFM inset are in panel (a). [Full credit and provenance](assets/literature/README.md).
+
 We inspected the asymmetric cross topology in [Auton et al., Figure 1](https://www.nature.com/articles/ncomms11670), including the AFM image in the [accepted manuscript](https://pure.manchester.ac.uk/ws/portalfiles/portal/33718005/CLEAN_Main_Text_Graphene_ballistic.pdf). The current reference reproduces the broad topology—four terminals, narrow upper passage, wider lower passage—not the exact fabricated contour or dimensions.
 
 All coordinates in `geometry/families.py` are **our normalized approximation**. The six reference parameters are `[0.18, 0.40, 0.06, -0.18, 0.55, 0.50]`. They are not measured dimensions extracted from the paper. Contacts are deliberately standardized to width 0.6 in a square of side 2 across all families. Real-device lead lengths, contacts, neck widths, and electrostatic conditions have not been matched.
