@@ -11,7 +11,8 @@ The pipeline now connects **GPU trajectory search → frozen geometry candidates
 | Geometry discovery | 98,304 evaluations; four families; three repeats | Population search beat equal-budget random search in all 12 family/repeat comparisons.* |
 | Best free profile | D12 versus frozen bevel D00 | Angular steering score 0.08011 versus 0.07644: **+4.8%**; higher mean in all nine scattering conditions.* |
 | Quantum transport | Five shapes, two physical widths | Contact modes and electron energy strongly affect transport; ray rankings do not carry over automatically. |
-| Matched quantum coverage | 15 atomic devices; 15,375 energy/device solves; 180 loaded outputs | **145/180** outputs passed both refinement checks; 35 remain unresolved.** |
+| Matched quantum coverage | 15 atomic devices; 15,375 energy/device solves; 180 loaded outputs | Original study: **145/180** outputs passed both refinement checks.** |
+| Integration follow-up | Seven devices; 21,504 additional solves | **31/35 flagged outputs resolved**; latest combined status **176/180**.‡ |
 | Split-island candidate D14 | Three energies × three contact/atomic-cut conditions × four loads | **36/36 converged**; largest absolute transverse voltage in all nine conditions at 10 kΩ.† |
 | Rectification and efficiency | Nonlinear stage pending | DC output, V/W, bandwidth, noise and conversion efficiency are not yet established. |
 
@@ -19,11 +20,13 @@ The pipeline now connects **GPU trajectory search → frozen geometry candidates
 
 \** Each output must change by no more than 1 nV + 1% on **both** 257→513 and 513→1025 energy-grid refinements. This is a numerical stability check, not a confidence interval.
 
+‡ Follow-up uses 1025→2049→4097 grids for seven devices; eight original devices retain their 257→513→1025 checks. [Follow-up results](results/2026-10-22-convergence/README.md).
+
 † Linear response to a 1 mV differential drive, 300 K reservoir occupations, 14.76 nm device width. This measures transverse signal transfer; symmetric AC has zero mean output in this model. Thermal occupations do not include phonon scattering.
 
 ![Full matched quantum coverage](results/2026-10-22-coverage/coverage-voltage.png)
 
-Signed output voltage in microvolts. Crosses mark unresolved grid convergence. The empty-device control also responds to an alternative atomic cut, making matched controls essential. [Full results, spectra, convergence matrix and protocol](results/2026-10-22-coverage/README.md).
+Signed output voltage in microvolts. Crosses mark the original study’s unresolved grid convergence; the linked follow-up resolves most of them. The empty-device control also responds to an alternative atomic cut, making matched controls essential. [Full results, spectra, convergence matrix and protocol](results/2026-10-22-coverage/README.md).
 
 ### Beyond the triangle
 
@@ -74,6 +77,15 @@ Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory sear
 
 Training curves show how proposals improve. Fresh-seed results determine whether those gains survive evaluation. [Refinement methods and results](docs/REFINEMENT.md).
 
+### What makes the next round worthwhile?
+
+Search has beaten random selection under equal budgets, and quantum transport
+has identified a different promising family. The next decision is whether a
+candidate improves **loaded DC output or detector performance** against matched
+controls by more than numerical and disorder uncertainty. If that advantage
+vanishes, redirect the search objective or geometry family. Further proxy gains
+alone are not the success criterion.
+
 ## What remains to complete
 
 | Status | Work item | Completion criterion |
@@ -82,7 +94,7 @@ Training curves show how proposals improve. Fresh-seed results determine whether
 | Done | Coherent graphene lattice | Ribbon, conservation, reciprocity and gauge checks |
 | Done | Linear reservoirs and loads | Checked terminal equations and power accounting |
 | Done | First matched quantum coverage | All 15 frozen devices reported, including unresolved outputs |
-| Next | Output integration convergence | Resolve the 35 flagged outputs with a separately recorded refinement study |
+| Partial | Output integration convergence | 31/35 flags resolved; four small D00 outputs need further quadrature/window checks |
 | Open | Edge disorder, orientation and size scaling | Matched ensembles with uncertainty and stability of candidate comparisons |
 | Open | Self-consistent nonlinear electrostatics / transport | Bias-dependent potential, gauge invariance, charge/current conservation and mesh convergence |
 | Partial | Loaded AC-to-DC response | Circuit solver and cycle accounting tested against analytic networks; nonlinear graphene provider still required |
@@ -150,7 +162,8 @@ Quantum transport uses an explicit carbon lattice, energy-dependent scattering m
 | Broader geometry discovery | [98,304-evaluation study](results/2026-10-22-discovery/README.md) |
 | First lattice verification | [Two-width checkpoint](results/2026-10-22-lattice/README.md) |
 | First loaded terminal calculation | [Linear-load checkpoint](results/2026-10-22-linear-load/README.md) |
-| Current matched quantum matrix | [Coverage results](results/2026-10-22-coverage/README.md) |
+| Integration follow-up | [4097-point refinement](results/2026-10-22-convergence/README.md) |
+| Matched quantum matrix | [Coverage results](results/2026-10-22-coverage/README.md) |
 
 ## Run
 

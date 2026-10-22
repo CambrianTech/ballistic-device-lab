@@ -1,0 +1,108 @@
+{
+  "keys": [
+    "empty-atomic-offset",
+    "D00-nominal",
+    "D00-atomic-offset",
+    "D00-wide-contact",
+    "D12-nominal",
+    "D12-atomic-offset",
+    "D16-nominal"
+  ],
+  "grid_counts": [
+    2049,
+    4097
+  ],
+  "plan": {
+    "candidate_ids": [
+      "empty",
+      "D00",
+      "D12",
+      "D14",
+      "D16"
+    ],
+    "fermi_ev": [
+      0.75,
+      0.9,
+      1.05
+    ],
+    "loads_ohm": [
+      1000.0,
+      10000.0,
+      100000.0,
+      1000000.0
+    ],
+    "grid_counts": [
+      257,
+      513,
+      1025
+    ],
+    "energy_min_ev": 0.42,
+    "energy_max_ev": 1.38,
+    "temperature_k": 300,
+    "width_m": 1.4759999999999998e-08,
+    "output_atol_v": 1e-09,
+    "output_rtol": 0.01
+  },
+  "source": {
+    "__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "experiments/convergence.py": "babb3121c42c33a1813e8090788dc55c0ebe68cebb8f1ec3f475f086ac7cb47d",
+    "experiments/coverage.py": "ec0b8b086b918237b0d10b737b80dec40c037dec8ad7f8900f0e25a7b4cdab7e",
+    "experiments/discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "experiments/families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "experiments/final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "experiments/lattice.py": "deed9b0a189abef92af154108a19dec5aa3549ccfb597ba908ff1b1a9239c6cd",
+    "experiments/learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "experiments/linear_load.py": "4732589454671763d6c8e61400352e89cb2e861fe32f106deca716fc7b6ab4fa",
+    "experiments/refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "experiments/rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "experiments/robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "experiments/validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "geometry/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "geometry/basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "geometry/families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "geometry/registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "metrics/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "metrics/angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "pipeline/__init__.py": "921e745a0387347e3c4b601ade67e2daa100dcaabb74db42dbf50c9eba734637",
+    "pipeline/contracts.py": "5631408c6c636362a4dcf983095037bfedf6e78913286902dc23c053851331e9",
+    "pipeline/ray.py": "00bdab69e66c820f669daeb42a00bb4baba30bd81583355d4f3a495910817eb8",
+    "reporting/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "reporting/catalog.py": "1546ac1c9152a6d082f074593aa1d2ecff54a1d178e8ee8b62278c0042278b31",
+    "reporting/coverage.py": "7cd766997d6b7ca3a2b8afe6008b9bf653cf5013293b7397b70abb5ae722903c",
+    "reporting/discovery.py": "b29ef3cfaa6cfec608872f1970c606ec31cd67d9b9f304f43a942854d291b4c9",
+    "reporting/families.py": "adee15e12bc327e803d536764aa6060cc8f9b9c1d98f708d58155e26b149f632",
+    "reporting/lattice.py": "ddb2e7aac61c4dda77cffeda6cfb1bb677b5e38ce5fdffedc784b8b5c8935de3",
+    "reporting/linear_load.py": "f961cb166fce0e797c41b3b22843c72f8376394cb205ceac3416a36dcae42200",
+    "reporting/showcase.py": "b1a8ab88a5df05049afb7dfa3c341d2377b9713e4ef8ce5f379c409a2be46ddb",
+    "reporting/spectra.py": "3a0fa8537f308cd8d7399c847edfe0cd4bae6af01ecb471928e7336086271d32",
+    "search/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "search/discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "search/families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "search/legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "search/refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "transport/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "transport/backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "transport/cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "transport/gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "transport/quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+    "transport/reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+    "validation/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "validation/families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "validation/receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "validation/registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2",
+    "transport/rays.cu": "46216034318dd905124e36af77b5608cfe07d972f05c7a2296ba1357c747273c"
+  },
+  "inputs": {
+    "empty-atomic-offset": "0e19cb484650bece0f01d89e77bfb11f94c336d22fed0cffdfa81bc87dee0b78",
+    "D00-nominal": "75b7b6206958f6c22a4509c28c19531caf26c63e2f0ab9defc4590a8a944661e",
+    "D00-atomic-offset": "6e511be5de5e8bef83251e53deec3f8488679f317c768babdd82ecbb16326fd4",
+    "D00-wide-contact": "b3ef8e682903618b28fcaced715add4594642ea83b0942020afb72ad348c78a0",
+    "D12-nominal": "df97a354f03cfd14d8986858ac776b6abc1e7b574c92609019b42b08d3dd21d8",
+    "D12-atomic-offset": "65e7c2e75c479a9138e75808ac9a88e68fdfbc69871de34a4c997af78b5dba40",
+    "D16-nominal": "2ea96a1ab467abff624a024678cae2bec393ed2746e684a581f2ee1234758446"
+  }
+}

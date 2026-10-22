@@ -31,7 +31,8 @@ implements thermal occupation averaging and linear loaded terminal equations.
 It does not complete the nonlinear or loaded-rectification gates below. Its
 initial candidate output-voltage integration was unresolved. The subsequent
 [matched coverage study](../results/2026-10-22-coverage/README.md) passes 145 of 180
-output checks; 35 remain unresolved under the frozen two-refinement criterion.
+output checks in the original study. The [integration follow-up](../results/2026-10-22-convergence/README.md)
+resolves 31 of the 35 flags; four remain open.
 
 | Gate | Model and evidence required |
 | --- | --- |
