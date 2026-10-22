@@ -233,6 +233,25 @@ agreement within the fixed-potential model, not experimental device performance.
 
 ## Electronic and photonic stage composition
 
+### Automated falsification queue
+
+`python -m verification_lab.worker` is a separate single-CPU consumer of completed
+rounds. It replays D00, triangle-control and each observed overall leader on the
+entire accepted energy grid, rebuilding rather than using search spectra as inputs.
+Its own atomic checkpoints allow resume; results retain pass/fail/unresolved status.
+It checks graph connectivity, fresh transmission/DC agreement and terminal-exchange
+covariance. The latter tests circuit/readout conventions, not atomic reflection.
+
+`runs/falsification/` contains an OS lock, source manifest, status, immutable inputs
+and completed receipts. Create its `STOP` file to stop between 32-energy batches;
+remove it and rerun to resume. `--once` drains one observed snapshot and exits.
+Never start duplicates or edit its loaded verification/transport code. Exceptions
+produce unresolved receipts that are not automatically retried; inspect the cause
+before a new campaign. Selection/scoring are untouched. The continuous reporter
+publishes only completed receipts matching the exact reported input row, retaining
+pending labels for new leaders. Exact atomic reflection, edge ensembles and missing
+device physics remain unresolved rather than inheriting numerical passes.
+
 The existing `PhysicsStage[Request, Result]` protocol is the common execution
 boundary. Search, immutable candidate identities, provenance, caching, convergence
 receipts and report generation are reusable. Each solver retains its own physical

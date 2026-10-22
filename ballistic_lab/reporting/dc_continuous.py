@@ -14,6 +14,7 @@ from matplotlib.patches import Polygon, Rectangle
 
 from ballistic_lab.reporting.dc_search import promoted
 from ballistic_lab.reporting.diversity_gallery import render as render_gallery
+from ballistic_lab.reporting.falsification import render as render_falsification
 from ballistic_lab.reporting.leader_evidence import render as render_evidence
 from ballistic_lab.reporting.leader_validation import render as render_validation
 
@@ -64,6 +65,10 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     evidence_block = render_evidence([control, leader], destination)
     render_gallery(snapshot, control, destination)
     validation_block = render_validation(snapshot, destination)
+    validation_block += render_falsification(
+        [control, leader] + [r for r in baseline if r["candidate"]["key"] == "triangle-control"],
+        destination,
+    )
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):

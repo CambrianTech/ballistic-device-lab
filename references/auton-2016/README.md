@@ -1,5 +1,7 @@
 # AFM-derived geometry reference
 
+Published measurement target: low-frequency voltage responsivity up to **23,000 mV/mW = 23,000 V/W**, as reported in the [paper abstract](https://pubmed.ncbi.nlm.nih.gov/27241162/). This is not a power-efficiency percentage. A reproduction must match the operating point and input-power definition before comparison. The traced geometry below has no simulated electrical score yet.
+
 ![Published device and manual contour estimate](geometry-reference.png)
 
 A first manual reconstruction of the dark etched regions in Auton et al. Figure 1a. The four boundaries are traced independently; left/right symmetry is not imposed. Original pixel coordinates, source-image SHA-256, coordinate transform and polygons in the pipeline's normalized coordinate convention are stored in `geometry.json`.

@@ -20,6 +20,8 @@ The authors' low-frequency conversion coefficient and optical responsivity are n
 
 ## Reproduction gates
 
+Published abstract targets: voltage responsivity **100 V/W**, noise-equivalent power **20 pW/√Hz at room temperature**, and minimum detectable power **30 nW**, for devices demonstrated up to **3 THz**. These are experimental detector metrics, not loaded power-conversion efficiency or results of our simulation. Source: [publisher abstract](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654), checked October 22, 2026. Matching a specific curve also requires its sample, gate voltage, temperature, optical-power definition and readout bandwidth; these headline values are not one fully specified simulation acceptance point.
+
 1. Recover the supplement and establish a parameterized four-terminal cross with 40/100 nm constrictions. Record measured dimensions separately from assumed flare angles, radii and hidden edges. Sweep uncertain boundaries rather than fitting a single shape to the desired score.
 2. Compare identical physical scale, contacts, carrier density, temperature, excitation and load. Retain the existing synthetic controls as a separate campaign. Estimate atom count and solver resources before a full-size solve.
 3. Validate equilibrium, current conservation, reciprocity, energy/phase/mesh convergence and boundary sensitivity. The current frozen-potential model is a preliminary comparison, not a recreation of driven electrostatics.
