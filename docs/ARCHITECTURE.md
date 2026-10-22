@@ -285,3 +285,10 @@ face maps and internal electrodes. Mapping the actual graphene sheet and dielect
 stack, self-consistent charge/transport, Maxwell fields and
 finite-frequency coupling remain the next stages. Their integration requires a new
 validated campaign rather than changing the meaning of existing search results.
+
+`physics_layers.self_consistent` now provides the charge/Poisson iteration
+coordinator with explicit charge-provider contracts, damping, unmixed residuals
+and failure propagation. Manufactured screening tests validate the coordinator;
+the graphene local-charge provider and dielectric-stack mapping remain unimplemented.
+This distinction prevents a converged numerical fixture from being promoted as
+a self-consistent graphene result.
