@@ -129,8 +129,10 @@ def evaluate(item, counts=(257,), output: Path = OUTPUT):
         record["levels"].append(dict(count=count, **metrics))
         record["spectrum"] = sorted(cache.values(), key=lambda r: r["energy_ev"])
         record["device_fingerprint"] = device.fingerprint
-        with gzip.open(path, "wt", encoding="utf-8") as stream:
+        temporary = path.with_suffix(".tmp")
+        with gzip.open(temporary, "wt", encoding="utf-8") as stream:
             json.dump(record, stream, allow_nan=False)
+        temporary.replace(path)
         print(f"{item['key']} {count}: {metrics['dc_v'] * 1e6:.5g} uV", flush=True)
     levels = record["levels"]
     checks = (

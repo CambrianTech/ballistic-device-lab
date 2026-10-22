@@ -156,3 +156,30 @@ budgets and matched seeds, retain historical validated incumbents, and report bo
 coverage and best converged DC power. Check descriptor bin/resolution sensitivity
 before treating coverage as robust. Do not silently replace the baseline with this
 experimental strategy or label screening archive members validated winners.
+
+## Continuous search worker
+
+`python -m ballistic_lab.pipeline.dc_continuous` runs back-to-back rounds using
+four CPU workers in the isolated Kwant environment. It compares elite, diversity,
+and random proposal arms from the same archived 40-candidate initial population.
+Each arm receives 20 new proposals per round and two automatically selected
+finalists for convergence refinement. These are equal candidate/refinement counts,
+not necessarily equal CPU time or spectral-solve counts. Global proposals stay
+matched across arms; mutations have a 2% parameter-range floor to avoid vanishing
+steps during long campaigns. Geometry diversity remains experimental.
+
+The worker checkpoints after each completed candidate, freezes proposed batches
+before evaluation, and writes complete matched rounds to
+`runs/dc-continuous/round-NNNNNN.json`. An OS lock prevents duplicate workers.
+Create `runs/dc-continuous/STOP` for a graceful stop after the current stage;
+remove it and rerun the command to resume. Source hashes prevent resuming a campaign
+with changed physics/search code. Do not edit loaded solver/search code while the
+worker is live. Gzip spectrum writes use atomic replacement; an interrupted energy
+grid is recomputed, while completed grids are reused.
+
+The 15-minute agent check-in supervises the continuous worker and publishes
+completed snapshots; it is not the compute timer. Read `status.json`, process
+liveness, `state.json`, and worker logs before starting anything. The worker itself
+does not commit or push, and partial stages must not replace validated README
+results. Historical controls remain in their immutable archives. The machine must
+remain running for this local process to progress.

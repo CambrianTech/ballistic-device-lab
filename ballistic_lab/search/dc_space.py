@@ -17,7 +17,8 @@ class WideDCPlan:
     initial_per_family: int = 4
     feedback_rounds: int = 2
     workers: int = 4
-    parent_strategy: Literal["elite", "diversity"] = "elite"
+    parent_strategy: Literal["elite", "diversity", "random"] = "elite"
+    mutation_floor: float = 0.0
 
 
 def proposals(plan: WideDCPlan, repeat: int, round_index: int, history: list[dict]) -> list[dict]:
@@ -46,15 +47,21 @@ def proposals(plan: WideDCPlan, repeat: int, round_index: int, history: list[dic
             )[:2]
             if plan.parent_strategy == "diversity":
                 elite = archive(pool)
-            elif plan.parent_strategy != "elite":
+            elif plan.parent_strategy not in ("elite", "random"):
                 raise ValueError(f"Unknown parent strategy: {plan.parent_strategy}")
             parent = elite[int(rng.integers(len(elite)))]["candidate"]
             child = (np.array(parent["parameters"]) - low) / width + rng.normal(
-                0, 0.16 / round_index, len(bounds)
+                0, max(plan.mutation_floor, 0.16 / round_index), len(bounds)
             )
             child = 1 - abs(np.mod(child, 2) - 1)
+            if plan.parent_strategy == "random":
+                child = rng.random(len(bounds))
             values = np.vstack((values, child))
-            origins.append(f"mutation of {parent['key']}")
+            origins.append(
+                "fresh random"
+                if plan.parent_strategy == "random"
+                else f"mutation of {parent['key']}"
+            )
         for index, (unit, origin) in enumerate(zip(values, origins, strict=True)):
             parameters = low + unit * width
             result.append(
