@@ -18,10 +18,11 @@ or electrical rectification.
   [documentation](https://tkwant.kwant-project.org/doc/stable/) includes time-dependent
   potentials, self-consistent mean-field calculations, and energy/heat extensions.
 
-None is integrated or installed by this repository yet. Their numerical backends
-must be benchmarked independently; the ray tracer's CUDA speed does not imply
-that a quantum solver will use the RTX GPU. Keep a separate environment and pin
-versions after reproducing the upstream graphene example.
+Kwant 1.5.0 is integrated as the optional `LatticeStage`, with an isolated conda
+environment in `environment-quantum.yml`. The clean-ribbon and four-terminal
+checks are recorded in [the lattice checkpoint](../results/2026-10-22-lattice/README.md).
+This stage uses a CPU sparse solver; it does not inherit the ray tracer's CUDA
+acceleration. Pybinding and Tkwant remain unintegrated options.
 
 ## Required progression
 

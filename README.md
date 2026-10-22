@@ -2,7 +2,7 @@
 
 **We are investigating whether optimized nanoscale geometry can improve graphene ballistic rectifiers—devices that turn an alternating electrical signal into a DC output using asymmetric electron transport.** In a ballistic device, carriers can cross the active region before bulk scattering randomizes their motion, making the shape of channels and boundaries important. Published devices already demonstrate rectification and terahertz detection; our question is whether systematic geometry search can find better candidates.
 
-Our present implementation is a **classical trajectory model and geometry search**, with CPU and CUDA backends. We have found improved angular steering relative to our own simple control and random-search baseline. We have **not yet demonstrated electrical rectification or matched or beaten a published device**. Electrical conversion efficiency remains unknown.
+Our implementation combines a **classical trajectory model and geometry search**, with CPU and CUDA backends, and an optional **Kwant graphene lattice transport stage**. We have found improved angular steering relative to our own simple control and random-search baseline. We have **not yet demonstrated electrical rectification or matched or beaten a published device**. Electrical conversion efficiency remains unknown.
 
 The reusable framework supports this specific investigation: screen many inexpensive candidates, challenge the survivors with scattering and fabrication variation, then spend detailed graphene lattice simulation on a small, diverse shortlist.
 
@@ -11,6 +11,24 @@ The reusable framework supports this specific investigation: screen many inexpen
 These are actual classical ray paths from the CPU solver, in normalized geometry. The shaded obstacle is excluded material. They illustrate transport, not measured current or a quantum wavefunction.
 
 ## Why ballistic rectifiers matter
+
+### Quantum transport checkpoint
+
+The [lattice checkpoint](results/2026-10-22-lattice/README.md) evaluates an empty
+control and four frozen designs at nominal widths of **9.84 and 14.76 nm**.
+Clean-ribbon transmission, current conservation, reciprocity, and a uniform
+energy-offset check pass. The simulations expose contact-mode cutoffs and strong
+energy dependence: a shape's ray score cannot predict its quantum performance.
+These are static, coherent calculations; self-consistent voltage and loaded
+rectification remain open gates.
+
+![Lattice transmission and conducting contact modes](results/2026-10-22-lattice/lattice-transmission.png)
+
+The upper plots show directional transmission from the left contact, not
+rectification or efficiency. The lower plots show how many electron channels
+the leads support. Lines connect sparse samples; thresholds are not resolved.
+
+### Device motivation
 
 A rectifier can turn a rapidly oscillating signal into a readable DC output. Graphene ballistic rectifiers use asymmetric carrier transport without a conventional p–n or Schottky junction barrier. Their planar geometry makes them interesting candidates for compact high-frequency detectors and receiver circuits; [experimental detection at 3 THz](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) provides a concrete reason to investigate them.
 
