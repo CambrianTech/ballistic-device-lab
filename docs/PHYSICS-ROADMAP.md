@@ -1,6 +1,6 @@
 # Physics gates for device discovery
 
-The implemented solver is a classical, elastic trajectory screen. It conserves
+The first implemented solver is a classical, elastic trajectory screen. It conserves
 particles, models boundary and bulk scattering, and passes CPU/GPU agreement,
 reciprocity, symmetry, and numerical-tolerance checks. These checks validate
 its implementation within its assumptions. They do not establish a material model
@@ -29,7 +29,9 @@ acceleration. Pybinding and Tkwant remain unintegrated options.
 The [linear reservoir/load checkpoint](../results/2026-10-22-linear-load/README.md)
 implements thermal occupation averaging and linear loaded terminal equations.
 It does not complete the nonlinear or loaded-rectification gates below. Its
-candidate output-voltage integration has not met the promotion tolerance yet.
+initial candidate output-voltage integration was unresolved. The subsequent
+[matched coverage study](../results/2026-10-22-coverage/README.md) passes 145 of 180
+output checks; 35 remain unresolved under the frozen two-refinement criterion.
 
 | Gate | Model and evidence required |
 | --- | --- |

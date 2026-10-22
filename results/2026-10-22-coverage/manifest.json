@@ -1,0 +1,629 @@
+{
+  "cases": [
+    {
+      "candidate": "empty",
+      "condition": "nominal",
+      "contact_fraction": 0.3,
+      "key": "empty-nominal",
+      "obstacles": [],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "empty",
+      "condition": "wide-contact",
+      "contact_fraction": 0.4,
+      "key": "empty-wide-contact",
+      "obstacles": [],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "empty",
+      "condition": "atomic-offset",
+      "contact_fraction": 0.3,
+      "key": "empty-atomic-offset",
+      "obstacles": [],
+      "offset": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": "D00",
+      "condition": "nominal",
+      "contact_fraction": 0.3,
+      "key": "D00-nominal",
+      "obstacles": [
+        [
+          [
+            -0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.3995760986345545,
+            0.06954416737458716
+          ],
+          [
+            0.05054252794461469,
+            -0.2890114859091946
+          ],
+          [
+            -0.34899273521308133,
+            0.06954416737458716
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D00",
+      "condition": "wide-contact",
+      "contact_fraction": 0.4,
+      "key": "D00-wide-contact",
+      "obstacles": [
+        [
+          [
+            -0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.3995760986345545,
+            0.06954416737458716
+          ],
+          [
+            0.05054252794461469,
+            -0.2890114859091946
+          ],
+          [
+            -0.34899273521308133,
+            0.06954416737458716
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D00",
+      "condition": "atomic-offset",
+      "contact_fraction": 0.3,
+      "key": "D00-atomic-offset",
+      "obstacles": [
+        [
+          [
+            -0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.7491741237656143,
+            0.30171152971314236
+          ],
+          [
+            0.3995760986345545,
+            0.06954416737458716
+          ],
+          [
+            0.05054252794461469,
+            -0.2890114859091946
+          ],
+          [
+            -0.34899273521308133,
+            0.06954416737458716
+          ]
+        ]
+      ],
+      "offset": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": "D12",
+      "condition": "nominal",
+      "contact_fraction": 0.3,
+      "key": "D12-nominal",
+      "obstacles": [
+        [
+          [
+            -0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3000391822557111
+          ],
+          [
+            0.4933043494813345,
+            0.14466788700348046
+          ],
+          [
+            0.24665217474066725,
+            -0.028396348658019543
+          ],
+          [
+            0.0,
+            -0.26599769449169347
+          ],
+          [
+            -0.2466521747406673,
+            -0.015609022639048786
+          ],
+          [
+            -0.4933043494813346,
+            0.15313079841928445
+          ],
+          [
+            -0.7399565242220019,
+            0.2991685912578954
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D12",
+      "condition": "wide-contact",
+      "contact_fraction": 0.4,
+      "key": "D12-wide-contact",
+      "obstacles": [
+        [
+          [
+            -0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3000391822557111
+          ],
+          [
+            0.4933043494813345,
+            0.14466788700348046
+          ],
+          [
+            0.24665217474066725,
+            -0.028396348658019543
+          ],
+          [
+            0.0,
+            -0.26599769449169347
+          ],
+          [
+            -0.2466521747406673,
+            -0.015609022639048786
+          ],
+          [
+            -0.4933043494813346,
+            0.15313079841928445
+          ],
+          [
+            -0.7399565242220019,
+            0.2991685912578954
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D12",
+      "condition": "atomic-offset",
+      "contact_fraction": 0.3,
+      "key": "D12-atomic-offset",
+      "obstacles": [
+        [
+          [
+            -0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3530927512957644
+          ],
+          [
+            0.7399565242220019,
+            0.3000391822557111
+          ],
+          [
+            0.4933043494813345,
+            0.14466788700348046
+          ],
+          [
+            0.24665217474066725,
+            -0.028396348658019543
+          ],
+          [
+            0.0,
+            -0.26599769449169347
+          ],
+          [
+            -0.2466521747406673,
+            -0.015609022639048786
+          ],
+          [
+            -0.4933043494813346,
+            0.15313079841928445
+          ],
+          [
+            -0.7399565242220019,
+            0.2991685912578954
+          ]
+        ]
+      ],
+      "offset": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": "D14",
+      "condition": "nominal",
+      "contact_fraction": 0.3,
+      "key": "D14-nominal",
+      "obstacles": [
+        [
+          [
+            -0.8466129275701412,
+            -0.09437548894370523
+          ],
+          [
+            -0.15338707242985883,
+            -0.09437548894370523
+          ],
+          [
+            -0.3364796514513926,
+            -0.3794778824084943
+          ]
+        ],
+        [
+          [
+            0.15351277359430815,
+            0.2913278772117751
+          ],
+          [
+            0.8464872264056919,
+            0.2913278772117751
+          ],
+          [
+            0.3811635425576571,
+            0.015448115233040044
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D14",
+      "condition": "wide-contact",
+      "contact_fraction": 0.4,
+      "key": "D14-wide-contact",
+      "obstacles": [
+        [
+          [
+            -0.8466129275701412,
+            -0.09437548894370523
+          ],
+          [
+            -0.15338707242985883,
+            -0.09437548894370523
+          ],
+          [
+            -0.3364796514513926,
+            -0.3794778824084943
+          ]
+        ],
+        [
+          [
+            0.15351277359430815,
+            0.2913278772117751
+          ],
+          [
+            0.8464872264056919,
+            0.2913278772117751
+          ],
+          [
+            0.3811635425576571,
+            0.015448115233040044
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D14",
+      "condition": "atomic-offset",
+      "contact_fraction": 0.3,
+      "key": "D14-atomic-offset",
+      "obstacles": [
+        [
+          [
+            -0.8466129275701412,
+            -0.09437548894370523
+          ],
+          [
+            -0.15338707242985883,
+            -0.09437548894370523
+          ],
+          [
+            -0.3364796514513926,
+            -0.3794778824084943
+          ]
+        ],
+        [
+          [
+            0.15351277359430815,
+            0.2913278772117751
+          ],
+          [
+            0.8464872264056919,
+            0.2913278772117751
+          ],
+          [
+            0.3811635425576571,
+            0.015448115233040044
+          ]
+        ]
+      ],
+      "offset": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "candidate": "D16",
+      "condition": "nominal",
+      "contact_fraction": 0.3,
+      "key": "D16-nominal",
+      "obstacles": [
+        [
+          [
+            0.7163726341249753,
+            0.1976935231179227
+          ],
+          [
+            0.4605186298626473,
+            0.5518367843213501
+          ],
+          [
+            0.019168686440261623,
+            0.5800316044388103
+          ],
+          [
+            -0.43141718980469457,
+            0.559247781918127
+          ],
+          [
+            -0.7137989757883106,
+            0.1976935231179228
+          ],
+          [
+            -0.2712482460602633,
+            -0.03533969942404014
+          ],
+          [
+            0.019168686440261477,
+            -0.3214085341141461
+          ],
+          [
+            0.3159162521695136,
+            -0.0404194578572675
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D16",
+      "condition": "wide-contact",
+      "contact_fraction": 0.4,
+      "key": "D16-wide-contact",
+      "obstacles": [
+        [
+          [
+            0.7163726341249753,
+            0.1976935231179227
+          ],
+          [
+            0.4605186298626473,
+            0.5518367843213501
+          ],
+          [
+            0.019168686440261623,
+            0.5800316044388103
+          ],
+          [
+            -0.43141718980469457,
+            0.559247781918127
+          ],
+          [
+            -0.7137989757883106,
+            0.1976935231179228
+          ],
+          [
+            -0.2712482460602633,
+            -0.03533969942404014
+          ],
+          [
+            0.019168686440261477,
+            -0.3214085341141461
+          ],
+          [
+            0.3159162521695136,
+            -0.0404194578572675
+          ]
+        ]
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "candidate": "D16",
+      "condition": "atomic-offset",
+      "contact_fraction": 0.3,
+      "key": "D16-atomic-offset",
+      "obstacles": [
+        [
+          [
+            0.7163726341249753,
+            0.1976935231179227
+          ],
+          [
+            0.4605186298626473,
+            0.5518367843213501
+          ],
+          [
+            0.019168686440261623,
+            0.5800316044388103
+          ],
+          [
+            -0.43141718980469457,
+            0.559247781918127
+          ],
+          [
+            -0.7137989757883106,
+            0.1976935231179228
+          ],
+          [
+            -0.2712482460602633,
+            -0.03533969942404014
+          ],
+          [
+            0.019168686440261477,
+            -0.3214085341141461
+          ],
+          [
+            0.3159162521695136,
+            -0.0404194578572675
+          ]
+        ]
+      ],
+      "offset": [
+        0.25,
+        0.25
+      ]
+    }
+  ],
+  "plan": {
+    "candidate_ids": [
+      "empty",
+      "D00",
+      "D12",
+      "D14",
+      "D16"
+    ],
+    "energy_max_ev": 1.38,
+    "energy_min_ev": 0.42,
+    "fermi_ev": [
+      0.75,
+      0.9,
+      1.05
+    ],
+    "grid_counts": [
+      257,
+      513,
+      1025
+    ],
+    "loads_ohm": [
+      1000.0,
+      10000.0,
+      100000.0,
+      1000000.0
+    ],
+    "output_atol_v": 1e-09,
+    "output_rtol": 0.01,
+    "temperature_k": 300,
+    "width_m": 1.4759999999999998e-08
+  },
+  "source": {
+    "__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "experiments/classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "experiments/coverage.py": "ec0b8b086b918237b0d10b737b80dec40c037dec8ad7f8900f0e25a7b4cdab7e",
+    "experiments/discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "experiments/families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "experiments/final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "experiments/lattice.py": "deed9b0a189abef92af154108a19dec5aa3549ccfb597ba908ff1b1a9239c6cd",
+    "experiments/learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "experiments/linear_load.py": "4732589454671763d6c8e61400352e89cb2e861fe32f106deca716fc7b6ab4fa",
+    "experiments/refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "experiments/rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "experiments/robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "experiments/validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "geometry/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "geometry/basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "geometry/families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "geometry/registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "metrics/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "metrics/angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "pipeline/__init__.py": "921e745a0387347e3c4b601ade67e2daa100dcaabb74db42dbf50c9eba734637",
+    "pipeline/contracts.py": "5631408c6c636362a4dcf983095037bfedf6e78913286902dc23c053851331e9",
+    "pipeline/ray.py": "00bdab69e66c820f669daeb42a00bb4baba30bd81583355d4f3a495910817eb8",
+    "reporting/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "reporting/catalog.py": "1546ac1c9152a6d082f074593aa1d2ecff54a1d178e8ee8b62278c0042278b31",
+    "reporting/discovery.py": "b29ef3cfaa6cfec608872f1970c606ec31cd67d9b9f304f43a942854d291b4c9",
+    "reporting/families.py": "adee15e12bc327e803d536764aa6060cc8f9b9c1d98f708d58155e26b149f632",
+    "reporting/lattice.py": "ddb2e7aac61c4dda77cffeda6cfb1bb677b5e38ce5fdffedc784b8b5c8935de3",
+    "reporting/linear_load.py": "f961cb166fce0e797c41b3b22843c72f8376394cb205ceac3416a36dcae42200",
+    "reporting/showcase.py": "b1a8ab88a5df05049afb7dfa3c341d2377b9713e4ef8ce5f379c409a2be46ddb",
+    "reporting/spectra.py": "3a0fa8537f308cd8d7399c847edfe0cd4bae6af01ecb471928e7336086271d32",
+    "search/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "search/discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "search/families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "search/legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "search/refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "transport/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "transport/backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "transport/cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "transport/gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "transport/quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+    "transport/rays.cu": "46216034318dd905124e36af77b5608cfe07d972f05c7a2296ba1357c747273c",
+    "transport/reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+    "validation/__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "validation/families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "validation/receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "validation/registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2"
+  }
+}

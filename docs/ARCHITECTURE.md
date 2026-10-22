@@ -36,8 +36,11 @@ the ray-only `TransportBackend`. Each solver has its own typed request and
 result; a lattice solver must not fabricate ray trajectories to fit an interface.
 
 `SquareDevice` snapshots obstacle vertices into immutable tuples, fixes the
-existing square/contact convention, and fingerprints geometry plus physical
-scale. Its optional `width_m` preserves normalized screening; physical solvers
+square and centered-contact convention, and fingerprints geometry, physical
+scale and `contact_width_fraction`. Identity schema v2 adds the contact fraction;
+v1 hashes in historical snapshots retain their historical meaning. The ray
+adapter rejects widths other than 0.3W instead of silently ignoring them.
+Its optional `width_m` preserves normalized screening; physical solvers
 must call `physical_width()` and reject unspecified scale. Geometry arrays handed
 to solvers are copies. This contract checks dimensions and finite coordinates;
 family validation remains responsible for polygon topology and nonintersection.
