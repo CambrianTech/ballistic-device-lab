@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "key": "triangle-control",
+    "family": "triangle",
+    "parameters": [
+      1.0,
+      0.7,
+      0.0,
+      0.0
+    ],
+    "origin": "fixed control",
+    "obstacles": [
+      [
+        [
+          -0.5,
+          0.35
+        ],
+        [
+          0.5,
+          0.35
+        ],
+        [
+          0.0,
+          -0.35
+        ]
+      ]
+    ]
+  },
+  "seed": 101,
+  "vacancies": 1,
+  "eligible_sites": 85,
+  "removed_indices": [
+    5042
+  ],
+  "removed_positions": [
+    [
+      -12.5,
+      6.639528095680697
+    ]
+  ],
+  "components": 1
+}

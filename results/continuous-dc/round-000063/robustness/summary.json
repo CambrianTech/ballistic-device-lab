@@ -1,0 +1,38 @@
+{
+  "triangle-control": {
+    "matched": 27,
+    "higher": 5,
+    "median_ratio": 0.4108115828536016,
+    "worst_ratio": 0.0026700251918176394
+  },
+  "D00": {
+    "matched": 27,
+    "higher": 0,
+    "median_ratio": 1.0,
+    "worst_ratio": 1.0
+  },
+  "diversity-r0-profile-g15-1": {
+    "matched": 27,
+    "higher": 10,
+    "median_ratio": 0.3503821624584622,
+    "worst_ratio": 2.6481776616576105e-05
+  },
+  "elite-r0-profile-g9-1": {
+    "matched": 27,
+    "higher": 16,
+    "median_ratio": 1.2120549070975817,
+    "worst_ratio": 0.1098346047435936
+  },
+  "random-r0-beveled-g3-0": {
+    "matched": 27,
+    "higher": 11,
+    "median_ratio": 0.49359072070605386,
+    "worst_ratio": 0.0034254000052950616
+  },
+  "random-r1-islands-g1-1": {
+    "matched": 27,
+    "higher": 6,
+    "median_ratio": 0.15566551991183525,
+    "worst_ratio": 9.512528943600798e-05
+  }
+}
