@@ -18,6 +18,8 @@ A [scale-calibrated manual AFM reconstruction](references/auton-2016/README.md) 
 
 The newer **Shi et al. (2026)** device has its own [benchmark record and SEM figure](references/shi-2026/README.md): 40/100 nm constrictions and antenna-coupled 3 THz measurements. Its reconstruction and matched transport comparison are pending.
 
+**Next benchmark: reconstructed published devices.** The scientific comparison target is the paper geometry evaluated alongside our candidates at matching scale, materials, contacts and operating conditions. The current synthetic-control search tests the pipeline; it does not establish improvement over published devices. [Matched-comparison acceptance plan](docs/PAPER-COMPARISON.md).
+
 ## Direct DC search
 
 **Continuous search: 29 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 620 candidates, including the same 40 starting designs.*
