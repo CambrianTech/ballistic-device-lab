@@ -1,0 +1,54 @@
+{
+  "records": {
+    "D00": {
+      "loads": [
+        {
+          "fermi_ev": 0.75,
+          "output_uv": 6.34445856250326
+        },
+        {
+          "fermi_ev": 0.9,
+          "output_uv": 7.178705909819468
+        },
+        {
+          "fermi_ev": 1.05,
+          "output_uv": 9.273863284686522
+        }
+      ],
+      "grid_count": 4097
+    },
+    "D14": {
+      "loads": [
+        {
+          "fermi_ev": 0.75,
+          "output_uv": -108.44636345450662
+        },
+        {
+          "fermi_ev": 0.9,
+          "output_uv": -87.81150448974411
+        },
+        {
+          "fermi_ev": 1.05,
+          "output_uv": -64.77846233214626
+        }
+      ],
+      "grid_count": 1025
+    }
+  },
+  "conditions": {
+    "width_nm": 14.76,
+    "contact_fraction": 0.3,
+    "drive_mv": 1,
+    "load_kohm": 10,
+    "reservoir_temperature_k": 300,
+    "lattice_offset": [
+      0,
+      0
+    ]
+  },
+  "source_sha256": {
+    "results\\2026-10-22-coverage\\summary.json": "9f984173c932e80140f9a54555e2a36408b8cdb64b22d595280c09a2a5301ac7",
+    "results\\2026-10-22-convergence\\summary.json": "1bd1ccc1aa98e285623ff7be1919ceae585aff6b2ba1c2761e889e3096359af5",
+    "results\\2026-10-22-discovery\\designs.json": "c605c13a739626f9200adcc683bcf4b9ab60248ae3306fa79aed0913c21b31b0"
+  }
+}

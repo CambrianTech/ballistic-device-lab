@@ -4,6 +4,23 @@
 
 The pipeline now connects **GPU trajectory search → frozen geometry candidates → graphene quantum transport → loaded terminal response**. Search has found shapes beyond triangles, and the quantum stage has changed which candidates look interesting. The next major step is self-consistent nonlinear transport: the stage that can test rectification and useful DC power.
 
+## A shape worth testing further
+
+![Our bevel reference and search-discovered split-island geometry at identical scale](designs/quantum-comparison.png)
+
+**The split-island candidate produces a larger transverse signal at all three nominal operating points.** Both designs went through the same graphene transport and loaded-terminal pipeline.
+
+| Simulated operating point | Our bevel reference D00 | Split islands D14 |
+| --- | ---: | ---: |
+| Fermi energy 0.75 eV | +6.34 µV | -108.45 µV |
+| Fermi energy 0.90 eV | +7.18 µV | -87.81 µV |
+| Fermi energy 1.05 eV | +9.27 µV | -64.78 µV |
+| Output convergence at these points | Passed | Passed |
+
+\* Signed bottom-minus-top output under a 1 mV drive, 10 kΩ load, 300 K reservoir occupations and identical 14.76 nm footprint/contacts. Linear signal transfer, not DC rectification. D00 uses 4097 energy samples; D14 uses 1025; both meet the stated two-refinement tolerance. These are our simulated designs, not a reconstruction of a published device. [Source data](designs/quantum-comparison.json) · [Full operating-condition matrix](results/2026-10-22-coverage/README.md) · [Refinement checks](results/2026-10-22-convergence/README.md).
+
+The next comparison will put a sourced published layout through the same pipeline; refinement of that layout will be reported separately from its original baseline.
+
 ## Current findings — October 22, 2026
 
 | Study | Coverage | Finding |
