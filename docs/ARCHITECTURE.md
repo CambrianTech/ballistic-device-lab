@@ -84,3 +84,25 @@ Implement `TransportBackend.trace(geometries, port, config, seed) -> TraceBatch`
 Run `python -m ruff check .`, `python -m ruff format --check .`, and `python -m unittest discover -s tests` locally or in CPU CI. GPU checks are run explicitly on a compatible NVIDIA machine; hosted CPU CI cannot substitute for them.
 
 The modular refactor was replayed against the pre-refactor run: candidate parameters, every training score, and every holdout statistic were exactly equal. See the saved refactor receipt in the topology results directory.
+
+
+## Quasistatic circuit interface
+
+`transport/circuit.py` accepts a `TerminalCurrentModel`: four currents into the
+L/R/T/B terminals for four applied voltages. The provider owns its transport and
+self-consistency calculations and must fail if those fail. The circuit layer
+solves the two output voltages with a resistor across T/B, checks terminal KCL,
+local Jacobian conditioning, passivity and power balance, and integrates a
+sinusoidal drive over a declared phase grid.
+
+It reports DC voltage, DC load power, total resistor heating and ripple heating
+separately. DC power is `mean(Vout)**2/R`; total heating is `mean(Vout**2)/R`.
+A large AC signal therefore cannot silently become an efficiency claim. The
+phase grid needs a refinement check, and the quasistatic model has no frequency
+prediction or storage/filter capacitor. Models with multiple roots need branch
+stability analysis; extra supplies require an extended power contract.
+
+Independent tests cover a known resistor chain, a piecewise-linear diode bridge
+with analytic output, cycle quadrature convergence, conservation failures and
+floating/disconnected outputs. The bridge is a circuit oracle, not a graphene
+result. The self-consistent graphene current provider remains to be implemented.

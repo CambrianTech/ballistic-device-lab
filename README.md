@@ -56,6 +56,7 @@ flowchart LR
 | Lattice | Kwant honeycomb nearest-neighbor tight binding; four leads; explicit physical dimensions | Hermiticity, unitarity, current conservation, reciprocity, clean-ribbon transmission, energy-offset invariance |
 | Reservoirs / load | Finite-temperature Landauer conductance; four-terminal resistor-load solution | Analytic network checks, gauge invariance, terminal current and power balance |
 | Coverage | Energy, contact width, atomic alignment and load matrix | Nested energy grids; per-output acceptance; all failures retained |
+| Quasistatic circuit | Current-provider interface, nonlinear load roots and sinusoidal cycle averaging | Analytic resistor/diode-bridge checks; DC power separated from ripple heating |
 
 Kwant uses a **CPU sparse solver**. The RTX 5090 accelerates the trajectory search. The quantum stage currently models coherent, elastic transport with ideal leads; edge disorder, electrostatic feedback and finite-frequency circuit effects remain separate work items.
 
@@ -84,7 +85,7 @@ Training curves show how proposals improve. Fresh-seed results determine whether
 | Next | Output integration convergence | Resolve the 35 flagged outputs with a separately recorded refinement study |
 | Open | Edge disorder, orientation and size scaling | Matched ensembles with uncertainty and stability of candidate comparisons |
 | Open | Self-consistent nonlinear electrostatics / transport | Bias-dependent potential, gauge invariance, charge/current conservation and mesh convergence |
-| Open | Loaded AC-to-DC response | Solve the driven output/load; report mean DC power and all input power |
+| Partial | Loaded AC-to-DC response | Circuit solver and cycle accounting tested against analytic networks; nonlinear graphene provider still required |
 | Open | Contacts, dynamics, noise and thermal limits | Application-specific circuit, frequency and loss models with validation |
 | Open | Matched published-device benchmark | Reproduce reference trends before comparing searched designs |
 | Open | Quantum-informed search feedback | Validated electrical labels, equal-budget baseline and untouched holdout |
@@ -106,6 +107,20 @@ Selected experimental reference points, not a complete ranking:
 | **This project** | Geometry discovery, coherent quantum transport and matched loaded-response coverage | Simulation-only; electrical rectification and matched device benchmarking are next-stage targets. |
 
 Responsivity (V/W) measures voltage sensitivity; efficiency measures useful DC power divided by AC input power. These are different targets. Our current contribution is the reproducible geometry-search and transport pipeline; a matched electrical comparison is an open milestone.
+
+## Comparison with conventional rectifiers
+
+| Use case | Conventional baseline | What our candidate must demonstrate |
+| --- | --- | --- |
+| Power conversion | MOSFET synchronous rectification reduces diode conduction loss.* | Useful DC efficiency at matched voltage, current, load and frequency, including control/contact losses |
+| Weak RF / THz signals | Commercial zero-bias Schottky detectors already cover millimeter-wave and THz bands.** | Matched responsivity, noise, input coupling, dynamic range and response bandwidth |
+| Geometry discovery | Optimized conventional and published ballistic layouts | Improvement under the same physical model and operating conditions |
+
+\* [TI's synchronous-rectification overview](https://www.ti.com/product-category/power-management/synchronous-rectification.html). Illustrative conduction-only arithmetic: at 1 A, a 0.4 V diode dissipates 0.4 W; a 10 mΩ MOSFET dissipates 0.01 W. Gate drive, switching and other converter losses must be added. These are assumed values, not a product comparison.
+
+\** [VDI's detector specifications](https://vadiodes.com/detectors-zbd/) list the standard WR1.0ZBD (750–1100 GHz) at typical 750 V/W and 27.1 pW/√Hz. The listed RF band is the carrier-frequency range, not the output modulation bandwidth; typical responsivity assumes optimal RF input power. These packaged-detector values cannot be ranked against low-frequency intrinsic graphene figures without matching conditions.
+
+**The reported +4.8% compares our profile against our frozen bevel in the angular proxy. It is not an improvement over a paper or a conventional electrical rectifier.**
 
 ## Model definitions
 
