@@ -75,11 +75,11 @@ def main(target: Path) -> None:
         counts = [np.sum(np.max(abs(changed - x), axis=1) < 1.3) for x in changed]
         center = changed[int(np.argmax(counts))]
     fig, axes = plt.subplots(2, 2, figsize=(10, 10))
-    draw(axes[0, 0], parent, f"a  Winner Â· {len(p):,} carbon sites")
-    draw(axes[0, 1], child, f"b  Local offspring Â· {len(c):,} carbon sites")
+    draw(axes[0, 0], parent, f"a  Winner  /  {len(p):,} carbon sites")
+    draw(axes[0, 1], child, f"b  Local offspring  /  {len(c):,} carbon sites")
     bounds = (center[0] - 1.3, center[0] + 1.3, center[1] - 1.3, center[1] + 1.3)
-    draw(axes[1, 0], parent, "c  Winner edge Â· enlarged", bounds)
-    draw(axes[1, 1], child, "d  Offspring edge Â· enlarged", bounds)
+    draw(axes[1, 0], parent, "c  Winner edge  /  enlarged", bounds)
+    draw(axes[1, 1], child, "d  Offspring edge  /  enlarged", bounds)
     for ax, data in zip(axes[0], (parent, child)):
         ax.add_patch(
             Rectangle(center - 1.3, 2.6, 2.6, fill=False, edgecolor="#ffbc47", linewidth=1.5)
@@ -92,7 +92,7 @@ def main(target: Path) -> None:
     fig.text(
         0.5,
         0.025,
-        f"Bright spots: carbon positions Â· black opening: etched void Â· gold: contacts and zoom window\n"
+        f"Bright spots: carbon positions  /  black opening: etched void  /  gold: contacts and zoom window\n"
         f"Offspring: {len(added)} sites added, {len(removed)} removed across the device.\n"
         "Position rendering (Gaussian width 0.032 nm); not simulated microscope contrast.",
         ha="center",
