@@ -55,6 +55,7 @@ def render(snapshot: dict, control: dict, destination: Path) -> None:
         if is_best:
             title = f"Best converged search · {item['family']}"
         if highlight:
+            ax.patches[0].set_facecolor("#eef3fa" if item["key"] == "D00" else "#e4f4ef")
             ax.add_patch(Rectangle((-1, -1), 2, 2, fill=False, edgecolor=highlight, lw=3))
         ax.set_title(
             f"{title}\n{metric['dc_v'] * 1e6:+.3f} µV DC · {label}",

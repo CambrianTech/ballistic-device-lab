@@ -183,3 +183,42 @@ liveness, `state.json`, and worker logs before starting anything. The worker its
 does not commit or push, and partial stages must not replace validated README
 results. Historical controls remain in their immutable archives. The machine must
 remain running for this local process to progress.
+
+
+## Continuous leader validation
+
+`python -m followup_lab.worker` is a separate one-CPU consumer of completed
+search snapshots. It never writes search histories or modifies the selection
+objective. The separately versioned `followup_lab/` orchestration package avoids
+changing the already-running search source manifest; it uses the same transport
+and circuit implementations rather than duplicating physics.
+
+Each distinct converged leader is queued by a hash of its polygon coordinates.
+The fixed synthetic D00 and triangle controls receive identical tests. Shared
+winners across methods are deduplicated; previous leaders remain queued. The
+current leader is prioritized ahead of older leaders after the controls.
+
+Three Fermi energies (0.75, 0.9, 1.05 eV), three loads (1, 10, 100 kohm), and
+nominal/wide-contact/atomic-offset conditions yield 27 DC cases per design.
+Nested grids 257/513/1025 extend to 2049/4097, requiring two successive changes
+within 1 nV + 1% and a 32-versus-64-phase check. Unresolved outputs remain marked.
+Existing nominal spectra are reused only after checking geometry. New spectra
+are checkpointed atomically. No quantum scattering or electrostatic feedback
+is implied by these fixed-potential checks.
+
+The independent CPU ray diagnostic uses 2048 trajectories per input, three
+fixed fresh seeds, specularities 0.5/0.8/1 and mean-free-path/width ratios
+0.5/1/2. Saved probabilities and first 16 paths per port drive the live plots.
+This is classical equal-input steering, not DC power or the earlier angular
+response derivative. It does not feed back into DC selection.
+
+Inspect `runs/leader-validation/status.json`, `queue.json`, worker logs and
+process liveness at each supervision check. Its OS lock prevents duplicates.
+Create `runs/leader-validation/STOP` for a stop between contact conditions;
+remove it to resume after diagnosis. A source manifest rejects changed code.
+Never modify either worker's loaded code while it runs. Reporting is excluded
+from worker source hashes and may be updated independently.
+
+The existing continuous reporter also publishes completed validation cases,
+matched trajectories, scattering and contact/energy charts. Pending conditions
+remain explicit. Archived earlier studies retain their original figures.

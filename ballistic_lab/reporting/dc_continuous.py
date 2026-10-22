@@ -1,6 +1,7 @@
 """Publish immutable completed rounds; never read a partial worker state."""
 
 import json
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +14,7 @@ from matplotlib.patches import Polygon, Rectangle
 
 from ballistic_lab.reporting.dc_search import promoted
 from ballistic_lab.reporting.diversity_gallery import render as render_gallery
+from ballistic_lab.reporting.leader_validation import render as render_validation
 
 ARMS = ("elite", "diversity", "random")
 LABELS = {
@@ -58,6 +60,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     control = next(r for r in baseline if r["candidate"]["key"] == "D00")
     best = winners(snapshot)
     render_gallery(snapshot, control, destination)
+    validation_block = render_validation(snapshot, destination)
     panels = [("Frozen control D00", control)] + [(LABELS[a], best[a]) for a in ARMS]
     fig, axes = plt.subplots(1, 4, figsize=(13, 4))
     for ax, (label, row) in zip(axes, panels, strict=True):
@@ -174,6 +177,8 @@ Last published: **{published:%Y-%m-%d %H:%M UTC}**, through matched round **{ind
 
 [Completed-round data and progress]({rel}/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
+{validation_block}
+
 <details>
 <summary>Earlier six-design gallery</summary>
 
@@ -185,8 +190,20 @@ Frozen wider-search snapshot, retained for comparison with the evolving gallery 
 
 """
     findings = text[end:].split("\n", 1)[1]
+    findings = re.sub(
+        r"!\[Feedback-guided search progress\]\([^\n]+\)",
+        f"![Feedback-guided search progress]({rel}/progress.png)",
+        findings,
+    )
+    findings = findings.replace(
+        "Historical **trajectory-proxy** training curves; these are not the current direct-DC campaign. Fresh-seed results test whether those proxy gains survive evaluation. [Refinement methods and results](docs/REFINEMENT.md).",
+        "Current direct-DC progress: best converged result retained after each completed matched round. Flat sections mean no better converged design was found; exploration continues. [Earlier trajectory-proxy study](docs/REFINEMENT.md).",
+    )
     root.write_text(
-        text[:start] + block + f"## Current findings — {date_label}, {published:%H:%M UTC}\n" + findings,
+        text[:start]
+        + block
+        + f"## Current findings — {date_label}, {published:%H:%M UTC}\n"
+        + findings,
         encoding="utf-8",
     )
 
