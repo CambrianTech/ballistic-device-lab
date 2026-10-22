@@ -1,8 +1,28 @@
-# Ballistic Device Lab
+# Ballistic Device Lab: Searching for Better Graphene Rectifiers
 
-A simulation pipeline for discovering useful electron-transport geometries: screen many inexpensive candidates, challenge the survivors with scattering and fabrication variation, then spend detailed lattice simulation on a small, diverse shortlist.
+**We are investigating whether optimized nanoscale geometry can improve graphene ballistic rectifiers—devices that turn an alternating electrical signal into a DC output using asymmetric electron transport.** In a ballistic device, carriers can cross the active region before bulk scattering randomizes their motion, making the shape of channels and boundaries important. Published devices already demonstrate rectification and terahertz detection; our question is whether systematic geometry search can find better candidates.
 
-The first target is geometry for graphene ballistic rectifiers. Our present implementation is a **classical trajectory model and geometry search**, with CPU and CUDA backends. It identifies angular steering sensitivity; it does not yet calculate electrical rectification, power efficiency, or a fabricated device's performance.
+Our present implementation is a **classical trajectory model and geometry search**, with CPU and CUDA backends. We have found improved angular steering relative to our own simple control and random-search baseline. We have **not yet demonstrated electrical rectification or matched or beaten a published device**. Electrical conversion efficiency remains unknown.
+
+The reusable framework supports this specific investigation: screen many inexpensive candidates, challenge the survivors with scattering and fabrication variation, then spend detailed graphene lattice simulation on a small, diverse shortlist.
+
+## Where published research stands—and where we stand
+
+These are selected experimental reference points, not an exhaustive ranking of the field. Low-frequency electrical measurements and antenna-coupled THz measurements have different input-power definitions and must not be ranked directly.
+
+| Work | Demonstrated result | Conditions and comparison limits |
+| --- | --- | --- |
+| [Auton et al., 2016](https://www.nature.com/articles/ncomms11670) ([accepted manuscript](https://pure.manchester.ac.uk/ws/portalfiles/portal/33718005/CLEAN_Main_Text_Graphene_ballistic.pdf)) | Room-temperature graphene rectification; intrinsic voltage responsivity up to **23,000 V/W** and noise-equivalent power down to **0.64 pW/√Hz** | Low-frequency electrical excitation. Substrate parasitics limited measurements to 3 MHz; these sensitivity values are not a demonstrated THz result. |
+| [Shi et al., 2026](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654) | Antenna-coupled graphene ballistic detection at **3 THz** | Figure 3 reports sample B's maximum responsivity changing from **77 V/W at 4 K** to **6 V/W at 300 K**. The abstract separately lists 100 V/W and 20 pW/√Hz at room temperature; this apparent discrepancy needs clarification before using those headline values as a matched benchmark. |
+| **This project** | Checked classical simulations, learned geometry search, finite-scattering screening, and frozen candidates | No measured device; no predicted V/W, noise-equivalent power, electrical bandwidth, or AC-to-DC power efficiency yet. Current gains are within our geometry proxy model. |
+
+### What about efficiency?
+
+Power-conversion efficiency is **η = useful DC power delivered to a load / AC input power**, with the input boundary specified. Detector responsivity is **DC output voltage / input power**, measured in V/W. A large output voltage into a high-impedance measurement does not by itself establish efficient power delivery.
+
+The reference results above therefore do not give us a comparable percentage-efficiency leaderboard. Neither does our simulation: a score of 0.072 is an angular-response derivative, **not 7.2% efficiency**. To compare power efficiency, we need nonlinear voltage/current transport, a load, input coupling, and consistent power accounting. To compare detector performance, we additionally need noise and frequency response.
+
+**Our current contribution is a reproducible candidate-discovery pipeline.** The next scientific milestone is to reproduce a published geometry's transport behavior, then evaluate our shortlist under the same physical assumptions. A state-of-the-art claim comes only after that comparison supports it.
 
 ## Why this project exists
 
