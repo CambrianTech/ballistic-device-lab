@@ -8,13 +8,13 @@ The pipeline connects **geometry search → graphene quantum transport → loade
 
 ## Direct DC search
 
-**Continuous search: 3 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 100 candidates, including the same 40 starting designs.*
+**Continuous search: 6 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 160 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000003/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000006/diversity.png)
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 19:48 UTC**, through matched round **3**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 20:00 UTC**, through matched round **6**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -25,7 +25,7 @@ Last published: **2026-10-22 19:48 UTC**, through matched round **3**. The 15-mi
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000003/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000006/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 <details>
 <summary>Earlier six-design gallery</summary>
