@@ -273,3 +273,13 @@ For each added solver, require an analytic/reference fixture, mesh convergence,
 passivity/power balance where applicable, and an independently checked coupling
 normalization. Only promote a candidate against a reference evaluated with the
 same materials, physical scale, excitation and output load.
+
+## Implemented extension building blocks
+
+[`physics_layers/`](../physics_layers/README.md) holds independently tested additions
+outside the live campaign's source manifest: a planar variable-permittivity Poisson
+solver, explicit terminal phasor power accounting, and passive optical energy-balance
+checks. These are working building blocks, not an integrated device solver.
+Geometry-aware electrostatics, self-consistent charge/transport, Maxwell fields and
+finite-frequency coupling remain the next stages. Their integration requires a new
+validated campaign rather than changing the meaning of existing search results.
