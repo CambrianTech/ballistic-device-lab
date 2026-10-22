@@ -1,6 +1,8 @@
 """Publish isolated local-search progress without changing matched rankings."""
 
 import json
+import os
+import subprocess
 from pathlib import Path
 
 
@@ -29,6 +31,35 @@ def render(destination: Path) -> str:
     ]
     if converged and parent.get("energy_converged") and parent.get("phase_converged"):
         best = max(converged, key=lambda r: r["phase64"]["dc_power_w"])
+        (target / "atomic-input.json").write_text(
+            json.dumps([parent["candidate"], best["candidate"]]), encoding="utf-8"
+        )
+        runtime = Path(
+            os.environ.get("BALLISTIC_KWANT_PYTHON", "../ballistic-quantum-runtime/env/python.exe")
+        ).resolve()
+        if runtime.exists():
+            env = os.environ.copy()
+            env["PATH"] = (
+                str(runtime.parent)
+                + os.pathsep
+                + str(runtime.parent / "Library/bin")
+                + os.pathsep
+                + env.get("PATH", "")
+            )
+            env.update(OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
+            subprocess.run(
+                [str(runtime), "-m", "ballistic_lab.reporting.atomic_view", str(target)],
+                env=env,
+                check=True,
+            )
+            lines += [
+                f"![Actual simulated graphene lattice and local edge changes]({target.as_posix()}/atomic-lattice.png)",
+                "",
+                "Actual carbon sites and hopping bonds from the transport builder. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity]("
+                + target.as_posix()
+                + "/atomic-lattice.json).",
+                "",
+            ]
         lines += [
             "| Local experiment | Converged DC power (pW) |",
             "| --- | ---: |",

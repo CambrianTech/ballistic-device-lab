@@ -20,7 +20,7 @@ The nominal test uses a **14.76 nm-wide device, 10 mV peak input, a 10 kΩ load 
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-22 23:31 UTC**, through matched round **59**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-22 23:34 UTC**, through matched round **59**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -132,6 +132,10 @@ Small pilot, not a fabrication-yield estimate. See [model and restart contract](
 ### Winner-neighborhood experiment
 
 Separate budget: **24/24 offspring evaluated**, 4 numerically converged so far. Parent: `diversity-r0-profile-g15-1`. These evaluations do not enter the three-method comparison.
+
+![Actual simulated graphene lattice and local edge changes](results/continuous-dc/round-000059/winner-local/atomic-lattice.png)
+
+Actual carbon sites and hopping bonds from the transport builder. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity](results/continuous-dc/round-000059/winner-local/atomic-lattice.json).
 
 | Local experiment | Converged DC power (pW) |
 | --- | ---: |
