@@ -1,0 +1,1 @@
+"""Ballistic device research components."""

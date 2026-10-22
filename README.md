@@ -44,6 +44,20 @@ The search currently uses ExtraTrees regression and uncertainty-guided proposals
 
 ## What we have found
 
+### New: comparing geometry families
+
+We screened **2,304 candidates** across triangles, beveled obstacles, and asymmetric cross-junctions with equal budgets. Beveled shapes improved on the newly searched triangles in all three repeats, but **did not clearly beat our previously learned triangle**. The cross candidates had shorter long-path tails, so we retain a varied shortlist for the lattice stage.
+
+![Frozen candidate geometry gallery](results/2026-10-22-families/families-geometries.png)
+
+White is the conducting region, gray is excluded/etched material, and orange marks the identical contacts. The reference cross is a **literature-inspired topology approximation**, not an exact fabricated-device reconstruction.
+
+![Fresh-seed topology comparison](results/2026-10-22-families/families-comparison.png)
+
+Bars show the angular-response proxy; error bars are standard deviations across four fresh simulation seeds, not experimental error bars or confidence intervals. [Read the benchmark, numerical fix, limitations, and next simulation gate](docs/TOPOLOGY-BENCHMARK.md).
+
+### Earlier search evidence
+
 Saved evidence is in [results/2026-10-22](results/2026-10-22/). These are computational results within the stated model.
 
 - Across three equal-budget searches, the original learned geometries averaged a 0.3541 angular steering change, versus 0.3129 for random search and 0.2266 for the simple triangle control. This uses a large imposed change in incoming angular distribution.
@@ -99,6 +113,12 @@ Useful starting references:
 - [Shi et al., 2026: Nanoscale Graphene-Based Ballistic Rectifiers for Detection of High Terahertz Frequency Optical Signals](https://onlinelibrary.wiley.com/doi/full/10.1002/smsc.202500654): a high-frequency detection benchmark to examine separately from low-frequency results.
 
 Responsivity (V/W), noise-equivalent power (W/sqrt(Hz)), bandwidth, impedance, and conversion efficiency are different metrics. A geometry score cannot be substituted for any of them. We have not completed an exhaustive state-of-the-art survey or established novelty.
+
+## Code organization and validation
+
+The implementation is split into geometry, transport, metrics, search, validation, reporting, and experiment modules under `ballistic_lab/`. Immutable dataclass configurations and result records define interfaces; `@geometry_family` and `@validation_check` register explicit extensions. Root scripts remain short compatibility entry points. [Architecture and validation contracts](docs/ARCHITECTURE.md).
+
+The topology search refuses to run with missing or stale source-validation receipts. CPU tests and formatting/lint checks run in CI; GPU validation additionally checks CPU agreement, reciprocity, symmetry, mixed topology batching, a grazing-boundary regression, and tolerance sensitivity. Refactoring preserved the complete recorded search output exactly.
 
 ## License
 

@@ -1,0 +1,14 @@
+{
+  "finalists": {
+    "exact_equal": true,
+    "canonical_sha256": "df180f11ff4d9cc0a358cd16d8c9507768e8508805decb3e85bbbaf42076280a"
+  },
+  "training": {
+    "exact_equal": true,
+    "canonical_sha256": "b8cb5961adc06e42143786869cc9fed7961f3b2c262350ed4a3ca6b9ef276a2b"
+  },
+  "validation": {
+    "exact_equal": true,
+    "canonical_sha256": "7638d75978a625044ec27bc4485bdce7aeba8bd50acc22f196dd97b02cb7074c"
+  }
+}
