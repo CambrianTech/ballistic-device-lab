@@ -129,3 +129,38 @@ implemented. Photonic solvers likewise retain their own typed fields and ports.
 
 Run `python -m unittest tests.test_application tests.test_physics_stages` for
 acceptance, failure-propagation and circuit-stage integration checks.
+
+## Finite-band lead charge
+
+`lead_charge.LeadChargeDevice` accepts a finalized one-orbital Kwant system and
+uses its actual energy-dependent semi-infinite lead self energies. It integrates
+reservoir-resolved spectral densities for site occupations and terminal currents,
+and implements the `SiteTransport` interface used by `solve_site_feedback`.
+This dense backend is for small verification devices, not campaign-scale search.
+
+Every site must recover unit spectral weight per spin over the specified energy
+interval before a result is returned. Truncated bands and missing bound states
+therefore reject the result; they are not silently treated as neutral charge.
+This is a numerical completeness gate, not a bound-state solver. Bound-state
+occupations at finite bias still need an explicit physical prescription.
+Lead electrostatic shifts and reservoir chemical potentials are separate inputs;
+a gauge shift changes the device, leads, energy interval and chemical potentials
+together. The live campaign is unchanged.
+
+Verification includes an analytic perfectly transmitting chain, gauge invariance,
+graphene injectivity versus Kwant wavefunctions and transmission versus its
+scattering matrix, deliberate missing-charge failures, and neutral Poisson
+integration. Nonneutral graphene feedback, full-band convergence across graphene
+subband thresholds, realistic gate/contact boundaries, bound states and scaling
+remain acceptance work. No self-consistent winner ranking is claimed.
+
+The first full-band trial on the 15-site ribbon produced by `build_system` with
+width `2 * 0.246 nm`, `ribbon=True`, zero shifts, 300 K and bounds
+`[-8.1, 8.1] eV` failed the lead-broadening passivity gate during adaptive
+integration (Kwant 1.5 runtime). No charge result was accepted. The next numerical
+task is subband-threshold integration and diagnosis of the lead self energy;
+loosening passivity or inserting an artificial imaginary energy is not a fix.
+
+See [Kwant local observables](https://kwant-project.org/doc/latest/tutorial/operators)
+and [Tkwant's missing-bound-state example](https://tkwant.kwant-project.org/doc/dev/tutorial/boundstates.html).
+Run `python -m unittest tests.test_lead_charge` in the isolated Kwant runtime.
