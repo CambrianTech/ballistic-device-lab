@@ -1,0 +1,20 @@
+{
+  "candidate": "diversity-r0-profile-g73-1",
+  "fingerprint": "3481f043a0798cd0ca62c374c2905ca7fd6ec042d1d9f065811ee2a191764557",
+  "independent": {
+    "dc_v": -2.833019489403627e-05,
+    "dc_power_w": 8.025999427340787e-14,
+    "max_kcl_a": 2.1173083645578427e-20
+  },
+  "production": {
+    "dc_v": -2.833077437231901e-05,
+    "dc_power_w": 8.026327765352475e-14,
+    "input_power_w": 3.229448141837857e-09,
+    "efficiency": 2.4853558294900335e-05,
+    "max_kcl_a": 1.6290494983619327e-20
+  },
+  "difference_v": 5.794782827378325e-10,
+  "tolerance_v": 2.8430774372319012e-08,
+  "passed": true,
+  "scope": "Independent quadrature and load solver on the same fixed-potential spectrum; not independent physics or experimental validation"
+}
