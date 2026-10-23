@@ -54,3 +54,51 @@ work never executes. These fixtures do not model graphene.
 Run `python -m unittest tests.test_physics_stages`. Integration into a new search
 campaign requires explicit source manifests and matched baseline validation;
 the currently running search remains on its existing model.
+
+## Application acceptance and future device families
+
+`application.evaluate(identity, stages, application)` first requires every named
+physics stage, then calls the existing validated graph runner. A final metric
+stage returns immutable `Metrics` containing explicit values and units.
+`application.compare(candidate, reference, application)` returns one serializable
+decision for search selection and reporting. It rejects missing outputs, unit
+mismatches, different materials/operating conditions, or different stage source,
+configuration, assumption and validation contracts. Device identities may differ.
+The candidate must meet every absolute target and strictly improve the declared
+objective to beat the reference. The reference need not meet the target itself.
+
+The versioned application owns metric requirements and objective direction;
+solvers do not own a global fitness function. A screening result cannot silently
+compete with a higher-fidelity result. Application versions and full requirement
+definitions are included in decision receipts. Receipts identify provenance;
+they do not authenticate payloads or make results safe to reuse as cached data.
+Independent uncertainty margins and robustness ensembles must be defined by the
+application's metric stages, not inferred from a tiny scalar improvement.
+
+```mermaid
+flowchart LR
+    G[Candidate geometry] --> P[Validated physics stages]
+    P --> M[Application metrics]
+    R[Matched reference through same stages] --> A[Targets and comparison]
+    M --> A
+    A --> D[Decision receipt]
+    D --> S[Selection and diversity policy]
+    D --> V[Tables and figures]
+    S --> G
+```
+
+The acceptance boundary is implemented and tested with manufactured fixtures.
+The live worker has not adopted it: integrating a new campaign still requires
+actual solver adapters, completed physics, matched controls and a new manifest.
+Persistent scheduling, cache validity and resume remain worker responsibilities.
+Missing stages fail preflight rather than passing through placeholder solvers.
+
+For future neuromorphic work, retain geometry, stage orchestration and provenance,
+but supply a time-dependent device/circuit model with explicit state initialization,
+input waveforms and observation intervals. Task metrics could then describe energy
+per event, latency and task error. A static rectifier curve does not establish
+memory, integration or spiking behavior. Those models and metrics are not yet
+implemented. Photonic solvers likewise retain their own typed fields and ports.
+
+Run `python -m unittest tests.test_application tests.test_physics_stages` for
+acceptance, failure-propagation and circuit-stage integration checks.

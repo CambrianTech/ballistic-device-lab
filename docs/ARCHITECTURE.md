@@ -319,8 +319,11 @@ The isolated `physics_layers.poisson3d` now supports a 3D dielectric domain and
 conservative mesh-aligned sheet deposition. All axes use explicit SI spacing;
 charge on fixed-potential nodes is rejected. Analytic and mesh-refinement fixtures
 plus reproducible field plots validate this subsolver. Actual device-stack mapping,
-atomistic site-to-mesh interpolation and finite-bias graphene charge feedback are
-still required before campaign integration. Existing 2D coordination is unchanged.
+finite-bias graphene charge feedback are still required before campaign integration.
+`physics_layers.site_mesh` now supplies conservative trilinear atom-to-grid charge
+deposition and the adjoint potential interpolation; actual stack calibration and
+mesh-dependent self-interaction treatment remain open. Existing 2D coordination
+is unchanged.
 
 [`physics_layers/`](../physics_layers/README.md) holds independently tested additions
 outside the live campaign's source manifest: a planar variable-permittivity Poisson
@@ -338,3 +341,11 @@ and failure propagation. Manufactured screening tests validate the coordinator;
 the graphene local-charge provider and dielectric-stack mapping remain unimplemented.
 This distinction prevents a converged numerical fixture from being promoted as
 a self-consistent graphene result.
+
+The opt-in `physics_layers.application` boundary now separates application targets
+from solver execution. It preflights required stages and emits a shared selection/
+reporting decision only after matched-model comparison and explicit metric targets.
+See [application acceptance](../physics_layers/STAGES.md#application-acceptance-and-future-device-families).
+This is not wired into the live fixed-potential campaign. Future neuromorphic
+applications need time-dependent state/circuit models; shared orchestration does
+not turn a static transport solver into a neuron model.
