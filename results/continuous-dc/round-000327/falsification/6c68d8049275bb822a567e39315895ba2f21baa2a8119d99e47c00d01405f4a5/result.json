@@ -1,0 +1,51 @@
+{
+  "candidate": {
+    "key": "triangle-control",
+    "family": "triangle",
+    "parameters": [
+      1.0,
+      0.7,
+      0.0,
+      0.0
+    ],
+    "origin": "fixed control",
+    "obstacles": [
+      [
+        [
+          -0.5,
+          0.35
+        ],
+        [
+          0.5,
+          0.35
+        ],
+        [
+          0.0,
+          -0.35
+        ]
+      ]
+    ]
+  },
+  "status": "pass",
+  "checks": {
+    "connected_graph": true,
+    "fresh_transmission": true,
+    "fresh_dc": true,
+    "terminal_exchange": true
+  },
+  "energy_count": 2049,
+  "fresh_dc_v": -3.872168020310384e-06,
+  "previous_dc_v": -3.872168020312856e-06,
+  "voltage_difference_v": 2.4724891730353027e-18,
+  "transmission_difference": 1.5260814834050507e-10,
+  "terminal_exchange_error_v": 9.351243737687476e-19,
+  "unresolved": [
+    "exact atomistic reflection",
+    "controlled atomic edge ensemble",
+    "self-consistent graphene electrostatics",
+    "phonons and realistic contacts",
+    "frequency response",
+    "matched published-device comparison"
+  ],
+  "identity": "6c68d8049275bb822a567e39315895ba2f21baa2a8119d99e47c00d01405f4a5"
+}
