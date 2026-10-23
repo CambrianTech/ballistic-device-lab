@@ -57,6 +57,33 @@ the currently running search remains on its existing model.
 
 ## Application acceptance and future device families
 
+### Site charge and 3D field feedback
+
+`site_feedback.solve_site_feedback` now connects a site-charge transport provider
+to `SiteMeshMap` and `Poisson3DStage`. It deposits excess charge
+`q_i = -e (n_i - n_ref,i)` and feeds the sampled potential back as an electron
+onsite energy shift `U_i[eV] = -phi_i[V]`. The mesh may carry a separately declared
+fixed background. References must be supplied explicitly to avoid double counting.
+The provider returns occupations and currents at each potential; transmission
+probabilities alone do not specify local charge. The wavefunction density route
+is described in the [Kwant local-operator documentation](https://kwant-project.org/doc/latest/tutorial/operators).
+
+Convergence requires both an unmixed full-grid voltage residual and an occupation
+residual after another transport solve. The returned transport uses the returned
+potential. Its charge differs from the last Poisson RHS by the recorded residual;
+the result is not an exact fixed point. Inner solver errors propagate, and an
+iteration limit raises with residual history. A failed run cannot feed a downstream
+stage. `tests.test_site_feedback` exercises this path through `run_stages`.
+
+Tests compare a wide-band resonant-level model against the separate Hartree-kernel
+implementation, verify screening sign, charge/current conservation, global gauge
+invariance and tighter iteration/quadrature tolerances. This establishes coupling
+correctness for the reference backend, **not self-consistent graphene validation**.
+The actual graphene-lead charge provider, bound-state occupations, full-band
+integration, calibrated reference doping, electrode stack and mesh/domain studies
+remain required. The point-charge deposition is mesh-regularized; taking its grid
+spacing to zero is not a physical atomic self-interaction model.
+
 `application.evaluate(identity, stages, application)` first requires every named
 physics stage, then calls the existing validated graph runner. A final metric
 stage returns immutable `Metrics` containing explicit values and units.
