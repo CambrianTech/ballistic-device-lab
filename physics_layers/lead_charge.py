@@ -8,6 +8,7 @@ inadequate energy interval fail closed; no fictitious broadening fills the gap.
 import numpy as np
 from scipy.constants import Boltzmann, elementary_charge, h
 from scipy.integrate import quad_vec
+from scipy.optimize import minimize_scalar
 from scipy.special import expit
 
 from .negf_reference import ReservoirResult
@@ -45,8 +46,93 @@ class LeadChargeDevice:
         self.spin = spin
         self.hamiltonian.flags.writeable = False
         self.lead_shifts.flags.writeable = False
+        self.system = system
+        self.thresholds = self._band_thresholds()
+
+    def _band_thresholds(self):
+        """Locate lead subband extrema to partition real-energy quadrature.
+
+        Dense momentum sampling seeds bounded scalar refinement. Completeness
+        still relies on the integrated spectral sum rule, not this locator.
+        """
+        import kwant
+
+        values = list(self.bounds)
+        momenta = np.linspace(-np.pi, np.pi, 257)
+        for lead, offset in zip(self.leads, self.lead_shifts):
+            bands = kwant.physics.Bands(lead)
+            sampled = np.array([bands(k) for k in momenta])
+            values.extend(sampled[0] + offset)
+            values.extend(sampled[128] + offset)
+            for band in range(sampled.shape[1]):
+                for i in range(1, len(momenta) - 1):
+                    left, middle, right = sampled[i - 1 : i + 2, band]
+                    if (middle < left and middle <= right) or (middle > left and middle >= right):
+                        sign = 1 if middle < left else -1
+                        result = minimize_scalar(
+                            lambda k: sign * bands(k)[band],
+                            bounds=(momenta[i - 1], momenta[i + 1]),
+                            method="bounded",
+                            options={"xatol": 1e-13},
+                        )
+                        values.append(sign * result.fun + offset)
+        ordered = sorted(
+            0.0 if abs(v) < 1e-12 else v for v in values if self.bounds[0] <= v <= self.bounds[1]
+        )
+        unique = [ordered[0]]
+        for value in ordered[1:]:
+            if value - unique[-1] > 1e-8:
+                unique.append(value)
+        return tuple(unique)
 
     def spectral(self, energy_ev, onsite_shift_ev):
+        """Flux-normalized scattering states avoid surface self-energy poles."""
+        import kwant
+
+        shift = np.asarray(onsite_shift_ev, float)
+        if shift.shape != (len(self.hamiltonian),) or not np.isfinite(shift).all():
+            raise ValueError("One finite shift per site required")
+        original = self.system
+
+        class ShiftedLead(kwant.system.InfiniteSystem):
+            def __init__(self, source, offset):
+                self.__dict__.update(source.__dict__)
+                self.source, self.offset = source, offset
+
+            def hamiltonian(self, i, j, *args, params=None):
+                return self.source.hamiltonian(i, j, *args, params=params) + (
+                    self.offset if i == j else 0
+                )
+
+        class ShiftedSystem(kwant.system.FiniteSystem):
+            def __init__(self):
+                self.__dict__.update(original.__dict__)
+
+            def hamiltonian(self, i, j, *args, params=None):
+                return original.hamiltonian(i, j, *args, params=params) + (
+                    shift[i] if i == j else 0
+                )
+
+        system = ShiftedSystem()
+        system.leads = [
+            ShiftedLead(lead, offset) for lead, offset in zip(self.leads, self.lead_shifts)
+        ]
+        waves = kwant.wave_function(system, energy_ev)
+        density = np.array(
+            [np.sum(abs(waves(a)) ** 2, axis=0) / (2 * np.pi) for a in range(len(self.leads))]
+        )
+        scattering = kwant.smatrix(system, energy_ev)
+        transmission = np.array(
+            [
+                [scattering.transmission(a, b) for b in range(len(self.leads))]
+                for a in range(len(self.leads))
+            ]
+        )
+        if not np.isfinite(density).all() or not np.isfinite(transmission).all():
+            raise ArithmeticError("Nonfinite scattering-state charge")
+        return density, transmission
+
+    def spectral_dense(self, energy_ev, onsite_shift_ev):
         """Return injectivity per eV/site/lead and T[outgoing,incoming], per spin."""
         n = len(self.hamiltonian)
         shift = np.asarray(onsite_shift_ev, float)
@@ -98,28 +184,31 @@ class LeadChargeDevice:
             current = transmission.sum(axis=0) * f - transmission @ f
             return np.r_[f @ density, density.sum(axis=0), current]
 
-        center = sum(self.bounds) / 2
-        radius = (self.bounds[1] - self.bounds[0]) / 2
+        values = np.zeros(2 * n + len(mus))
+        error = 0.0
+        for low, high in zip(self.thresholds[:-1], self.thresholds[1:]):
+            center, radius = (low + high) / 2, (high - low) / 2
 
-        def transformed(theta):
-            # Remove square-root endpoint singularities without adding lifetime
-            # broadening or deleting occupied band-edge spectral weight.
-            return integrand(center + radius * np.sin(theta)) * radius * np.cos(theta)
+            def transformed(theta):
+                # Resolve each subband edge without fictitious lifetime broadening.
+                return integrand(center + radius * np.sin(theta)) * radius * np.cos(theta)
 
-        values, error, info = quad_vec(
-            transformed,
-            -np.pi / 2,
-            np.pi / 2,
-            epsabs=tolerance,
-            epsrel=tolerance,
-            points=[
-                np.arcsin((m - center) / radius) for m in mus if self.bounds[0] < m < self.bounds[1]
-            ],
-            full_output=True,
-            limit=2000,
-        )
-        if not info.success or not np.isfinite(values).all():
-            raise ArithmeticError("Finite-band charge integration failed")
+            part, err, info = quad_vec(
+                transformed,
+                -np.pi / 2,
+                np.pi / 2,
+                epsabs=tolerance / (len(self.thresholds) - 1),
+                epsrel=tolerance,
+                points=[
+                    np.arcsin((m - center) / radius) for m in mus if low + 1e-8 < m < high - 1e-8
+                ],
+                full_output=True,
+                limit=2000,
+            )
+            if not info.success or not np.isfinite(part).all():
+                raise ArithmeticError("Finite-band charge integration failed")
+            values += part
+            error += err
         if np.max(abs(values[n : 2 * n] - 1)) > 10 * tolerance:
             raise ArithmeticError(
                 "Incomplete continuum spectral weight: bound states or energy window"

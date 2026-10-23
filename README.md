@@ -239,6 +239,13 @@ Flat stretches mean no better converged candidate has been found. They do not es
 
 ## Physics: what works and what is missing
 
+**New equilibrium check:** quantum charge and 3D Poisson now converge together on
+a small graphene ribbon, including bound-state charge. A 30 mV gate-box boundary
+is screened to local potentials of −2.1 to +4.8 mV.
+[Charge maps, convergence and reproduction](results/physics-reference/graphene-feedback/README.md).
+This verifies the equilibrium coupling on a 15-site fixture; finite-bias feedback
+for the searched devices is still pending.
+
 | Layer | Status | What the evidence establishes |
 | --- | --- | --- |
 | Graphene quantum transport | Used by search | Coherent nearest-neighbor lattice model with ideal leads; conservation and reference checks |

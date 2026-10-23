@@ -20,6 +20,12 @@ Implemented:
 
 Next implementations, in dependency order:
 
+The [equilibrium graphene check](../results/physics-reference/graphene-feedback/README.md)
+now connects full-spectrum charge (including bound states) to 3D Poisson.
+`equilibrium_charge` and `site_acceleration` implement this small-device path.
+Unequal reservoir chemical potentials are rejected; the finite-bias production
+charge provider and calibrated device stack remain unfinished.
+
 1. Map the rectifier's actual dielectric/contact stack into a suitable electrostatic domain, including 3D or a justified reduced sheet-charge model. The Cartesian 2D solver is implemented and verified; a graphene device mapping is still required. Etched transport obstacles must not silently become fixed-potential metal electrodes.
 2. Supply the coordinator with a physically justified graphene charge provider and conservative mesh/site charge mapping. Account for reference/background charge and reservoir occupations; verify charge integration, gauge consistency and inner solver convergence. Existing transmission matrices alone do not provide local charge. The current manufactured linear screening fixture is solely a numerical test.
 3. Explicit disorder/scattering models with matched ensemble seeds; phonon temperature is distinct from reservoir occupation temperature.

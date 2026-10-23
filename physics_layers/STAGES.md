@@ -133,10 +133,13 @@ acceptance, failure-propagation and circuit-stage integration checks.
 ## Finite-band lead charge
 
 `lead_charge.LeadChargeDevice` accepts a finalized one-orbital Kwant system and
-uses its actual energy-dependent semi-infinite lead self energies. It integrates
+uses its actual semi-infinite lead modes. It integrates
 reservoir-resolved spectral densities for site occupations and terminal currents,
 and implements the `SiteTransport` interface used by `solve_site_feedback`.
-This dense backend is for small verification devices, not campaign-scale search.
+The default uses flux-normalized scattering states; `spectral_dense` retains the
+independent self-energy formulation for checks away from surface poles.
+Lead subband extrema partition the energy quadrature. This backend is for small
+verification devices, not campaign-scale search.
 
 Every site must recover unit spectral weight per spin over the specified energy
 interval before a result is returned. Truncated bands and missing bound states
@@ -156,11 +159,40 @@ remain acceptance work. No self-consistent winner ranking is claimed.
 
 The first full-band trial on the 15-site ribbon produced by `build_system` with
 width `2 * 0.246 nm`, `ribbon=True`, zero shifts, 300 K and bounds
-`[-8.1, 8.1] eV` failed the lead-broadening passivity gate during adaptive
-integration (Kwant 1.5 runtime). No charge result was accepted. The next numerical
-task is subband-threshold integration and diagnosis of the lead self energy;
-loosening passivity or inserting an artificial imaginary energy is not a fix.
+`[-8.1, 8.1] eV` failed the dense lead-broadening passivity gate during adaptive
+integration (Kwant 1.5 runtime). Scattering states plus threshold partitioning
+avoid that failure but still reject incomplete continuum spectral weight.
+No continuum-only graphene charge result was accepted.
 
 See [Kwant local observables](https://kwant-project.org/doc/latest/tutorial/operators)
 and [Tkwant's missing-bound-state example](https://tkwant.kwant-project.org/doc/dev/tutorial/boundstates.html).
 Run `python -m unittest tests.test_lead_charge` in the isolated Kwant runtime.
+
+## Equilibrium graphene charge with bound states
+
+`equilibrium_charge.EquilibriumChargeDevice` evaluates full equilibrium charge
+using finite-temperature Matsubara poles, surface Green-function decimation and
+an exactly evaluated isolated-device subtraction to accelerate the high-frequency
+tail. Two successive pole doublings must agree. The imaginary energies are
+contour integration points, not physical lifetime broadening. The equilibrium
+Fermi function fixes bound-state occupations; unequal reservoir chemical
+potentials are explicitly rejected. This does not supply finite-bias bound-state
+occupations or rectifier scoring.
+
+The surface calculation is checked against Kwant self energies away from poles
+and an independent finite stack. Charge is checked against continuum integration
+where complete, direct 801-site reservoir diagonalization including an impurity
+bound state, particle-hole symmetry, common energy shifts and pole refinement.
+The 15-site graphene ribbon recovers one electron per carbon at neutrality and
+responds nonuniformly to an applied onsite shift.
+
+`python -m physics_layers.graphene_feedback_demo` connects this provider to the
+existing conservative site/grid mapping and 3D Poisson iteration. The explicit
+fixture uses a 30 mV enclosing gate boundary, relative dielectric constant 4,
+0.2 nm mesh and ideal zero-shift reservoirs at 300 K. It is a mesh-regularized
+Hartree verification geometry, not a calibrated gate/contact stack. Exchange,
+edge chemistry, phonons, finite-bias bound occupations, physical mesh calibration
+and campaign-scale performance remain open.
+
+Surface method: [Lopez Sancho et al., 1985](https://doi.org/10.1088/0305-4608/15/4/009).
+Run `python -m unittest tests.test_equilibrium_charge` in the Kwant runtime.

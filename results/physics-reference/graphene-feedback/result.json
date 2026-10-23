@@ -1,0 +1,248 @@
+{
+  "source_sha256": {
+    "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+    "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers\\site_acceleration.py": "770140d2221d357ddca3c4d5fe7c71cbd34c674e647a062b3927819d1b0eb825",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2"
+  },
+  "model": "Equilibrium nearest-neighbor graphene, ideal leads, dielectric gate box",
+  "limitations": "15-site verification fixture; no finite-bias rectification, calibrated stack, exchange or phonons",
+  "gate_v": 0.03,
+  "temperature_k": 300,
+  "dielectric_relative": 4,
+  "spacing_m": [
+    2e-10,
+    2e-10,
+    2e-10
+  ],
+  "positions_m": [
+    [
+      6e-10,
+      6e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      6e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      6e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      1.215e-09
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.338e-09
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      1.215e-09
+    ]
+  ],
+  "plan": {
+    "method": "Hybrid root in site space",
+    "tolerance": 1e-05
+  },
+  "site_potential_v": [
+    0.0003515241968629363,
+    0.0023053387803934297,
+    0.0016036220815631868,
+    -0.0005057915991449455,
+    -7.995674293983243e-05,
+    -0.0005654798517615383,
+    0.0010460048517240928,
+    0.0004152035945598749,
+    0.002393225157411091,
+    0.00472252183301343,
+    0.004825807082797572,
+    -0.0005014298652002054,
+    -0.001375098926532861,
+    0.00025559533093126363,
+    -0.0020557116581208018
+  ],
+  "excess_charge_c": [
+    -5.278724513961513e-22,
+    -4.279896343374053e-22,
+    -5.312698606941537e-22,
+    -4.275092696724299e-22,
+    -1.9950561811767138e-22,
+    -5.732982622071664e-22,
+    -6.5286002701778095e-22,
+    -3.8980152336321964e-22,
+    -8.103932190468442e-22,
+    -8.110704731066028e-23,
+    -7.466131330554925e-23,
+    1.2954134904048861e-23,
+    3.53723157708794e-23,
+    6.5701655506794145e-24,
+    5.334673627442085e-23
+  ],
+  "transport": {
+    "electrons_per_site": [
+      1.003294720695547,
+      1.002671301186492,
+      1.00331592565651,
+      1.0026683029860766,
+      1.0012452161258873,
+      1.0035782463059386,
+      1.0040748317829842,
+      1.0024329497453102,
+      1.0050580766305623,
+      1.0005062303717922,
+      1.0004659992645077,
+      0.9999191466494446,
+      0.9997792233701314,
+      0.9999589922520947,
+      0.9996670358614503
+    ],
+    "currents_a": [
+      0.0,
+      0.0
+    ],
+    "integration_error": 2.834425583131406e-09
+  },
+  "history": [
+    {
+      "potential_residual_v": 0.030000000000001158,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000000009495,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000000009495,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999998650269882,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999998253042815,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.029999963911348113,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999996438264656,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999996812209272,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999997539175634,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999995037445773,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.02999998758191814,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.029999988746949476,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000841996652,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000046995674,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000995899646,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.030000000215273635,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.03000000081580266,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 0.03000000022719501,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.46440758258637e-06,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 3.624970670856875e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 4.055783486833775e-14,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 4.055176333617183e-14,
+      "occupation_residual": 1.7608137170554983e-13
+    }
+  ]
+}
