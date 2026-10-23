@@ -14,28 +14,28 @@ The nominal test uses a **14.76 nm-wide device, 10 mV peak input, a 10 kΩ load 
 
 ## Direct DC search
 
-**Continuous search: 70 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 1440 candidates, including the same 40 starting designs.*
+**Continuous search: 74 completed matched rounds.** Three methods explore the same five geometry families: top-score selection, a diversity archive, and random search. Each has evaluated 1520 candidates, including the same 40 starting designs.*
 
-![Automatically selected representatives from every shape family](results/continuous-dc/round-000070/diversity.png)
+![Automatically selected representatives from every shape family](results/continuous-dc/round-000074/diversity.png)
 
 **An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-23 00:16 UTC**, through matched round **70**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-23 00:31 UTC**, through matched round **74**. The 15-minute check-in publishes completed rounds while simulation continues independently.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
 | Frozen control D00 | D00 | 11.205 | 0.01256 |
 | Top-score selection | elite-r0-triangle-g17-1 | 22.971 | 0.05277 |
-| Diversity archive | diversity-r0-profile-g15-1 | 28.215 | 0.07961 |
+| Diversity archive | diversity-r0-profile-g73-1 | 28.331 | 0.08026 |
 | Random search | random-r0-triangle-g41-0 | 17.860 | 0.03190 |
 
 \* Fixed-potential simulations at 10 mV peak into 10 kΩ. Candidate counts include shared starting designs and matching proposals. Equal candidate budgets are not equal CPU budgets. Differences this small do not establish a better search method. D00 is our synthetic control. Winners are selected automatically after numerical convergence checks; incomplete rounds do not update this table.
 
-[Completed-round data and progress](results/continuous-dc/round-000070/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
+[Completed-round data and progress](results/continuous-dc/round-000074/README.md) · [Wider search archive](results/2026-10-22-dc-wide/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
 ### The device at atomic scale
 
-![Synthetic control versus current winner](results/continuous-dc/round-000070/atomic-comparison.png)
+![Synthetic control versus current winner](results/continuous-dc/round-000074/atomic-comparison.png)
 
 D00 is our synthetic control, not a reconstructed paper device. Both panels use the same scale and operating conditions.
 
@@ -47,16 +47,16 @@ D00 is our synthetic control, not a reconstructed paper device. Both panels use 
 
 Separate budget: **24/24 offspring evaluated**, 4 numerically converged so far. Parent: `diversity-r0-profile-g15-1`. These evaluations do not enter the three-method comparison.
 
-![Actual simulated graphene lattice and local edge changes](results/continuous-dc/round-000070/winner-local/atomic-lattice.png)
+![Actual simulated graphene lattice and local edge changes](results/continuous-dc/round-000074/winner-local/atomic-lattice.png)
 
-Actual carbon positions from the transport builder, shown as bright spots. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity](results/continuous-dc/round-000070/winner-local/atomic-lattice.json).
+Actual carbon positions from the transport builder, shown as bright spots. The highlighted window compares the frozen parent with its best converged local offspring; this is an ideal lattice rendering, not a microscope image. [Coordinates and connectivity](results/continuous-dc/round-000074/winner-local/atomic-lattice.json).
 
 | Local experiment | Converged DC power (pW) |
 | --- | ---: |
 | Parent | 0.07961 |
 | Best converged offspring: local-s0.01-4 | 0.07632 |
 
-[Frozen plan and completed rows](results/continuous-dc/round-000070/winner-local) Â· [Protocol](local_lab/README.md).
+[Frozen plan and completed rows](results/continuous-dc/round-000074/winner-local) Â· [Protocol](local_lab/README.md).
 
 </details>
 
@@ -68,14 +68,14 @@ Actual carbon positions from the transport builder, shown as bright spots. The h
 | Design | Terminal input (nW) | Loaded voltage response (V/W) | Useful DC (pW) | DC efficiency (%) |
 | --- | ---: | ---: | ---: | ---: |
 | D00 | 5.430 | 2064 | 0.01256 | 0.000231 |
-| diversity-r0-profile-g15-1 | 3.222 | 8757 | 0.07961 | 0.002471 |
+| diversity-r0-profile-g73-1 | 3.229 | 8773 | 0.08026 | 0.002485 |
 
 These are finite-amplitude, quasistatic electrical-terminal values at 10 mV peak, 10 kΩ, 300 K and 0.9 eV in the frozen-potential model. Responsivity is |mean output voltage| / mean terminal input power; efficiency is mean(output voltage)² / (load resistance × mean input power). They are not optical responsivities, small-signal derivatives or measured performance.
 
 **Decision gates:** detector usefulness requires output-noise density, noise-equivalent input power, usable dynamic range and frequency response. Power-converter usefulness requires efficiency and delivered power across excitation and load. Neither application is qualified yet. The present search still optimizes nominal DC load power; this report does not silently change its objective. [Application qualification plan](docs/DEVICE-ROLE.md).
 
 
-**Leader versus D00:** higher computed DC power in **10/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
+**Leader versus D00:** higher computed DC power in **13/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
 
 <details>
 <summary>Validation dashboard: robustness, trajectories, edge damage and numerical checks</summary>
@@ -88,9 +88,9 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 | --- | ---: | ---: | ---: |
 | triangle-control | 3/3 | 27/27 | 27/27 |
 | D00 | 3/3 | 27/27 | 27/27 |
-| diversity-r0-profile-g15-1 | 3/3 | 27/27 | 27/27 |
+| diversity-r0-profile-g73-1 | 3/3 | 27/27 | 27/27 |
 
-**Leader versus D00:** higher computed DC power in **10/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
+**Leader versus D00:** higher computed DC power in **13/27** matched, numerically converged cases so far, out of 27 planned conditions. This counts the computed ordering, not statistical significance or physical validation.
 
 ### Peak performance and robustness
 
@@ -98,37 +98,38 @@ Each new converged leader enters a separate one-CPU validation queue with D00 an
 | --- | ---: | ---: | ---: | ---: |
 | triangle-control | 27/27 | 5 | 0.411× | 0.00267× |
 | D00 | 27/27 | 0 | 1× | 1× |
+| diversity-r0-profile-g73-1 | 27/27 | 13 | 0.445× | 0.00444× |
 | diversity-r0-profile-g15-1 | 27/27 | 10 | 0.35× | 2.65e-05× |
 | elite-r0-profile-g9-1 | 27/27 | 16 | 1.21× | 0.11× |
 | random-r0-beveled-g3-0 | 27/27 | 11 | 0.494× | 0.00343× |
 | random-r1-islands-g1-1 | 27/27 | 6 | 0.156× | 9.51e-05× |
 
-Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000070/robustness).
+Each ratio compares DC load power at the same energy, load and contact condition. Below 1× means less power than D00. Only pairs passing both numerical convergence gates enter; partial coverage is not comparable to complete coverage. These are equally weighted descriptive summaries, not probabilities of success, efficiency or a new search objective. Historical tested leaders remain visible. [All supporting cases](results/continuous-dc/round-000074/robustness).
 
 
-![Matched control and leader trajectories](results/continuous-dc/round-000070/leader-trajectories.png)
+![Matched control and leader trajectories](results/continuous-dc/round-000074/leader-trajectories.png)
 
 Orange paths enter from the left; purple paths enter from the right; gold segments are contacts. Trajectory paths are a classical diagnostic, not a quantum current map or DC-efficiency measurement. Neither control is a reproduced paper device.
 
-![Updating classical scattering comparison](results/continuous-dc/round-000070/leader-scattering.png)
+![Updating classical scattering comparison](results/continuous-dc/round-000074/leader-scattering.png)
 
-![Updating leader energy and contact checks](results/continuous-dc/round-000070/leader-coverage.png)
+![Updating leader energy and contact checks](results/continuous-dc/round-000074/leader-coverage.png)
 
 <details>
 <summary>All 27 DC conditions per design: loads, energies and contact cuts</summary>
 
-![Full current validation matrix](results/continuous-dc/round-000070/leader-matrix.png)
+![Full current validation matrix](results/continuous-dc/round-000074/leader-matrix.png)
 
 </details>
 
-Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000070/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
+Full matrix: three Fermi energies × three loads × three contact/atomic-cut conditions, with energy and phase refinement. Ray checks cover three specularities × three mean free paths × three seeds. [Completed case data](results/continuous-dc/round-000074/validation) retains all loads, raw seed results and convergence flags. Phonons, self-consistent electrostatics and finite-frequency response remain unimplemented.
 
 ### Automated falsification checks
 
 | Design | Fresh spectrum/DC replay | Terminal exchange |
 | --- | --- | --- |
 | D00 | Pass | Pass |
-| diversity-r0-profile-g15-1 | Pass | Pass |
+| diversity-r0-profile-g73-1 | Pass | Pass |
 | triangle-control | Pass | Pass |
 
 Fresh replay rebuilds the lattice and recomputes every energy on the accepted grid,
@@ -137,7 +138,7 @@ conventions; it is **not** a physical mirror-geometry test. These numerical pass
 do not validate missing physics. Exact atomic reflection, controlled edge ensembles,
 self-consistent graphene electrostatics, realistic scattering/contacts, frequency
 response and matched paper-device comparison remain **unresolved**.
-[Completed receipts and fresh spectra](results/continuous-dc/round-000070/falsification).
+[Completed receipts and fresh spectra](results/continuous-dc/round-000074/falsification).
 
 
 ### Atomic-edge sensitivity
@@ -148,13 +149,13 @@ One- and three-atom edge-vacancy pilot; three fixed seeds per damage level. Inta
 | --- | ---: | ---: | ---: | ---: |
 | D00 | 0 | 1 / 1 | 1 | 11.205–11.205 |
 | D00 | 1 | 3 / 3 | 3 | 10.307–11.331 |
-| D00 | 3 | 1 / 3 | 1 | 10.417–10.417 |
+| D00 | 3 | 2 / 3 | 2 | 10.417–11.884 |
 | diversity-r0-profile-g15-1 | 0 | 1 / 1 | 1 | 28.216–28.216 |
 | diversity-r0-profile-g15-1 | 1 | 3 / 3 | 3 | 23.246–28.385 |
-| diversity-r0-profile-g15-1 | 3 | 1 / 3 | 1 | 27.213–27.213 |
+| diversity-r0-profile-g15-1 | 3 | 2 / 3 | 2 | 27.212–27.213 |
 | triangle-control | 0 | 1 / 1 | 1 | 3.871–3.871 |
 | triangle-control | 1 | 3 / 3 | 3 | 3.452–4.557 |
-| triangle-control | 3 | 2 / 3 | 2 | 3.632–4.886 |
+| triangle-control | 3 | 3 / 3 | 3 | 3.632–4.886 |
 
 Small pilot, not a fabrication-yield estimate. See [model and restart contract](edge_lab/README.md). Self-consistent electrostatics remains pending.
 
@@ -164,9 +165,9 @@ Small pilot, not a fabrication-yield estimate. See [model and restart contract](
 | Independent score check | Difference (nV) | Result |
 | --- | ---: | --- |
 | D00 | 0.1241 | Pass |
-| diversity-r0-profile-g15-1 | 0.4037 | Pass |
+| diversity-r0-profile-g73-1 | 0.5795 | Pass |
 
-[Audit receipts and exact input spectra](results/continuous-dc/round-000070/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
+[Audit receipts and exact input spectra](results/continuous-dc/round-000074/evidence). This cross-check uses pair currents, Gaussian quadrature and a separate load solver; it shares the same fixed-potential transport model.
 
 
 </details>
@@ -232,7 +233,7 @@ A separate bounded experiment evaluates **24 mutations around a frozen winner**:
 
 This experiment has its own checkpoints and source manifest. Its extra evaluations are **not added to the matched three-method scores or candidate counts**. Results and completion status are published separately. [Local experiment contract](local_lab/README.md).
 
-![Feedback-guided search progress](results/continuous-dc/round-000070/progress.png)
+![Feedback-guided search progress](results/continuous-dc/round-000074/progress.png)
 
 Flat stretches mean no better converged candidate has been found. They do not establish a local or global optimum. [Search implementation](ballistic_lab/search/dc_space.py) · [Diversity selection](ballistic_lab/search/diversity.py).
 
