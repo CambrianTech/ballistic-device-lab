@@ -43,8 +43,11 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     paths = sorted(source.glob("round-*.json"))
     if not paths:
         raise ValueError("No completed matched round to publish")
-    snapshots = [json.loads(p.read_text(encoding="utf-8")) for p in paths]
-    snapshot = snapshots[-1]
+    snapshots = []
+    for path in paths:
+        snapshot = json.loads(path.read_text(encoding="utf-8"))
+        # Keep only plotted winners from older cumulative histories.
+        snapshots.append({"round": snapshot["round"], "best": winners(snapshot)})
     index = snapshot["round"]
     published = datetime.now(timezone.utc)
     destination = Path("results/continuous-dc") / f"round-{index:06d}"
@@ -151,7 +154,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
     plt.close(fig)
     fig, ax = plt.subplots(figsize=(8, 4))
     for arm in ARMS:
-        values = [winners(s)[arm] for s in snapshots]
+        values = [s["best"][arm] for s in snapshots]
         ax.plot(
             [s["round"] for s in snapshots],
             [abs(r["phase64"]["dc_v"]) * 1e6 if r else float("nan") for r in values],
