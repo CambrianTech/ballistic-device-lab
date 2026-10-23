@@ -349,3 +349,21 @@ See [application acceptance](../physics_layers/STAGES.md#application-acceptance-
 This is not wired into the live fixed-potential campaign. Future neuromorphic
 applications need time-dependent state/circuit models; shared orchestration does
 not turn a static transport solver into a neuron model.
+
+## Report disk retention
+
+Continuous report publication shares identical immutable round/proposal JSON
+files through filesystem hard links. Every historical path and byte remains
+available, but repeated copies occupy storage once on this volume. Existing
+copies can be drained with `python -m ballistic_lab.reporting.storage`.
+The drain checks full byte equality, rejects conflicting histories, and replaces
+only explicitly named immutable report records atomically. It never touches
+live checkpoints, spectra, figures, recovery backups, or solver sources.
+
+Do not edit archived history files in place: linked paths share their contents.
+Git stores the same bytes normally; a fresh clone may materialize duplicates,
+so run the drain after cloning. Filesystems must support hard links; failure
+leaves the original target intact rather than silently deleting evidence.
+This controls duplicate-report growth, not a hard total disk quota. Unique
+round histories and spectra continue growing and should be measured during
+monitoring. No scientific results are automatically discarded.

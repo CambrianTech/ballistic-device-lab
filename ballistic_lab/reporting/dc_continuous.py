@@ -3,7 +3,6 @@
 import json
 import os
 import re
-import shutil
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,6 +22,7 @@ from ballistic_lab.reporting.falsification import render as render_falsification
 from ballistic_lab.reporting.leader_evidence import render as render_evidence
 from ballistic_lab.reporting.leader_validation import render as render_validation
 from ballistic_lab.reporting.local_refinement import render as render_local
+from ballistic_lab.reporting.storage import archive
 
 ARMS = ("elite", "diversity", "random")
 LABELS = {
@@ -60,7 +60,7 @@ def main(source: Path = Path("runs/dc-continuous")) -> None:
         target = destination / path.name
         if target.exists() and target.read_bytes() != path.read_bytes():
             raise ValueError(f"Archive conflict: {target}")
-        shutil.copyfile(path, target)
+        archive(path, target)
     baseline = json.loads(
         Path("results/2026-10-22-dc-wide/summary.json").read_text(encoding="utf-8")
     )
