@@ -13,7 +13,7 @@ The intended application is a sensitive, zero-bias signal detector. No candidate
 | Workstream | State | Evidence |
 | --- | --- | --- |
 | New charge/Poisson model | Loaded operating points completed on one small fixture | [Completed +10 mV](results/physics-reference/loaded-feedback-complete/README.md), [−10 mV](results/physics-reference/loaded-feedback-reverse/README.md), [+5 mV](results/physics-reference/loaded-feedback-half/README.md) |
-| Half-amplitude comparison | −5 mV retry pending after a time-limit failure | [Preserved attempt and retry checks](results/physics-reference/loaded-feedback-reverse-half-inner/README.md) |
+| Half-amplitude comparison | Both signs complete; raw even response closely follows amplitude squared; offset unresolved | [Matched ±5/±10 mV evidence](results/physics-reference/loaded-feedback-reverse-half/README.md) |
 | Geometry integration | Geometry-capable fixture added; empty-control equivalence and obstacle removal tests pass | [Fixture tests](tests/test_geometry_feedback_fixture.py) |
 | Fresh optimization | Not started; no new-model shape rankings yet | [Next campaign](#next-campaign) |
 
@@ -23,7 +23,7 @@ The completed +10 and −10 mV outputs are **−2.236 and −3.399 µV** into 10
 
 ### Next campaign
 
-1. Finish the matched ±5 mV pair and measure zero-drive output under the same assumptions. Report any offset before interpreting amplitude scaling.
+1. Measure zero-drive output under the same assumptions as the completed ±5 and ±10 mV pairs. Report any offset before interpreting amplitude scaling.
 2. Connect the geometry fixture to loaded evaluation, check phase/numerical convergence and model sensitivity, then benchmark D00, the synthetic triangle and retained leaders under identical conditions.
 3. Start a small campaign from round zero with a frozen model, explicit objective, controls and fresh exploration. Publish new geometry images only from those new results.
 

@@ -1,0 +1,13 @@
+{
+  "even_output_v": -7.044305980901851e-07,
+  "odd_output_v": 2.907454961785409e-07,
+  "scope": "Two-point parity diagnostic, not a sinusoidal-cycle average",
+  "reviewed_source_changes": [
+    "physics_layers/even_scaling.py",
+    "physics_layers/loaded_feedback_pilot.py",
+    "physics_layers/plot_loaded_polarity.py",
+    "physics_layers/report_loaded_complete.py",
+    "physics_layers/storage_audit.py"
+  ],
+  "source_review": "Runner change adds explicit bounded time budget and distinct output folder; numerical settings and solver equations unchanged. Other differences are standalone reporting, plotting, scaling and storage modules not imported by the runner. Transport, fixture, charge and Poisson hashes match."
+}

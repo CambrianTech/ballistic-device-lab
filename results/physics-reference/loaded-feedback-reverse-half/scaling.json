@@ -1,0 +1,12 @@
+{
+  "low_even_v": -7.044305980901851e-07,
+  "quadratic_prediction_v": -7.044270882131458e-07,
+  "zero_bias_v": null,
+  "offset_corrected": false,
+  "compared_low_response_v": -7.044305980901851e-07,
+  "compared_high_response_v": -2.817708352852583e-06,
+  "departure_from_quadratic_v": -3.5098770393245503e-12,
+  "low_coefficient_per_v": -0.028177223923607404,
+  "high_coefficient_per_v": -0.02817708352852583,
+  "scope": "Two-amplitude diagnostic; prediction refers to the compared response, with supplied zero-bias output subtracted. An absent offset remains unresolved; numerical uncertainty and model sensitivity require separate checks."
+}
