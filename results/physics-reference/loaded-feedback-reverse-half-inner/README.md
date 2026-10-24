@@ -1,5 +1,13 @@
 # Provisional -5 mV inner-solve audit
 
+**Attempt outcome:** failed at 3605.85 seconds with `Charge/time budget exhausted`,
+after 149 charge calls during expensive evaluation eleven. Final conditioning
+was not completed. The trial output remains unresolved. A separate cold retry
+uses `--max-seconds 5400` and a distinct `-seconds-5400` run directory; physics,
+tolerances, the 240-charge-call cap and 24-current-evaluation cap are unchanged.
+The original attempt and its lock/checkpoints are retained. The time limit is
+checked between charge calls, so a call already running may finish beyond it.
+
 Seven completed inner evaluations from the running -5 mV loaded-feedback
 experiment are recorded in [audit.json](audit.json), with source-file hashes
 and the worker's source manifest. The outer solve is still pending; this is

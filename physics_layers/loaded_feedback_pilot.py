@@ -20,7 +20,9 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_drive=False):
+def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_drive=False, max_seconds=3600):
+    if type(max_seconds) is not int or not 1 <= max_seconds <= 7200:
+        raise ValueError("Time budget must be an integer from 1 to 7200 seconds")
     if type(max_poles) is not int or max_poles < 128:
         raise ValueError("Pole budget must be an integer >= 128")
     out = Path("runs/loaded-feedback-pilot")
@@ -34,6 +36,8 @@ def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_dri
     if half_drive:
         drive_v *= 0.5
         out = out.with_name(out.name + "-half")
+    if max_seconds != 3600:
+        out = out.with_name(out.name + f"-seconds-{max_seconds}")
     out.mkdir(parents=True, exist_ok=True)
     with (out / "attempt.lock").open("x") as lock:
         lock.write(str(os.getpid()))
@@ -42,6 +46,7 @@ def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_dri
     status["max_poles"] = max_poles
     status["cache_currents"] = cache_currents
     status["drive_v"] = drive_v
+    status["max_seconds"] = max_seconds
     manifest = {
         str(p): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in Path("physics_layers").glob("*.py")
@@ -80,7 +85,7 @@ def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_dri
 
             class Counted:
                 def solve(self, *args, **kwargs):
-                    if status["charge_calls"] >= 240 or time.perf_counter() - started > 3600:
+                    if status["charge_calls"] >= 240 or time.perf_counter() - started > max_seconds:
                         raise RuntimeError("Charge/time budget exhausted")
                     status["charge_calls"] += 1
                     save()
@@ -140,5 +145,6 @@ if __name__ == "__main__":
     parser.add_argument("--cache-currents", action="store_true")
     parser.add_argument("--reverse-drive", action="store_true")
     parser.add_argument("--half-drive", action="store_true")
+    parser.add_argument("--max-seconds", type=int, default=3600)
     args = parser.parse_args()
-    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive, half_drive=args.half_drive)
+    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive, half_drive=args.half_drive, max_seconds=args.max_seconds)
