@@ -1,0 +1,15 @@
+# Sensitivity near a bound-state occupation transition
+
+This synthetic chain holds its Hamiltonian and reservoir chemical potentials fixed while moving the explicit bound-occupation reference from 20 meV below to 20 meV above the bound pole. The eight cases cover onsite impurities ±0.7 eV and temperatures 150 and 600 K.
+
+The analytic reference includes both continuum and discrete-pole weight, as derived in the [complete chain reference](../impurity-bound-reference/README.md). With fixed onsite potential the bound occupation can change charge without changing transmission or current. In a self-consistent electrostatic model that changed charge could alter potential; this experiment does not solve that feedback.
+
+This tests the chosen closure numerically, not whether a physical isolated state equilibrates to that reference. The reference is deliberately near the pole, far from the transport reservoirs, to expose assumption sensitivity rather than represent a calibrated device.
+
+Reproduce with:
+
+```sh
+python -m physics_layers.impurity_bound_reference --near-bound --output new-output-directory
+```
+
+The result file must not already exist. [Raw cases](result.json) include charge, current, analytic errors and spectral sum-rule checks. Historical results are preserved.
