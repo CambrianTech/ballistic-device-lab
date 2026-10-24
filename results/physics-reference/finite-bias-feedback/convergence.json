@@ -1,0 +1,8 @@
+{
+  "tolerance": 1e-09,
+  "max_poles": 131072,
+  "initial_attempt": "32768-pole cap failed at stricter tolerance; last charge change 5.40418e-10",
+  "max_occupation_change": 7.599632034782644e-11,
+  "max_current_change_a": 2.117582368135751e-22,
+  "scope": "Tighter quadrature at saved self-consistent potential; not mesh convergence"
+}

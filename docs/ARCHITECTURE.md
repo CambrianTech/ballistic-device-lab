@@ -367,3 +367,14 @@ leaves the original target intact rather than silently deleting evidence.
 This controls duplicate-report growth, not a hard total disk quota. Unique
 round histories and spectra continue growing and should be measured during
 monitoring. No scientific results are automatically discarded.
+
+## Finite-bias pilot and campaign stop
+
+The October 24 pivot intentionally stops the original search at checkpoint round
+433 with its STOP sentinel retained. Do not treat this as a worker failure.
+The isolated `physics_layers.bias_charge` adds equilibrium charge plus a
+nonequilibrium injectivity correction with an explicit bound-occupation reference.
+See [finite-bias pilot](../physics_layers/FINITE_BIAS.md) for assumptions and
+verification. It is not integrated into historical scoring. The next experimental
+steps are convergence and calibrated contact electrostatics, followed by dynamic
+state/circuit models if pursuing neuromorphic behavior.

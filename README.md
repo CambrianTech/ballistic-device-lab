@@ -4,6 +4,13 @@
 
 A rectifier converts an alternating signal into a DC output. Our immediate goal is a sensitive, zero-bias signal detector. The search currently maximizes simulated DC power into a load; detector sensitivity is a separate qualification step. We have not yet demonstrated an advantage over a fabricated or commercial device.
 
+## Current direction
+
+The geometry campaign is intentionally stopped at checkpoint round 433. Its
+completed results below remain the fixed-potential baseline. Work now focuses on
+[finite-bias charge feedback](physics_layers/FINITE_BIAS.md): testable physics
+experiments before a new search or a dynamic neuromorphic device model.
+
 ## What the pictures show
 
 Each square represents a tiny graphene region with four electrical contacts. **The filled polygon is an etched-out obstacle: graphene is removed there.** The remaining white region conducts. Orange segments are contacts. An AC voltage is applied between left and right; we calculate the average voltage across a resistor connecting top and bottom. The search changes the obstacle geometry while keeping the nominal device dimensions and drive fixed.
