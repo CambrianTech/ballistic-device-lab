@@ -1,0 +1,60 @@
+# Fresh discovery pipeline
+
+The worker owns proposal generation, scoring, refinement, checkpointing and
+champion retention. The publisher consumes its completed snapshots and redraws
+the README. Neither step requires an AI or manual score selection.
+
+## Run in your fork
+
+With the Kwant environment active and BLAS limited to one thread:
+
+```sh
+python -m ballistic_lab.pipeline.fresh_discovery --root runs/my-campaign --seed 241026 --rounds 20 --workers 4
+```
+
+Set the `campaign_gallery` adapter's `root` in `publication.json` to that directory,
+then run the existing publication service in another terminal:
+
+```sh
+python -m ballistic_lab.reporting.live_project --watch --push
+```
+
+Omit `--push` for local generation only. Publication uses the configured remote
+and branch, normally your fork's `origin/main`. It checks actual worker liveness,
+and refuses to absorb uncommitted README edits. The two processes communicate
+through saved data: compute continues if publication fails, and publication never
+changes scoring. This is a bounded 20-generation campaign, not a service that
+survives a machine reboot.
+
+## What runs automatically
+
+A new seed produces 40 stratified initial designs spanning triangle, beveled,
+profile, islands and radial families. Subsequent generations propose 20 designs:
+fresh samples plus diversity-guided mutations. The strongest two screening
+candidates receive the existing energy/phase refinement. A candidate may replace
+the champion only when both convergence checks pass and DC power improves.
+This single diversity campaign does not estimate superiority over other search
+strategies. Equal candidate budgets are not equal CPU budgets.
+
+The main gallery is control / retained benchmark / current campaign best, all at
+14.76 nm width, 10 mV peak drive, 10 kohm load and 300 K with fixed internal
+potential. The proposal strip shows one recorded proposal per family, clearly
+unranked. Charge-feedback experiments stay in the physics section; their scores
+cannot displace this campaign's champion.
+
+## Checkpoints and model compatibility
+
+The default ledger and synthetic control are the repository's published baseline.
+Pass `--ledger`, `--controls` and `--reference-manifest` for compatible fork data.
+The worker checks reference transport, geometry and scoring hashes before carrying
+a champion forward. Different physics must be re-evaluated, not silently compared.
+A full source manifest and seed/configuration are recorded in the new run.
+
+Create `STOP` in the new run directory to stop after the active generation.
+Resume with the same command and unchanged source/configuration after deliberately
+removing that run's STOP. Never remove the old `runs/dc-continuous/STOP` to start
+this campaign. Per-run OS locks prevent duplicate workers on the same directory;
+operators must also avoid launching overlapping campaigns on limited hardware.
+All completed rounds are immutable reporting inputs. Partial rows are checkpoints,
+not published champions. The campaign keeps its best in `state.json` and snapshots;
+the original champion ledger and historical studies remain intact.

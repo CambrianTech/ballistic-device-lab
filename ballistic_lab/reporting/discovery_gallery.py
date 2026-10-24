@@ -68,4 +68,6 @@ def render(options):
     fig.subplots_adjust(left=.025,right=.975,top=.81,bottom=.22,wspace=.22)
     fig.savefig(out/'discovery.png',dpi=160,facecolor=fig.get_facecolor()); plt.close(fig)
     body='**Keep the best. Explore what changes it.** The retained champion stays in view as new experiment geometries and results arrive.\n\n![Retained champion alongside the latest saved experiment designs](results/live/discovery.png)\n\nShapes are normalized for display. Gold marks retained champions; teal marks new experiments. Different scales and physics have separate scores—this gallery is not a shared ranking. New feedback points measure grounded-terminal current, not loaded DC power. [Live evidence](results/live/evidence.json).'
+    if not ledger:
+        body='**Charge-feedback experiments** — saved geometries and completed grounded-terminal current results.\n\n![Small-device charge-feedback experiments](results/live/discovery.png)\n\nThese small fixtures test the physics implementation; their current scores are separate from the main loaded-power competition. [Run evidence](results/live/evidence.json).'
     return dict(markdown=body,evidence=dict(cards=cards,experiment_status=source.as_posix() if source else None))

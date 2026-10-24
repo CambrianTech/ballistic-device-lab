@@ -22,6 +22,11 @@
       "label": "New geometry feedback experiments",
       "module": "ballistic_lab.pipeline.small_feedback_experiment",
       "status_glob": "runs/small-feedback-*/status.json"
+    },
+    {
+      "label": "Fresh evolutionary shape search",
+      "module": "ballistic_lab.pipeline.fresh_discovery",
+      "status_glob": "runs/fresh-discovery-*/status.json"
     }
   ],
   "completed_glob": "runs/loaded-feedback-pilot*/status.json",
@@ -34,11 +39,18 @@
       }
     },
     {
-      "callable": "ballistic_lab.reporting.discovery_gallery:render",
+      "callable": "ballistic_lab.reporting.campaign_gallery:render",
       "block": "discovery",
       "options": {
-        "ledger": "results/live/champions.json",
-        "experiments": "runs/small-feedback-*/status.json"
+        "root": "runs/fresh-discovery-20261024"
+      }
+    },
+    {
+      "callable": "ballistic_lab.reporting.discovery_gallery:render",
+      "block": "feedback-gallery",
+      "options": {
+        "experiments": "runs/small-feedback-*/status.json",
+        "ledger": "runs/no-feedback-champion.json"
       }
     }
   ]

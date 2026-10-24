@@ -1,9 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-24 15:58 UTC**
+**Computing · Updated 2026-10-24 16:05 UTC**
 
-New geometry feedback experiments · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
+Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve devices. Simulate the physics. Beat the champion.
@@ -19,11 +19,17 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 [Explore the shapes](#letting-shapes-compete) · [Follow the electrons](#following-the-electrons) · [Look inside the physics](#the-charge-changes-the-device) · [Run the code](#reproduce-and-explore)
 
 <!-- discovery:start -->
-**Keep the best. Explore what changes it.** The retained champion stays in view as new experiment geometries and results arrive.
+**One benchmark. A fresh population. A champion to beat.**
 
-![Retained champion alongside the latest saved experiment designs](results/live/discovery.png)
+![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)
 
-Shapes are normalized for display. Gold marks retained champions; teal marks new experiments. Different scales and physics have separate scores—this gallery is not a shared ranking. New feedback points measure grounded-terminal current, not loaded DC power. [Live evidence](results/live/evidence.json).
+All three use the same fixed-potential transport model: 14.76 nm, 10 mV peak drive, 10 kΩ load and 300 K. Only energy- and phase-converged designs enter the comparison. The retained champion survives every restart.
+
+**Shapes being explored now** — one recorded proposal per family, not selected for score.
+
+![Current diverse geometry proposals](results/live/campaign-attempts.png)
+
+[Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).
 <!-- discovery:end -->
 
 ## Letting shapes compete
@@ -105,6 +111,14 @@ A strong score at one operating point is only part of the story. The nominal win
 </details>
 
 ## The charge changes the device
+
+<!-- feedback-gallery:start -->
+**Charge-feedback experiments** — saved geometries and completed grounded-terminal current results.
+
+![Small-device charge-feedback experiments](results/live/discovery.png)
+
+These small fixtures test the physics implementation; their current scores are separate from the main loaded-power competition. [Run evidence](results/live/evidence.json).
+<!-- feedback-gallery:end -->
 
 Geometry is only one part of the physics. Electrons redistribute charge, charge changes the electrostatic potential, and that potential changes transport. A separate self-consistent graphene–Poisson experiment resolves that feedback at individual lattice sites.
 
