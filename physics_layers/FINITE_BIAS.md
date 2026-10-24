@@ -272,3 +272,14 @@ The selected pole ceiling is recorded and applied to both neutral and finite-bia
 charge. It writes to runs/loaded-feedback-pilot-poles-131072, retaining the original
 failed attempt. All accuracy, circuit-call, charge-call and elapsed-time limits
 are unchanged. Retry results remain pending.
+
+The higher-pole run cleared the first charge failure: its first two completed
+inner solves passed at about 4.38e-9 V potential residual and 6.95e-10 electrons/site
+occupation residual. Both callbacks requested exactly [0.005,-0.005,0,0] V.
+The outer load solution is still pending. A separate ExactCurrentCache wrapper
+now supports bounded in-memory reuse of identical voltages for a frozen,
+deterministic provider. It never rounds voltages or caches failed evaluations;
+new model/settings require a new cache. Four cache/bridge tests pass, including
+preservation of 1e-12 V Jacobian perturbations, output-copy isolation and eviction.
+The active pilot has not been modified to use it; integration is deferred until
+that process finishes. This is an optimization mechanism, not new physics evidence.
