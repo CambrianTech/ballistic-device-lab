@@ -10,7 +10,22 @@ from .poisson3d import Poisson3DStage
 from .site_feedback import FeedbackFailure, FeedbackResult, FeedbackStep
 
 
-def solve_accelerated(mesh, mapping, provider, reference, mus, temperature_k, *, tolerance=1e-6):
+def solve_accelerated(
+    mesh,
+    mapping,
+    provider,
+    reference,
+    mus,
+    temperature_k,
+    *,
+    tolerance=1e-6,
+    initial_potential_v=None,
+):
+    """Solve feedback, optionally starting from a nearby bias's site potentials.
+
+    A warm start is only an initial guess; full-grid and charge checks still run.
+    It does not establish uniqueness or rule out bias-history dependence.
+    """
     reference = np.asarray(reference, float)
     n = len(mapping.positions_m)
     if (
@@ -23,6 +38,13 @@ def solve_accelerated(mesh, mapping, provider, reference, mus, temperature_k, *,
         or mapping.spacing_m != mesh.spacing_m
     ):
         raise ValueError("One finite nonnegative reference occupation per site required")
+    initial = (
+        np.zeros(n)
+        if initial_potential_v is None
+        else np.array(initial_potential_v, float, copy=True)
+    )
+    if initial.shape != (n,) or not np.isfinite(initial).all():
+        raise ValueError("Initial potential must contain one finite voltage per site")
     poisson = Poisson3DStage()
     external = mapping.sample_potential(poisson.evaluate(mesh).potential_v)
     grounded = np.where(np.isfinite(mesh.fixed_potential_v), 0.0, np.nan)
@@ -43,7 +65,7 @@ def solve_accelerated(mesh, mapping, provider, reference, mus, temperature_k, *,
         return value
 
     solved = root(
-        residual, np.zeros(n), method="hybr", options={"xtol": tolerance / 100, "maxfev": 300}
+        residual, initial, method="hybr", options={"xtol": tolerance / 100, "maxfev": 300}
     )
     transport = provider.solve(-solved.x, mus, temperature_k, tolerance=tolerance / 100)
     charge = -elementary_charge * (np.array(transport.electrons_per_site) - reference)

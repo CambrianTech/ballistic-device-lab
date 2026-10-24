@@ -194,3 +194,15 @@ final full-grid potential residual 2.79e-14 V and recomputed occupation residual
 5.77e-15 electrons/site. [Published evidence and plot](../results/physics-reference/four-terminal-feedback/README.md).
 This is a pinned-output pilot, not loaded DC
 or a restarted optimization campaign. Remote box electrodes remain uncalibrated.
+
+### Continuation support for repeated bias evaluations
+
+`solve_accelerated(..., initial_potential_v=...)` now accepts a copied, finite
+site-potential initial guess from a neighboring bias. The default remains zero.
+Every solve still recomputes charge and verifies the full-grid Poisson residual;
+the initial guess never substitutes for a completed evaluation. Three accelerated
+solver tests pass, including changed-bias warm/cold agreement on the independent
+small feedback fixture and rejection of malformed guesses. This is numerical
+verification, not a measured graphene speedup. The hybrid solver still builds a
+numerical Jacobian, and multiple self-consistent branches remain possible;
+future bias sweeps must compare cold starts and forward/reverse continuation.

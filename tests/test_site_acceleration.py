@@ -8,6 +8,37 @@ from tests.test_site_feedback import fixture
 
 
 class AcceleratedFeedbackTests(unittest.TestCase):
+    def test_warm_start_matches_cold_at_changed_bias(self):
+        mesh, mapping, provider = fixture()
+        previous = solve_accelerated(mesh, mapping, provider, [1], [0.04, -0.02], 300)
+        initial = np.array(previous.site_potential_v)
+        saved = initial.copy()
+        warm = solve_accelerated(
+            mesh,
+            mapping,
+            provider,
+            [1],
+            [0.045, -0.025],
+            300,
+            initial_potential_v=initial,
+        )
+        cold = solve_accelerated(mesh, mapping, provider, [1], [0.045, -0.025], 300)
+        np.testing.assert_array_equal(initial, saved)
+        np.testing.assert_allclose(warm.site_potential_v, cold.site_potential_v, atol=1e-6)
+        np.testing.assert_allclose(
+            warm.transport.electrons_per_site, cold.transport.electrons_per_site, atol=1e-6
+        )
+        self.assertLess(warm.history[-1].potential_residual_v, 1e-6)
+        self.assertLess(warm.history[-1].occupation_residual, 1e-6)
+
+    def test_rejects_invalid_initial_potential(self):
+        mesh, mapping, provider = fixture()
+        for initial in ([float("nan")], [float("inf")], [], [[0]], [0, 0]):
+            with self.subTest(initial=initial), self.assertRaises(ValueError):
+                solve_accelerated(
+                    mesh, mapping, provider, [1], [0, 0], 300, initial_potential_v=initial
+                )
+
     def test_matches_direct_mesh_iteration(self):
         mesh, mapping, provider = fixture()
         a = solve_accelerated(mesh, mapping, provider, [1], [0.04, -0.02], 300, tolerance=1e-6)
