@@ -1,0 +1,720 @@
+{
+  "snapshot": "runs\\fresh-discovery-20261024\\round-000019.json",
+  "snapshot_sha256": "184f5105b4bc5076f9dbc913917f2b56f768093c433a136216f92264829e6d51",
+  "selection": [
+    {
+      "family": "beveled",
+      "pending_rank": 1,
+      "pending_count": 81,
+      "row": {
+        "candidate": {
+          "key": "r1-beveled-g10-1",
+          "family": "beveled",
+          "repeat": 1,
+          "round": 10,
+          "parameters": [
+            1.203426140351635,
+            0.8180695884052422,
+            0.22359443660073175,
+            0.5541121552891305,
+            0.3272525513754776,
+            0.24340939727871125
+          ],
+          "origin": "mutation of r1-beveled-g1-0",
+          "obstacles": [
+            [
+              [
+                -0.6017130701758175,
+                0.6326292308033529
+              ],
+              [
+                0.6017130701758175,
+                0.6326292308033529
+              ],
+              [
+                0.5364071701100198,
+                0.3649138707950505
+              ],
+              [
+                0.33341652618076206,
+                -0.18544035760188937
+              ],
+              [
+                -0.37409373874917795,
+                0.3649138707950505
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": 9.562255442277112e-06,
+            "dc_power_w": 9.143672914335825e-15,
+            "input_power_w": 4.824220015827141e-09,
+            "efficiency": 1.895368139168107e-06,
+            "max_kcl_a": 1.2076009762661651e-20
+          }
+        ],
+        "device_fingerprint": "2bac17c846e9fdf40343539e0d8db5b5995548e6008b0e19c2ea0620730182c3",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "beveled",
+      "pending_rank": 41,
+      "pending_count": 81,
+      "row": {
+        "candidate": {
+          "key": "r1-beveled-g11-0",
+          "family": "beveled",
+          "repeat": 1,
+          "round": 11,
+          "parameters": [
+            1.047993954043656,
+            0.6816219234070117,
+            -0.007832470788042278,
+            0.12455530965379813,
+            0.3523280598822214,
+            0.2986859016478425
+          ],
+          "origin": "fresh global",
+          "obstacles": [
+            [
+              [
+                -0.523996977021828,
+                0.33297849091546355
+              ],
+              [
+                0.523996977021828,
+                0.33297849091546355
+              ],
+              [
+                0.3869806824594604,
+                0.09282396106828303
+              ],
+              [
+                0.06526660573060793,
+                -0.3486434324915481
+              ],
+              [
+                -0.34799225249917864,
+                0.09282396106828303
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -2.285805675519711e-06,
+            "dc_power_w": 5.224907586238123e-16,
+            "input_power_w": 5.2290242866015165e-09,
+            "efficiency": 9.992127211239118e-08,
+            "max_kcl_a": 1.9667046244060786e-20
+          }
+        ],
+        "device_fingerprint": "0e099fc0575c55e5900cbaead29e4e4926d53ccfe0b0ca8590830011c71469b5",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "islands",
+      "pending_rank": 1,
+      "pending_count": 83,
+      "row": {
+        "candidate": {
+          "key": "r1-islands-g19-1",
+          "family": "islands",
+          "repeat": 1,
+          "round": 19,
+          "parameters": [
+            0.6069575922347047,
+            0.7314505918120122,
+            -0.10170026762265574,
+            -0.0034508256976170104,
+            0.6446021784192852,
+            0.34612302694242114,
+            -0.03442816169140178,
+            0.3413838068839029
+          ],
+          "origin": "mutation of r1-islands-g1-1",
+          "obstacles": [
+            [
+              [
+                -0.8034787961173524,
+                0.2640250282833504
+              ],
+              [
+                -0.19652120388264765,
+                0.2640250282833504
+              ],
+              [
+                -0.5010472524283236,
+                -0.4674255635286618
+              ]
+            ],
+            [
+              [
+                0.17769891079035738,
+                0.1386333517798088
+              ],
+              [
+                0.8223010892096426,
+                0.1386333517798088
+              ],
+              [
+                0.6100283727972162,
+                -0.20748967516261235
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -9.06215946815572e-06,
+            "dc_power_w": 8.212273422628437e-15,
+            "input_power_w": 3.1598702527725107e-09,
+            "efficiency": 2.598927413371762e-06,
+            "max_kcl_a": 3.377502518145895e-20
+          }
+        ],
+        "device_fingerprint": "66238e762f4d5481f1ed17f394ce20a86e368615376a888be93d956996523a5e",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "islands",
+      "pending_rank": 42,
+      "pending_count": 83,
+      "row": {
+        "candidate": {
+          "key": "r0-islands-g16-0",
+          "family": "islands",
+          "repeat": 0,
+          "round": 16,
+          "parameters": [
+            0.22562422611272087,
+            0.24827593955821184,
+            -0.1544113935232152,
+            -0.1283635066255185,
+            0.5997789225086448,
+            0.4569366976114618,
+            0.2399050123859851,
+            0.14415504361580722
+          ],
+          "origin": "fresh global",
+          "obstacles": [
+            [
+              [
+                -0.6128121130563604,
+                -0.030273423744109282
+              ],
+              [
+                -0.3871878869436396,
+                -0.030273423744109282
+              ],
+              [
+                -0.5144809584217489,
+                -0.2785493633023211
+              ]
+            ],
+            [
+              [
+                0.20011053874567758,
+                0.468373361191716
+              ],
+              [
+                0.7998894612543224,
+                0.468373361191716
+              ],
+              [
+                0.5432305783670378,
+                0.01143666358025422
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": 1.8042870804306285e-06,
+            "dc_power_w": 3.255451868608882e-16,
+            "input_power_w": 4.918202180560735e-09,
+            "efficiency": 6.61919081219577e-08,
+            "max_kcl_a": 1.4465734552327348e-20
+          }
+        ],
+        "device_fingerprint": "58fe90351fd5e9428ee8f5f30a4a20dddeb8cfac1b03937f7b37be7018f9f18a",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "profile",
+      "pending_rank": 1,
+      "pending_count": 81,
+      "row": {
+        "candidate": {
+          "key": "r1-profile-g10-1",
+          "family": "profile",
+          "repeat": 1,
+          "round": 10,
+          "parameters": [
+            0.5425167312158067,
+            0.43989512065613273,
+            0.20614285075352917,
+            0.07049662629279399,
+            0.08008457005785574,
+            0.280259058212054,
+            0.3421937573056034,
+            0.47380730538134924,
+            0.5957845848885756,
+            0.21809607282816545
+          ],
+          "origin": "mutation of r1-profile-g0-2",
+          "obstacles": [
+            [
+              [
+                -0.27125836560790334,
+                0.4260904110815955
+              ],
+              [
+                0.27125836560790334,
+                0.4260904110815955
+              ],
+              [
+                0.27125836560790334,
+                0.33015101281022097
+              ],
+              [
+                0.1808389104052689,
+                0.16400767922697163
+              ],
+              [
+                0.09041945520263445,
+                0.21766488931310976
+              ],
+              [
+                0.0,
+                0.27556104692387173
+              ],
+              [
+                -0.09041945520263445,
+                0.3028058188544299
+              ],
+              [
+                -0.1808389104052689,
+                0.39086159947330057
+              ],
+              [
+                -0.27125836560790334,
+                0.3950792891526766
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -8.347238213115994e-06,
+            "dc_power_w": 6.96763857865039e-15,
+            "input_power_w": 6.392837965418799e-09,
+            "efficiency": 1.089913214810214e-06,
+            "max_kcl_a": 1.5759445030360283e-20
+          }
+        ],
+        "device_fingerprint": "4ef508d4fdfa1da6c1f33834e91bb4372bfc246adcc449d2ec05889667adc90b",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "profile",
+      "pending_rank": 41,
+      "pending_count": 81,
+      "row": {
+        "candidate": {
+          "key": "r1-profile-g10-0",
+          "family": "profile",
+          "repeat": 1,
+          "round": 10,
+          "parameters": [
+            0.5389712671526636,
+            0.31044611359277546,
+            0.11455544838721121,
+            0.6613439742745637,
+            0.8196007129546288,
+            0.7821877535536145,
+            0.7814359397983757,
+            0.8230030902554479,
+            0.5406782860663105,
+            0.8379084904471295
+          ],
+          "origin": "fresh global",
+          "obstacles": [
+            [
+              [
+                -0.2694856335763318,
+                0.2697785051835989
+              ],
+              [
+                0.2694856335763318,
+                0.2697785051835989
+              ],
+              [
+                0.2694856335763318,
+                0.009653070777898343
+              ],
+              [
+                0.17965708905088784,
+                0.10192703257030994
+              ],
+              [
+                0.08982854452544392,
+                0.014280394338950897
+              ],
+              [
+                0.0,
+                0.02718475465147513
+              ],
+              [
+                -0.08982854452544395,
+                0.02695135699301565
+              ],
+              [
+                -0.1796570890508879,
+                0.015336649148966486
+              ],
+              [
+                -0.2694856335763318,
+                0.06446683862206012
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -2.419692163078894e-06,
+            "dc_power_w": 5.854910164065416e-16,
+            "input_power_w": 5.750881771805228e-09,
+            "efficiency": 1.0180891203102465e-07,
+            "max_kcl_a": 2.069114754118972e-20
+          }
+        ],
+        "device_fingerprint": "8405ca277aac0c5f43314305c3de1de368931bf09a29f860a3f03cbd5fd243c5",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "radial",
+      "pending_rank": 1,
+      "pending_count": 84,
+      "row": {
+        "candidate": {
+          "key": "r0-radial-g10-1",
+          "family": "radial",
+          "repeat": 0,
+          "round": 10,
+          "parameters": [
+            0.6182719083384668,
+            0.6562956587915875,
+            -0.12057597769492788,
+            0.15634589087308276,
+            0.9434298226018508,
+            0.38787209725244065,
+            0.6162386486830701,
+            0.4973257507194183,
+            0.3997915227252255,
+            0.6539895871800481,
+            0.48090556629986003,
+            0.7049565533768034
+          ],
+          "origin": "mutation of r0-radial-g6-0",
+          "obstacles": [
+            [
+              [
+                0.4627201791085396,
+                0.15634589087308276
+              ],
+              [
+                0.04899559773042754,
+                0.33634612589134094
+              ],
+              [
+                -0.12057597769492785,
+                0.5607806407833759
+              ],
+              [
+                -0.33799896750644537,
+                0.38714040443631303
+              ],
+              [
+                -0.36775584538779454,
+                0.1563458908730828
+              ],
+              [
+                -0.40648993076209655,
+                -0.14715178329781053
+              ],
+              [
+                -0.12057597769492794,
+                -0.1592703445782253
+              ],
+              [
+                0.18761993072261418,
+                -0.17080407991458119
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -7.430552696788698e-06,
+            "dc_power_w": 5.5213113379753786e-15,
+            "input_power_w": 5.256144120902755e-09,
+            "efficiency": 1.0504490004408555e-06,
+            "max_kcl_a": 1.2420944078096264e-20
+          }
+        ],
+        "device_fingerprint": "6fd8f17a0148d41283569e3078bcc62f7f3bce1a364ef1f92558d743964a2212",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "radial",
+      "pending_rank": 43,
+      "pending_count": 84,
+      "row": {
+        "candidate": {
+          "key": "r0-radial-g8-1",
+          "family": "radial",
+          "repeat": 0,
+          "round": 8,
+          "parameters": [
+            0.3952639629378295,
+            0.5121170366514576,
+            0.04171670857114146,
+            -0.1372083505384153,
+            0.5234376142951493,
+            0.36964646496252224,
+            0.4046971352502315,
+            0.7550919770412519,
+            0.7212733771573976,
+            0.5847893679384093,
+            0.8673637219176054,
+            0.791110096216771
+          ],
+          "origin": "mutation of r0-radial-g2-0",
+          "obstacles": [
+            [
+              [
+                0.24861273434816528,
+                -0.1372083505384153
+              ],
+              [
+                0.14503061427423228,
+                -0.003351444281881749
+              ],
+              [
+                0.041716708571141466,
+                0.07004394710726738
+              ],
+              [
+                -0.16932683900102252,
+                0.1362266354991738
+              ],
+              [
+                -0.24337666484564324,
+                -0.13720835053841524
+              ],
+              [
+                -0.12172831077047314,
+                -0.3489731123409815
+              ],
+              [
+                0.041716708571141396,
+                -0.5814000895058382
+              ],
+              [
+                0.2628270981689137,
+                -0.42368626937532916
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": 1.8318996452646373e-06,
+            "dc_power_w": 3.355856310320704e-16,
+            "input_power_w": 5.369654905430692e-09,
+            "efficiency": 6.249668497181638e-08,
+            "max_kcl_a": 1.5061304593365528e-20
+          }
+        ],
+        "device_fingerprint": "12f940b8c23fa7a118513df5b847dc9fc2c4e7d197ea89ee50dc66ae1ece452f",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "triangle",
+      "pending_rank": 1,
+      "pending_count": 82,
+      "row": {
+        "candidate": {
+          "key": "r0-triangle-g12-0",
+          "family": "triangle",
+          "repeat": 0,
+          "round": 12,
+          "parameters": [
+            1.3844580773779627,
+            0.9003405029328077,
+            -0.1889444702492552,
+            -0.43592525340485266
+          ],
+          "origin": "fresh global",
+          "obstacles": [
+            [
+              [
+                -0.6922290386889813,
+                0.2612257812171486
+              ],
+              [
+                0.6922290386889813,
+                0.2612257812171486
+              ],
+              [
+                -0.30176011910469175,
+                -0.639114721715659
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": -1.07433139865707e-05,
+            "dc_power_w": 1.1541879541404562e-14,
+            "input_power_w": 4.590176118144749e-09,
+            "efficiency": 2.514474225897359e-06,
+            "max_kcl_a": 1.917073787652897e-19
+          }
+        ],
+        "device_fingerprint": "bcc8ec02ae1085758f399fc1b3a9e7254db0e0caba959f7cc6339301314524aa",
+        "energy_converged": false
+      }
+    },
+    {
+      "family": "triangle",
+      "pending_rank": 42,
+      "pending_count": 82,
+      "row": {
+        "candidate": {
+          "key": "r0-triangle-g11-0",
+          "family": "triangle",
+          "repeat": 0,
+          "round": 11,
+          "parameters": [
+            0.4150540796968437,
+            0.4563179590629586,
+            0.0810676437054329,
+            -0.29049598392204845
+          ],
+          "origin": "fresh global",
+          "obstacles": [
+            [
+              [
+                -0.20752703984842186,
+                0.3092266232369122
+              ],
+              [
+                0.20752703984842186,
+                0.3092266232369122
+              ],
+              [
+                -0.060285771631197464,
+                -0.1470913358260464
+              ]
+            ]
+          ]
+        },
+        "levels": [
+          {
+            "count": 257,
+            "dc_v": 2.0318997520481444e-06,
+            "dc_power_w": 4.1286166023733113e-16,
+            "input_power_w": 5.834188935246134e-09,
+            "efficiency": 7.076590505033297e-08,
+            "max_kcl_a": 1.503152609131362e-20
+          }
+        ],
+        "device_fingerprint": "b94fb80cfb88baea88e46db3b5c74e161728ed065b019117b7828d5eb942b42f",
+        "energy_converged": false
+      }
+    }
+  ],
+  "source": {
+    "ballistic_lab\\models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "ballistic_lab\\paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "ballistic_lab\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\experiments\\classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "ballistic_lab\\experiments\\convergence.py": "babb3121c42c33a1813e8090788dc55c0ebe68cebb8f1ec3f475f086ac7cb47d",
+    "ballistic_lab\\experiments\\coverage.py": "ec0b8b086b918237b0d10b737b80dec40c037dec8ad7f8900f0e25a7b4cdab7e",
+    "ballistic_lab\\experiments\\dc_audit.py": "812c8a13c33155650bc2ccfc4637a8c31bd050dfabccad07df308e92df335e11",
+    "ballistic_lab\\experiments\\dc_refine.py": "c99861f310088779a89937f49c917569f5975a612b1590366b37884442b6a612",
+    "ballistic_lab\\experiments\\dc_search.py": "f97bf3ee3d94a64fe37dedf12e0c10d34f8cc22a8ebff66945f47fe592a599f0",
+    "ballistic_lab\\experiments\\dc_wide.py": "30674ab898ecb43ff212a78acc14cac342b1fdbd95d8a5f157c7a53cf39e37ea",
+    "ballistic_lab\\experiments\\discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "ballistic_lab\\experiments\\families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "ballistic_lab\\experiments\\final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "ballistic_lab\\experiments\\finite_bias.py": "5e1e15e9fc284a0aa0922b6b83d81c8915f393f6c596ee2d56aa578ce8e1755f",
+    "ballistic_lab\\experiments\\lattice.py": "deed9b0a189abef92af154108a19dec5aa3549ccfb597ba908ff1b1a9239c6cd",
+    "ballistic_lab\\experiments\\learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "ballistic_lab\\experiments\\linear_load.py": "4732589454671763d6c8e61400352e89cb2e861fe32f106deca716fc7b6ab4fa",
+    "ballistic_lab\\experiments\\refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "ballistic_lab\\experiments\\rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "ballistic_lab\\experiments\\robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "ballistic_lab\\experiments\\validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "ballistic_lab\\experiments\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\geometry\\basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "ballistic_lab\\geometry\\families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "ballistic_lab\\geometry\\registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "ballistic_lab\\geometry\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\metrics\\angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "ballistic_lab\\metrics\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\pipeline\\contracts.py": "5631408c6c636362a4dcf983095037bfedf6e78913286902dc23c053851331e9",
+    "ballistic_lab\\pipeline\\dc_continuous.py": "3af09fa87a874418c68690e3b23487115f8575735d6fede38974f6f3871e0bee",
+    "ballistic_lab\\pipeline\\dc_publish.py": "61c529f7425eff9bcf3a57e37950efca79b06110aaeb2378fb5ace6889b2158d",
+    "ballistic_lab\\pipeline\\dc_workflow.py": "1a0119a00915f1f84af92068545209edc2bfb86382875d281d0e058eb371c344",
+    "ballistic_lab\\pipeline\\feedback_capacity.py": "87b06f6e470bc76e73d84bbbba55e798d898ab8d4e761a9d723159296f53ad16",
+    "ballistic_lab\\pipeline\\fresh_discovery.py": "d373793048e1cd6e664f3e958c32379612c6eb07a5bbf9342dd0d39c58010622",
+    "ballistic_lab\\pipeline\\prepare_feedback_campaign.py": "48b1075256bae5d9e81b70b153f5c1b650b9df6de40e810130678ac0d8057ccc",
+    "ballistic_lab\\pipeline\\ray.py": "00bdab69e66c820f669daeb42a00bb4baba30bd81583355d4f3a495910817eb8",
+    "ballistic_lab\\pipeline\\screening_audit.py": "cdef4355fd8948ac0329e1407c5cbade72a3501065baa9bdc3e8aaaafb4ea101",
+    "ballistic_lab\\pipeline\\small_feedback_experiment.py": "93e38b286c64a85bbf4c93fe1f1ac16bde3f1e4792833a35fe958807456e03de",
+    "ballistic_lab\\pipeline\\__init__.py": "921e745a0387347e3c4b601ade67e2daa100dcaabb74db42dbf50c9eba734637",
+    "ballistic_lab\\search\\dc_space.py": "51825c28c728dda748f48bdb0d5f6e5f1b592e8f7522ee5684718b3f2fdf353d",
+    "ballistic_lab\\search\\discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "ballistic_lab\\search\\diversity.py": "7b2c613ebc31577c5e94da622cd37926f604509fb718ca03402d22f2bd1b4baa",
+    "ballistic_lab\\search\\families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "ballistic_lab\\search\\legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "ballistic_lab\\search\\refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "ballistic_lab\\search\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\transport\\backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "ballistic_lab\\transport\\circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6",
+    "ballistic_lab\\transport\\cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "ballistic_lab\\transport\\finite_bias.py": "f09e8922a647264b5e4dc169a81583d7cc3d91f6580642fc3b5f28c246317a5d",
+    "ballistic_lab\\transport\\gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "ballistic_lab\\transport\\quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+    "ballistic_lab\\transport\\reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+    "ballistic_lab\\transport\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\validation\\dc_score.py": "627533f7d0e3bde68f985c0eaa79c196bd2cb44b8415197a5615f30305f2249d",
+    "ballistic_lab\\validation\\families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "ballistic_lab\\validation\\receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "ballistic_lab\\validation\\registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2",
+    "ballistic_lab\\validation\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a"
+  },
+  "purpose": "Top and median unqualified per family; diagnostic sample, not unbiased false-negative estimate"
+}
