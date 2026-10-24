@@ -2,14 +2,46 @@
 
 **Searching for better graphene ballistic rectifiers using an evolutionary geometry search.** This is an open simulation project: software proposes shapes, calculates electron transport, and keeps candidates that perform well under a stated electrical test.
 
-A rectifier converts an alternating signal into a DC output. Our immediate goal is a sensitive, zero-bias signal detector. The search currently maximizes simulated DC power into a load; detector sensitivity is a separate qualification step. We have not yet demonstrated an advantage over a fabricated or commercial device.
+A rectifier converts an alternating signal into a DC output. Our immediate goal is a sensitive, zero-bias signal detector. The historical search maximized simulated DC power into a load; detector sensitivity is a separate qualification step. We have not yet demonstrated an advantage over a fabricated or commercial device.
 
-## Current direction
+## Current direction: physics before the next search
 
-The geometry campaign is intentionally stopped at checkpoint round 433. Its
-completed results below remain the fixed-potential baseline. Work now focuses on
-[finite-bias charge feedback](physics_layers/FINITE_BIAS.md): testable physics
-experiments before a new search or a dynamic neuromorphic device model.
+**The old geometry search is stopped at checkpoint round 433. The new physics
+experiments do not yet run an optimization campaign.** The published matched
+round-430 results below remain a historical fixed-potential baseline.
+
+The intended next step is a bounded search for better devices using self-consistent
+charge and electrostatics. Better results are a hypothesis to test, not a guaranteed
+consequence of a more detailed model. We already have geometry proposal algorithms;
+the immediate bottleneck is choosing and integrating a defensible physics model.
+
+| Implemented and checked | Evidence | Remaining limitation |
+| --- | --- | --- |
+| Finite-bias quantum charge and Poisson feedback | [Pilot and verification](physics_layers/FINITE_BIAS.md) | Tiny 15-site fixture; ideal contacts and high Fermi energy |
+| Finite-width charge deposition and potential averaging | [Analytic Gaussian pair](results/physics-reference/gaussian-pair/README.md) | Chosen Gaussian widths are not calibrated carbon orbitals |
+| Coupled feedback across two grids | [0.10/0.05 nm comparison](results/physics-reference/finite-width-feedback/README.md): maximum potential change 0.08435 mV; current change 0.000670% | Two grids do not establish full convergence |
+| Bound-state, gauge and spin checks | [Seven finite-bias regression tests](tests/test_bias_charge.py) | Occupation closure is explicit, but needs physical justification |
+
+### Route to a new optimization run
+
+1. **Bound the model uncertainty:** vary charge width, contact/gate assumptions and
+   bound-state occupation reference; refine the grid where those checks require it.
+2. **Integrate and benchmark:** connect feedback to the four-terminal loaded-DC
+   evaluation, check current and power accounting, and measure runtime on D00,
+   the synthetic triangle and retained leaders under identical assumptions.
+3. **Run a small new campaign:** freeze a versioned model and objective, retain
+   fresh exploration and controls, then qualify finalists on finer numerical
+   settings and wider operating conditions before increasing the budget.
+
+This does not require finishing every possible physics layer first. Exploratory
+searches can use explicitly bounded assumptions; predictive device claims require
+calibration and stronger evidence. We will keep new-model rankings separate from
+the historical fixed-potential table. The old campaign's STOP remains in place;
+restarting it requires explicit authorization and a new scientific reason.
+
+Neuromorphic work additionally needs a time-dependent state/circuit model with
+relaxation and energy accounting. Static rectification alone does not demonstrate
+memory or neuron-like dynamics. [Detailed physics work](physics_layers/FINITE_BIAS.md).
 
 ## What the pictures show
 
@@ -25,9 +57,9 @@ The nominal test uses a **14.76 nm-wide device, 10 mV peak input, a 10 kΩ load 
 
 ![Automatically selected representatives from every shape family](results/continuous-dc/round-000430/diversity.png)
 
-**An evolving experiment:** the worker continuously proposes, solves and refines geometries. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
+**Historical campaign:** the worker proposed, solved and refined geometries until the intentional stop. This gallery regenerates from completed rounds, showing the control plus a leading candidate in each family. Blue highlights the frozen control; teal highlights the best converged search candidate, which always occupies its family's panel. Other families show their strongest screening result. Labels distinguish converged results from screening-only estimates; the table below includes converged method winners only.
 
-Last published: **2026-10-24 01:33 UTC**, through matched round **430**. The 15-minute check-in publishes completed rounds while simulation continues independently.
+Last published: **2026-10-24 01:33 UTC**, through matched round **430**. The campaign is stopped; current check-ins advance separate physics experiments.
 
 | Method | Best converged design | DC magnitude (µV) | DC power (pW) |
 | --- | --- | ---: | ---: |
@@ -89,7 +121,7 @@ These are finite-amplitude, quasistatic electrical-terminal values at 10 mV peak
 
 ### Current leader: broader checks
 
-Each new converged leader enters a separate one-CPU validation queue with D00 and the synthetic triangle. Identical geometries are tested once. Search continues independently; these checks do not change its objective. Pending and unresolved results stay visible.
+Each new converged leader enters a separate one-CPU validation queue with D00 and the synthetic triangle. Identical geometries are tested once. These historical checks do not change the stopped campaign's objective. Pending and unresolved results stay visible.
 
 | Design | Completed contact/edge conditions | Converged DC cases | Ray scattering cases |
 | --- | ---: | ---: | ---: |
