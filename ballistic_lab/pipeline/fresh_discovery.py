@@ -69,7 +69,7 @@ def main():
         (args.root/'spectra').mkdir(exist_ok=True)
         plan=replace(WideDCPlan(),seeds=(args.seed,args.seed+100),parent_strategy='diversity',mutation_floor=.04)
         try:
-            with ProcessPoolExecutor(max_workers=args.workers,strategy=args.strategy) as pool:
+            with ProcessPoolExecutor(max_workers=args.workers) as pool:
                 while state['round']<args.rounds and not (args.root/'STOP').exists():
                     index=state['round']; path=args.root/f'proposals-{index:06d}.json'
                     if path.exists(): items=json.loads(path.read_text())

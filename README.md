@@ -1,9 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Workers waiting · Updated 2026-10-24 17:15 UTC**
+**Computing · Updated 2026-10-24 17:15 UTC**
 
-Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
+Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve devices. Simulate the physics. Beat the champion.
@@ -24,6 +24,10 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 ![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)
 
 All three use the same fixed-potential transport model: 14.76 nm, 10 mV peak drive, 10 kΩ load and 300 K. Only energy- and phase-converged designs enter the comparison. The retained champion survives every restart.
+
+**Shapes being explored now** — one recorded proposal per family, not selected for score.
+
+![Current diverse geometry proposals](results/live/campaign-attempts.png)
 
 [Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).
 <!-- discovery:end -->
