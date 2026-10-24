@@ -20,7 +20,7 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, max_poles=32768, cache_currents=False, reverse_drive=False):
+def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_drive=False):
     if type(max_poles) is not int or max_poles < 128:
         raise ValueError("Pole budget must be an integer >= 128")
     out = Path("runs/loaded-feedback-pilot")
@@ -31,6 +31,9 @@ def main(*, max_poles=32768, cache_currents=False, reverse_drive=False):
     if reverse_drive:
         out = out.with_name(out.name + "-reverse")
     drive_v = -0.01 if reverse_drive else 0.01
+    if half_drive:
+        drive_v *= 0.5
+        out = out.with_name(out.name + "-half")
     out.mkdir(parents=True, exist_ok=True)
     with (out / "attempt.lock").open("x") as lock:
         lock.write(str(os.getpid()))
@@ -136,5 +139,6 @@ if __name__ == "__main__":
     parser.add_argument("--max-poles", type=int, default=32768)
     parser.add_argument("--cache-currents", action="store_true")
     parser.add_argument("--reverse-drive", action="store_true")
+    parser.add_argument("--half-drive", action="store_true")
     args = parser.parse_args()
-    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive)
+    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive, half_drive=args.half_drive)

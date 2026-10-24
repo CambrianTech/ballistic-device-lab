@@ -339,3 +339,12 @@ separators. The positive/reverse runner change and newly added reporting files
 must be reviewed before pairing; no differences are silently ignored. A passive
 reference test verifies zero even response and rejection of model-setting or
 unreviewed source mismatches. The reverse physics result remains pending.
+
+### Intermediate amplitude experiment
+
+`--half-drive` selects 5 mV magnitude (combinable with `--reverse-drive`),
+records the actual drive and uses a separate `-half` folder. First measure
++5 mV under the same cached model and one-hour budget; then -5 mV will permit
+an even-response scaling comparison with the completed +/-10 mV pair.
+Quadratic scaling is a hypothesis, not assumed in ranking or DC accounting.
+These amplitudes alone do not establish sinusoidal phase convergence.
