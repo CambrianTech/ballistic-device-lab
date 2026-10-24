@@ -1,0 +1,83 @@
+{
+  "scope": "Grounded transverse terminals; two-bias even current, not loaded power or cycle average. Uncalibrated; refinement unresolved.",
+  "rows": [
+    {
+      "name": "empty-control",
+      "phase": "complete",
+      "sites": 51,
+      "device": {
+        "obstacles": [],
+        "width_m": 9.84e-10,
+        "contact_width_fraction": 0.6
+      },
+      "even_transverse_current_difference_a": -5.259692604481678e-10,
+      "max_current_sum_residual_a": 1.9490443183280715e-23,
+      "final_feedback_residuals": [
+        {
+          "potential_residual_v": 4.383971149643506e-09,
+          "occupation_residual": 6.954259390568041e-10
+        },
+        {
+          "potential_residual_v": 3.4843595057842958e-09,
+          "occupation_residual": 6.153810794273795e-10
+        }
+      ],
+      "integration_errors": [
+        4.8879118395371774e-11,
+        4.887776279706589e-11
+      ],
+      "source": "runs/small-feedback-shapes-v1/empty-control.json",
+      "source_sha256": "621331ff4672c1e0ed421688250bf32ed593bc50cbf76f354b8abfcef80ac034",
+      "magnitude_ratio_to_control": 1.0
+    },
+    {
+      "name": "triangle-up",
+      "phase": "complete",
+      "sites": 49,
+      "device": {
+        "obstacles": [
+          [
+            [
+              -0.3,
+              -0.3
+            ],
+            [
+              0.3,
+              -0.3
+            ],
+            [
+              0.0,
+              0.3
+            ]
+          ]
+        ],
+        "width_m": 9.84e-10,
+        "contact_width_fraction": 0.6
+      },
+      "even_transverse_current_difference_a": -1.3070480872864118e-10,
+      "max_current_sum_residual_a": 2.0343473189976024e-23,
+      "final_feedback_residuals": [
+        {
+          "potential_residual_v": 5.437763813884167e-09,
+          "occupation_residual": 7.093765574950339e-10
+        },
+        {
+          "potential_residual_v": 5.633057489212723e-09,
+          "occupation_residual": 8.893674685594988e-10
+        }
+      ],
+      "integration_errors": [
+        5.000305369407962e-11,
+        4.925574689472337e-11
+      ],
+      "source": "runs/small-feedback-shapes-v1/triangle-up.json",
+      "source_sha256": "ee071198070aa27b5facc09682e9d69f95598de40fbbcbd70743d3cc639f8d08",
+      "magnitude_ratio_to_control": 0.2485027520757967
+    },
+    {
+      "name": "triangle-down",
+      "phase": "failed",
+      "error": "ValueError('Duplicate atomic lattice: shape does not create a distinct experiment')"
+    }
+  ]
+}
