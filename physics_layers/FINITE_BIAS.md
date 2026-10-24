@@ -218,3 +218,16 @@ potential difference was 8.34e-15 V and current difference 1.22e-21 A.
 [Evidence](../results/physics-reference/four-terminal-feedback-warm/README.md).
 These individual timings do not establish a performance distribution, and the
 same-bias result does not establish changed-bias or loaded-output behavior.
+
+### Optional Broyden feedback solver
+
+`solve_accelerated(..., method="broyden1")` now uses rank-one Jacobian updates
+instead of the default hybrid solver's finite-difference startup. Its initial
+Jacobian is the identity (SciPy alpha=-1), with 100 iterations maximum and
+site-residual target tolerance/100. Line searches can use multiple charge calls;
+this is not a 100-call budget. Experiment runners must retain their charge-call
+ceilings. The same full-grid and recomputed-occupation checks remain mandatory.
+Five accelerated-solver tests pass, including agreement with independent direct
+mesh iteration at positive, reversed and zero bias on the small reference fixture.
+The default remains hybrid. Graphene convergence and speed are unmeasured for
+this new option; no physical validation or search-readiness claim follows.

@@ -20,6 +20,7 @@ def solve_accelerated(
     *,
     tolerance=1e-6,
     initial_potential_v=None,
+    method="hybr",
 ):
     """Solve feedback, optionally starting from a nearby bias's site potentials.
 
@@ -27,6 +28,8 @@ def solve_accelerated(
     It does not establish uniqueness or rule out bias-history dependence.
     """
     reference = np.asarray(reference, float)
+    if method not in ("hybr", "broyden1"):
+        raise ValueError("Feedback method must be hybr or broyden1")
     n = len(mapping.positions_m)
     if (
         reference.shape != (n,)
@@ -64,9 +67,12 @@ def solve_accelerated(
         history.append(FeedbackStep(float(np.max(abs(value))), None))
         return value
 
-    solved = root(
-        residual, initial, method="hybr", options={"xtol": tolerance / 100, "maxfev": 300}
+    options = (
+        {"xtol": tolerance / 100, "maxfev": 300}
+        if method == "hybr"
+        else {"fatol": tolerance / 100, "maxiter": 100, "jac_options": {"alpha": -1.0}}
     )
+    solved = root(residual, initial, method=method, options=options)
     transport = provider.solve(-solved.x, mus, temperature_k, tolerance=tolerance / 100)
     charge = -elementary_charge * (np.array(transport.electrons_per_site) - reference)
     field = poisson.evaluate(
