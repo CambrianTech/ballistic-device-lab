@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-24 22:35 UTC**
+**Computing · Updated 2026-10-24 22:39 UTC**
 
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
@@ -18,6 +18,7 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 
 [Explore the shapes](#letting-shapes-compete) · [Follow the electrons](#following-the-electrons) · [Look inside the physics](#the-charge-changes-the-device) · [Run the code](#reproduce-and-explore)
 
+<a id="current-discovery"></a>
 <!-- discovery:start -->
 **One benchmark. A fresh population. A champion to beat.**
 
@@ -113,11 +114,16 @@ A strong score at one operating point is only part of the story. The nominal win
 ## The charge changes the device
 
 <!-- feedback-gallery:start -->
-**Charge-feedback experiments** — saved geometries and completed grounded-terminal current results.
+<details>
+<summary>Completed charge-feedback checks — saved reference results</summary>
+
+These fixtures are completed checks, not the active evolutionary population. See the [current campaign and evolving designs](#current-discovery) above.
 
 ![Small-device charge-feedback experiments](results/live/discovery.png)
 
-These small fixtures test the physics implementation; their current scores are separate from the main loaded-power competition. [Run evidence](results/live/evidence.json).
+These small fixtures test the physics implementation; their current scores are separate from the main loaded-power competition. This image changes only when new charge-feedback geometry results are saved. [Run evidence](results/live/evidence.json).
+
+</details>
 <!-- feedback-gallery:end -->
 
 Geometry is only one part of the physics. Electrons redistribute charge, charge changes the electrostatic potential, and that potential changes transport. A separate self-consistent graphene–Poisson experiment resolves that feedback at individual lattice sites.
@@ -180,3 +186,4 @@ python -m ballistic_lab.reporting.dc_continuous
 Each experiment supplies its own device physics, electrical objective and acceptance tests; the harness supplies proposal, selection, retained champions and reproducible reporting. These ML and neuromorphic experiments are planned extensions, not demonstrated capabilities of the rectifier model.
 
 [MIT license](LICENSE). External figures retain their stated licenses.
+
