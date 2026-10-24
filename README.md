@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Workers waiting · Updated 2026-10-24 21:01 UTC**
+**Workers waiting · Updated 2026-10-24 21:16 UTC**
 
 Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
