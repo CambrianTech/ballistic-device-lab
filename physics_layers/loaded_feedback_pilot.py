@@ -13,24 +13,28 @@ import numpy as np
 from ballistic_lab.transport.circuit import CircuitTolerance, solve_terminal_load
 
 from .bias_charge import BiasChargeDevice
+from .current_cache import ExactCurrentCache
 from .equilibrium_charge import EquilibriumChargeDevice
 from .feedback_current import FeedbackCurrentModel
 from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, max_poles=32768):
+def main(*, max_poles=32768, cache_currents=False):
     if type(max_poles) is not int or max_poles < 128:
         raise ValueError("Pole budget must be an integer >= 128")
     out = Path("runs/loaded-feedback-pilot")
     if max_poles != 32768:
         out = out.with_name(out.name + f"-poles-{max_poles}")
+    if cache_currents:
+        out = out.with_name(out.name + "-cached")
     out.mkdir(parents=True, exist_ok=True)
     with (out / "attempt.lock").open("x") as lock:
         lock.write(str(os.getpid()))
     started = time.perf_counter()
     status = dict(pid=os.getpid(), phase="reference", charge_calls=0, circuit_calls=0)
     status["max_poles"] = max_poles
+    status["cache_currents"] = cache_currents
     manifest = {
         str(p): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in Path("physics_layers").glob("*.py")
@@ -95,9 +99,10 @@ def main(*, max_poles=32768):
             return result
 
         tolerance = CircuitTolerance(current_atol_a=1e-13, current_rtol=1e-6, root_xtol=1e-6)
-        answer = solve_terminal_load(
-            FeedbackCurrentModel(evaluate, lead_order=(0, 1, 2, 3)), 0.01, 1e4, tolerance=tolerance
-        )
+        model = FeedbackCurrentModel(evaluate, lead_order=(0, 1, 2, 3))
+        if cache_currents:
+            model = ExactCurrentCache(model)
+        answer = solve_terminal_load(model, 0.01, 1e4, tolerance=tolerance)
         (out / "result.json").write_text(
             json.dumps(
                 dict(
@@ -106,6 +111,7 @@ def main(*, max_poles=32768):
                     drive_v=0.01,
                     load_ohm=1e4,
                     max_poles=max_poles,
+                    cache_currents=cache_currents,
                     source_sha256=manifest,
                     scope="single instantaneous drive, not rectified DC; uncalibrated fixture",
                 ),
@@ -124,4 +130,6 @@ def main(*, max_poles=32768):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-poles", type=int, default=32768)
-    main(max_poles=parser.parse_args().max_poles)
+    parser.add_argument("--cache-currents", action="store_true")
+    args = parser.parse_args()
+    main(max_poles=args.max_poles, cache_currents=args.cache_currents)

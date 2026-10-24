@@ -283,3 +283,16 @@ new model/settings require a new cache. Four cache/bridge tests pass, including
 preservation of 1e-12 V Jacobian perturbations, output-copy isolation and eviction.
 The active pilot has not been modified to use it; integration is deferred until
 that process finishes. This is an optimization mechanism, not new physics evidence.
+
+### Cached loaded pilot retry
+
+The runner now accepts `--cache-currents`, creating a separate `-cached` run
+folder and recording this choice in status/results. Only exact repeated voltage
+vectors reuse successful currents from this one frozen model instance; distinct
+Jacobian probes still execute. The existing one-hour/240-charge-call limits and
+all circuit/feedback checks remain. `circuit_calls` counts expensive cache misses,
+not total outer requests. The prior timed-out attempt is retained.
+
+A fresh 131072-pole cached attempt is the next runtime experiment. Six cache and
+circuit tests pass, including full-solution equality on passive reference cases.
+Its graphene completion and runtime benefit remain pending.
