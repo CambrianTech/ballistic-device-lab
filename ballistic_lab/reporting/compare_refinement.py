@@ -6,10 +6,22 @@ import json
 from pathlib import Path
 
 
+def validate_pair(first, second):
+    """Refuse misleading shared benchmarks before creating any report."""
+    for key in ('round', 'objective', 'control', 'retained_champion'):
+        if key not in first or key not in second or first[key] != second[key]:
+            raise ValueError('Unmatched or missing comparison field: ' + key)
+    for snapshot in (first, second):
+        keys = [r['candidate']['key'] for r in snapshot['rows']]
+        if len(keys) != len(set(keys)):
+            raise ValueError('Duplicate candidate identity')
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('first',type=Path);p.add_argument('second',type=Path);p.add_argument('output',type=Path)
     a=p.parse_args(); summaries=[]; populations=[]
+    validate_pair(json.loads(a.first.read_text()), json.loads(a.second.read_text()))
     for path in (a.first,a.second):
         s=json.loads(path.read_text())
         q=[r for r in s['rows'] if r.get('energy_converged') and r.get('phase_converged') and r.get('phase64')]
@@ -24,3 +36,4 @@ def main():
     print('identical candidate records',identical)
 
 if __name__=='__main__':main()
+
