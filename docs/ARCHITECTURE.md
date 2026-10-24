@@ -384,3 +384,15 @@ physics is integrated and checked. This authorization does not remove the old
 campaign STOP or overwrite its history. Retain old controls and winners for
 matched new-model comparisons; readiness still requires the integration and
 benchmark checks described in the README.
+
+### Storage audit
+
+Run `python -m physics_layers.storage_audit` for a read-only snapshot of runs
+and results. It counts logical lengths and unique file identities separately,
+so archived hard links are not mistaken for duplicate occupied storage.
+The October 24 check measured runs at 11.86 GB and results at 11.20 GB of
+unique file lengths, versus 402.02 GB of logical result paths. Thus existing
+archive deduplication avoids about 390.82 GB of duplicate file lengths.
+These are decimal GB, not allocated filesystem blocks; free volume space was
+948.45 GB. A temporary two-link fixture verified the counting. No results were
+deleted. The existing immutable archive drain remains the cleanup mechanism.
