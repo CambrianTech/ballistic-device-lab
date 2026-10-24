@@ -17,6 +17,18 @@ still gate publication. Do not use this provisional output in the accepted
 polarity/scaling comparison. Zero-drive offset and physical calibration are
 also unresolved. This remains an uncalibrated 51-site numerical fixture.
 
+## Runtime diagnosis at the next check-in
+
+At 3443.96 seconds the worker had entered expensive evaluation eleven (143
+charge calls). Evaluations eight and nine perturb the top output in opposite
+directions; evaluation ten perturbs the bottom output. These are the final
+central-difference Jacobian checks after seven root evaluations, not renewed
+geometry exploration. Four extra current evaluations are needed for this check.
+The worker enforces its 3600-second budget before each charge call, so a stable
+root can still fail before final conditioning is available. Preserve that failure
+if it occurs; a retry must explicitly budget the final checks and retain the same
+physics and tolerances. Do not waive conditioning to publish the trial voltage.
+
 Reproduce the fixed seven-evaluation projection with:
 
 ```powershell
