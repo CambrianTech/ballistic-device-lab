@@ -8,6 +8,13 @@ tolerances, the 240-charge-call cap and 24-current-evaluation cap are unchanged.
 The original attempt and its lock/checkpoints are retained. The time limit is
 checked between charge calls, so a call already running may finish beyond it.
 
+The [first two completed retry evaluations](retry-first-two.json) reproduce
+the original attempt at exactly matched terminal voltages: maximum site-potential
+difference 1.04e-14 V, current difference 1.09e-21 A and occupation difference
+1.78e-15 electrons. This is a cold-repeat numerical reproducibility check,
+not physical validation or completion of the outer solve. The comparison records
+both input-file hashes and uses `physics_layers.compare_loaded_inner.compare`.
+
 Seven completed inner evaluations from the running -5 mV loaded-feedback
 experiment are recorded in [audit.json](audit.json), with source-file hashes
 and the worker's source manifest. The outer solve is still pending; this is

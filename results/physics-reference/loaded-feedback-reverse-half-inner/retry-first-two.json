@@ -1,0 +1,39 @@
+{
+  "scope": "Two completed cold-retry evaluations only; final operating point remains unresolved. Numerical reproducibility is not physical validation.",
+  "comparisons": [
+    {
+      "reference": "runs\\loaded-feedback-pilot-poles-131072-cached-reverse-half\\evaluation-001.json",
+      "candidate": "runs\\loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400\\evaluation-001.json",
+      "reference_sha256": "3fc5dd8460679b1ff9566289bff6bb413e7f9e810ed4fb7a3292b05b503294d9",
+      "candidate_sha256": "e6ca0ef321652e3b3ba3ae7575ffbc1de7a01da172b0fd19ffb74c83eefe45eb",
+      "voltage_v": [
+        -0.0025,
+        0.0025,
+        0.0,
+        0.0
+      ],
+      "max_absolute_difference": {
+        "site_potential_v": 1.0337217193345793e-14,
+        "currents_a": 1.0852609636695723e-21,
+        "electrons_per_site": 1.7763568394002505e-15
+      }
+    },
+    {
+      "reference": "runs\\loaded-feedback-pilot-poles-131072-cached-reverse-half\\evaluation-002.json",
+      "candidate": "runs\\loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400\\evaluation-002.json",
+      "reference_sha256": "33269d15f5eb8f064d3538548ca346fe4279ccfe2dab94f17bb4181637297669",
+      "candidate_sha256": "f070e6f808aaf6e163ea8565a69b3e766b64fd3e5620243db9d1b55cdd87cca1",
+      "voltage_v": [
+        -0.0025,
+        0.0025,
+        7.450580596923828e-11,
+        0.0
+      ],
+      "max_absolute_difference": {
+        "site_potential_v": 6.1287780406260595e-15,
+        "currents_a": 5.558653716356346e-22,
+        "electrons_per_site": 1.3322676295501878e-15
+      }
+    }
+  ]
+}
