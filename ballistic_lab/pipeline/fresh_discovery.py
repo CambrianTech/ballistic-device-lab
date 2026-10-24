@@ -47,6 +47,7 @@ def main():
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--seed',type=int,default=241026)
     p.add_argument('--rounds',type=int,default=20)
+    p.add_argument('--continuous',action='store_true',help='Continue generations until this run receives STOP')
     p.add_argument('--workers',type=int,default=4)
     p.add_argument('--strategy',choices=['elite','diversity','random','mixed'],default='diversity')
     p.add_argument('--ledger',type=Path,default=Path('results/live/champions.json'))
@@ -63,6 +64,7 @@ def main():
         if manifest.exists() and json.loads(manifest.read_text())!=hashes: raise ValueError('Source changed; use a new campaign')
         save(manifest,hashes)
         config=dict(seed=args.seed,rounds=args.rounds,workers=args.workers,strategy=args.strategy)
+        if args.continuous: config['continuous']=True
         if args.refinement_policy != 'score': config['refinement_policy']=args.refinement_policy
         cfg=args.root/'config.json'
         if cfg.exists() and json.loads(cfg.read_text())!=config: raise ValueError('Resume configuration mismatch')
@@ -84,7 +86,7 @@ def main():
         plan=replace(WideDCPlan(),seeds=(args.seed,args.seed+100),parent_strategy='diversity',mutation_floor=.04)
         try:
             with ProcessPoolExecutor(max_workers=args.workers) as pool:
-                while state['round']<args.rounds and not (args.root/'STOP').exists():
+                while (args.continuous or state['round']<args.rounds) and not (args.root/'STOP').exists():
                     index=state['round']; path=args.root/f'proposals-{index:06d}.json'
                     if path.exists(): items=json.loads(path.read_text())
                     else:

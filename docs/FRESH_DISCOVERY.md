@@ -80,3 +80,21 @@ new run so its plots update automatically.
 New campaigns may select `--refinement-policy family`. One refinement slot goes to the highest coarse-power unqualified candidate; the second goes to the strongest remaining candidate in a rotating family (alphabetical family order, indexed by generation). If that family has no remaining candidate, the slot returns to the highest remaining score. Qualified rows never consume slots. Default `score` preserves the existing policy.
 
 This changes allocation of the same two candidate slots, not the objective, numerical convergence gates, or champion promotion. It is not an equal-CPU guarantee. The option is saved in campaign configuration and cannot change on resume. Source hashes require a new campaign after this code change. Five focused discovery tests pass, including a low-scoring family's access to refinement. No comparative performance improvement has yet been measured with this policy.
+
+## Sustained discovery
+
+Use `--continuous` to keep proposing and refining generations until the run's
+`STOP` file is created. This overrides the generation limit, retains checkpoints
+and converged champions, and does not require an AI to schedule more rounds.
+It does not auto-start after a machine reboot. Storage grows with saved spectra
+and immutable snapshots; monitor free space during long runs.
+
+```sh
+python -m ballistic_lab.pipeline.fresh_discovery --root runs/fresh-discovery-continuous-v1 --seed 241029 --continuous --workers 4 --strategy mixed --refinement-policy family
+```
+
+The configured publisher follows this campaign every five minutes. One refinement
+slot exploits coarse power and one rotates across geometry families. Numerical
+energy/phase convergence gates remain required for champion promotion. This is
+fixed-potential discovery; the separate small charge-feedback checks are not its
+fitness function or a claim of physical validation.

@@ -42,7 +42,7 @@ def render(options):
             done = outcome.get('phase') == 'complete' and len(row['evaluations']) == 2
             result = (f"{outcome['even_transverse_current_difference_a']*1e12:+.3f} pA even ΔI"
                       if done else 'Evaluation pending' if not outcome else outcome['phase'])
-            cards.append(dict(title='NEW EXPERIMENT', name=row['name'].replace('-', ' ').title(),
+            cards.append(dict(title='COMPLETED PHYSICS CHECK' if done else 'UNRESOLVED PHYSICS CHECK', name=row['name'].replace('-', ' ').title(),
                 obstacles=row['device']['obstacles'], contact=row['device']['contact_width_fraction'],
                 result=result, detail=f"{row['device']['width_m']*1e9:.3f} nm • charge feedback",
                 source=path.as_posix(), sha256=hashlib.sha256(path.read_bytes()).hexdigest()))

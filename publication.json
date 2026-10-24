@@ -1,5 +1,5 @@
 {
-  "interval_seconds": 900,
+  "interval_seconds": 300,
   "remote": "origin",
   "branch": "main",
   "workers": [
@@ -42,7 +42,7 @@
       "callable": "ballistic_lab.reporting.campaign_gallery:render",
       "block": "discovery",
       "options": {
-        "root": "runs/fresh-discovery-mixed-v2"
+        "root": "runs/fresh-discovery-continuous-v1"
       }
     },
     {
