@@ -1,0 +1,43 @@
+{
+  "scope": "Atomic connectivity check only; no electrical performance conclusion.",
+  "rows": [
+    {
+      "name": "empty-control",
+      "sites": 51,
+      "components": 1,
+      "lead_interface_sites": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "all_leads_share_component": true
+    },
+    {
+      "name": "triangle-up",
+      "sites": 49,
+      "components": 1,
+      "lead_interface_sites": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "all_leads_share_component": true
+    },
+    {
+      "name": "triangle-down",
+      "sites": 49,
+      "components": 1,
+      "lead_interface_sites": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "all_leads_share_component": true
+    }
+  ],
+  "triangle_lattices_distinct": false,
+  "triangle_symmetric_difference_sites": 0
+}

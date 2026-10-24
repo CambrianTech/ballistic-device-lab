@@ -23,3 +23,18 @@ difference is a screening observable, not delivered load power or cycle-averaged
 DC. This is a three-case experiment, not an evolutionary campaign. Its results
 cannot replace the full-size retained champion; refinement and matched loaded
 comparisons are still required before promotion.
+
+## Atomic topology audit
+
+`topology.json` checks the actual lattice behind the proposed shapes. The control
+has 51 sites; each triangle has 49. All three retain a single connected component
+and the same four lead interfaces (3, 3, 2, 2 sites).
+
+**The two triangle orientations produce identical atomic lattices at this scale.**
+Their symmetric difference is zero sites. Thus the three nominal outlines provide
+only two distinct electrical geometries. The running experiment's duplicate check
+will reject the second triangle, preserving the failure rather than manufacturing
+an independent score. Polygon appearance alone is insufficient to establish a
+new device: future candidate generation should deduplicate on atomic topology
+before expensive feedback evaluation. No current-response conclusion follows
+from this connectivity audit. The existing run and its loaded code are unchanged.
