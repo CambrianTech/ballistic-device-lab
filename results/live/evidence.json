@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-24 16:05 UTC",
+  "published_utc": "2026-10-24 16:06 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "7fe3e9c7a42ab6ed5ac53afc7e3ffb224bb4a3eaa7975c678a7641426f5b9643"
+      "status_sha256": "80a8b6e372ac1747ee02d027a5c582e548b7d7d9af035a588e2fdf2d6046027d"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
@@ -95,7 +95,7 @@
       "phase": "screen",
       "live": true,
       "stopped": false,
-      "status_sha256": "6f32cdc29ec9ecf985ca0887eb18eb4aa07e0d22b8a3f1a4fc884b8d2d2f8099"
+      "status_sha256": "e419fa39f3b8a488fada7b552d7fede030d3809a086f66a14461dfe179badd8a"
     }
   ],
   "loaded_points": [
