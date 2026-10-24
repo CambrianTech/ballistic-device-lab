@@ -29,3 +29,9 @@ charge width and occupation closure. Before using the even response to guide
 new shapes, sample intermediate drive amplitudes, establish phase convergence,
 and test sensitivity to numerical and model choices. Historical fixed-potential
 rankings remain separate and the old campaign stays stopped.
+
+![Completed opposite-drive loaded outputs](polarity.png)
+
+Reproduce this figure with `python -m physics_layers.plot_loaded_polarity`.
+Only completed, accounting-checked points are plotted; no interpolated curve
+or uncertainty estimate is implied. The +5 mV run is still pending.

@@ -49,6 +49,8 @@ Both signs produce negative output, with a two-point even component of
 [Matched polarity comparison](results/physics-reference/loaded-feedback-reverse/README.md).
 Phase sampling and numerical/model sensitivity remain next.
 
+![Completed opposite-drive loaded outputs](results/physics-reference/loaded-feedback-reverse/polarity.png)
+
 ### Route to a new optimization run
 
 **Runtime finding:** starting from the already converged potential used 57 charge
