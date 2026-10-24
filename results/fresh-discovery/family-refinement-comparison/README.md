@@ -1,5 +1,7 @@
 # Broader qualification, unchanged best score
 
+![Data-generated refinement comparison](comparison.png)
+
 Across five completed generations, the two policies evaluated **the same 120 candidate records**. Each qualified ten candidates. Rotating a family slot increased qualified coverage from **four to all five families**, without changing the best converged voltage magnitude (12.337 µV).
 
 | Family | Score-only qualified | Rotating-family qualified |
@@ -21,3 +23,8 @@ python -m ballistic_lab.reporting.compare_refinement runs/fresh-discovery-mixed-
 ```
 
 Numerical qualification is not physical validation or literature novelty.
+
+Regenerate this figure from the comparison JSON using: 
+
+    python -m ballistic_lab.reporting.plot_refinement results/fresh-discovery/family-refinement-comparison/result.json results/fresh-discovery/family-refinement-comparison/comparison.png
+
