@@ -378,3 +378,9 @@ See [finite-bias pilot](../physics_layers/FINITE_BIAS.md) for assumptions and
 verification. It is not integrated into historical scoring. The next experimental
 steps are convergence and calibrated contact electrostatics, followed by dynamic
 state/circuit models if pursuing neuromorphic behavior.
+
+The user subsequently authorized a fresh campaign from round zero once the new
+physics is integrated and checked. This authorization does not remove the old
+campaign STOP or overwrite its history. Retain old controls and winners for
+matched new-model comparisons; readiness still requires the integration and
+benchmark checks described in the README.

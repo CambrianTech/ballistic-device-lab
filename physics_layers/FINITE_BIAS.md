@@ -132,3 +132,16 @@ equilibrium baseline and bias correction; it is not a spin-polarized material mo
 It also checks rejection of zero, negative, NaN and infinite temperature/tolerance.
 All seven tests in `python -m unittest tests.test_bias_charge` passed in 47.197 s
 in the isolated Kwant runtime. Existing physical assumptions remain unchanged.
+
+## Circuit integration boundary
+
+`FeedbackCurrentModel` now exposes a converged four-terminal feedback callback
+through the existing loaded-DC current interface. Lead permutation is explicit;
+the callback owns chemical potentials, contact/gate boundaries and occupation
+policy and must raise on nonconvergence. No stale solution is substituted.
+Two tests pass: an analytic asymmetric passive resistor network through the real
+loaded-circuit solver (including permuted provider leads), and failure/invalid
+input propagation. Circuit output is bottom minus top. This is an integration
+fixture, not an integrated graphene device calculation. Next: implement the
+four-terminal graphene callback with explicit electrode electrostatics and benchmark
+its cost before a fresh campaign.
