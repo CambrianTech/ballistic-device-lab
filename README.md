@@ -43,7 +43,11 @@ completion in **50.8 minutes**, within the same one-hour budget that stopped
 the uncached attempt. Independent power accounting passed. This remains a
 single-drive numerical fixture, not rectified DC or physical validation.
 [Completed loaded result](results/physics-reference/loaded-feedback-complete/README.md).
-Opposite drive and then an AC cycle are the next integration checks.
+**Opposite drive now also passes:** output is -3.399 microvolts at -10 mV.
+Both signs produce negative output, with a two-point even component of
+**-2.818 microvolts**. This is a polarity diagnostic, not a sinusoidal DC average.
+[Matched polarity comparison](results/physics-reference/loaded-feedback-reverse/README.md).
+Phase sampling and numerical/model sensitivity remain next.
 
 ### Route to a new optimization run
 

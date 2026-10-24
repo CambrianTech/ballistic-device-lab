@@ -1,0 +1,12 @@
+{
+  "even_output_v": -2.817708352852583e-06,
+  "odd_output_v": 5.813868167879237e-07,
+  "scope": "Two-point parity diagnostic, not a sinusoidal-cycle average",
+  "reviewed_source_changes": [
+    "physics_layers/audit_load_linearization.py",
+    "physics_layers/compare_loaded_inner.py",
+    "physics_layers/loaded_feedback_pilot.py",
+    "physics_layers/report_loaded_complete.py"
+  ],
+  "source_review": "Runner diff adds drive sign, folder suffix and drive metadata only; three other differences are standalone reporting/audit modules not imported by the solver. Transport, fixture, charge and Poisson source hashes match."
+}
