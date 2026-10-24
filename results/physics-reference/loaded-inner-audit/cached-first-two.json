@@ -1,0 +1,39 @@
+{
+  "scope": "Matched completed points only; cached outer solve and runtime benefit pending",
+  "comparisons": [
+    {
+      "reference": "runs\\loaded-feedback-pilot-poles-131072\\evaluation-001.json",
+      "candidate": "runs\\loaded-feedback-pilot-poles-131072-cached\\evaluation-001.json",
+      "reference_sha256": "1488718a95232f1421ed61c6931bf0975c2a924412bf71ff549cb0ce509f703e",
+      "candidate_sha256": "2a563f416f0131f6284f21a7904267e75023895da34d547d74d41f94079b94e0",
+      "voltage_v": [
+        0.005,
+        -0.005,
+        0.0,
+        0.0
+      ],
+      "max_absolute_difference": {
+        "site_potential_v": 3.471181675429591e-15,
+        "currents_a": 2.117582368135751e-22,
+        "electrons_per_site": 1.1102230246251565e-15
+      }
+    },
+    {
+      "reference": "runs\\loaded-feedback-pilot-poles-131072\\evaluation-004.json",
+      "candidate": "runs\\loaded-feedback-pilot-poles-131072-cached\\evaluation-002.json",
+      "reference_sha256": "5ed555850435da7628106da0cb8850c5bca01a064b6cf934a9ea0ae656c498b9",
+      "candidate_sha256": "256aa2c2d160dfa903d1fcb4b55adfe15720e951e3c4e4b5bde21807a3e47106",
+      "voltage_v": [
+        0.005,
+        -0.005,
+        1.4901161193847657e-10,
+        0.0
+      ],
+      "max_absolute_difference": {
+        "site_potential_v": 4.5363018896793506e-15,
+        "currents_a": 6.024976786683115e-22,
+        "electrons_per_site": 1.3322676295501878e-15
+      }
+    }
+  ]
+}

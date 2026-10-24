@@ -79,3 +79,19 @@ match exactly. Six cache/circuit tests passed. These are software verification
 fixtures, not graphene performance measurements; actual runtime savings remain
 unmeasured. The next bounded attempt can integrate the cache in a fresh run
 folder while preserving this failed attempt and its evidence.
+
+## Cached retry: first matched points
+
+The cached run's first two completed evaluations reproduce the uncached
+initial point and first Jacobian perturbation. Maximum differences across
+these matched points are **4.54e-15 V** in site potential, **6.03e-22 A**
+in terminal current, and **1.34e-15 electrons/site** in occupation.
+The cached second evaluation corresponds to uncached evaluation four:
+the two duplicate initial evaluations were skipped while the distinct
+1.49e-10 V Jacobian perturbation was retained.
+
+[Comparison with raw-record hashes](cached-first-two.json), reproducible with
+`python -m physics_layers.compare_loaded_inner`. This is a numerical
+repeatability check at two points, not a full trajectory equivalence or
+physical validation claim. End-to-end completion and runtime savings remain
+pending; the cached worker continues under its original budget.
