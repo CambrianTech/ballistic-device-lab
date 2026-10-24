@@ -74,3 +74,22 @@ No diagonal subtraction is applied; finite charge extent needs independent justi
 shows approximately second-order convergence: 2.59%, 0.624%, 0.155% mean-potential
 error at 0.2, 0.1, 0.05 nm grids. The 0.2 nm Gaussian width is a test choice,
 not carbon-orbital calibration. No graphene feedback model has been replaced.
+
+## Finite-width site coupling
+
+`physics_layers.gaussian_site_mesh.GaussianSiteMeshMap` is an opt-in alternative
+mapping with a fixed physical Gaussian standard deviation. It samples the density
+at grid nodes, truncates at an explicit per-axis cutoff (default five sigma), and
+normalizes each site's weights to unity. Deposition uses the transpose of the same
+weights used to average potential, preserving the discrete charge/work pairing.
+It rejects cutoff boxes outside the mesh, spacing larger than sigma, and nonzero
+charge support on electrodes, including opposite charges that would cancel.
+
+Verification: `python -m unittest tests.test_gaussian_site_mesh tests.test_site_mesh`
+passes seven tests, including anisotropic spacing, displaced sites, signed charge
+conservation, potential-offset covariance, adjoint work, reciprocal Poisson response,
+positive energy and invalid-boundary rejection. These are numerical fixtures.
+The mapping is not wired into the graphene pilot or historical search. Its cutoff
+normalization changes the infinite Gaussian slightly; no carbon-orbital calibration,
+self-interaction correction, or coupled graphene convergence is claimed. Next test:
+fixed-width graphene feedback across meshes and widths, with assumptions reported.
