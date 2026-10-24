@@ -296,3 +296,14 @@ not total outer requests. The prior timed-out attempt is retained.
 A fresh 131072-pole cached attempt is the next runtime experiment. Six cache and
 circuit tests pass, including full-solution equality on passive reference cases.
 Its graphene completion and runtime benefit remain pending.
+
+### Completed-load publication gate
+
+`python -m physics_layers.report_loaded_complete RUN NEW_OUTPUT_FOLDER`
+requires a complete outer solve and matching status/result source manifests.
+It independently recomputes terminal current balance, output KCL, load power,
+input/device power and power conservation, and checks the recorded final
+Jacobian condition. Incomplete runs cannot create a publication folder.
+Two tests check a passive resistor oracle and rejection of incomplete or
+inconsistent records. These checks verify accounting; they do not physically
+validate the model or turn a single drive into rectified DC.
