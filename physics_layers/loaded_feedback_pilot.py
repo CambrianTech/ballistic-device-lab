@@ -20,7 +20,7 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, max_poles=32768, cache_currents=False):
+def main(*, max_poles=32768, cache_currents=False, reverse_drive=False):
     if type(max_poles) is not int or max_poles < 128:
         raise ValueError("Pole budget must be an integer >= 128")
     out = Path("runs/loaded-feedback-pilot")
@@ -28,6 +28,9 @@ def main(*, max_poles=32768, cache_currents=False):
         out = out.with_name(out.name + f"-poles-{max_poles}")
     if cache_currents:
         out = out.with_name(out.name + "-cached")
+    if reverse_drive:
+        out = out.with_name(out.name + "-reverse")
+    drive_v = -0.01 if reverse_drive else 0.01
     out.mkdir(parents=True, exist_ok=True)
     with (out / "attempt.lock").open("x") as lock:
         lock.write(str(os.getpid()))
@@ -35,6 +38,7 @@ def main(*, max_poles=32768, cache_currents=False):
     status = dict(pid=os.getpid(), phase="reference", charge_calls=0, circuit_calls=0)
     status["max_poles"] = max_poles
     status["cache_currents"] = cache_currents
+    status["drive_v"] = drive_v
     manifest = {
         str(p): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in Path("physics_layers").glob("*.py")
@@ -102,13 +106,13 @@ def main(*, max_poles=32768, cache_currents=False):
         model = FeedbackCurrentModel(evaluate, lead_order=(0, 1, 2, 3))
         if cache_currents:
             model = ExactCurrentCache(model)
-        answer = solve_terminal_load(model, 0.01, 1e4, tolerance=tolerance)
+        answer = solve_terminal_load(model, drive_v, 1e4, tolerance=tolerance)
         (out / "result.json").write_text(
             json.dumps(
                 dict(
                     solution=asdict(answer),
                     circuit_tolerance=asdict(tolerance),
-                    drive_v=0.01,
+                    drive_v=drive_v,
                     load_ohm=1e4,
                     max_poles=max_poles,
                     cache_currents=cache_currents,
@@ -131,5 +135,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-poles", type=int, default=32768)
     parser.add_argument("--cache-currents", action="store_true")
+    parser.add_argument("--reverse-drive", action="store_true")
     args = parser.parse_args()
-    main(max_poles=args.max_poles, cache_currents=args.cache_currents)
+    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive)

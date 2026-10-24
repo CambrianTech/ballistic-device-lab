@@ -307,3 +307,12 @@ Jacobian condition. Incomplete runs cannot create a publication folder.
 Two tests check a passive resistor oracle and rejection of incomplete or
 inconsistent records. These checks verify accounting; they do not physically
 validate the model or turn a single drive into rectified DC.
+
+### Opposite-drive comparison
+
+`--reverse-drive` runs the same loaded pilot at -10 mV, with an additional
+`-reverse` folder suffix and drive recorded in status/result. All model
+assumptions, tolerances, budgets and cold inner initializations stay identical.
+The positive-drive result remains preserved. The even component
+(Vout(+V)+Vout(-V))/2 will test polarity asymmetry at these two points;
+it is not a sinusoidal-cycle average or a physical-validation claim.
