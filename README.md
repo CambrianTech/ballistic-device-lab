@@ -1,5 +1,10 @@
 # Ballistic Device Lab
 
+<!-- activity:start -->
+**● Active research · Automated check-ins every 15 minutes · Updated October 24, 2026, 14:58 UTC**  
+Running at this update: self-consistent zero-drive control. Results and diagrams evolve as experiments complete.
+<!-- activity:end -->
+
 ### Can the shape of graphene make a better rectifier?
 
 We let software carve the device—and let electron transport decide which shapes work. An open computational experiment in turning an alternating electrical signal into DC, at the scale of individual carbon atoms.
