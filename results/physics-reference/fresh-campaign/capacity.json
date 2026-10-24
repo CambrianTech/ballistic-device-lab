@@ -1,0 +1,26 @@
+{
+  "source_sha256": "22c6d98e553d5b8adf7d4c6e897bade04d5ffde5697d67b293b200bfa2d64f27",
+  "rows": [
+    {
+      "role": "synthetic-control",
+      "key": "D00",
+      "sites": 7919,
+      "leads": 4,
+      "width_m": 1.476e-08,
+      "one_complex128_dense_matrix_bytes": 1003368976,
+      "site_ratio_to_51": 155.27450980392157,
+      "dense_cubic_work_ratio_to_51": 3743695.3551725964
+    },
+    {
+      "role": "retained-champion:2839c5699a89924d184768a332707cf9b11ab25aad9d7ace96ffa92e75c07009",
+      "key": "diversity-r0-profile-g73-1",
+      "sites": 6715,
+      "leads": 4,
+      "width_m": 1.476e-08,
+      "one_complex128_dense_matrix_bytes": 721459600,
+      "site_ratio_to_51": 131.66666666666666,
+      "dense_cubic_work_ratio_to_51": 2282587.9629629627
+    }
+  ],
+  "scope": "Lattice construction only. Single-matrix storage is a lower bound, not total memory; cubic ratio is asymptotic work, not a runtime prediction. No charge, Poisson or transmission solve performed."
+}
