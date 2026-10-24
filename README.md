@@ -1,9 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-24 15:09 UTC**
+**Workers waiting · Updated 2026-10-24 15:24 UTC**
 
-Self-consistent graphene feedback · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
+Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve devices. Simulate the physics. Beat the champion.
@@ -114,6 +114,7 @@ With a load connected, opposite drives produce unequal outputs. At ±10 mV the t
 | ---: | ---: | --- |
 | -10 | -3.399095 | `loaded-feedback-pilot-poles-131072-cached-reverse` |
 | -5 | -0.995176 | `loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400` |
+| 0 | 0.000000 | `loaded-feedback-pilot-poles-131072-cached-zero-seconds-5400` |
 | 5 | -0.413685 | `loaded-feedback-pilot-poles-131072-cached-half` |
 | 10 | -2.236322 | `loaded-feedback-pilot-poles-131072-cached` |
 
