@@ -212,5 +212,9 @@ The same-bias warm-start benchmark is available with
 It uses the published pilot potential as its initial guess, records the seed hash,
 recomputes the neutral background, and retains a separate exclusive lock and
 results in `runs/four-terminal-feedback-warm`. The 80-call ceiling and final
-checks are unchanged. Results are pending; even a speedup here would not establish
-speedup at a different bias or in a loaded-output solve.
+checks are unchanged. The completed benchmark used 57 versus 60 charge calls,
+and 905.7 versus 860.2 seconds: no observed wall-time improvement. Maximum
+potential difference was 8.34e-15 V and current difference 1.22e-21 A.
+[Evidence](../results/physics-reference/four-terminal-feedback-warm/README.md).
+These individual timings do not establish a performance distribution, and the
+same-bias result does not establish changed-bias or loaded-output behavior.

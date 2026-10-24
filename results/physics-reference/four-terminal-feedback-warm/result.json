@@ -1,0 +1,445 @@
+{
+  "transport": {
+    "electrons_per_site": [
+      1.0103012201194992,
+      1.0338674718010061,
+      1.0216785612057835,
+      1.012485930116844,
+      1.0181035016819102,
+      1.0116182710740398,
+      1.0437069600382574,
+      1.0089944226551453,
+      1.0024245858391037,
+      1.0181035835776007,
+      1.071294316283751,
+      1.0315788115094409,
+      1.0083143310629017,
+      1.0090527805823444,
+      1.0124347038722554,
+      1.0689794942701316,
+      1.0011964685613353,
+      1.0316185824832802,
+      1.043494978242027,
+      1.021665612224231,
+      1.0690254675144442,
+      1.0714892339715232,
+      1.012169421711242,
+      1.034109912785804,
+      1.1263331539360968,
+      1.210019030093741,
+      1.0238502624632313,
+      1.0395412765642256,
+      1.12431283400671,
+      1.1387626646299611,
+      1.084717597251586,
+      1.1525379970297382,
+      1.0658096923015528,
+      1.0403034315409738,
+      1.0332953363473436,
+      1.044316981726389,
+      1.0847408669243122,
+      1.0392771126317542,
+      1.0478410660597337,
+      1.0474900864359025,
+      1.0332343231205825,
+      1.1387288904444888,
+      1.039556777956418,
+      1.0049680842312376,
+      1.0477625771684842,
+      1.0403659409138524,
+      1.1240707742429,
+      1.0395011250786856,
+      1.03929096066935,
+      1.065884955640557,
+      1.0385192805716994
+    ],
+    "currents_a": [
+      2.73949459294519e-07,
+      -2.7347956546146736e-07,
+      -3.489969833989996e-10,
+      -1.2089684965259872e-10
+    ],
+    "integration_error": 3.9096392338798517e-10
+  },
+  "site_potential_v": [
+    0.009781647573399048,
+    0.009403008657036952,
+    0.009359053804243116,
+    0.009608604293844738,
+    0.009859210616611791,
+    0.010143885317344961,
+    0.009824755371459973,
+    0.010205456692353954,
+    0.010051218565596404,
+    0.010076855732460855,
+    0.010921243739379681,
+    0.010781459411074501,
+    0.010805369524142553,
+    0.010688427503718902,
+    0.010265916160174242,
+    0.010605993195311737,
+    0.010799472842243094,
+    0.011292352425771193,
+    0.011079756159236672,
+    0.010536803322510448,
+    0.010884716716157575,
+    0.011898481977778467,
+    0.01257535797510772,
+    0.012254029792624887,
+    0.012094818007389511,
+    0.01007815350489054,
+    0.009698382044855638,
+    0.009738941915900978,
+    0.009869267753379065,
+    0.010157893758360896,
+    0.010850312361701406,
+    0.010393449992345486,
+    0.009595340191685444,
+    0.00962348054370539,
+    0.009930283277489538,
+    0.009676373656263644,
+    0.010992878982829624,
+    0.0105989933019854,
+    0.010499992485856513,
+    0.010709069251924271,
+    0.01033662436903963,
+    0.010642858236171485,
+    0.010596073786782427,
+    0.01111408365167113,
+    0.011097091023251173,
+    0.010686079138655042,
+    0.010688013263769837,
+    0.010944111172232452,
+    0.011760558142921432,
+    0.011834157346308915,
+    0.011248524275129053
+  ],
+  "history": [
+    {
+      "potential_residual_v": 2.983724378680108e-14,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 3.1058489113888754e-14,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 3.076705556992465e-14,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.5722077459368045e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.5448927553896041e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.5374967965442465e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.5407920425647426e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6073827685536557e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6510039689554556e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6536673246025924e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6447619655135526e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6097920566005008e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6429758421809826e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.9590289113136095e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7760481627049352e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.773012379274741e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7228184157058735e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6473837918806744e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.933798711439838e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7581164822588757e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.863691839742998e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.8695178564953618e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7531254399572038e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.984070841648533e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.1451982551434767e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.191329184081381e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.1128370407408337e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.4291307854085176e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.920228143159619e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6703430479048098e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.716222320508054e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.8986979176405239e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.9473454793139666e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.9703462819653517e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.8879028548801635e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.5893116163401277e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6024166368810988e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6466076939447571e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.6518350229310919e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.9961985883720779e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.743495677691831e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7399903913528636e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7847394742642742e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7147039343967663e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.0438988522497592e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.734086225307907e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7725457907014075e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.8415738899102418e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7765936638491908e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 2.0684175032481544e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.7917983242965452e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.9185910499208703e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.969365070325635e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 1.8892274723791846e-10,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 9.070869055882724e-15,
+      "occupation_residual": null
+    },
+    {
+      "potential_residual_v": 9.05699126807491e-15,
+      "occupation_residual": 2.6645352591003757e-15
+    }
+  ],
+  "reference_occupations": [
+    1.0099069288947267,
+    1.0334233848171603,
+    1.0212320639083892,
+    1.0122805470660228,
+    1.0178275224820446,
+    1.011292629528343,
+    1.0429055596800438,
+    1.0088666169166938,
+    1.00233519876775,
+    1.0178275224820443,
+    1.0701683760635459,
+    1.0311570390137283,
+    1.00791301692663,
+    1.0088666169166935,
+    1.012280547066022,
+    1.0674527819281199,
+    1.0009465687338945,
+    1.0311570390137281,
+    1.0429055596800438,
+    1.0212320639083885,
+    1.06745278192812,
+    1.0701683760635463,
+    1.011292629749941,
+    1.0334233850387586,
+    1.1243331971451502,
+    1.2085519188650418,
+    1.0226569900048583,
+    1.0380536323798948,
+    1.1223807135443327,
+    1.1369126785994659,
+    1.0832815781745344,
+    1.1515629269328655,
+    1.0654467099206142,
+    1.0398741247441767,
+    1.0328195143565666,
+    1.0435069511748947,
+    1.0832815781745333,
+    1.0389288364084548,
+    1.047360560253351,
+    1.0469930520189554,
+    1.0328195143565662,
+    1.1369126785994648,
+    1.0392142001495939,
+    1.0049107344891934,
+    1.0473605602533511,
+    1.039874124744177,
+    1.1223807135443322,
+    1.0392142001495945,
+    1.0389288364084548,
+    1.0654467099206133,
+    1.038053632158296
+  ],
+  "reservoir_voltages_v": [
+    0.005,
+    -0.005,
+    0.0,
+    0.0
+  ],
+  "gate_electrostatic_v": 0.03,
+  "convention": "mu=0.9+V, lead onsite=+V, contact phi=-V, device onsite=-phi",
+  "source_sha256": {
+    "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+    "physics_layers\\bias_charge.py": "c92929a059feb3dec9a129abd9c2a552d1fbcc5038ec1e36ae78e0e836de4d16",
+    "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+    "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+    "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+    "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+    "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+    "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+    "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+    "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+    "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+    "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+    "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+    "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+    "physics_layers\\four_terminal_feedback_pilot.py": "5685e09b42eef51f44ef9cbabe7ea81864556343e62edef85d3ad01f43703a68",
+    "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+    "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+    "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+    "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+    "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+    "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+    "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+    "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+    "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+    "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+    "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+    "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+    "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+    "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+    "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+    "physics_layers\\site_acceleration.py": "9551b59c3c9d9aa704cf41fbacd1519ab10938109c2ad45d5f212464c255302e",
+    "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+    "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+    "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd"
+  },
+  "initialization": "published same-bias solution",
+  "seed_sha256": "df5172f0253468fcfad93d696328239fd695aa6daefae6b27941a071b2eb45cb"
+}

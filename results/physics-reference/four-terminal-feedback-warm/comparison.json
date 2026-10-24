@@ -1,0 +1,8 @@
+{
+  "cold_calls": 60,
+  "warm_calls": 57,
+  "cold_seconds": 860.2254350000294,
+  "warm_seconds": 905.7348038000055,
+  "max_potential_difference_v": 8.338815749020512e-15,
+  "max_current_difference_a": 1.2176098616780567e-21
+}
