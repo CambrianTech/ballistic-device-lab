@@ -20,7 +20,7 @@ the immediate bottleneck is choosing and integrating a defensible physics model.
 | Finite-bias quantum charge and Poisson feedback | [Completed four-terminal pilot](results/physics-reference/four-terminal-feedback/README.md) | Tiny 51-site fixture; pinned outputs and uncalibrated contacts |
 | Finite-width charge deposition and potential averaging | [Analytic Gaussian pair](results/physics-reference/gaussian-pair/README.md) | Chosen Gaussian widths are not calibrated carbon orbitals |
 | Coupled feedback across two grids | [0.10/0.05 nm comparison](results/physics-reference/finite-width-feedback/README.md): maximum potential change 0.08435 mV; current change 0.000670% | Two grids do not establish full convergence |
-| Bound-state, gauge and spin checks | [Seven finite-bias regression tests](tests/test_bias_charge.py) | Occupation closure is explicit, but needs physical justification |
+| Bound-state, gauge and spin checks | [Eight finite-bias regression tests](tests/test_bias_charge.py), including 12 bound-level temperature/filling cases | Occupation closure is explicit, but needs physical justification |
 
 ### Latest result: charge and potential solved together
 
@@ -53,6 +53,17 @@ Phase sampling and numerical/model sensitivity remain next.
 10 kohm, with all final circuit checks passing in 56.3 minutes.
 The matching -5 mV point is pending; amplitude scaling is not yet established.
 [Completed +5 mV evidence](results/physics-reference/loaded-feedback-half/README.md).
+
+The first -5 mV attempt exhausted its one-hour budget during final conditioning;
+a separate 90-minute retry is pending with unchanged physics and tolerances.
+[Failure and reproducibility evidence](results/physics-reference/loaded-feedback-reverse-half-inner/README.md).
+After that pair completes, the next control is **zero applied drive** with the
+same gate, occupation reference, mesh and load. It must pass the same terminal
+current, power and conditioning checks. Its measured output will be reported
+before any baseline subtraction in the amplitude-scaling comparison. A nonzero
+baseline would require diagnosis; it must not be silently removed to improve
+the apparent scaling. Phase convergence and model sensitivity remain separate
+requirements before interpreting a sinusoidal DC response.
 
 ![Completed opposite-drive loaded outputs](results/physics-reference/loaded-feedback-reverse/polarity.png)
 
