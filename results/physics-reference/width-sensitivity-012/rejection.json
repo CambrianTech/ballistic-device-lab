@@ -1,0 +1,10 @@
+{
+  "status": "rejected",
+  "sigma_m": 1.2E-10,
+  "grid_factor": 2,
+  "spacing_m": 1E-10,
+  "error": "Charge deposition overlaps a fixed-potential node",
+  "stage": "electrostatic response kernel",
+  "transport_result": null,
+  "source_sha256": "22e38524bf5baaf852b172f9358524915835c8e2af9d07499e3771c01d352c05"
+}
