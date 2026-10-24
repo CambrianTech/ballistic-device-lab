@@ -1,0 +1,231 @@
+{
+  "sigma_m": 1e-10,
+  "cutoff_sigma": 5,
+  "positions_m": [
+    [
+      6e-10,
+      6e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      6e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      6e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      1.215e-09
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.338e-09
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      1.215e-09
+    ]
+  ],
+  "rows": [
+    {
+      "spacing_m": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "shape": [
+        13,
+        19,
+        21
+      ],
+      "potential_v": [
+        0.010387700353214464,
+        0.005094623948816961,
+        0.008940351510700873,
+        0.005974333978786413,
+        0.0029731867965584447,
+        0.008955464804351951,
+        0.008822261518262507,
+        0.008613739959145347,
+        0.014653051865925965,
+        0.008610282040294367,
+        0.008641631243813074,
+        0.0028270020817428455,
+        0.0056248714701438345,
+        0.005210919928496858,
+        0.009308990788028375
+      ],
+      "transport": {
+        "electrons_per_site": [
+          1.6028353150576349,
+          1.2628657552531972,
+          1.3538290675032767,
+          1.6024234687495948,
+          1.2627761667149182,
+          1.3536365110132773,
+          1.6024155438938423,
+          1.2636446533092858,
+          1.354821632266697,
+          1.10992229998872,
+          1.109695330975856,
+          1.1095238088325343,
+          1.1094159509687678,
+          1.109307862166491,
+          1.1093449689314232
+        ],
+        "currents_a": [
+          1.5460313737127944e-06,
+          -1.5460313737127944e-06
+        ],
+        "integration_error": 1.0604391122635757e-09
+      },
+      "residual": {
+        "potential_residual_v": 5.957977167181383e-13,
+        "occupation_residual": 1.5054624213917123e-13
+      }
+    },
+    {
+      "spacing_m": [
+        5e-11,
+        5e-11,
+        5e-11
+      ],
+      "shape": [
+        25,
+        37,
+        41
+      ],
+      "potential_v": [
+        0.01046927102992392,
+        0.005156609964588308,
+        0.008980615860445653,
+        0.006032957133426694,
+        0.0030176602604175757,
+        0.009006502593944669,
+        0.00888167872637402,
+        0.008665557093808911,
+        0.014711353737233843,
+        0.008689120633083771,
+        0.008687906003503615,
+        0.002890033840328616,
+        0.005676876542728344,
+        0.0052779110618992285,
+        0.009393344828256238
+      ],
+      "transport": {
+        "electrons_per_site": [
+          1.602865394240217,
+          1.2628710537970849,
+          1.3538364982757183,
+          1.602453414564315,
+          1.2627802148408198,
+          1.3536428409189147,
+          1.6024401514779176,
+          1.2636513941960854,
+          1.3548300720347328,
+          1.1099479286205616,
+          1.1097124278790786,
+          1.1095513766922507,
+          1.1094364772791803,
+          1.1093309645910754,
+          1.1093681270283209
+        ],
+        "currents_a": [
+          1.546021018735513e-06,
+          -1.546021018735513e-06
+        ],
+        "integration_error": 1.0601935108274742e-09
+      },
+      "residual": {
+        "potential_residual_v": 5.655562823614346e-13,
+        "occupation_residual": 1.4077627952246985e-13
+      }
+    }
+  ],
+  "max_potential_change_v": 8.435404022786273e-05,
+  "current_relative_change": -6.697779526110281e-06,
+  "source_sha256": {
+    "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+    "physics_layers\\bias_charge.py": "c92929a059feb3dec9a129abd9c2a552d1fbcc5038ec1e36ae78e0e836de4d16",
+    "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+    "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+    "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+    "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+    "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+    "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+    "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+    "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+    "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+    "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+    "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+    "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+    "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+    "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+    "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+    "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+    "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+    "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+    "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+    "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+    "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+    "physics_layers\\site_acceleration.py": "770140d2221d357ddca3c4d5fe7c71cbd34c674e647a062b3927819d1b0eb825",
+    "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+    "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+    "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd"
+  }
+}

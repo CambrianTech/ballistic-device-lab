@@ -101,3 +101,8 @@ Changing sigma from 0.10 to 0.15 nm changes the analytic interaction from 1.3434
 to 1.10311 V per elementary source charge (about 17.9%). This model sensitivity
 is much larger than mapping error, reinforcing the need for physical width
 calibration. This reference uses analytic source fields, not a Poisson solve.
+
+[Finite-width coupled feedback](../results/physics-reference/finite-width-feedback/README.md)
+now compares fixed sigma 0.10 nm at 0.10/0.05 nm grid spacing: maximum site-potential
+change 0.08435 mV and current change -0.000670%. Both residual checks pass.
+This is a two-grid numerical fixture, with orbital width and contacts uncalibrated.
