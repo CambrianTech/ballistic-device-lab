@@ -1,0 +1,85 @@
+{
+  "scope": "Synthetic scalar Hartree closure, not a graphene Poisson model.",
+  "equation": "U=0.7+g*(n(U,reference)-n0)",
+  "neutral_charge": 1.0142118426748943,
+  "temperature_k": 150,
+  "chemical_potentials_ev": [
+    0.2,
+    -0.1
+  ],
+  "source_sha256": "341a2f9b421e0a4944c63109f048d19a166cfa042bdac3f48f494dc68fdb4d19",
+  "rows": [
+    {
+      "coupling_ev_per_electron": 0,
+      "reference_ev": 2.098962010041709,
+      "quadrature_tolerance": 1e-08,
+      "onsite_ev": 0.7,
+      "charge_electrons": 0.7998018950838748,
+      "current_a": 2.070160243348221e-05,
+      "residual_ev": 0.0
+    },
+    {
+      "coupling_ev_per_electron": 0,
+      "reference_ev": 2.098962010041709,
+      "quadrature_tolerance": 1e-10,
+      "onsite_ev": 0.7,
+      "charge_electrons": 0.7998018950838748,
+      "current_a": 2.0701602433482207e-05,
+      "residual_ev": 0.0
+    },
+    {
+      "coupling_ev_per_electron": 0,
+      "reference_ev": 2.138962010041709,
+      "quadrature_tolerance": 1e-08,
+      "onsite_ev": 0.7,
+      "charge_electrons": 1.228621790265914,
+      "current_a": 2.070160243348221e-05,
+      "residual_ev": 0.0
+    },
+    {
+      "coupling_ev_per_electron": 0,
+      "reference_ev": 2.138962010041709,
+      "quadrature_tolerance": 1e-10,
+      "onsite_ev": 0.7,
+      "charge_electrons": 1.228621790265914,
+      "current_a": 2.0701602433482207e-05,
+      "residual_ev": 0.0
+    },
+    {
+      "coupling_ev_per_electron": 0.2,
+      "reference_ev": 2.098962010041709,
+      "quadrature_tolerance": 1e-08,
+      "onsite_ev": 0.6735486842956921,
+      "charge_electrons": 0.8819552641533485,
+      "current_a": 2.0870884210243105e-05,
+      "residual_ev": 1.3565537582138631e-15
+    },
+    {
+      "coupling_ev_per_electron": 0.2,
+      "reference_ev": 2.098962010041709,
+      "quadrature_tolerance": 1e-10,
+      "onsite_ev": 0.6735486842956921,
+      "charge_electrons": 0.8819552641533485,
+      "current_a": 2.0870884210243105e-05,
+      "residual_ev": 1.3565537582138631e-15
+    },
+    {
+      "coupling_ev_per_electron": 0.2,
+      "reference_ev": 2.138962010041709,
+      "quadrature_tolerance": 1e-08,
+      "onsite_ev": 0.7271460209785156,
+      "charge_electrons": 1.1499419475674728,
+      "current_a": 2.0524094986036098e-05,
+      "residual_ev": 1.1102230246251565e-16
+    },
+    {
+      "coupling_ev_per_electron": 0.2,
+      "reference_ev": 2.138962010041709,
+      "quadrature_tolerance": 1e-10,
+      "onsite_ev": 0.7271460209785156,
+      "charge_electrons": 1.1499419475674728,
+      "current_a": 2.0524094986036098e-05,
+      "residual_ev": 1.1102230246251565e-16
+    }
+  ]
+}
