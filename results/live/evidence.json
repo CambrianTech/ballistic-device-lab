@@ -1,0 +1,737 @@
+{
+  "published_utc": "2026-10-24 15:08 UTC",
+  "workers": [
+    {
+      "run": "runs/loaded-feedback-pilot",
+      "label": "Self-consistent graphene feedback",
+      "phase": "failed",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "b79d626c67e37e29fbd0430a4267980dfdb04dd65498fd94c58fce6710e6eeff"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072",
+      "label": "Self-consistent graphene feedback",
+      "phase": "failed",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "0b30138a51c5f81caa646ae9ea7e334622bf652751e891c30b8a2dc6574e078f"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached",
+      "label": "Self-consistent graphene feedback",
+      "phase": "complete",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "2317fb22ee546de7769b86f68c02d1084a74a5979b74acef680811d9ac10206e"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-half",
+      "label": "Self-consistent graphene feedback",
+      "phase": "complete",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "5037f394c810a0c06987ef61cc1d948e8468fcdd157e757fe185ce68997d1f55"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-reverse",
+      "label": "Self-consistent graphene feedback",
+      "phase": "complete",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "18277c180907fb87d5a46caf62fcbc8e4e1e5a6e1ae844ab780d4bef3aafd69e"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-reverse-half",
+      "label": "Self-consistent graphene feedback",
+      "phase": "failed",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "56947dec943d3afe8e7dfa93d6767525a8e38e950bc89c63a94a2da9f34ef6d7"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400",
+      "label": "Self-consistent graphene feedback",
+      "phase": "complete",
+      "live": false,
+      "stopped": false,
+      "status_sha256": "4e5b2b9d8bc2f43d14f3b565c411408f48185c8fcc7072f741559470d1a5319f"
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-zero-seconds-5400",
+      "label": "Self-consistent graphene feedback",
+      "phase": "load",
+      "live": true,
+      "stopped": false,
+      "status_sha256": "01f34d348098cd4ac1c285be7651c1838e9fbd88b09214f6ea4e4480c395c856"
+    },
+    {
+      "run": "runs/dc-continuous",
+      "label": "Geometry search",
+      "phase": "stopped",
+      "live": false,
+      "stopped": true,
+      "status_sha256": "8e33d0d0bde8d6e4bd1a5a4afd80b20a970fe267b78154ece64c063008e5f782"
+    },
+    {
+      "run": "runs/edge-sensitivity",
+      "label": "Atomic-edge sensitivity",
+      "phase": "waiting",
+      "live": true,
+      "stopped": false,
+      "status_sha256": "3e773101f7beaec080fcdabbdfca2d7546e0970f1e3a024dbaccd7ab884ce4e9"
+    }
+  ],
+  "loaded_points": [
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached",
+      "drive_v": 0.01,
+      "output_v": -2.2363215360646594e-06,
+      "load_power_w": 5.001134012666597e-16,
+      "kcl_residual_a": 3.544520623578008e-21,
+      "power_residual_w": -2.1967015197236905e-26,
+      "output_jacobian_condition": 8.83016984833174,
+      "source_sha256": {
+        "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+        "physics_layers\\bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+        "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+        "physics_layers\\current_cache.py": "da9180a5f2784a553a10409f2b2ac705e0d1752479c8b6eecc61b7672839f5f5",
+        "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+        "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+        "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+        "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+        "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+        "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+        "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+        "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+        "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+        "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+        "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+        "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+        "physics_layers\\four_terminal_feedback_pilot.py": "c2fbb349bf71d2f3791502c76c7c2aaf3231f4f49d5d33fb5d6c17466a2357ed",
+        "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+        "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+        "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+        "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+        "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+        "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+        "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+        "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+        "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+        "physics_layers\\loaded_feedback_pilot.py": "659c90d6f9acb682a4f1e5043fd541368aeb9d88088141bd130ee0c07a9bdddc",
+        "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+        "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+        "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+        "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+        "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+        "physics_layers\\report_feedback_broyden.py": "5ea5adfe0c565e9990b81eb69efa527645b1abe47d11f21a6fffc3fff6983737",
+        "physics_layers\\report_feedback_warm.py": "977a9ff6f96f15177653277741388d0fac1801934bfb5b8c809d8620c59aac3d",
+        "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+        "physics_layers\\report_loaded_inner.py": "d94a415f7f3723e660e9d601977e94d0cbc2632e68fbd8802c3f1c59774a095e",
+        "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+        "physics_layers\\site_acceleration.py": "91944abb217e39064d5d61d988597372fabc28fd502b781440fd43c58c19141a",
+        "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+        "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+        "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+        "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd",
+        "ballistic_lab/transport/circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6"
+      }
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-half",
+      "drive_v": 0.005,
+      "output_v": -4.136851019116442e-07,
+      "load_power_w": 1.7113536354364745e-17,
+      "kcl_residual_a": 1.1791847372855544e-22,
+      "power_residual_w": -7.337518219393706e-26,
+      "output_jacobian_condition": 8.828624323072866,
+      "source_sha256": {
+        "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+        "physics_layers\\audit_load_linearization.py": "a264ff4b8968e414c6e3974989a26ab2e2f2944c5424733eebaa2d451d49ef5f",
+        "physics_layers\\bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+        "physics_layers\\compare_loaded_inner.py": "7f33edf7a8050a0500a1519bfbc645844bdd9c95ed915a0909af211fc9a6241c",
+        "physics_layers\\compare_polarity.py": "31659bbd37321a200012e7853b876ad91d4825aab8462a98038d8f2577752507",
+        "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+        "physics_layers\\current_cache.py": "da9180a5f2784a553a10409f2b2ac705e0d1752479c8b6eecc61b7672839f5f5",
+        "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+        "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+        "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+        "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+        "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+        "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+        "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+        "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+        "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+        "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+        "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+        "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+        "physics_layers\\four_terminal_feedback_pilot.py": "c2fbb349bf71d2f3791502c76c7c2aaf3231f4f49d5d33fb5d6c17466a2357ed",
+        "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+        "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+        "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+        "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+        "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+        "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+        "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+        "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+        "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+        "physics_layers\\loaded_feedback_pilot.py": "c7cee3d3ec9ce94f0445f92d43ccbe56f2cc747f4d35f596e6a8c39872387883",
+        "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+        "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+        "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+        "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+        "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+        "physics_layers\\polarity.py": "d2a3a08ffc7dbb267c85698c4bbccc281cc8448643d3cb1f13d3f7709b60317d",
+        "physics_layers\\report_feedback_broyden.py": "5ea5adfe0c565e9990b81eb69efa527645b1abe47d11f21a6fffc3fff6983737",
+        "physics_layers\\report_feedback_warm.py": "977a9ff6f96f15177653277741388d0fac1801934bfb5b8c809d8620c59aac3d",
+        "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+        "physics_layers\\report_loaded_complete.py": "74e28c0d9a299ceb59381ea15c3ca3a3fd4906136e1323f28bc70c12c255155d",
+        "physics_layers\\report_loaded_inner.py": "d94a415f7f3723e660e9d601977e94d0cbc2632e68fbd8802c3f1c59774a095e",
+        "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+        "physics_layers\\site_acceleration.py": "91944abb217e39064d5d61d988597372fabc28fd502b781440fd43c58c19141a",
+        "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+        "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+        "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+        "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd",
+        "ballistic_lab/transport/circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6"
+      }
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-reverse",
+      "drive_v": -0.01,
+      "output_v": -3.3990951696405068e-06,
+      "load_power_w": 1.1553847972273426e-15,
+      "kcl_residual_a": 6.272252091048186e-21,
+      "power_residual_w": 3.445428889643291e-26,
+      "output_jacobian_condition": 8.823883499261521,
+      "source_sha256": {
+        "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+        "physics_layers\\audit_load_linearization.py": "a264ff4b8968e414c6e3974989a26ab2e2f2944c5424733eebaa2d451d49ef5f",
+        "physics_layers\\bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+        "physics_layers\\compare_loaded_inner.py": "7f33edf7a8050a0500a1519bfbc645844bdd9c95ed915a0909af211fc9a6241c",
+        "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+        "physics_layers\\current_cache.py": "da9180a5f2784a553a10409f2b2ac705e0d1752479c8b6eecc61b7672839f5f5",
+        "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+        "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+        "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+        "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+        "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+        "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+        "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+        "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+        "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+        "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+        "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+        "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+        "physics_layers\\four_terminal_feedback_pilot.py": "c2fbb349bf71d2f3791502c76c7c2aaf3231f4f49d5d33fb5d6c17466a2357ed",
+        "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+        "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+        "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+        "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+        "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+        "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+        "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+        "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+        "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+        "physics_layers\\loaded_feedback_pilot.py": "9136b7dda436c255b70d7ab1de3f9c9fcd7660c25ff17a087aac115dd975aa39",
+        "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+        "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+        "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+        "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+        "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+        "physics_layers\\report_feedback_broyden.py": "5ea5adfe0c565e9990b81eb69efa527645b1abe47d11f21a6fffc3fff6983737",
+        "physics_layers\\report_feedback_warm.py": "977a9ff6f96f15177653277741388d0fac1801934bfb5b8c809d8620c59aac3d",
+        "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+        "physics_layers\\report_loaded_complete.py": "6a24c423c4b70270009f0ac4082bf4aa5c310f66087b44f048cdabecd6a4467b",
+        "physics_layers\\report_loaded_inner.py": "d94a415f7f3723e660e9d601977e94d0cbc2632e68fbd8802c3f1c59774a095e",
+        "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+        "physics_layers\\site_acceleration.py": "91944abb217e39064d5d61d988597372fabc28fd502b781440fd43c58c19141a",
+        "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+        "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+        "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+        "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd",
+        "ballistic_lab/transport/circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6"
+      }
+    },
+    {
+      "run": "runs/loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400",
+      "drive_v": -0.005,
+      "output_v": -9.95176094268726e-07,
+      "load_power_w": 9.903754586039561e-17,
+      "kcl_residual_a": 2.0776192047917827e-21,
+      "power_residual_w": 6.046674305301454e-26,
+      "output_jacobian_condition": 8.82548146985047,
+      "source_sha256": {
+        "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+        "physics_layers\\audit_load_linearization.py": "a264ff4b8968e414c6e3974989a26ab2e2f2944c5424733eebaa2d451d49ef5f",
+        "physics_layers\\bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+        "physics_layers\\compare_loaded_inner.py": "7f33edf7a8050a0500a1519bfbc645844bdd9c95ed915a0909af211fc9a6241c",
+        "physics_layers\\compare_polarity.py": "31659bbd37321a200012e7853b876ad91d4825aab8462a98038d8f2577752507",
+        "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+        "physics_layers\\current_cache.py": "da9180a5f2784a553a10409f2b2ac705e0d1752479c8b6eecc61b7672839f5f5",
+        "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+        "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+        "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+        "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+        "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+        "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+        "physics_layers\\even_scaling.py": "99491c0c7620e82968007e2b8296a2cf8f2144f2b266bdb101f18295f635b281",
+        "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+        "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+        "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+        "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+        "physics_layers\\finite_width_feedback.py": "d68f57eede842346f8d968914ee3f3b22b9e5d0514976f98f23b23f1f7a75c09",
+        "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+        "physics_layers\\four_terminal_feedback_pilot.py": "c2fbb349bf71d2f3791502c76c7c2aaf3231f4f49d5d33fb5d6c17466a2357ed",
+        "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+        "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+        "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+        "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+        "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+        "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+        "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+        "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+        "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+        "physics_layers\\loaded_feedback_pilot.py": "dc2881047467b5a746da3d1beab194d5f690e9d6dda968e9bf2516ad44031228",
+        "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+        "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+        "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+        "physics_layers\\plot_loaded_polarity.py": "62dfdb5d652f07c8fdae7d2d1dff266c45f0612db8f8c27bdffd9ba6150b19d6",
+        "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+        "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+        "physics_layers\\polarity.py": "d2a3a08ffc7dbb267c85698c4bbccc281cc8448643d3cb1f13d3f7709b60317d",
+        "physics_layers\\report_feedback_broyden.py": "5ea5adfe0c565e9990b81eb69efa527645b1abe47d11f21a6fffc3fff6983737",
+        "physics_layers\\report_feedback_warm.py": "977a9ff6f96f15177653277741388d0fac1801934bfb5b8c809d8620c59aac3d",
+        "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+        "physics_layers\\report_loaded_complete.py": "611685cadb1190ac962051232daba1f0cef27762b28b1f46c6a02b4fd3ea42ea",
+        "physics_layers\\report_loaded_inner.py": "d94a415f7f3723e660e9d601977e94d0cbc2632e68fbd8802c3f1c59774a095e",
+        "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+        "physics_layers\\site_acceleration.py": "91944abb217e39064d5d61d988597372fabc28fd502b781440fd43c58c19141a",
+        "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+        "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+        "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+        "physics_layers\\storage_audit.py": "0955d2a9e08fd78ef06f7b2370da482f6f1de5954eda0d7069162478d4e5050c",
+        "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd",
+        "ballistic_lab/transport/circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6"
+      }
+    }
+  ],
+  "rejected": [],
+  "adapters": {
+    "evolution": {
+      "snapshot": "runs/dc-continuous/round-000432.json",
+      "snapshot_sha256": "82168ce126574852ffc0c0f8d11b67e1dd4950cd999e9813b86e2470475c547c",
+      "model": "2839c5699a89924d184768a332707cf9b11ab25aad9d7ace96ffa92e75c07009",
+      "selected": [
+        {
+          "candidate": {
+            "key": "elite-r0-beveled-g432-1",
+            "family": "beveled",
+            "repeat": 0,
+            "round": 432,
+            "parameters": [
+              1.244636387528174,
+              0.8804441650157588,
+              0.044411098784677305,
+              0.42411468386354223,
+              0.18501544473067766,
+              0.1557845613970166
+            ],
+            "origin": "mutation of elite-r0-beveled-g368-1",
+            "obstacles": [
+              [
+                [
+                  -0.622318193764087,
+                  0.4846331812925567
+                ],
+                [
+                  0.622318193764087,
+                  0.4846331812925567
+                ],
+                [
+                  0.5664875135714211,
+                  0.32173741254163596
+                ],
+                [
+                  0.2639342840107864,
+                  -0.3958109837232021
+                ],
+                [
+                  -0.48425374022690915,
+                  0.32173741254163596
+                ]
+              ]
+            ],
+            "arm": "elite"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": -1.1905055345834524e-05,
+              "dc_power_w": 1.4173034278738319e-14,
+              "input_power_w": 4.5004110244961474e-09,
+              "efficiency": 3.149275522078584e-06,
+              "max_kcl_a": 1.3924427559472647e-19
+            }
+          ],
+          "device_fingerprint": "f6038b40140947a39b9d5310f3a379154e7c1c78fda701e4edae893d5cf14bd6",
+          "energy_converged": false
+        },
+        {
+          "candidate": {
+            "key": "elite-r0-islands-g432-1",
+            "family": "islands",
+            "repeat": 0,
+            "round": 432,
+            "parameters": [
+              0.39477508381297877,
+              0.2700772371076656,
+              -0.04075857593596349,
+              0.37214264201990277,
+              0.4211748330883983,
+              0.38454684888649193,
+              -0.11949828644864627,
+              0.188290985423597
+            ],
+            "origin": "mutation of elite-r0-islands-g77-1",
+            "obstacles": [
+              [
+                [
+                  -0.6973875419064894,
+                  0.09428004261786932
+                ],
+                [
+                  -0.3026124580935106,
+                  0.09428004261786932
+                ],
+                [
+                  -0.4265436786531048,
+                  -0.1757971944897963
+                ]
+              ],
+              [
+                [
+                  0.28941258345580084,
+                  0.0727751379945997
+                ],
+                [
+                  0.7105874165441992,
+                  0.0727751379945997
+                ],
+                [
+                  0.5396517121789167,
+                  -0.31177171089189226
+                ]
+              ]
+            ],
+            "arm": "elite"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": 6.033856942049151e-06,
+              "dc_power_w": 3.640742959711473e-15,
+              "input_power_w": 5.411600695262471e-09,
+              "efficiency": 6.727663707521368e-07,
+              "max_kcl_a": 1.5074539483166376e-20
+            }
+          ],
+          "device_fingerprint": "0eec0f05c2007caa549b08ba2172078c904ec8613d289edb88dc8f2bebce514a",
+          "energy_converged": false
+        },
+        {
+          "candidate": {
+            "key": "diversity-r0-profile-g432-1",
+            "family": "profile",
+            "repeat": 0,
+            "round": 432,
+            "parameters": [
+              1.2987266749865476,
+              0.9362794376736967,
+              0.009707590092390306,
+              0.8541194025924435,
+              0.8100100903104748,
+              0.3244510451608791,
+              0.7734369063008566,
+              0.9965631909556903,
+              0.9658762912417835,
+              0.2889323620311308
+            ],
+            "origin": "mutation of diversity-r0-profile-g370-1",
+            "obstacles": [
+              [
+                [
+                  -0.6493633374932738,
+                  0.47784730892923866
+                ],
+                [
+                  0.6493633374932738,
+                  0.47784730892923866
+                ],
+                [
+                  0.6493633374932738,
+                  0.20732587948099857
+                ],
+                [
+                  0.4329088916621825,
+                  -0.4264828018969742
+                ],
+                [
+                  0.2164544458310913,
+                  -0.45521431510505994
+                ],
+                [
+                  0.0,
+                  -0.24630576277821103
+                ],
+                [
+                  -0.21645444583109125,
+                  0.17407046681336763
+                ],
+                [
+                  -0.4329088916621825,
+                  -0.2805484829366729
+                ],
+                [
+                  -0.6493633374932738,
+                  -0.32184712503620805
+                ]
+              ]
+            ],
+            "arm": "diversity"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": 1.1841963760687123e-05,
+              "dc_power_w": 1.4023210570942712e-14,
+              "input_power_w": 2.764383199577103e-09,
+              "efficiency": 5.072817174220994e-06,
+              "max_kcl_a": 1.3786619269421312e-20
+            }
+          ],
+          "device_fingerprint": "3bb38ae3b62b92f43a50236fc2075e147f94b067b9b6f98f590c79f7ab07fa83",
+          "energy_converged": false
+        },
+        {
+          "candidate": {
+            "key": "elite-r0-radial-g432-1",
+            "family": "radial",
+            "repeat": 0,
+            "round": 432,
+            "parameters": [
+              0.7269117473624807,
+              0.641698330456997,
+              0.12582993225873118,
+              -0.1395036848325087,
+              0.6785141242780863,
+              0.784390132026076,
+              0.9005242020510184,
+              0.4761961069763724,
+              0.5347742888838556,
+              0.7827828429018964,
+              0.6100846127716162,
+              0.9838754390763664
+            ],
+            "origin": "mutation of elite-r0-radial-g48-1",
+            "obstacles": [
+              [
+                [
+                  0.6190498199478383,
+                  -0.1395036848325087
+                ],
+                [
+                  0.5290097748619782,
+                  0.21641274217689782
+                ],
+                [
+                  0.1258299322587312,
+                  0.43836119215974917
+                ],
+                [
+                  -0.11893687907671568,
+                  0.07656993724766459
+                ],
+                [
+                  -0.2629037805183603,
+                  -0.13950368483250863
+                ],
+                [
+                  -0.27652375694246994,
+                  -0.4946908056218439
+                ],
+                [
+                  0.1258299322587311,
+                  -0.5309939622855583
+                ],
+                [
+                  0.6315460656876292,
+                  -0.5859364184951119
+                ]
+              ]
+            ],
+            "arm": "elite"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": 5.308395395390036e-06,
+              "dc_power_w": 2.817906167379814e-15,
+              "input_power_w": 3.7242563883990026e-09,
+              "efficiency": 7.566359223166121e-07,
+              "max_kcl_a": 1.70372736406322e-19
+            }
+          ],
+          "device_fingerprint": "9f4d6dfd4247b34b5f4f4c17a6cb1f62b31aee430505a19d3749e9e07f989cbd",
+          "energy_converged": false
+        },
+        {
+          "candidate": {
+            "key": "elite-r0-triangle-g432-1",
+            "family": "triangle",
+            "repeat": 0,
+            "round": 432,
+            "parameters": [
+              1.2888913764627605,
+              1.0909230279985302,
+              0.19979249267822574,
+              -0.031737310849467626
+            ],
+            "origin": "mutation of elite-r0-triangle-g263-1",
+            "obstacles": [
+              [
+                [
+                  -0.6444456882313803,
+                  0.7452540066774909
+                ],
+                [
+                  0.6444456882313803,
+                  0.7452540066774909
+                ],
+                [
+                  -0.020452973132998417,
+                  -0.3456690213210394
+                ]
+              ]
+            ],
+            "arm": "elite"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": -1.9685557721416574e-05,
+              "dc_power_w": 3.875211828032237e-14,
+              "input_power_w": 5.094175973420724e-09,
+              "efficiency": 7.607141661873223e-06,
+              "max_kcl_a": 2.901418716591e-20
+            }
+          ],
+          "device_fingerprint": "51ee648b30d74848d0389af7e3a6e66304258f34ddaa39526738ca301d17ff32",
+          "energy_converged": false
+        }
+      ],
+      "champion": {
+        "candidate": {
+          "candidate": {
+            "key": "diversity-r0-profile-g73-1",
+            "family": "profile",
+            "repeat": 0,
+            "round": 73,
+            "parameters": [
+              1.3418130373742911,
+              1.0463649051039141,
+              0.21877843626138227,
+              0.8837297054660306,
+              0.34297573577667617,
+              0.1697368491311527,
+              0.9163481923897311,
+              0.9522423345877419,
+              0.8296039599449422,
+              0.8335919218252448
+            ],
+            "origin": "mutation of diversity-r0-profile-g15-1",
+            "obstacles": [
+              [
+                [
+                  -0.6709065186871456,
+                  0.7419608888133393
+                ],
+                [
+                  0.6709065186871456,
+                  0.7419608888133393
+                ],
+                [
+                  0.6709065186871456,
+                  -0.13028044336272226
+                ],
+                [
+                  0.4472710124580971,
+                  -0.12610758000828148
+                ],
+                [
+                  0.2236355062290485,
+                  -0.2544320712534929
+                ],
+                [
+                  0.0,
+                  -0.21687370055868482
+                ],
+                [
+                  -0.22363550622904854,
+                  0.5643542067795834
+                ],
+                [
+                  -0.4472710124580971,
+                  0.3830831155944324
+                ],
+                [
+                  -0.6709065186871456,
+                  -0.1827428605841337
+                ]
+              ]
+            ],
+            "arm": "diversity"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": -2.8374284899264268e-05,
+              "dc_power_w": 8.051000435446162e-14,
+              "input_power_w": 3.227539330962993e-09,
+              "efficiency": 2.4944701241003948e-05,
+              "max_kcl_a": 1.565191155072839e-20
+            },
+            {
+              "count": 513,
+              "dc_v": -2.833300768637125e-05,
+              "dc_power_w": 8.027593245559723e-14,
+              "input_power_w": 3.2295047529024328e-09,
+              "efficiency": 2.4857041124788975e-05,
+              "max_kcl_a": 1.415471464200741e-20
+            },
+            {
+              "count": 1025,
+              "dc_v": -2.8330774372317925e-05,
+              "dc_power_w": 8.026327765351861e-14,
+              "input_power_w": 3.229448141837862e-09,
+              "efficiency": 2.4853558294898397e-05,
+              "max_kcl_a": 1.4079441206265084e-20
+            }
+          ],
+          "device_fingerprint": "50869efc1297b526620e64be69378ff33bcc5113c5b3f830866af74ffd01d2f1",
+          "energy_converged": true,
+          "phase64": {
+            "dc_v": -2.833077437231901e-05,
+            "dc_power_w": 8.026327765352475e-14,
+            "input_power_w": 3.229448141837857e-09,
+            "efficiency": 2.4853558294900335e-05,
+            "max_kcl_a": 1.6290494983619327e-20
+          },
+          "phase_converged": true
+        },
+        "source": "runs/dc-continuous/round-000432.json",
+        "objective": "DC power at fixed 10 mV peak and 10 kohm"
+      }
+    }
+  }
+}

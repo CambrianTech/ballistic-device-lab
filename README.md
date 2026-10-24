@@ -1,8 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**● Active research · Automated check-ins every 15 minutes · Updated October 24, 2026, 14:58 UTC**  
-Running at this update: self-consistent zero-drive control. Results and diagrams evolve as experiments complete.
+**Computing · Updated 2026-10-24 15:08 UTC**
+
+Self-consistent graphene feedback · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Can the shape of graphene make a better rectifier?
@@ -54,6 +55,14 @@ Matched conditions: 14.76 nm device width, 10 mV peak sinusoidal drive, 10 kΩ l
 
 </details>
 
+<!-- evolution:start -->
+**Champion to beat: 28.331 µV DC.** Latest completed generation: **432**. The champion survives restarts; records from different source manifests remain separate.
+
+![Parents and latest diverse attempts](results/live/generation.png)
+
+The strip selects new attempts by screening score within each family, not by visual preference. Parent links come from recorded mutation origins; fresh samples have no parent. [Selection evidence](results/live/evidence.json) · [Champion ledger](results/live/champions.json).
+<!-- evolution:end -->
+
 ## Following the electrons
 
 The geometry gives electrons different routes through the device. Trajectory diagrams make that routing visible; the quantum calculation determines the electrical score.
@@ -98,7 +107,18 @@ With a load connected, opposite drives produce unequal outputs. At ±10 mV the t
 <details>
 <summary><strong>Inspect the loaded response and model assumptions</strong></summary>
 
-![Completed positive and negative drive operating points](results/physics-reference/loaded-feedback-reverse/polarity.png)
+<!-- loaded-points:start -->
+| Drive (mV) | Output (µV) | Evidence |
+| ---: | ---: | --- |
+| -10 | -3.399095 | `loaded-feedback-pilot-poles-131072-cached-reverse` |
+| -5 | -0.995176 | `loaded-feedback-pilot-poles-131072-cached-reverse-half-seconds-5400` |
+| 5 | -0.413685 | `loaded-feedback-pilot-poles-131072-cached-half` |
+| 10 | -2.236322 | `loaded-feedback-pilot-poles-131072-cached` |
+
+Individual operating points; source manifests and accounting are retained in the [data snapshot](results/live/evidence.json).
+<!-- loaded-points:end -->
+
+![Completed loaded-feedback operating points](results/live/loaded-points.png)
 
 These are individual operating points, not a sinusoidal DC average. The fixture uses surrogate contacts, a chosen Gaussian charge width and an explicit bound-state occupation rule. Numerical checks verify calculations within these assumptions; they do not establish fabricated-device performance or literature novelty.
 
@@ -118,7 +138,7 @@ python -m unittest discover -s tests
 python -m ballistic_lab.reporting.dc_continuous
 ```
 
-[Python dependencies](requirements.txt) · [Quantum environment](environment-quantum.yml) · [GPU dependencies](requirements-gpu.txt) · [Worker and source-manifest contracts](docs/ARCHITECTURE.md)
+[Run your own continuously published fork](docs/PUBLICATION.md) · [Python dependencies](requirements.txt) · [Quantum environment](environment-quantum.yml) · [GPU dependencies](requirements-gpu.txt) · [Worker and source-manifest contracts](docs/ARCHITECTURE.md)
 
 | Explore | Read |
 | --- | --- |
@@ -127,5 +147,9 @@ python -m ballistic_lab.reporting.dc_continuous
 | Published devices | [Auton et al.](references/auton-2016/README.md) · [Shi et al.](references/shi-2026/README.md) · [Matched comparison criteria](docs/PAPER-COMPARISON.md) |
 
 **Research software.** The application is sensitive signal detection; no design is qualified against a fabricated or commercial detector. Real contacts, driven noise, fabrication yield and finite-frequency response require separate evidence.
+
+## Future experiments
+
+**Neuromorphic devices:** use the same propose–simulate–test loop to explore geometries and circuits with useful memory and neuron-like dynamics. Those experiments will measure time-dependent state, switching energy and robustness against matched controls. Static rectification alone does not demonstrate neuromorphic behavior.
 
 [MIT license](LICENSE). External figures retain their stated licenses.
