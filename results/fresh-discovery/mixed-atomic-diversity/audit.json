@@ -1,0 +1,131 @@
+{
+  "snapshot": "runs\\fresh-discovery-mixed-v2\\round-000009.json",
+  "snapshot_sha256": "64e10c4b0d8089d25d50af62fc041c44580df3db9ce73baec514a27361ae1956",
+  "generation": 9,
+  "candidates": 20,
+  "distinct_atomic_lattices": 20,
+  "duplicates": [],
+  "rows": [
+    {
+      "key": "r0-triangle-g9-1",
+      "family": "triangle",
+      "sites": 7847,
+      "atomic_sha256": "5e1ad853e0bb46cb35fb5b0b1d6b5b446d8651df426f4240e9bf9114998df14f"
+    },
+    {
+      "key": "r0-beveled-g9-0",
+      "family": "beveled",
+      "sites": 8050,
+      "atomic_sha256": "4db2e675f8db97adcace48cb60a33e612ab66e58f85352dfaa27d0a095c7608c"
+    },
+    {
+      "key": "r0-beveled-g9-1",
+      "family": "beveled",
+      "sites": 8537,
+      "atomic_sha256": "efa1feff07c642e8f8c9d9c0dfca6fee7c962ceac0428df3d51b9be3924bf7c4"
+    },
+    {
+      "key": "r0-triangle-g9-0",
+      "family": "triangle",
+      "sites": 8627,
+      "atomic_sha256": "8c332ce096f9db00a289245c7fd4e7e9ef074a6a0a50bdc64d629897bbdef7dc"
+    },
+    {
+      "key": "r0-profile-g9-1",
+      "family": "profile",
+      "sites": 6841,
+      "atomic_sha256": "739fbff9bdc7d3ff2fd8191f44f537be091536d0b3d7948a378b008b39dccdbe"
+    },
+    {
+      "key": "r0-profile-g9-0",
+      "family": "profile",
+      "sites": 8176,
+      "atomic_sha256": "3e0081fb22c3257a89a9a01b78381de9708488c3d9a573b8af3e4877067e99bb"
+    },
+    {
+      "key": "r0-islands-g9-0",
+      "family": "islands",
+      "sites": 8220,
+      "atomic_sha256": "14be45308ba875d73200cd36d7056c8b75e8881582e2ea9f214a641dd5060daa"
+    },
+    {
+      "key": "r0-islands-g9-1",
+      "family": "islands",
+      "sites": 8382,
+      "atomic_sha256": "547cb77ffcd1f89d3c83c618157f715fd86d22a72354e23bdb5835939b28b52b"
+    },
+    {
+      "key": "r0-radial-g9-0",
+      "family": "radial",
+      "sites": 8327,
+      "atomic_sha256": "efac6509e78f92f83e050356c317bc02d52465f736f946e7cff7434b380d97da"
+    },
+    {
+      "key": "r0-radial-g9-1",
+      "family": "radial",
+      "sites": 8197,
+      "atomic_sha256": "a83f19f4aa89726c46225b1df73120bc57740e98d0b5472b87bb288226e9d749"
+    },
+    {
+      "key": "r1-triangle-g9-1",
+      "family": "triangle",
+      "sites": 7225,
+      "atomic_sha256": "0134fe493c8649fd4deafb650093fc01a9e416716ea182364ad031f084811d1e"
+    },
+    {
+      "key": "r1-triangle-g9-0",
+      "family": "triangle",
+      "sites": 8418,
+      "atomic_sha256": "6073f0eed2af8e12daa6e2caceee70fc04158910144d7587847b54f1ed7087c5"
+    },
+    {
+      "key": "r1-beveled-g9-0",
+      "family": "beveled",
+      "sites": 8352,
+      "atomic_sha256": "5d2362d9296c0e94d7c74ba2d196e68e700b4a8a5d99d491bf1e47fc38c5fb2e"
+    },
+    {
+      "key": "r1-beveled-g9-1",
+      "family": "beveled",
+      "sites": 8206,
+      "atomic_sha256": "175b8e4b402a65f6b906a541767dde23432a8ae07f03693e7216017ae67eedb7"
+    },
+    {
+      "key": "r1-profile-g9-0",
+      "family": "profile",
+      "sites": 8182,
+      "atomic_sha256": "ea243236417f81d8649170608bb50deadd7db5d3374fe968db8250066d9b6553"
+    },
+    {
+      "key": "r1-profile-g9-1",
+      "family": "profile",
+      "sites": 7831,
+      "atomic_sha256": "4b2386c18654f62382d56d1c0e767cac68fe1d29bec636231e7b8f86fe51dc1e"
+    },
+    {
+      "key": "r1-islands-g9-0",
+      "family": "islands",
+      "sites": 8434,
+      "atomic_sha256": "290a9a6af69a199ef36026a47819610000a257fa11be922af9f4d9adba847bb7"
+    },
+    {
+      "key": "r1-islands-g9-1",
+      "family": "islands",
+      "sites": 8138,
+      "atomic_sha256": "460174ef90aff8e326fe9a582a56e52f98dccc3ed41fe375eb74f02a8d1e8062"
+    },
+    {
+      "key": "r1-radial-g9-0",
+      "family": "radial",
+      "sites": 8354,
+      "atomic_sha256": "aae385a078f454a17a484075b85d2a33ea2a498f64fdf2a215dbfb105d56fd94"
+    },
+    {
+      "key": "r1-radial-g9-1",
+      "family": "radial",
+      "sites": 7805,
+      "atomic_sha256": "3c5e4931a9947fdcfd178cfa4668508a315d2f5d41e9fe8fce280bff64973142"
+    }
+  ],
+  "scope": "Exact site, graph and lead-interface identity under the fixed lattice builder; not transport diversity or physical novelty."
+}
