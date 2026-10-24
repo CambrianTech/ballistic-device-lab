@@ -218,6 +218,10 @@ Regenerate with `python -m ballistic_lab.reporting.dc_continuous`. The reporter 
     (destination / "README.md").write_text(report, encoding="utf-8")
     root = Path("README.md")
     text = root.read_text(encoding="utf-8")
+    # Curated landing pages are maintained separately from historical snapshots.
+    # Retain compatibility only for the original README template.
+    if "## Direct DC search" not in text or "## Current findings" not in text:
+        return
     start, end = text.index("## Direct DC search"), text.index("## Current findings")
     rel = destination.as_posix()
     block = f"""## Direct DC search
