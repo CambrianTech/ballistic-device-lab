@@ -65,3 +65,7 @@ only the static charge/transport building block.
 changes current by only 0.00660%, but local potentials by up to 3.5879 mV.
 Local electrostatics remains mesh-sensitive; address finite charge extent or
 self-interaction before a quantitative dynamic charge-storage prediction.
+
+[Response-matrix diagnosis](../results/physics-reference/electrostatic-kernel/README.md)
+finds on-site responses increase by 2.083–6.481 V/e on refinement.
+No diagonal subtraction is applied; finite charge extent needs independent justification.
