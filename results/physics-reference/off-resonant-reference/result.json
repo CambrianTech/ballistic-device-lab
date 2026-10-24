@@ -1,0 +1,27 @@
+{
+  "scope": "Synthetic single-site chain verification; finite-band full integration versus equilibrium plus bias correction. No Poisson feedback or physical validation.",
+  "onsite_shift_ev": 0.7,
+  "chemical_potentials_ev": [
+    0.2,
+    -0.1
+  ],
+  "rows": [
+    {
+      "temperature_k": 150,
+      "status": "reference_rejected",
+      "reason": "Incomplete continuum spectral weight: bound states or energy window"
+    },
+    {
+      "temperature_k": 600,
+      "status": "reference_rejected",
+      "reason": "Incomplete continuum spectral weight: bound states or energy window"
+    }
+  ],
+  "sources": {
+    "physics_layers/bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+    "physics_layers/lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+    "physics_layers/equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers/off_resonant_reference.py": "8f4d6e8bea1783fc178f8d5a7cd85ab59612138418201fd6c2339a6f03b30553",
+    "tests/test_lead_charge.py": "d6d9bead063636b27b7c907c1cf3a0a98637de70048fa394f1cf58bb01693c76"
+  }
+}
