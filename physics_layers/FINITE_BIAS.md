@@ -93,3 +93,11 @@ The mapping is not wired into the graphene pilot or historical search. Its cutof
 normalization changes the infinite Gaussian slightly; no carbon-orbital calibration,
 self-interaction correction, or coupled graphene convergence is claimed. Next test:
 fixed-width graphene feedback across meshes and widths, with assumptions reported.
+
+The [Gaussian-pair reference](../results/physics-reference/gaussian-pair/README.md)
+checks site averaging against an independent analytic interaction at 0.246 nm
+separation. Finest-grid relative errors are below 8e-7 for both chosen widths.
+Changing sigma from 0.10 to 0.15 nm changes the analytic interaction from 1.34345
+to 1.10311 V per elementary source charge (about 17.9%). This model sensitivity
+is much larger than mapping error, reinforcing the need for physical width
+calibration. This reference uses analytic source fields, not a Poisson solve.

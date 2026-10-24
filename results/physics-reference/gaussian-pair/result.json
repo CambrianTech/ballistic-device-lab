@@ -1,0 +1,54 @@
+{
+  "separation_m": 2.46e-10,
+  "dielectric_relative": 4,
+  "rows": [
+    {
+      "sigma_m": 1e-10,
+      "spacing_m": 1e-10,
+      "analytic_v": 1.3434548811846683,
+      "sampled_v": 1.3434596882681442,
+      "relative_error": 3.578150292504745e-06
+    },
+    {
+      "sigma_m": 1e-10,
+      "spacing_m": 5e-11,
+      "analytic_v": 1.3434548811846683,
+      "sampled_v": 1.3434556440344267,
+      "relative_error": 5.678268537590014e-07
+    },
+    {
+      "sigma_m": 1e-10,
+      "spacing_m": 2.5e-11,
+      "analytic_v": 1.3434548811846683,
+      "sampled_v": 1.3434556912390938,
+      "relative_error": 6.029636252513626e-07
+    },
+    {
+      "sigma_m": 1.5e-10,
+      "spacing_m": 1e-10,
+      "analytic_v": 1.103110525449727,
+      "sampled_v": 1.1031117104525607,
+      "relative_error": 1.0742376275185705e-06
+    },
+    {
+      "sigma_m": 1.5e-10,
+      "spacing_m": 5e-11,
+      "analytic_v": 1.103110525449727,
+      "sampled_v": 1.1031112702828771,
+      "relative_error": 6.752117152064585e-07
+    },
+    {
+      "sigma_m": 1.5e-10,
+      "spacing_m": 2.5e-11,
+      "analytic_v": 1.103110525449727,
+      "sampled_v": 1.103111396021113,
+      "relative_error": 7.89196880734977e-07
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\joelt\\development\\ballistic-device-lab\\physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+    "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9"
+  },
+  "limitation": "Analytic source potential; tests averaging only, not Poisson or graphene feedback. Chosen widths are uncalibrated."
+}
