@@ -1,0 +1,78 @@
+{
+  "scope": "Numerical fixed-point convergence audit; not physical dynamical stability.",
+  "input_sha256": "151778b2a7adcefc179e23d07375142dadab550caba6d8d4569bb06f5a252ef5",
+  "rows": [
+    {
+      "reference_ev": 2.098962010041709,
+      "derivative_steps_ev": [
+        0.0001,
+        1e-05,
+        1e-06
+      ],
+      "map_slopes": [
+        -0.6886663207633648,
+        -0.6886665646577138,
+        -0.6886665670502445
+      ],
+      "starts": [
+        {
+          "start_ev": 0.3,
+          "iterations": 57,
+          "onsite_ev": 0.6735486843316493,
+          "residual_ev": 6.07210948189163e-11,
+          "root_error_ev": 3.595712616544233e-11
+        },
+        {
+          "start_ev": 0.7,
+          "iterations": 55,
+          "onsite_ev": 0.673548684266138,
+          "residual_ev": 4.990563517992541e-11,
+          "root_error_ev": 2.955413691552167e-11
+        },
+        {
+          "start_ev": 1.1,
+          "iterations": 58,
+          "onsite_ev": 0.6735486843280117,
+          "residual_ev": 5.4578563890572696e-11,
+          "root_error_ev": 3.231959144756047e-11
+        }
+      ]
+    },
+    {
+      "reference_ev": 2.138962010041709,
+      "derivative_steps_ev": [
+        0.0001,
+        1e-05,
+        1e-06
+      ],
+      "map_slopes": [
+        -0.7283621211429114,
+        -0.7283622528886368,
+        -0.7283622543985402
+      ],
+      "starts": [
+        {
+          "start_ev": 0.3,
+          "iterations": 58,
+          "onsite_ev": 0.7271460209382626,
+          "residual_ev": 6.957157072662312e-11,
+          "root_error_ev": 4.025291211462445e-11
+        },
+        {
+          "start_ev": 0.7,
+          "iterations": 64,
+          "onsite_ev": 0.7271460209440778,
+          "residual_ev": 5.952116577390143e-11,
+          "root_error_ev": 3.4437785956242806e-11
+        },
+        {
+          "start_ev": 1.1,
+          "iterations": 67,
+          "onsite_ev": 0.7271460209467853,
+          "residual_ev": 5.484179776971132e-11,
+          "root_error_ev": 3.1730285066089436e-11
+        }
+      ]
+    }
+  ]
+}
