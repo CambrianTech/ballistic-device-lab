@@ -16,13 +16,17 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, warm_start=False):
+def main(*, warm_start=False, method="hybr"):
+    if method not in ("hybr", "broyden1"):
+        raise ValueError("Unknown feedback method")
     seed_path = Path("results/physics-reference/four-terminal-feedback/result.json")
     seed_bytes = seed_path.read_bytes() if warm_start else None
     seed = json.loads(seed_bytes) if warm_start else None
     out = Path(
         "runs/four-terminal-feedback-warm" if warm_start else "runs/four-terminal-feedback-pilot"
     )
+    if method != "hybr":
+        out = out.with_name(out.name + "-" + method)
     out.mkdir(parents=True, exist_ok=True)
     # A retained lock is intentional: diagnose a stopped attempt before rerunning.
     with (out / "attempt.lock").open("x") as f:
@@ -32,6 +36,7 @@ def main(*, warm_start=False):
         pid=os.getpid(),
         phase="reference",
         charge_evaluations=0,
+        method=method,
         initialization="published same-bias solution" if warm_start else "zero",
         seed_sha256=hashlib.sha256(seed_bytes).hexdigest() if warm_start else None,
         source_sha256={
@@ -74,6 +79,7 @@ def main(*, warm_start=False):
             0.9 + voltage,
             300,
             tolerance=1e-5,
+            method=method,
             initial_potential_v=seed["site_potential_v"] if warm_start else None,
         )
         record = dict(
@@ -86,6 +92,7 @@ def main(*, warm_start=False):
             convention="mu=0.9+V, lead onsite=+V, contact phi=-V, device onsite=-phi",
             source_sha256=status["source_sha256"],
             initialization=status["initialization"],
+            method=method,
             seed_sha256=status["seed_sha256"],
         )
         (out / "result.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
@@ -105,4 +112,6 @@ if __name__ == "__main__":
         action="store_true",
         help="Benchmark the published same-bias solution in a separate retained run",
     )
-    main(warm_start=parser.parse_args().warm_start)
+    parser.add_argument("--method", choices=("hybr", "broyden1"), default="hybr")
+    args = parser.parse_args()
+    main(warm_start=args.warm_start, method=args.method)

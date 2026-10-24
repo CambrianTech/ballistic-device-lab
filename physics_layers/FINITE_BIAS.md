@@ -231,3 +231,10 @@ Five accelerated-solver tests pass, including agreement with independent direct
 mesh iteration at positive, reversed and zero bias on the small reference fixture.
 The default remains hybrid. Graphene convergence and speed are unmeasured for
 this new option; no physical validation or search-readiness claim follows.
+
+The bounded graphene comparison can now be run with
+`python -m physics_layers.four_terminal_feedback_pilot --method broyden1`.
+It starts from zero, uses the same fixture and tolerances as the published hybrid
+pilot, and retains the 80-charge-call ceiling, source manifest and exclusive lock.
+Its separate directory is `runs/four-terminal-feedback-pilot-broyden1`.
+Graphene results are pending; the optional method does not change search scoring.
