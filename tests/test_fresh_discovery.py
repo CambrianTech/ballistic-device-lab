@@ -15,3 +15,11 @@ class FreshTests(unittest.TestCase):
   self.assertEqual(fresh,proposals(plan,0,0,[]))
   self.assertNotEqual([x['obstacles'] for x in old],[x['obstacles'] for x in fresh])
   self.assertEqual(len({x['family'] for x in fresh}),5)
+
+class RefinementTests(unittest.TestCase):
+ def test_converged_leaders_do_not_consume_pending_slots(self):
+  from ballistic_lab.pipeline.fresh_discovery import refinement_queue
+  def row(key,power,ok):
+   return dict(candidate=dict(key=key),levels=[dict(dc_power_w=power)],energy_converged=ok,phase_converged=ok,phase64=dict(dc_power_w=power))
+  rows=[row('leader',100,True),row('second',90,True),row('pending',80,False),row('other',70,False),row('lower',60,False)]
+  self.assertEqual([r['candidate']['key'] for r in refinement_queue(rows)],['pending','other'])

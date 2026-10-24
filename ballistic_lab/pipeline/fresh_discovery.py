@@ -17,6 +17,11 @@ def choose_champion(retained, rows):
     return max([retained]+[r for r in rows if qualified(r)],key=lambda r:r['phase64']['dc_power_w'])
 
 
+def refinement_queue(rows):
+    """Spend refinement slots on candidates that still need validation."""
+    return finalists([r for r in rows if not qualified(r)])
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
@@ -69,7 +74,7 @@ def main():
                         r=future.result();known[r['candidate']['key']]=r;state['rows']=list(known.values());save(statepath,state)
                         status(args.root,phase='screen',round=index,last_completed=r['candidate']['key'])
                     status(args.root,phase='refine',round=index)
-                    for r in finalists(state['rows']):
+                    for r in refinement_queue(state['rows']):
                         if not qualified(r):
                             refined=pool.submit(task,r['candidate'],args.root/'spectra',True).result()
                             known[refined['candidate']['key']]=refined
