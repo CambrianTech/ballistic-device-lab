@@ -316,3 +316,13 @@ assumptions, tolerances, budgets and cold inner initializations stay identical.
 The positive-drive result remains preserved. The even component
 (Vout(+V)+Vout(-V))/2 will test polarity asymmetry at these two points;
 it is not a sinusoidal-cycle average or a physical-validation claim.
+
+### Polarity diagnostic contract
+
+`physics_layers.polarity.polarity_components` separates even and odd output
+from equal-magnitude opposite drives. Three analytic tests cover a linear
+response, a mixed linear/quadratic response, and invalid pairs. The quadratic
+oracle makes the limitation explicit: its two-point even response is twice
+its sinusoidal mean at the same amplitude. Thus even output cannot be labelled
+sinusoidal DC without phase integration. Only use completed, matched-model
+loaded results as inputs; the reverse graphene solve is still pending.
