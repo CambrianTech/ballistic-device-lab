@@ -245,3 +245,18 @@ The recomputed neutral backgrounds agreed within 1.56e-15 electrons/site.
 [Recorded comparison](../results/physics-reference/four-terminal-feedback-broyden/README.md).
 This is one numerical fixture and one timing per method; changed-bias/load
 behavior remains untested. The optional method does not change search scoring.
+
+### First loaded feedback integration (pending)
+
+`python -m physics_layers.loaded_feedback_pilot` couples the 51-site fixture to
+10 kohm at one balanced 10 mV drive. Every current callback rebuilds the contact
+boundaries and shifted leads and converges internal feedback from zero using
+Broyden at 1e-6 tolerance. Circuit checks use 1e-13 A absolute plus 1e-6 relative
+current tolerance, and retain current conservation, output KCL, Jacobian condition
+and power balance. The runner caps 24 circuit callbacks and 240 charge calls;
+a one-hour deadline is checked before each charge call (not an interrupt of an
+in-flight call). Completed inner evaluations survive outer failure. Exclusive
+attempt lock and source hashes live under runs/loaded-feedback-pilot.
+Seven bridge/feedback tests pass. The actual loaded graphene result is pending.
+This is one instantaneous drive, not AC rectification, with the existing
+uncalibrated electrode, charge-width and bound-occupation assumptions.
