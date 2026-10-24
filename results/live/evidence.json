@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-24 15:43 UTC",
+  "published_utc": "2026-10-24 15:58 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "9a135201c39948d4984b6217c1dda1626a448533611eff18659244cffa019529"
+      "status_sha256": "595c7baa06ddaf7c9ad00808f47f40f96b579af2bdb9eaf49c622984b523b598"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
@@ -87,7 +87,7 @@
       "phase": "running",
       "live": true,
       "stopped": false,
-      "status_sha256": "a0d307b029e821a6d74bb2d7102e697c5aafa936b08628c34ed0710ba4f2281e"
+      "status_sha256": "4dc06aac9c330ddb89cf3222ab7e2ed0a23c5a18280e9ae5eb65db5aef130471"
     }
   ],
   "loaded_points": [
@@ -860,10 +860,35 @@
           "name": "Empty Control",
           "obstacles": [],
           "contact": 0.6,
-          "result": "Evaluation pending",
+          "result": "-525.969 pA even \u0394I",
           "detail": "0.984 nm \u2022 charge feedback",
           "source": "runs/small-feedback-shapes-v1/empty-control.json",
-          "sha256": "09a46889eba1afc3764c2d458c03f993b1cc6181486b1c3daca49ec5aea8aff5"
+          "sha256": "621331ff4672c1e0ed421688250bf32ed593bc50cbf76f354b8abfcef80ac034"
+        },
+        {
+          "title": "NEW EXPERIMENT",
+          "name": "Triangle Up",
+          "obstacles": [
+            [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                -0.3
+              ],
+              [
+                0.0,
+                0.3
+              ]
+            ]
+          ],
+          "contact": 0.6,
+          "result": "Evaluation pending",
+          "detail": "0.984 nm \u2022 charge feedback",
+          "source": "runs/small-feedback-shapes-v1/triangle-up.json",
+          "sha256": "274b9e502afc3e3cc83db4932e56945f432aa8f97cc43aa4c9cfac51d02934c7"
         }
       ],
       "experiment_status": "runs/small-feedback-shapes-v1/status.json"

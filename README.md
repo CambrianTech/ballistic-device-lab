@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-24 15:43 UTC**
+**Computing · Updated 2026-10-24 15:58 UTC**
 
 New geometry feedback experiments · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
