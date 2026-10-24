@@ -331,3 +331,11 @@ The completed-load reporter additionally checks that recorded L/R voltages
 exactly match the declared balanced drive. A regression rejects a mislabeled
 positive result presented as negative drive. The published positive result
 passes this stricter check; reverse-drive completion remains pending.
+
+`compare_polarity.compare_completed` now requires both completed accounting
+checks, matched load/pole budget/cache/tolerances, and an exact explicit review
+list for every changed source-manifest entry. Source paths normalize Windows
+separators. The positive/reverse runner change and newly added reporting files
+must be reviewed before pairing; no differences are silently ignored. A passive
+reference test verifies zero even response and rejection of model-setting or
+unreviewed source mismatches. The reverse physics result remains pending.
