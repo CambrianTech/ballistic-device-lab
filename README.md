@@ -41,7 +41,12 @@ before a fresh geometry campaign. [Recorded assumptions and results](results/phy
 **Runtime finding:** starting from the already converged potential used 57 charge
 evaluations versus 60 from zero (5% fewer), but took 906 versus 860 seconds in
 these individual runs. Warm initialization alone did not deliver a practical
-speedup; avoiding repeated numerical-Jacobian work is the next solver target.
+speedup. The subsequent cold-start Broyden test reduced charge calls to **13**
+and runtime to **225 seconds**, versus hybrid's 60 calls and 860 seconds.
+Both final residual checks passed; maximum potential difference was 35 nV.
+This single-fixture result supports testing Broyden in the load integration;
+it does not establish performance across devices or physical accuracy.
+[Broyden comparison](results/physics-reference/four-terminal-feedback-broyden/README.md).
 [Same-bias benchmark](results/physics-reference/four-terminal-feedback-warm/README.md).
 
 1. **Bound the model uncertainty:** vary charge width, contact/gate assumptions and

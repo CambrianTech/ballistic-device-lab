@@ -1,0 +1,12 @@
+{
+  "hybrid_calls": 60,
+  "broyden_calls": 13,
+  "hybrid_seconds": 860.2254350000294,
+  "broyden_seconds": 225.335878999962,
+  "potential_difference_v": 3.470408474134934e-08,
+  "current_difference_a": 2.907659843271465e-15,
+  "final_residual": {
+    "potential_residual_v": 8.60612380890885e-08,
+    "occupation_residual": 1.23981931388073e-08
+  }
+}

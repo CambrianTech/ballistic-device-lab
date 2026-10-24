@@ -237,4 +237,11 @@ The bounded graphene comparison can now be run with
 It starts from zero, uses the same fixture and tolerances as the published hybrid
 pilot, and retains the 80-charge-call ceiling, source manifest and exclusive lock.
 Its separate directory is `runs/four-terminal-feedback-pilot-broyden1`.
-Graphene results are pending; the optional method does not change search scoring.
+The completed graphene run used 13 charge calls and 225.34 seconds, compared
+with hybrid's 60 calls and 860.23 seconds. Full-grid potential residual was
+8.61e-8 V and occupation residual 1.24e-8 electrons/site. Maximum potential
+difference from hybrid was 3.47e-8 V; terminal-current difference was 2.91e-15 A.
+The recomputed neutral backgrounds agreed within 1.56e-15 electrons/site.
+[Recorded comparison](../results/physics-reference/four-terminal-feedback-broyden/README.md).
+This is one numerical fixture and one timing per method; changed-bias/load
+behavior remains untested. The optional method does not change search scoring.
