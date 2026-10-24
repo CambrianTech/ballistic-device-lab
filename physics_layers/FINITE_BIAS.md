@@ -174,3 +174,21 @@ re-enabling NumPy write flags, or reassignment cannot change a prepared boundary
 The regression suite exercises those mutation paths alongside the Poisson and load
 checks (five tests pass). This prevents geometry drift during repeated evaluations;
 it does not change the physical contact model or historical results.
+
+## Bounded four-terminal feedback pilot
+
+`python -m physics_layers.four_terminal_feedback_pilot` runs one 51-site case,
+with 10 mV balanced reservoir drive, pinned output reservoirs, 30 mV electrostatic
+gate, 300 K and EF=0.9 eV. Reservoir V means mu=EF+V and lead onsite shift=+V eV;
+contact electrostatic potential is -V and device onsite shift is -phi. This is
+an electron electrochemical convention, not an inferred work-function model.
+The fixed compensating background is zero-onsite equilibrium occupation at EF.
+
+The runner caps feedback charge calls at 80, writes progress and errors under
+`runs/four-terminal-feedback-pilot`, and uses an exclusive retained attempt lock.
+Do not remove the lock or launch a duplicate without diagnosing process state.
+Source hashes are saved before the run; do not edit those sources while it runs.
+Fixture construction and finite-charge support smoke checks passed (51 sites,
+13x28x27 mesh). Coupled convergence remains pending until status says complete
+and result residuals are inspected. This is a pinned-output pilot, not loaded DC
+or a restarted optimization campaign. Remote box electrodes remain uncalibrated.
