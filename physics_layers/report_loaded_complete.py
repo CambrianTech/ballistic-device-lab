@@ -14,6 +14,9 @@ def validate(status, result):
     v, current = s['voltage_v'], s['current_a']
     if len(v) != 4 or len(current) != 4 or not all(math.isfinite(x) for x in v+current):
         raise ValueError('Invalid terminal vectors')
+    drive = result['drive_v']
+    if not math.isfinite(drive) or v[0] != drive/2 or v[1] != -drive/2:
+        raise ValueError('Terminal bias disagrees with declared balanced drive')
     resistance = result['load_ohm']
     if not math.isfinite(resistance) or resistance <= 0:
         raise ValueError('Invalid load')

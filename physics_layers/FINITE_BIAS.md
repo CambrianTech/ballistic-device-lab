@@ -326,3 +326,8 @@ oracle makes the limitation explicit: its two-point even response is twice
 its sinusoidal mean at the same amplitude. Thus even output cannot be labelled
 sinusoidal DC without phase integration. Only use completed, matched-model
 loaded results as inputs; the reverse graphene solve is still pending.
+
+The completed-load reporter additionally checks that recorded L/R voltages
+exactly match the declared balanced drive. A regression rejects a mislabeled
+positive result presented as negative drive. The published positive result
+passes this stricter check; reverse-drive completion remains pending.

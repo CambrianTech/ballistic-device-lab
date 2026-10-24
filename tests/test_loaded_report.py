@@ -9,7 +9,7 @@ class CompletedReportTests(unittest.TestCase):
     def setUp(self):
         self.status = dict(phase='complete',source_sha256={'fixture':'test'})
         self.result = dict(solution=asdict(solve_terminal_load(ResistorModel(),0.001,2000)),
-                           load_ohm=2000,circuit_tolerance=asdict(CircuitTolerance()),
+                           drive_v=0.001,load_ohm=2000,circuit_tolerance=asdict(CircuitTolerance()),
                            source_sha256={'fixture':'test'})
 
     def test_independent_passive_reference(self):
@@ -25,3 +25,8 @@ class CompletedReportTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate(self.status,self.result)
         self.result['source_sha256']={}
         with self.assertRaises(ValueError): validate(self.status,self.result)
+
+    def test_wrong_declared_drive_rejected(self):
+        self.result['drive_v'] = -0.001
+        with self.assertRaises(ValueError):
+            validate(self.status,self.result)
