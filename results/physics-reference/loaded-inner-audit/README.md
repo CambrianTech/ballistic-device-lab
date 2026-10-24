@@ -95,3 +95,21 @@ the two duplicate initial evaluations were skipped while the distinct
 repeatability check at two points, not a full trajectory equivalence or
 physical validation claim. End-to-end completion and runtime savings remain
 pending; the cached worker continues under its original budget.
+
+## Independent initial-point linearization
+
+An independent 2-by-2 solve using the archived forward-difference current
+responses predicts the later output terminal voltages within **1.85e-12 V**.
+The initial output KCL Jacobian has condition number **8.83**. This indicates
+that the observed slow run is not explained by a nearly singular initial
+load equation: expensive inner feedback evaluations remain the measured cost.
+The derivative is sampled at only one step size and one operating point;
+this does not replace final-root central-difference checks or establish
+conditioning across geometries.
+
+[Diagnostic numbers](initial-linearization.json) are reproducible with
+`python -m physics_layers.audit_load_linearization` from published compact
+records alone, without Kwant or another transport run. The script independently
+forms the Jacobian and solves the linear system, and checks finite conditioning
+and prediction agreement below 10 nV. This is numerical verification, not
+physical validation or evidence of rectified DC performance.

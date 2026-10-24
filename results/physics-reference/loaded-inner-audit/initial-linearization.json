@@ -1,0 +1,34 @@
+{
+  "scope": "Initial-point forward-difference diagnostic, not final root conditioning or physical validation",
+  "source": "results\\physics-reference\\loaded-inner-audit\\first-seven.json",
+  "source_records": [
+    "1488718a95232f1421ed61c6931bf0975c2a924412bf71ff549cb0ce509f703e",
+    "5ed555850435da7628106da0cb8850c5bca01a064b6cf934a9ea0ae656c498b9",
+    "05ba99870151f556d45e9b3139df345a3486322aef8e64b235bff20ca818c080",
+    "825858e64f3fc1ac08609863c58847f8784e49a94135953bc5e68fccc10d3f20"
+  ],
+  "jacobian_a_per_v": [
+    [
+      0.00012321773307129302,
+      -0.00011293809311328784
+    ],
+    [
+      -0.00011293697633127375,
+      0.00016520954032820528
+    ]
+  ],
+  "condition_number": 8.830167120677505,
+  "predicted_output_terminals_v": [
+    9.380799035275318e-06,
+    7.144477472945819e-06
+  ],
+  "observed_output_terminals_v": [
+    9.38080084994449e-06,
+    7.144479313876022e-06
+  ],
+  "max_prediction_error_v": 1.84093020301067e-12,
+  "observed_output_kcl_residual_a": [
+    -6.780296083520599e-22,
+    -2.4393556264188786e-21
+  ]
+}
