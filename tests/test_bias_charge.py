@@ -121,6 +121,9 @@ class BiasChargeTests(unittest.TestCase):
         )
 
     def test_invalid_numerical_controls(self):
+        for cap in [0, 127, 128.0, True]:
+            with self.subTest(cap=cap), self.assertRaises(ValueError):
+                BiasChargeDevice(chain(), reference_mu_ev=0.03, max_poles=cap)
         provider = BiasChargeDevice(chain(), reference_mu_ev=0.03)
         for tolerance in [0, -1e-7, float("nan"), float("inf")]:
             with self.subTest(tolerance=tolerance), self.assertRaises(ValueError):
@@ -128,3 +131,15 @@ class BiasChargeTests(unittest.TestCase):
         for temperature in [0, -1, float("nan"), float("inf")]:
             with self.subTest(temperature=temperature), self.assertRaises(ValueError):
                 provider.solve([0], [0.08, -0.02], temperature)
+
+    def test_explicit_pole_budget_preserves_converged_charge(self):
+        system = chain()
+        a = BiasChargeDevice(system, reference_mu_ev=0.03)
+        b = BiasChargeDevice(system, reference_mu_ev=0.03, max_poles=65536)
+        self.assertEqual(b.equilibrium.max_poles, 65536)
+        first = a.solve([0.07], [0.08, -0.02], 300, tolerance=1e-7)
+        second = b.solve([0.07], [0.08, -0.02], 300, tolerance=1e-7)
+        np.testing.assert_allclose(
+            first.electrons_per_site, second.electrons_per_site, atol=1e-9, rtol=0
+        )
+        np.testing.assert_allclose(first.currents_a, second.currents_a, atol=1e-14, rtol=0)

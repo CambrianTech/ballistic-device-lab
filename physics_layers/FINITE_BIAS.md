@@ -260,3 +260,9 @@ attempt lock and source hashes live under runs/loaded-feedback-pilot.
 Seven bridge/feedback tests pass. The actual loaded graphene result is pending.
 This is one instantaneous drive, not AC rectification, with the existing
 uncalibrated electrode, charge-width and bound-occupation assumptions.
+
+The first loaded attempt failed before an output solution: the Matsubara pole
+ceiling prevented the two-consecutive-refinement convergence test at the tighter
+feedback tolerance. [Failure receipt](../results/physics-reference/loaded-feedback-first-attempt/README.md).
+BiasChargeDevice now exposes max_poles explicitly, retaining the default 32768.
+A higher-budget retry remains pending; tolerance criteria are unchanged.

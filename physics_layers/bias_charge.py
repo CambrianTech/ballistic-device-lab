@@ -15,11 +15,13 @@ from .negf_reference import ReservoirResult
 
 
 class BiasChargeDevice:
-    def __init__(self, system, *, reference_mu_ev, lead_shifts_ev=None, spin=2):
+    def __init__(self, system, *, reference_mu_ev, lead_shifts_ev=None, spin=2, max_poles=32768):
         if not np.isfinite(reference_mu_ev):
             raise ValueError("Explicit finite bound-state reference required")
         self.reference_mu = float(reference_mu_ev)
-        self.equilibrium = EquilibriumChargeDevice(system, lead_shifts_ev=lead_shifts_ev, spin=spin)
+        self.equilibrium = EquilibriumChargeDevice(
+            system, lead_shifts_ev=lead_shifts_ev, spin=spin, max_poles=max_poles
+        )
         self.continuum = LeadChargeDevice(
             system, (-100, 100), lead_shifts_ev=lead_shifts_ev, spin=spin
         )
