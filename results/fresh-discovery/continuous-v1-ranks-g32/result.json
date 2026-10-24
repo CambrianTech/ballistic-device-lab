@@ -1,0 +1,633 @@
+{
+  "generation": 32,
+  "population": 680,
+  "qualified": 66,
+  "pair_count": 2145,
+  "tied_pairs": 0,
+  "reversed_pairs": 22,
+  "coarse_best": "r1-triangle-g4-1",
+  "refined_best": "r1-triangle-g4-1",
+  "max_rank_shift": 6,
+  "snapshot_sha256": "24f8c167bc98615af0cfa16d4894d783a8b9067ee797fbb1be62297917d30dd3",
+  "rows": [
+    {
+      "key": "r0-beveled-g0-0",
+      "family": "beveled",
+      "coarse_power_w": 2.1808334642593994e-15,
+      "refined_power_w": 2.180532697125642e-15,
+      "coarse_rank": 64,
+      "refined_rank": 64
+    },
+    {
+      "key": "r0-beveled-g0-2",
+      "family": "beveled",
+      "coarse_power_w": 9.32155842139955e-15,
+      "refined_power_w": 9.326530505865954e-15,
+      "coarse_rank": 16,
+      "refined_rank": 16
+    },
+    {
+      "key": "r0-profile-g0-3",
+      "family": "profile",
+      "coarse_power_w": 6.455017084753445e-15,
+      "refined_power_w": 6.397207073824865e-15,
+      "coarse_rank": 28,
+      "refined_rank": 29
+    },
+    {
+      "key": "r0-radial-g0-1",
+      "family": "radial",
+      "coarse_power_w": 3.1352117922309184e-15,
+      "refined_power_w": 3.1442553663158953e-15,
+      "coarse_rank": 61,
+      "refined_rank": 60
+    },
+    {
+      "key": "r0-beveled-g1-0",
+      "family": "beveled",
+      "coarse_power_w": 3.7078528903570305e-15,
+      "refined_power_w": 3.697418676213283e-15,
+      "coarse_rank": 57,
+      "refined_rank": 57
+    },
+    {
+      "key": "r0-profile-g1-1",
+      "family": "profile",
+      "coarse_power_w": 4.409953041813674e-15,
+      "refined_power_w": 4.403471253280845e-15,
+      "coarse_rank": 52,
+      "refined_rank": 52
+    },
+    {
+      "key": "r0-radial-g1-1",
+      "family": "radial",
+      "coarse_power_w": 3.93983656223484e-15,
+      "refined_power_w": 3.914659518466368e-15,
+      "coarse_rank": 55,
+      "refined_rank": 55
+    },
+    {
+      "key": "r1-islands-g1-1",
+      "family": "islands",
+      "coarse_power_w": 6.172620905349854e-16,
+      "refined_power_w": 6.226254654935233e-16,
+      "coarse_rank": 66,
+      "refined_rank": 66
+    },
+    {
+      "key": "r1-profile-g2-0",
+      "family": "profile",
+      "coarse_power_w": 6.330269828663185e-15,
+      "refined_power_w": 6.490261872030451e-15,
+      "coarse_rank": 29,
+      "refined_rank": 28
+    },
+    {
+      "key": "r0-profile-g3-1",
+      "family": "profile",
+      "coarse_power_w": 1.7680079021120244e-14,
+      "refined_power_w": 1.7691975998863348e-14,
+      "coarse_rank": 4,
+      "refined_rank": 4
+    },
+    {
+      "key": "r1-triangle-g3-1",
+      "family": "triangle",
+      "coarse_power_w": 4.8616466805876085e-15,
+      "refined_power_w": 4.8366628182006646e-15,
+      "coarse_rank": 46,
+      "refined_rank": 45
+    },
+    {
+      "key": "r1-profile-g3-0",
+      "family": "profile",
+      "coarse_power_w": 1.2303300062598277e-14,
+      "refined_power_w": 1.2281205998136818e-14,
+      "coarse_rank": 13,
+      "refined_rank": 13
+    },
+    {
+      "key": "r0-profile-g4-1",
+      "family": "profile",
+      "coarse_power_w": 1.7297968948927737e-14,
+      "refined_power_w": 1.7291992232379183e-14,
+      "coarse_rank": 5,
+      "refined_rank": 5
+    },
+    {
+      "key": "r1-triangle-g4-1",
+      "family": "triangle",
+      "coarse_power_w": 2.2646727194773878e-14,
+      "refined_power_w": 2.2602349000407453e-14,
+      "coarse_rank": 1,
+      "refined_rank": 1
+    },
+    {
+      "key": "r1-profile-g4-1",
+      "family": "profile",
+      "coarse_power_w": 6.030842142410598e-15,
+      "refined_power_w": 6.0898477561295555e-15,
+      "coarse_rank": 32,
+      "refined_rank": 32
+    },
+    {
+      "key": "r0-triangle-g5-1",
+      "family": "triangle",
+      "coarse_power_w": 6.70864824773709e-15,
+      "refined_power_w": 6.5657528159018796e-15,
+      "coarse_rank": 27,
+      "refined_rank": 27
+    },
+    {
+      "key": "r0-profile-g5-0",
+      "family": "profile",
+      "coarse_power_w": 7.231445090760536e-15,
+      "refined_power_w": 7.262371116901464e-15,
+      "coarse_rank": 23,
+      "refined_rank": 23
+    },
+    {
+      "key": "r1-islands-g6-1",
+      "family": "islands",
+      "coarse_power_w": 1.0928100202960762e-15,
+      "refined_power_w": 1.0914223692806958e-15,
+      "coarse_rank": 65,
+      "refined_rank": 65
+    },
+    {
+      "key": "r0-triangle-g7-1",
+      "family": "triangle",
+      "coarse_power_w": 5.3749115750947494e-15,
+      "refined_power_w": 5.358698166356861e-15,
+      "coarse_rank": 39,
+      "refined_rank": 38
+    },
+    {
+      "key": "r0-radial-g8-0",
+      "family": "radial",
+      "coarse_power_w": 3.20898888057214e-15,
+      "refined_power_w": 3.219426382393344e-15,
+      "coarse_rank": 59,
+      "refined_rank": 58
+    },
+    {
+      "key": "r0-radial-g8-1",
+      "family": "radial",
+      "coarse_power_w": 4.605925427340698e-15,
+      "refined_power_w": 4.593136582388389e-15,
+      "coarse_rank": 51,
+      "refined_rank": 51
+    },
+    {
+      "key": "r0-beveled-g9-1",
+      "family": "beveled",
+      "coarse_power_w": 3.18352173934082e-15,
+      "refined_power_w": 3.0096407559947512e-15,
+      "coarse_rank": 60,
+      "refined_rank": 62
+    },
+    {
+      "key": "r0-profile-g9-0",
+      "family": "profile",
+      "coarse_power_w": 8.867597026053655e-15,
+      "refined_power_w": 8.585034843901598e-15,
+      "coarse_rank": 18,
+      "refined_rank": 20
+    },
+    {
+      "key": "r0-beveled-g10-1",
+      "family": "beveled",
+      "coarse_power_w": 9.132189055405595e-15,
+      "refined_power_w": 9.185413040019045e-15,
+      "coarse_rank": 17,
+      "refined_rank": 17
+    },
+    {
+      "key": "r0-profile-g10-0",
+      "family": "profile",
+      "coarse_power_w": 5.4974838338432716e-15,
+      "refined_power_w": 5.51369912546021e-15,
+      "coarse_rank": 36,
+      "refined_rank": 36
+    },
+    {
+      "key": "r1-triangle-g10-0",
+      "family": "triangle",
+      "coarse_power_w": 5.1516199136683396e-15,
+      "refined_power_w": 5.0932387617676765e-15,
+      "coarse_rank": 42,
+      "refined_rank": 42
+    },
+    {
+      "key": "r1-islands-g10-1",
+      "family": "islands",
+      "coarse_power_w": 2.893498842362495e-15,
+      "refined_power_w": 2.9000957875385294e-15,
+      "coarse_rank": 63,
+      "refined_rank": 63
+    },
+    {
+      "key": "r1-radial-g10-0",
+      "family": "radial",
+      "coarse_power_w": 5.132608139417382e-15,
+      "refined_power_w": 5.093004236233273e-15,
+      "coarse_rank": 43,
+      "refined_rank": 43
+    },
+    {
+      "key": "r0-profile-g11-1",
+      "family": "profile",
+      "coarse_power_w": 7.895917541606592e-15,
+      "refined_power_w": 7.662381695311982e-15,
+      "coarse_rank": 21,
+      "refined_rank": 21
+    },
+    {
+      "key": "r1-profile-g11-1",
+      "family": "profile",
+      "coarse_power_w": 5.788413675103242e-15,
+      "refined_power_w": 5.751458607325897e-15,
+      "coarse_rank": 33,
+      "refined_rank": 34
+    },
+    {
+      "key": "r0-triangle-g13-0",
+      "family": "triangle",
+      "coarse_power_w": 5.430623648235602e-15,
+      "refined_power_w": 5.382166705945631e-15,
+      "coarse_rank": 38,
+      "refined_rank": 37
+    },
+    {
+      "key": "r0-islands-g13-1",
+      "family": "islands",
+      "coarse_power_w": 4.7660289234411975e-15,
+      "refined_power_w": 4.7602040560440325e-15,
+      "coarse_rank": 50,
+      "refined_rank": 49
+    },
+    {
+      "key": "r0-radial-g13-1",
+      "family": "radial",
+      "coarse_power_w": 4.839076519256386e-15,
+      "refined_power_w": 4.827534950103349e-15,
+      "coarse_rank": 47,
+      "refined_rank": 48
+    },
+    {
+      "key": "r1-profile-g13-1",
+      "family": "profile",
+      "coarse_power_w": 8.144169544808482e-15,
+      "refined_power_w": 8.846635334396049e-15,
+      "coarse_rank": 20,
+      "refined_rank": 18
+    },
+    {
+      "key": "r1-beveled-g15-0",
+      "family": "beveled",
+      "coarse_power_w": 3.2208122362746607e-15,
+      "refined_power_w": 3.1577830467175652e-15,
+      "coarse_rank": 58,
+      "refined_rank": 59
+    },
+    {
+      "key": "r1-profile-g15-1",
+      "family": "profile",
+      "coarse_power_w": 5.202725710293717e-15,
+      "refined_power_w": 5.13743426953542e-15,
+      "coarse_rank": 41,
+      "refined_rank": 41
+    },
+    {
+      "key": "r1-islands-g15-1",
+      "family": "islands",
+      "coarse_power_w": 3.074334859141143e-15,
+      "refined_power_w": 3.0717998408413466e-15,
+      "coarse_rank": 62,
+      "refined_rank": 61
+    },
+    {
+      "key": "r0-triangle-g16-0",
+      "family": "triangle",
+      "coarse_power_w": 4.773387869064314e-15,
+      "refined_power_w": 4.831360840395377e-15,
+      "coarse_rank": 49,
+      "refined_rank": 47
+    },
+    {
+      "key": "r0-profile-g16-1",
+      "family": "profile",
+      "coarse_power_w": 9.607892938491272e-15,
+      "refined_power_w": 9.641370650160689e-15,
+      "coarse_rank": 15,
+      "refined_rank": 15
+    },
+    {
+      "key": "r1-profile-g16-1",
+      "family": "profile",
+      "coarse_power_w": 6.231101221033714e-15,
+      "refined_power_w": 6.2603023144641165e-15,
+      "coarse_rank": 30,
+      "refined_rank": 31
+    },
+    {
+      "key": "r0-profile-g17-1",
+      "family": "profile",
+      "coarse_power_w": 5.763461804645551e-15,
+      "refined_power_w": 5.752995028654556e-15,
+      "coarse_rank": 34,
+      "refined_rank": 33
+    },
+    {
+      "key": "r0-triangle-g18-0",
+      "family": "triangle",
+      "coarse_power_w": 1.1035355736593009e-14,
+      "refined_power_w": 1.0991353844201079e-14,
+      "coarse_rank": 14,
+      "refined_rank": 14
+    },
+    {
+      "key": "r0-triangle-g19-1",
+      "family": "triangle",
+      "coarse_power_w": 1.4795012286847467e-14,
+      "refined_power_w": 1.5136003142604383e-14,
+      "coarse_rank": 11,
+      "refined_rank": 9
+    },
+    {
+      "key": "r0-beveled-g19-0",
+      "family": "beveled",
+      "coarse_power_w": 4.144705770096894e-15,
+      "refined_power_w": 4.15453924974974e-15,
+      "coarse_rank": 54,
+      "refined_rank": 54
+    },
+    {
+      "key": "r0-profile-g19-1",
+      "family": "profile",
+      "coarse_power_w": 1.716869265142554e-14,
+      "refined_power_w": 1.7152038350713492e-14,
+      "coarse_rank": 6,
+      "refined_rank": 6
+    },
+    {
+      "key": "r1-profile-g20-0",
+      "family": "profile",
+      "coarse_power_w": 1.5156994637538877e-14,
+      "refined_power_w": 1.507120847053449e-14,
+      "coarse_rank": 9,
+      "refined_rank": 10
+    },
+    {
+      "key": "r0-triangle-g21-1",
+      "family": "triangle",
+      "coarse_power_w": 5.47440550102396e-15,
+      "refined_power_w": 5.254461547688287e-15,
+      "coarse_rank": 37,
+      "refined_rank": 40
+    },
+    {
+      "key": "r0-profile-g21-1",
+      "family": "profile",
+      "coarse_power_w": 5.043952184119315e-15,
+      "refined_power_w": 5.0537391017260436e-15,
+      "coarse_rank": 45,
+      "refined_rank": 44
+    },
+    {
+      "key": "r1-beveled-g21-0",
+      "family": "beveled",
+      "coarse_power_w": 7.176799261382977e-15,
+      "refined_power_w": 7.26208266986244e-15,
+      "coarse_rank": 24,
+      "refined_rank": 24
+    },
+    {
+      "key": "r1-profile-g21-1",
+      "family": "profile",
+      "coarse_power_w": 5.115079569049789e-15,
+      "refined_power_w": 4.749835027288522e-15,
+      "coarse_rank": 44,
+      "refined_rank": 50
+    },
+    {
+      "key": "r1-beveled-g21-1",
+      "family": "beveled",
+      "coarse_power_w": 8.727217892631866e-15,
+      "refined_power_w": 8.67980951194084e-15,
+      "coarse_rank": 19,
+      "refined_rank": 19
+    },
+    {
+      "key": "r0-profile-g22-0",
+      "family": "profile",
+      "coarse_power_w": 4.783391742094544e-15,
+      "refined_power_w": 4.836021977646777e-15,
+      "coarse_rank": 48,
+      "refined_rank": 46
+    },
+    {
+      "key": "r1-radial-g22-0",
+      "family": "radial",
+      "coarse_power_w": 5.73604914663802e-15,
+      "refined_power_w": 5.732791289234324e-15,
+      "coarse_rank": 35,
+      "refined_rank": 35
+    },
+    {
+      "key": "r0-beveled-g25-1",
+      "family": "beveled",
+      "coarse_power_w": 6.907444086473826e-15,
+      "refined_power_w": 6.934217618570899e-15,
+      "coarse_rank": 26,
+      "refined_rank": 26
+    },
+    {
+      "key": "r1-beveled-g25-0",
+      "family": "beveled",
+      "coarse_power_w": 6.9737391397857e-15,
+      "refined_power_w": 7.019961531227595e-15,
+      "coarse_rank": 25,
+      "refined_rank": 25
+    },
+    {
+      "key": "r1-islands-g26-1",
+      "family": "islands",
+      "coarse_power_w": 4.356408656059295e-15,
+      "refined_power_w": 4.36427717802481e-15,
+      "coarse_rank": 53,
+      "refined_rank": 53
+    },
+    {
+      "key": "r1-triangle-g27-1",
+      "family": "triangle",
+      "coarse_power_w": 1.6492484891120006e-14,
+      "refined_power_w": 1.639760789863823e-14,
+      "coarse_rank": 7,
+      "refined_rank": 7
+    },
+    {
+      "key": "r1-triangle-g27-0",
+      "family": "triangle",
+      "coarse_power_w": 1.9099153426515653e-14,
+      "refined_power_w": 1.9195679827505782e-14,
+      "coarse_rank": 2,
+      "refined_rank": 2
+    },
+    {
+      "key": "r0-beveled-g28-1",
+      "family": "beveled",
+      "coarse_power_w": 1.8743747315352342e-14,
+      "refined_power_w": 1.87842235813376e-14,
+      "coarse_rank": 3,
+      "refined_rank": 3
+    },
+    {
+      "key": "r0-profile-g28-1",
+      "family": "profile",
+      "coarse_power_w": 1.5019646370549635e-14,
+      "refined_power_w": 1.4976085712467357e-14,
+      "coarse_rank": 10,
+      "refined_rank": 11
+    },
+    {
+      "key": "r0-islands-g28-1",
+      "family": "islands",
+      "coarse_power_w": 3.7973002837033276e-15,
+      "refined_power_w": 3.809577235736168e-15,
+      "coarse_rank": 56,
+      "refined_rank": 56
+    },
+    {
+      "key": "r1-triangle-g29-0",
+      "family": "triangle",
+      "coarse_power_w": 1.519595222011652e-14,
+      "refined_power_w": 1.5223947941505582e-14,
+      "coarse_rank": 8,
+      "refined_rank": 8
+    },
+    {
+      "key": "r1-islands-g29-0",
+      "family": "islands",
+      "coarse_power_w": 6.2185269331722056e-15,
+      "refined_power_w": 6.305937876506876e-15,
+      "coarse_rank": 31,
+      "refined_rank": 30
+    },
+    {
+      "key": "r1-beveled-g30-1",
+      "family": "beveled",
+      "coarse_power_w": 7.596003006418334e-15,
+      "refined_power_w": 7.56689509713853e-15,
+      "coarse_rank": 22,
+      "refined_rank": 22
+    },
+    {
+      "key": "r1-profile-g31-0",
+      "family": "profile",
+      "coarse_power_w": 5.2406211727620664e-15,
+      "refined_power_w": 5.257001778442336e-15,
+      "coarse_rank": 40,
+      "refined_rank": 39
+    },
+    {
+      "key": "r1-beveled-g32-1",
+      "family": "beveled",
+      "coarse_power_w": 1.2363206864525448e-14,
+      "refined_power_w": 1.2330254839408991e-14,
+      "coarse_rank": 12,
+      "refined_rank": 12
+    }
+  ],
+  "reversals": [
+    {
+      "a": "r0-profile-g0-3",
+      "b": "r1-profile-g2-0"
+    },
+    {
+      "a": "r0-radial-g0-1",
+      "b": "r0-beveled-g9-1"
+    },
+    {
+      "a": "r1-triangle-g3-1",
+      "b": "r1-profile-g21-1"
+    },
+    {
+      "a": "r0-triangle-g7-1",
+      "b": "r0-triangle-g21-1"
+    },
+    {
+      "a": "r0-radial-g8-0",
+      "b": "r1-beveled-g15-0"
+    },
+    {
+      "a": "r0-beveled-g9-1",
+      "b": "r1-islands-g15-1"
+    },
+    {
+      "a": "r0-profile-g9-0",
+      "b": "r1-profile-g13-1"
+    },
+    {
+      "a": "r0-profile-g9-0",
+      "b": "r1-beveled-g21-1"
+    },
+    {
+      "a": "r1-profile-g11-1",
+      "b": "r0-profile-g17-1"
+    },
+    {
+      "a": "r0-triangle-g13-0",
+      "b": "r0-triangle-g21-1"
+    },
+    {
+      "a": "r0-islands-g13-1",
+      "b": "r1-profile-g21-1"
+    },
+    {
+      "a": "r0-radial-g13-1",
+      "b": "r0-triangle-g16-0"
+    },
+    {
+      "a": "r0-radial-g13-1",
+      "b": "r1-profile-g21-1"
+    },
+    {
+      "a": "r0-radial-g13-1",
+      "b": "r0-profile-g22-0"
+    },
+    {
+      "a": "r1-profile-g13-1",
+      "b": "r1-beveled-g21-1"
+    },
+    {
+      "a": "r0-triangle-g16-0",
+      "b": "r1-profile-g21-1"
+    },
+    {
+      "a": "r1-profile-g16-1",
+      "b": "r1-islands-g29-0"
+    },
+    {
+      "a": "r0-triangle-g19-1",
+      "b": "r1-profile-g20-0"
+    },
+    {
+      "a": "r0-triangle-g19-1",
+      "b": "r0-profile-g28-1"
+    },
+    {
+      "a": "r0-triangle-g21-1",
+      "b": "r1-profile-g31-0"
+    },
+    {
+      "a": "r0-profile-g21-1",
+      "b": "r1-profile-g21-1"
+    },
+    {
+      "a": "r1-profile-g21-1",
+      "b": "r0-profile-g22-0"
+    }
+  ],
+  "limitation": "Selected qualified subset only; cannot estimate missed winners among unrefined candidates. Fixed-potential simulation, not physical validation."
+}
