@@ -1,0 +1,194 @@
+[
+  {
+    "key": "r0-beveled-g0-0",
+    "coarse_power_w": 2.1808334642593994E-15,
+    "converged_power_w": 2.180532697125642E-15,
+    "change_percent": -0.013791384747463553
+  },
+  {
+    "key": "r0-beveled-g0-2",
+    "coarse_power_w": 9.32155842139955E-15,
+    "converged_power_w": 9.326530505865954E-15,
+    "change_percent": 0.05333962671938419
+  },
+  {
+    "key": "r0-profile-g0-3",
+    "coarse_power_w": 6.455017084753445E-15,
+    "converged_power_w": 6.397207073824865E-15,
+    "change_percent": -0.895582616893853
+  },
+  {
+    "key": "r0-beveled-g1-0",
+    "coarse_power_w": 3.7078528903570305E-15,
+    "converged_power_w": 3.697418676213283E-15,
+    "change_percent": -0.28140852542676287
+  },
+  {
+    "key": "r0-profile-g1-1",
+    "coarse_power_w": 4.409953041813674E-15,
+    "converged_power_w": 4.403471253280845E-15,
+    "change_percent": -0.14698089687964488
+  },
+  {
+    "key": "r0-radial-g1-1",
+    "coarse_power_w": 3.93983656223484E-15,
+    "converged_power_w": 3.914659518466368E-15,
+    "change_percent": -0.6390377715107753
+  },
+  {
+    "key": "r1-islands-g1-1",
+    "coarse_power_w": 6.172620905349854E-16,
+    "converged_power_w": 6.226254654935233E-16,
+    "change_percent": 0.8688975138404276
+  },
+  {
+    "key": "r1-profile-g2-0",
+    "coarse_power_w": 6.330269828663185E-15,
+    "converged_power_w": 6.490261872030451E-15,
+    "change_percent": 2.5274126964198063
+  },
+  {
+    "key": "r0-profile-g3-1",
+    "coarse_power_w": 1.7680079021120244E-14,
+    "converged_power_w": 1.7691975998863348E-14,
+    "change_percent": 0.06729029733911762
+  },
+  {
+    "key": "r1-triangle-g3-1",
+    "coarse_power_w": 4.8616466805876085E-15,
+    "converged_power_w": 4.8366628182006646E-15,
+    "change_percent": -0.5138971222796496
+  },
+  {
+    "key": "r1-profile-g3-0",
+    "coarse_power_w": 1.2303300062598277E-14,
+    "converged_power_w": 1.2281205998136818E-14,
+    "change_percent": -0.17957835986317505
+  },
+  {
+    "key": "r0-profile-g4-1",
+    "coarse_power_w": 1.7297968948927737E-14,
+    "converged_power_w": 1.7291992232379183E-14,
+    "change_percent": -0.034551550914441176
+  },
+  {
+    "key": "r1-triangle-g4-1",
+    "coarse_power_w": 2.2646727194773878E-14,
+    "converged_power_w": 2.2602349000407453E-14,
+    "change_percent": -0.19595853292508902
+  },
+  {
+    "key": "r1-profile-g4-1",
+    "coarse_power_w": 6.030842142410598E-15,
+    "converged_power_w": 6.0898477561295555E-15,
+    "change_percent": 0.9783975823876023
+  },
+  {
+    "key": "r0-triangle-g5-1",
+    "coarse_power_w": 6.70864824773709E-15,
+    "converged_power_w": 6.5657528159018796E-15,
+    "change_percent": -2.1300182474675355
+  },
+  {
+    "key": "r0-profile-g5-0",
+    "coarse_power_w": 7.231445090760536E-15,
+    "converged_power_w": 7.262371116901464E-15,
+    "change_percent": 0.42766038810750917
+  },
+  {
+    "key": "r1-islands-g6-1",
+    "coarse_power_w": 1.0928100202960762E-15,
+    "converged_power_w": 1.0914223692806958E-15,
+    "change_percent": -0.1269800779283181
+  },
+  {
+    "key": "r0-triangle-g7-1",
+    "coarse_power_w": 5.3749115750947494E-15,
+    "converged_power_w": 5.358698166356861E-15,
+    "change_percent": -0.3016497762124204
+  },
+  {
+    "key": "r0-radial-g8-1",
+    "coarse_power_w": 4.605925427340698E-15,
+    "converged_power_w": 4.593136582388389E-15,
+    "change_percent": -0.2776607036751977
+  },
+  {
+    "key": "r0-beveled-g9-1",
+    "coarse_power_w": 3.18352173934082E-15,
+    "converged_power_w": 3.0096407559947512E-15,
+    "change_percent": -5.461906579663333
+  },
+  {
+    "key": "r0-profile-g9-0",
+    "coarse_power_w": 8.867597026053655E-15,
+    "converged_power_w": 8.585034843901598E-15,
+    "change_percent": -3.1864571802470154
+  },
+  {
+    "key": "r0-beveled-g10-1",
+    "coarse_power_w": 9.132189055405595E-15,
+    "converged_power_w": 9.185413040019045E-15,
+    "change_percent": 0.5828173758836597
+  },
+  {
+    "key": "r0-profile-g10-0",
+    "coarse_power_w": 5.4974838338432716E-15,
+    "converged_power_w": 5.51369912546021E-15,
+    "change_percent": 0.29495842292641683
+  },
+  {
+    "key": "r1-triangle-g10-0",
+    "coarse_power_w": 5.1516199136683396E-15,
+    "converged_power_w": 5.0932387617676765E-15,
+    "change_percent": -1.133258137809534
+  },
+  {
+    "key": "r1-islands-g10-1",
+    "coarse_power_w": 2.893498842362495E-15,
+    "converged_power_w": 2.9000957875385294E-15,
+    "change_percent": 0.22799197564731255
+  },
+  {
+    "key": "r1-radial-g10-0",
+    "coarse_power_w": 5.132608139417382E-15,
+    "converged_power_w": 5.093004236233273E-15,
+    "change_percent": -0.771613614527844
+  },
+  {
+    "key": "r0-profile-g11-1",
+    "coarse_power_w": 7.895917541606592E-15,
+    "converged_power_w": 7.662381695311982E-15,
+    "change_percent": -2.957678383342033
+  },
+  {
+    "key": "r1-profile-g11-1",
+    "coarse_power_w": 5.788413675103242E-15,
+    "converged_power_w": 5.751458607325897E-15,
+    "change_percent": -0.638431699107711
+  },
+  {
+    "key": "r0-triangle-g13-0",
+    "coarse_power_w": 5.430623648235602E-15,
+    "converged_power_w": 5.382166705945631E-15,
+    "change_percent": -0.8922905623503286
+  },
+  {
+    "key": "r1-profile-g13-1",
+    "coarse_power_w": 8.144169544808482E-15,
+    "converged_power_w": 8.846635334396049E-15,
+    "change_percent": 8.625382682944704
+  },
+  {
+    "key": "r1-beveled-g15-0",
+    "coarse_power_w": 3.2208122362746607E-15,
+    "converged_power_w": 3.1577830467175652E-15,
+    "change_percent": -1.9569346156607326
+  },
+  {
+    "key": "r1-profile-g15-1",
+    "coarse_power_w": 5.202725710293717E-15,
+    "converged_power_w": 5.13743426953542E-15,
+    "change_percent": -1.2549468181479728
+  }
+]
