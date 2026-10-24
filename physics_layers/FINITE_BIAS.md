@@ -348,3 +348,11 @@ records the actual drive and uses a separate `-half` folder. First measure
 an even-response scaling comparison with the completed +/-10 mV pair.
 Quadratic scaling is a hypothesis, not assumed in ranking or DC accounting.
 These amplitudes alone do not establish sinusoidal phase convergence.
+
+The half-amplitude diagnostic is prepared in `physics_layers.even_scaling`:
+it compares the lower-amplitude even response with amplitude-squared scaling
+from the larger pair, reporting the absolute departure without division by
+possibly zero output. Analytic quadratic and quartic fixtures check the formula.
+This is not a fitted physics law: zero-bias offset, numerical uncertainty and
+model sensitivity remain independent checks. Neither half-amplitude parity nor
+its scaling is reported until both loaded half-amplitude runs complete.
