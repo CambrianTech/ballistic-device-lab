@@ -1,0 +1,7 @@
+{
+  "output_v": -2.2363215360646594e-06,
+  "load_power_w": 5.001134012666597e-16,
+  "kcl_residual_a": 3.544520623578008e-21,
+  "power_residual_w": -2.1967015197236905e-26,
+  "output_jacobian_condition": 8.83016984833174
+}

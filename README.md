@@ -36,11 +36,14 @@ not improved rectification or physical validation. A single operating point take
 14 minutes, so loaded-output integration and evaluation cost are practical hurdles
 before a fresh geometry campaign. [Recorded assumptions and results](results/physics-reference/four-terminal-feedback/README.md).
 
-The loaded-feedback pilot has reached a **provisional -2.236 microvolt output**
-at one +10 mV drive into 10 kohm. Its seventh inner evaluation satisfies output
-KCL to 2.44e-21 A and power balance to 2.37e-26 W. The attempt reached its one-hour budget before final circuit conditioning
-checks finished, so this remains provisional, not an AC-cycle or rectified-DC result.
-[Operating-point audit](results/physics-reference/loaded-inner-audit/README.md).
+**The loaded-feedback pilot now completes all circuit checks:** output
+**-2.236 microvolts** at one +10 mV drive into 10 kohm, with output KCL residual
+3.54e-21 A and final Jacobian condition 8.83. Exact-voltage caching enabled
+completion in **50.8 minutes**, within the same one-hour budget that stopped
+the uncached attempt. Independent power accounting passed. This remains a
+single-drive numerical fixture, not rectified DC or physical validation.
+[Completed loaded result](results/physics-reference/loaded-feedback-complete/README.md).
+Opposite drive and then an AC cycle are the next integration checks.
 
 ### Route to a new optimization run
 
