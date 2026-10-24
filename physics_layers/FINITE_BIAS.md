@@ -106,3 +106,19 @@ calibration. This reference uses analytic source fields, not a Poisson solve.
 now compares fixed sigma 0.10 nm at 0.10/0.05 nm grid spacing: maximum site-potential
 change 0.08435 mV and current change -0.000670%. Both residual checks pass.
 This is a two-grid numerical fixture, with orbital width and contacts uncalibrated.
+
+## Bound-state gauge regression
+
+`tests.test_bias_charge.BiasChargeTests.test_bound_state_gauge_and_unshifted_reference_control`
+adds an isolated 0.04 eV orbital alongside a conducting chain at 300 K and
+reservoir chemical potentials +0.05/-0.05 eV. Shifting device onsite energies,
+lead Hamiltonians, both reservoirs and the bound-occupation reference by +0.37 eV
+preserves occupations (absolute tolerance 2e-6 electrons) and currents (1e-11 A).
+A negative control deliberately leaves the reference at 0.02 eV: isolated charge
+then changes by more than 0.5 electrons, agreeing with the analytic Fermi occupation,
+while current stays unchanged. Thus current agreement alone cannot validate the
+bound-state charge closure. This verifies the declared closure, not its physical
+correctness or a relaxation mechanism for isolated states.
+
+All five finite-bias tests passed in the isolated Kwant runtime (40.576 s):
+`python -m unittest tests.test_bias_charge`. No transport implementation changed.
