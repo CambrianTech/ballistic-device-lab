@@ -45,7 +45,7 @@ class GeometryFeedbackModel:
         if self.neutral is None:
             reference,_,_=geometry_fixture(self.device,np.zeros(4))
             self.neutral=EquilibriumChargeDevice(reference,max_poles=self.max_poles).solve(
-                np.zeros(len(reference.sites)),[.9]*4,300,tolerance=1e-7).electrons_per_site.copy()
+                np.zeros(len(reference.sites)),[.9]*4,300,tolerance=1e-7).electrons_per_site
         self._budget()
         system,mesh,mapping=geometry_fixture(self.device,voltage)
         if len(system.sites) != len(self.neutral):

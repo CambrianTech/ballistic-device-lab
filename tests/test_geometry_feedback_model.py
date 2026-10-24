@@ -23,6 +23,14 @@ class GeometryModelTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,'nonconverged'): m.currents([0]*4)
             with self.assertRaisesRegex(RuntimeError,'evaluation budget'): m.currents([0]*4)
 
+    def test_neutral_reference_accepts_immutable_occupations(self):
+        m=GeometryFeedbackModel(self.device)
+        result=SimpleNamespace(transport=SimpleNamespace(currents_a=[0,0,0,0]))
+        with patch('physics_layers.geometry_feedback_model.geometry_fixture',return_value=(SimpleNamespace(sites=[1,2]),None,None)), patch('physics_layers.geometry_feedback_model.EquilibriumChargeDevice') as reference, patch('physics_layers.geometry_feedback_model.BiasChargeDevice'), patch('physics_layers.geometry_feedback_model.solve_accelerated',return_value=result):
+            reference.return_value.solve.return_value=SimpleNamespace(electrons_per_site=(1.,1.))
+            np.testing.assert_equal(m.currents([0]*4),[0]*4)
+            self.assertEqual(m.neutral,(1.,1.))
+
     def test_completed_callback_and_current_order(self):
         saved=[];m=GeometryFeedbackModel(self.device,record=lambda v,r:saved.append(v))
         m.neutral=np.zeros(2)
