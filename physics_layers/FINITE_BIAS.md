@@ -356,3 +356,12 @@ possibly zero output. Analytic quadratic and quartic fixtures check the formula.
 This is not a fitted physics law: zero-bias offset, numerical uncertainty and
 model sensitivity remain independent checks. Neither half-amplitude parity nor
 its scaling is reported until both loaded half-amplitude runs complete.
+
+The isolated bound-level regression now covers 150, 300 and 600 K with reference
+energies -0.02, 0.02, 0.04 and 0.06 eV for a level at 0.04 eV. All twelve
+occupations agree with the analytic spin-two Fermi occupation to six decimal
+places, including half filling at the level energy. The full eight-test
+`tests.test_bias_charge` suite passed in 108.76 seconds on October 24.
+This verifies the implemented reference-reservoir closure across temperature
+and filling; it does not determine the physical occupation of an isolated level
+or establish the loaded graphene fixture's sensitivity to that assumption.

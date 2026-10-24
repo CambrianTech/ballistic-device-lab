@@ -54,12 +54,14 @@ class BiasChargeTests(unittest.TestCase):
         b.attach_lead(lead.reversed(), origin=lat(0))
         system = b.finalized()
         isolated = list(system.sites).index(lat(10))
-        for reference in [-0.02, 0.02]:
-            result = BiasChargeDevice(system, reference_mu_ev=reference).solve(
-                np.zeros(len(system.sites)), [0.05, -0.05], 300, tolerance=1e-7
-            )
-            expected = 2 * expit((reference - 0.04) / (Boltzmann * 300 / elementary_charge))
-            self.assertAlmostEqual(result.electrons_per_site[isolated], expected, places=6)
+        for temperature in (150, 300, 600):
+            for reference in (-0.02, 0.02, 0.04, 0.06):
+                with self.subTest(temperature=temperature, reference=reference):
+                    result = BiasChargeDevice(system, reference_mu_ev=reference).solve(
+                        np.zeros(len(system.sites)), [0.05, -0.05], temperature, tolerance=1e-7
+                    )
+                    expected = 2 * expit((reference - 0.04) / (Boltzmann * temperature / elementary_charge))
+                    self.assertAlmostEqual(result.electrons_per_site[isolated], expected, places=6)
 
     def test_bound_state_gauge_and_unshifted_reference_control(self):
         """A bound occupation closure must transform with the energy gauge."""
