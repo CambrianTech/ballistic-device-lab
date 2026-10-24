@@ -17,6 +17,11 @@
       "label": "Atomic-edge sensitivity",
       "module": "edge_lab.worker",
       "status_glob": "runs/edge-sensitivity/status.json"
+    },
+    {
+      "label": "New geometry feedback experiments",
+      "module": "ballistic_lab.pipeline.small_feedback_experiment",
+      "status_glob": "runs/small-feedback-*/status.json"
     }
   ],
   "completed_glob": "runs/loaded-feedback-pilot*/status.json",
@@ -26,6 +31,14 @@
       "block": "evolution",
       "options": {
         "snapshots": "runs/dc-continuous/round-*.json"
+      }
+    },
+    {
+      "callable": "ballistic_lab.reporting.discovery_gallery:render",
+      "block": "discovery",
+      "options": {
+        "ledger": "results/live/champions.json",
+        "experiments": "runs/small-feedback-*/status.json"
       }
     }
   ]

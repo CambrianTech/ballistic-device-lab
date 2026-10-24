@@ -61,3 +61,14 @@ The editorial order stays fixed. New results replace the appropriate experiment
 panel rather than appending another status section. A control/champion/challenger
 comparison requires matched evaluation evidence; no third panel is invented when
 there is no distinct qualified challenger.
+
+### Champion and experiment gallery
+
+The `discovery_gallery:render` adapter reads the champion ledger and the latest
+experiment status matched by its configurable glob. Geometry cards come from
+saved case JSON, including dimensions, obstacles and contacts. A partial case
+shows pending; a score appears only with two saved evaluations and a completed
+case receipt. Different models stay labeled separately. The publisher redraws
+`results/live/discovery.png` and its README block each cycle, without an AI.
+Forks configure their own paths in `publication.json`; no upstream scores are
+embedded in this renderer. Existing reference-study illustrations remain separate.

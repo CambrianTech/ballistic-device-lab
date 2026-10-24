@@ -1,9 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Workers waiting · Updated 2026-10-24 15:39 UTC**
+**Computing · Updated 2026-10-24 15:43 UTC**
 
-Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
+New geometry feedback experiments · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve devices. Simulate the physics. Beat the champion.
@@ -17,6 +17,14 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 **Same material. Same drive. Different geometry.** The selected shape produces **28.33 µV** versus **11.21 µV** for the synthetic control in the fixed-potential simulation. Bright dots are carbon sites; black openings are etched voids. These are simulated lattices, not microscope images.
 
 [Explore the shapes](#letting-shapes-compete) · [Follow the electrons](#following-the-electrons) · [Look inside the physics](#the-charge-changes-the-device) · [Run the code](#reproduce-and-explore)
+
+<!-- discovery:start -->
+**Keep the best. Explore what changes it.** The retained champion stays in view as new experiment geometries and results arrive.
+
+![Retained champion alongside the latest saved experiment designs](results/live/discovery.png)
+
+Shapes are normalized for display. Gold marks retained champions; teal marks new experiments. Different scales and physics have separate scores—this gallery is not a shared ranking. New feedback points measure grounded-terminal current, not loaded DC power. [Live evidence](results/live/evidence.json).
+<!-- discovery:end -->
 
 ## Letting shapes compete
 
