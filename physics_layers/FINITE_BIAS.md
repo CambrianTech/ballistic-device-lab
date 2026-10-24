@@ -266,3 +266,9 @@ ceiling prevented the two-consecutive-refinement convergence test at the tighter
 feedback tolerance. [Failure receipt](../results/physics-reference/loaded-feedback-first-attempt/README.md).
 BiasChargeDevice now exposes max_poles explicitly, retaining the default 32768.
 A higher-budget retry remains pending; tolerance criteria are unchanged.
+
+A separate retry uses `python -m physics_layers.loaded_feedback_pilot --max-poles 131072`.
+The selected pole ceiling is recorded and applied to both neutral and finite-bias
+charge. It writes to runs/loaded-feedback-pilot-poles-131072, retaining the original
+failed attempt. All accuracy, circuit-call, charge-call and elapsed-time limits
+are unchanged. Retry results remain pending.

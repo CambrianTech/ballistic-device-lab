@@ -1,5 +1,6 @@
 """Bounded single-drive loaded graphene feedback experiment, not an AC cycle."""
 
+import argparse
 import hashlib
 import json
 import os
@@ -18,13 +19,18 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main():
+def main(*, max_poles=32768):
+    if type(max_poles) is not int or max_poles < 128:
+        raise ValueError("Pole budget must be an integer >= 128")
     out = Path("runs/loaded-feedback-pilot")
+    if max_poles != 32768:
+        out = out.with_name(out.name + f"-poles-{max_poles}")
     out.mkdir(parents=True, exist_ok=True)
     with (out / "attempt.lock").open("x") as lock:
         lock.write(str(os.getpid()))
     started = time.perf_counter()
     status = dict(pid=os.getpid(), phase="reference", charge_calls=0, circuit_calls=0)
+    status["max_poles"] = max_poles
     manifest = {
         str(p): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in Path("physics_layers").glob("*.py")
@@ -45,7 +51,7 @@ def main():
     try:
         system, _, _ = fixture(np.zeros(4))
         neutral = (
-            EquilibriumChargeDevice(system)
+            EquilibriumChargeDevice(system, max_poles=max_poles)
             .solve(np.zeros(len(system.sites)), [0.9] * 4, 300, tolerance=1e-7)
             .electrons_per_site
         )
@@ -57,7 +63,9 @@ def main():
             status["phase"] = "load"
             save()
             system, mesh, mapping = fixture(voltage)
-            provider = BiasChargeDevice(system, reference_mu_ev=0.9, lead_shifts_ev=voltage)
+            provider = BiasChargeDevice(
+                system, reference_mu_ev=0.9, lead_shifts_ev=voltage, max_poles=max_poles
+            )
 
             class Counted:
                 def solve(self, *args, **kwargs):
@@ -97,6 +105,7 @@ def main():
                     circuit_tolerance=asdict(tolerance),
                     drive_v=0.01,
                     load_ohm=1e4,
+                    max_poles=max_poles,
                     source_sha256=manifest,
                     scope="single instantaneous drive, not rectified DC; uncalibrated fixture",
                 ),
@@ -113,4 +122,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--max-poles", type=int, default=32768)
+    main(max_poles=parser.parse_args().max_poles)
