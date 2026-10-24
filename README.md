@@ -36,6 +36,10 @@ not improved rectification or physical validation. A single operating point take
 14 minutes, so loaded-output integration and evaluation cost are practical hurdles
 before a fresh geometry campaign. [Recorded assumptions and results](results/physics-reference/four-terminal-feedback/README.md).
 
+The loaded-feedback pilot has completed its first five inner evaluations. Their
+charge/potential checks pass, but the initial output KCL mismatch is 0.349 nA;
+the outer loaded solution is still pending. [Compact inner audit](results/physics-reference/loaded-inner-audit/README.md).
+
 ### Route to a new optimization run
 
 **Runtime finding:** starting from the already converged potential used 57 charge
