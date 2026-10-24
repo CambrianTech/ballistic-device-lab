@@ -17,6 +17,15 @@ quadratic amplitude scaling. A single positive-drive point cannot establish
 that scaling. Zero-drive offset, numerical convergence and model sensitivity
 remain unresolved.
 
+The standalone `physics_layers.even_scaling` diagnostic now accepts an optional
+measured `zero_bias_v`. With no measurement it reports an uncorrected comparison
+and explicitly marks the offset unresolved. For the analytic verification fixture
+E(A) = 2 microvolts + 3 A^2 (A in volts), comparing 5 and 10 mV without correction
+produces a 1.5 microvolt apparent departure from quadratic scaling. Subtracting
+the known 2 microvolt offset removes that departure. Three unit tests check this,
+quadratic/quartic responses, zero responses and invalid inputs. This verifies
+the diagnostic arithmetic; no zero-drive graphene result has been measured yet.
+
 This is the same small 51-site numerical fixture with surrogate electrodes,
 chosen Gaussian charge width and bound-state occupation closure. It is not a
 sinusoidal DC average, physical validation, a new shape or a novelty claim.
