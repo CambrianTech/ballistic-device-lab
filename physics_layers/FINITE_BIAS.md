@@ -157,3 +157,9 @@ Four boundary/circuit tests pass, including Poisson gauge shifts, linear
 superposition, the maximum principle and the prior analytic load fixture:
 `python -m unittest tests.test_electrode_boundary tests.test_feedback_current`.
 This establishes boundary plumbing, not calibrated graphene contact physics.
+
+[Four-terminal preflight](../results/physics-reference/four-terminal-preflight/README.md)
+now supplies a 51-site fixture, explicit remote-box electrode partition and finite
+charge support checks. All four leads conduct at 0.9 eV (one mode per spin each).
+The next callback must reconcile reservoir/lead shifts and contact electrostatics;
+this preflight has no self-consistent or loaded-DC result yet.
