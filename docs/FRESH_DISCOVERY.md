@@ -74,3 +74,9 @@ superiority. It broadens proposal behavior within the existing five geometry
 families; it does not add new geometric topology families. Original campaigns,
 controls, and champion are retained. The publisher's campaign root points at the
 new run so its plots update automatically.
+
+## Refinement exploration
+
+New campaigns may select `--refinement-policy family`. One refinement slot goes to the highest coarse-power unqualified candidate; the second goes to the strongest remaining candidate in a rotating family (alphabetical family order, indexed by generation). If that family has no remaining candidate, the slot returns to the highest remaining score. Qualified rows never consume slots. Default `score` preserves the existing policy.
+
+This changes allocation of the same two candidate slots, not the objective, numerical convergence gates, or champion promotion. It is not an equal-CPU guarantee. The option is saved in campaign configuration and cannot change on resume. Source hashes require a new campaign after this code change. Five focused discovery tests pass, including a low-scoring family's access to refinement. No comparative performance improvement has yet been measured with this policy.

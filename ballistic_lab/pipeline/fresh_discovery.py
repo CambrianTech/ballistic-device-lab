@@ -17,10 +17,22 @@ def choose_champion(retained, rows):
     return max([retained]+[r for r in rows if qualified(r)],key=lambda r:r['phase64']['dc_power_w'])
 
 
-def refinement_queue(rows):
-    """Spend refinement slots on candidates that still need validation."""
-    return finalists([r for r in rows if not qualified(r)])
-
+def refinement_queue(rows, policy='score', generation=0):
+    """Keep exploitation while optionally rotating a family exploration slot."""
+    pending = [r for r in rows if not qualified(r)]
+    if policy == 'score':
+        return finalists(pending)
+    if policy != 'family':
+        raise ValueError('Unknown refinement policy')
+    if not pending:
+        return []
+    ranked = sorted(pending, key=lambda r: (-r['levels'][0]['dc_power_w'], r['candidate']['key']))
+    first = ranked[0]
+    families = sorted({r['candidate']['family'] for r in rows})
+    target = families[generation % len(families)]
+    remaining = [r for r in ranked if r is not first]
+    second = next((r for r in remaining if r['candidate']['family'] == target), None)
+    return [first] + ([second or remaining[0]] if remaining else [])
 
 def strategy_for(mode, generation):
     if mode == 'mixed':
@@ -40,6 +52,7 @@ def main():
     p.add_argument('--ledger',type=Path,default=Path('results/live/champions.json'))
     p.add_argument('--reference-manifest',type=Path,default=Path('runs/dc-continuous/source.json'))
     p.add_argument('--controls',type=Path,default=Path('results/2026-10-22-dc-wide/summary.json'))
+    p.add_argument('--refinement-policy', choices=['score','family'], default='score')
     args=p.parse_args()
     if args.rounds<1 or args.workers<1: raise ValueError('Positive rounds and workers required')
     args.root.mkdir(parents=True,exist_ok=True)
@@ -50,6 +63,7 @@ def main():
         if manifest.exists() and json.loads(manifest.read_text())!=hashes: raise ValueError('Source changed; use a new campaign')
         save(manifest,hashes)
         config=dict(seed=args.seed,rounds=args.rounds,workers=args.workers,strategy=args.strategy)
+        if args.refinement_policy != 'score': config['refinement_policy']=args.refinement_policy
         cfg=args.root/'config.json'
         if cfg.exists() and json.loads(cfg.read_text())!=config: raise ValueError('Resume configuration mismatch')
         save(cfg,config)
@@ -84,7 +98,7 @@ def main():
                         r=future.result();known[r['candidate']['key']]=r;state['rows']=list(known.values());save(statepath,state)
                         status(args.root,phase='screen',round=index,last_completed=r['candidate']['key'])
                     status(args.root,phase='refine',round=index)
-                    for r in refinement_queue(state['rows']):
+                    for r in refinement_queue(state['rows'], args.refinement_policy, index):
                         if not qualified(r):
                             refined=pool.submit(task,r['candidate'],args.root/'spectra',True).result()
                             known[refined['candidate']['key']]=refined

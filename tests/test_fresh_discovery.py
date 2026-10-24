@@ -30,3 +30,14 @@ class StrategyTests(unittest.TestCase):
   self.assertEqual([strategy_for('mixed',i) for i in range(1,7)],['elite','diversity','random']*2)
   self.assertEqual(strategy_for('random',9),'random')
   with self.assertRaises(ValueError):strategy_for('unknown',1)
+
+class FamilyRefinementTests(unittest.TestCase):
+ def test_rotating_slot_reaches_low_scoring_family(self):
+  from ballistic_lab.pipeline.fresh_discovery import refinement_queue
+  def row(key,family,power):
+   return dict(candidate=dict(key=key,family=family),levels=[dict(dc_power_w=power)])
+  rows=[row('a','beveled',100),row('b','beveled',90),row('c','radial',1)]
+  self.assertEqual([r['candidate']['key'] for r in refinement_queue(rows,'family',1)],['a','c'])
+  self.assertEqual(len(refinement_queue(rows[:1],'family',1)),1)
+  self.assertEqual(refinement_queue([],'family'),[])
+  with self.assertRaises(ValueError): refinement_queue(rows,'invalid')
