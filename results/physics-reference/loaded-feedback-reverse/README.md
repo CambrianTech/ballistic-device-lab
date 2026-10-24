@@ -34,4 +34,5 @@ rankings remain separate and the old campaign stays stopped.
 
 Reproduce this figure with `python -m physics_layers.plot_loaded_polarity`.
 Only completed, accounting-checked points are plotted; no interpolated curve
-or uncertainty estimate is implied. The +5 mV run is still pending.
+or uncertainty estimate is implied. The [+5 mV run](../loaded-feedback-half/README.md)
+has completed; its matching -5 mV point remains pending.

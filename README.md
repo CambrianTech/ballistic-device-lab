@@ -49,6 +49,11 @@ Both signs produce negative output, with a two-point even component of
 [Matched polarity comparison](results/physics-reference/loaded-feedback-reverse/README.md).
 Phase sampling and numerical/model sensitivity remain next.
 
+**Half-amplitude point completed:** +5 mV gives **-0.414 microvolts** into
+10 kohm, with all final circuit checks passing in 56.3 minutes.
+The matching -5 mV point is pending; amplitude scaling is not yet established.
+[Completed +5 mV evidence](results/physics-reference/loaded-feedback-half/README.md).
+
 ![Completed opposite-drive loaded outputs](results/physics-reference/loaded-feedback-reverse/polarity.png)
 
 ### Route to a new optimization run
