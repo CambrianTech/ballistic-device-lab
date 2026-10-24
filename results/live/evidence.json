@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-24 20:16 UTC",
+  "published_utc": "2026-10-24 20:31 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "465a635d64049603dc5ec85755bbba638b3aff0ace8789560585ca93ed8303c7"
+      "status_sha256": "b8443815e0ef38de92bf1846a81e9e0ad162f3f2ddb484ac4e2c0009f5e5b638"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
@@ -100,10 +100,10 @@
     {
       "run": "runs/fresh-discovery-family-v1",
       "label": "Fresh evolutionary shape search",
-      "phase": "screen",
-      "live": true,
+      "phase": "complete",
+      "live": false,
       "stopped": false,
-      "status_sha256": "39af23d3043647a0d26d649859060c376b724864c0bf40b2fc495597c9d8aa31"
+      "status_sha256": "faffcc248ff248fe1e748995311d266f9b8ed0ce97b18279f7faec6204ff52e6"
     },
     {
       "run": "runs/fresh-discovery-mixed-20261024",

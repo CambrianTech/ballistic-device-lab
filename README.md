@@ -1,9 +1,9 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-24 20:16 UTC**
+**Workers waiting · Updated 2026-10-24 20:31 UTC**
 
-Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
+Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve devices. Simulate the physics. Beat the champion.
