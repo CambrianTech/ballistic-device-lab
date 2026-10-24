@@ -6,9 +6,11 @@
 Self-consistent graphene feedback · [Data snapshot](results/live/evidence.json) · Published every 15 minutes while the publisher runs.
 <!-- activity:end -->
 
-### Can the shape of graphene make a better rectifier?
+### Evolve devices. Simulate the physics. Beat the champion.
 
-We let software carve the device—and let electron transport decide which shapes work. An open computational experiment in turning an alternating electrical signal into DC, at the scale of individual carbon atoms.
+**An evolutionary-search harness for discovering electrical device designs.** Algorithms mutate geometries, preserve diverse candidates and test them against controls through physics simulation. Every completed generation produces results and diagrams you can inspect—and a record for the next run to beat.
+
+The featured experiment is a **graphene ballistic rectifier**: can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms.
 
 ![Carbon lattice of a synthetic control and a search-selected rectifier, with atomic edge closeups](results/continuous-dc/round-000430/atomic-comparison.png)
 
@@ -150,6 +152,8 @@ python -m ballistic_lab.reporting.dc_continuous
 
 ## Future experiments
 
-**Neuromorphic devices:** use the same propose–simulate–test loop to explore geometries and circuits with useful memory and neuron-like dynamics. Those experiments will measure time-dependent state, switching energy and robustness against matched controls. Static rectification alone does not demonstrate neuromorphic behavior.
+**Electrical devices for machine learning.** The broader aim is to reuse this harness to search for components that store weights, multiply and accumulate signals, or implement useful nonlinear responses. Neuromorphic ideas include a charge-storage node coupled to a ballistic channel, with explicit memory and time-dependent behavior.
+
+Each experiment supplies its own device physics, electrical objective and acceptance tests; the harness supplies proposal, selection, retained champions and reproducible reporting. These ML and neuromorphic experiments are planned extensions, not demonstrated capabilities of the rectifier model.
 
 [MIT license](LICENSE). External figures retain their stated licenses.
