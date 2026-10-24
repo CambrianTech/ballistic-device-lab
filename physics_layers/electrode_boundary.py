@@ -1,10 +1,13 @@
 """Explicit electrode partition for a Dirichlet Poisson domain."""
 
+from dataclasses import dataclass
+
 import numpy as np
 
 from .poisson3d import frozen_array
 
 
+@dataclass(frozen=True, slots=True, init=False)
 class ElectrodeBoundary:
     """Disjoint masks in caller-declared order, e.g. L,R,T,B,gate.
 
@@ -12,6 +15,9 @@ class ElectrodeBoundary:
     Masks encode geometry only; voltage, lead-band and reservoir conventions
     remain explicit responsibilities of the device callback.
     """
+
+    masks: tuple[np.ndarray, ...]
+    shape: tuple[int, int, int]
 
     def __init__(self, masks):
         masks = tuple(np.asarray(mask) for mask in masks)
@@ -27,10 +33,11 @@ class ElectrodeBoundary:
             raise ValueError("Electrode masks overlap; assign edges and corners explicitly")
         if any(not np.all(np.take(count, [0, -1], axis=axis) == 1) for axis in range(3)):
             raise ValueError("Every outer node needs a Dirichlet electrode assignment")
-        self.masks = tuple(frozen_array(mask) != 0 for mask in masks)
-        for mask in self.masks:
-            mask.flags.writeable = False
-        self.shape = shape
+        snapshots = tuple(
+            np.frombuffer(mask.tobytes(), dtype=bool).reshape(shape) for mask in masks
+        )
+        object.__setattr__(self, "masks", snapshots)
+        object.__setattr__(self, "shape", shape)
 
     def potentials(self, voltages_v):
         voltages = np.asarray(voltages_v, float)

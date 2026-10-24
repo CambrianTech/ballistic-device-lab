@@ -41,6 +41,20 @@ class ElectrodeBoundaryTests(unittest.TestCase):
         self.assertGreaterEqual(a.min(), -1e-14)
         self.assertLessEqual(a.max(), 0.1 + 1e-14)
 
+    def test_geometry_is_an_immutable_snapshot(self):
+        from dataclasses import FrozenInstanceError
+
+        boundary = ElectrodeBoundary(self.masks)
+        expected = boundary.potentials([0.1, 0.2]).copy()
+        self.masks[0][:] = False
+        np.testing.assert_equal(boundary.potentials([0.1, 0.2]), expected)
+        with self.assertRaises(ValueError):
+            boundary.masks[0].setflags(write=True)
+        with self.assertRaises(FrozenInstanceError):
+            boundary.masks = ()
+        with self.assertRaises(FrozenInstanceError):
+            boundary.shape = (3, 3, 3)
+
     def test_reject_overlap_missing_face_and_bad_voltage(self):
         with self.assertRaises(ValueError):
             ElectrodeBoundary((self.masks[0], self.masks[0] | self.masks[1]))

@@ -168,3 +168,9 @@ this preflight has no self-consistent or loaded-DC result yet.
 passes tolerance refinement at 0.9 eV: maximum occupation change 3.10e-9 electrons
 and current change 2.12e-21 A. One evaluation takes 12-18 s on this host. This is
 fixed onsite, with pinned output reservoirs; self-consistent loaded DC is pending.
+
+Electrode partitions now retain immutable boolean snapshots: caller array edits,
+re-enabling NumPy write flags, or reassignment cannot change a prepared boundary.
+The regression suite exercises those mutation paths alongside the Poisson and load
+checks (five tests pass). This prevents geometry drift during repeated evaluations;
+it does not change the physical contact model or historical results.
