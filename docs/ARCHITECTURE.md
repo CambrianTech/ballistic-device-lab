@@ -396,3 +396,19 @@ archive deduplication avoids about 390.82 GB of duplicate file lengths.
 These are decimal GB, not allocated filesystem blocks; free volume space was
 948.45 GB. A temporary two-link fixture verified the counting. No results were
 deleted. The existing immutable archive drain remains the cleanup mechanism.
+
+### Geometry feedback current adapter
+
+`physics_layers.geometry_feedback_model.GeometryFeedbackModel` connects an explicit
+`SquareDevice` to the circuit current interface using geometry-dependent neutral
+charge, cold-start charge/Poisson feedback and explicit evaluation/time/charge
+budgets. Failed inner solves propagate; they cannot reuse a successful score.
+A callback records completed feedback evaluations. The defaults match the small
+loaded pilot (0.9 eV, 300 K, 1e-6 V feedback tolerance and the surrogate mesh).
+
+Five focused tests cover empty-fixture equivalence, obstacle removal, invalid
+voltages, budget/failure propagation and current ordering/recording. Adapter tests
+mock expensive feedback and do not establish numerical parity of a full loaded
+geometry solve. Full pilot replay and matched control/champion evaluation remain
+required before fresh search scoring. This separate module does not change the
+running zero-drive pilot or edge worker.
