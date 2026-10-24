@@ -17,10 +17,24 @@ the immediate bottleneck is choosing and integrating a defensible physics model.
 
 | Implemented and checked | Evidence | Remaining limitation |
 | --- | --- | --- |
-| Finite-bias quantum charge and Poisson feedback | [Pilot and verification](physics_layers/FINITE_BIAS.md) | Tiny 15-site fixture; ideal contacts and high Fermi energy |
+| Finite-bias quantum charge and Poisson feedback | [Completed four-terminal pilot](results/physics-reference/four-terminal-feedback/README.md) | Tiny 51-site fixture; pinned outputs and uncalibrated contacts |
 | Finite-width charge deposition and potential averaging | [Analytic Gaussian pair](results/physics-reference/gaussian-pair/README.md) | Chosen Gaussian widths are not calibrated carbon orbitals |
 | Coupled feedback across two grids | [0.10/0.05 nm comparison](results/physics-reference/finite-width-feedback/README.md): maximum potential change 0.08435 mV; current change 0.000670% | Two grids do not establish full convergence |
 | Bound-state, gauge and spin checks | [Seven finite-bias regression tests](tests/test_bias_charge.py) | Occupation closure is explicit, but needs physical justification |
+
+### Latest result: charge and potential solved together
+
+The first four-terminal feedback pilot completed in **14.3 minutes (60 charge
+evaluations)** at EF=0.9 eV and 300 K. Its self-consistent site potentials span
+**9.36–12.58 mV**; the final full-grid potential residual is 2.79e-14 V.
+
+![Self-consistent graphene charge and potential](results/physics-reference/four-terminal-feedback/charge-potential.png)
+
+This is a small numerical fixture with pinned output reservoirs, a chosen 0.10 nm
+charge width and surrogate electrodes. It establishes coupled solver operation,
+not improved rectification or physical validation. A single operating point takes
+14 minutes, so loaded-output integration and evaluation cost are practical hurdles
+before a fresh geometry campaign. [Recorded assumptions and results](results/physics-reference/four-terminal-feedback/README.md).
 
 ### Route to a new optimization run
 

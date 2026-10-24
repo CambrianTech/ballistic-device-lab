@@ -189,6 +189,8 @@ The runner caps feedback charge calls at 80, writes progress and errors under
 Do not remove the lock or launch a duplicate without diagnosing process state.
 Source hashes are saved before the run; do not edit those sources while it runs.
 Fixture construction and finite-charge support smoke checks passed (51 sites,
-13x28x27 mesh). Coupled convergence remains pending until status says complete
-and result residuals are inspected. This is a pinned-output pilot, not loaded DC
+13x28x27 mesh). The completed run took 860.2 seconds and 60 charge calls, with
+final full-grid potential residual 2.79e-14 V and recomputed occupation residual
+5.77e-15 electrons/site. [Published evidence and plot](../results/physics-reference/four-terminal-feedback/README.md).
+This is a pinned-output pilot, not loaded DC
 or a restarted optimization campaign. Remote box electrodes remain uncalibrated.
