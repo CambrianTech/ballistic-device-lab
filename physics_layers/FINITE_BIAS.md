@@ -58,3 +58,10 @@ it is not evidence of intrinsic graphene spiking. The current pilot supplies
 only the static charge/transport building block.
 
 [Completed pilot results and charts](../results/physics-reference/finite-bias-feedback/README.md).
+
+## Mesh sensitivity finding
+
+[The same-box 0.1 nm comparison](../results/physics-reference/finite-bias-mesh/README.md)
+changes current by only 0.00660%, but local potentials by up to 3.5879 mV.
+Local electrostatics remains mesh-sensitive; address finite charge extent or
+self-interaction before a quantitative dynamic charge-storage prediction.

@@ -1,0 +1,165 @@
+{
+  "spacing_m": [
+    1e-10,
+    1e-10,
+    1e-10
+  ],
+  "shape": [
+    13,
+    19,
+    21
+  ],
+  "positions_m": [
+    [
+      6e-10,
+      6e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      6e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      6e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      1.215e-09
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.338e-09
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      1.215e-09
+    ]
+  ],
+  "baseline_sha256": "a4881d314e6a51d80e6d03931014aa24f5668cd81a300d520b2a22ba52170faa",
+  "source_sha256": {
+    "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+    "physics_layers\\bias_charge.py": "c92929a059feb3dec9a129abd9c2a552d1fbcc5038ec1e36ae78e0e836de4d16",
+    "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+    "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+    "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+    "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+    "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+    "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+    "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+    "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+    "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+    "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+    "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+    "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+    "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+    "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+    "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+    "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+    "physics_layers\\site_acceleration.py": "770140d2221d357ddca3c4d5fe7c71cbd34c674e647a062b3927819d1b0eb825",
+    "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+    "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+    "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd"
+  },
+  "transport": {
+    "electrons_per_site": [
+      1.6007081664881913,
+      1.263051956856938,
+      1.3535430579807182,
+      1.6010018792207967,
+      1.2629838562276363,
+      1.3533966328368412,
+      1.600714670421601,
+      1.2634314674865275,
+      1.354201432186362,
+      1.1087004177395876,
+      1.108855211502788,
+      1.1086694330856093,
+      1.1086033169031246,
+      1.108444372543588,
+      1.1084608681825403
+    ],
+    "currents_a": [
+      1.54640881333548e-06,
+      -1.5464088133354801e-06
+    ],
+    "integration_error": 1.1144065852419022e-09
+  },
+  "potential_v": [
+    0.003019869308338812,
+    0.004988685844780397,
+    0.007219850701849181,
+    0.0036250987117157855,
+    0.003741033796086767,
+    0.0069034397292515905,
+    0.003109344453923921,
+    0.006434293796351958,
+    0.010869130173426354,
+    0.005299186851671695,
+    0.00605277403177061,
+    0.003478717495574011,
+    0.00409926136148041,
+    0.00353867516507283,
+    0.005605229238189023
+  ],
+  "residual": {
+    "potential_residual_v": 4.933050495870006e-13,
+    "occupation_residual": 9.725553695716371e-14
+  },
+  "current_relative_change": 6.597798955754186e-05,
+  "max_site_potential_change_v": 0.003587884831106252,
+  "limitation": "Two meshes only. Point-charge deposition changes atomic self interaction with grid spacing; no physical mesh convergence claim."
+}
