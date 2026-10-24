@@ -22,7 +22,13 @@ def audit(run, limit):
             raise ValueError('Incomplete or nonfinite completed evaluation')
         # This reporter is specific to the pilot configured for a 10 kohm load.
         load_current = (voltage[2] - voltage[3]) / 1e4
-        rows.append(dict(file=path.name, sha256=hashlib.sha256(raw).hexdigest(),
+        input_power = sum(v*i for v, i in zip(voltage[:2], current[:2]))
+        device_power = sum(v*i for v, i in zip(voltage, current))
+        load_power = (voltage[2] - voltage[3])**2 / 1e4
+        rows.append(dict(input_power_w=input_power, device_power_w=device_power,
+                         load_power_w=load_power,
+                         power_balance_residual_w=input_power-device_power-load_power,
+                         file=path.name, sha256=hashlib.sha256(raw).hexdigest(),
                          voltage_v=voltage, currents_a=current,
                          feedback_residual=residual,
                          current_sum_a=sum(current),

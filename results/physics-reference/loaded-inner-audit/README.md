@@ -31,3 +31,30 @@ python -m physics_layers.report_loaded_inner runs/loaded-feedback-pilot-poles-13
 Assumptions remain those of the 51-site fixture: chosen charge width,
 surrogate electrodes, and explicit reference occupation closure. Final load,
 power-accounting and AC-cycle checks are still required.
+
+## Provisional operating point after seven inner solves
+
+The seventh completed evaluation has output VB-VT = **-2.23632 microvolts**
+at a single +10 mV drive and a 10 kohm load. The maximum output KCL residual
+is **2.44e-21 A**, down from 3.49e-10 A initially. Final inner potential
+and occupation residuals are 4.38e-9 V and 6.95e-10 electrons/site.
+
+Independent bookkeeping from the recorded currents and voltages gives:
+
+| Quantity | Value |
+| --- | ---: |
+| Input power | 2.7371326444e-9 W |
+| Device absorption | 2.7371321443e-9 W |
+| Load power | 5.0011340e-16 W |
+| Input minus device minus load | -2.37e-26 W |
+
+The power residual agrees with minus the output-voltage-weighted KCL
+residual to floating-point precision; device absorption is positive.
+These checks support this operating point but do not replace the outer
+solver's remaining Jacobian-conditioning checks. The worker is still running.
+This instantaneous load power is **not rectified DC power**; reverse drive
+and an AC cycle have not been evaluated with this model.
+
+[first-seven.json](first-seven.json) preserves this expanded compact audit;
+the earlier five-record snapshot remains unchanged. Reproduce using the same
+report command with `first-seven.json --limit 7`. No live solver source changed.
