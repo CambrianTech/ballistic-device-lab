@@ -13,3 +13,9 @@ python -m physics_layers.finite_width_feedback --sigma-nm 0.12 --factors 2 --out
 Observed rejection: `ValueError: Charge deposition overlaps a fixed-potential node`, raised in `SiteMeshMap.deposit_charge` while constructing the electrostatic response kernel. The safeguard was retained. The original two-grid results remain unchanged. This fixture uses an uncalibrated charge width and is not physical validation.
 
 The experiment CLI now accepts width, grid factors and a separate output directory, refuses existing result files before computation, and records null grid differences for single-grid runs.
+
+Preflight improvement: the runner now checks charge support for every requested
+mesh before computing neutral occupations or feedback. Two regression tests
+(`python -m unittest tests.test_width_preflight`) verify that 0.12 nm is rejected
+before either expensive solve and that 0.10 nm passes preflight on both original
+grids. Both passed; these are execution-order checks, not new physical evidence.

@@ -31,10 +31,7 @@ def main():
         raise FileExistsError(out / 'result.json')
     base, original, eq = fixture(0.03)
     system = build_system(SquareDevice((), 2 * 0.246e-9), LatticeRequest((0.7,)), ribbon=True)
-    reference = eq.solve(
-        np.zeros(len(system.sites)), [2.5, 2.5], 300, tolerance=1e-7
-    ).electrons_per_site
-    rows = []
+    prepared = []
     for factor in args.factors:
         shape = tuple(factor * (n - 1) + 1 for n in original.shape)
         spacing = tuple(h / factor for h in base.spacing_m)
@@ -45,6 +42,16 @@ def main():
         )
         mesh = Poisson3DRequest(spacing, faces, np.zeros(shape), fixed)
         mapping = GaussianSiteMeshMap(shape, spacing, (0, 0, 0), original.positions_m, args.sigma_nm * 1e-9)
+        # Check every site's support, including sites with zero excess charge
+        # at equilibrium, before any occupation or feedback solve.
+        mapping.deposit_charge(np.ones(len(system.sites)), fixed)
+        prepared.append((mesh, mapping))
+    reference = eq.solve(
+        np.zeros(len(system.sites)), [2.5, 2.5], 300, tolerance=1e-7
+    ).electrons_per_site
+    rows = []
+    for mesh, mapping in prepared:
+        shape, spacing = mapping.shape, mapping.spacing_m
         result = solve_accelerated(
             mesh,
             mapping,
