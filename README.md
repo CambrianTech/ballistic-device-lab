@@ -38,8 +38,8 @@ before a fresh geometry campaign. [Recorded assumptions and results](results/phy
 
 The loaded-feedback pilot has reached a **provisional -2.236 microvolt output**
 at one +10 mV drive into 10 kohm. Its seventh inner evaluation satisfies output
-KCL to 2.44e-21 A and power balance to 2.37e-26 W. Final circuit conditioning
-checks are still running; this is not an AC-cycle or rectified-DC result.
+KCL to 2.44e-21 A and power balance to 2.37e-26 W. The attempt reached its one-hour budget before final circuit conditioning
+checks finished, so this remains provisional, not an AC-cycle or rectified-DC result.
 [Operating-point audit](results/physics-reference/loaded-inner-audit/README.md).
 
 ### Route to a new optimization run

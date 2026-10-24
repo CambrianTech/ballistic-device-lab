@@ -58,3 +58,24 @@ and an AC cycle have not been evaluated with this model.
 [first-seven.json](first-seven.json) preserves this expanded compact audit;
 the earlier five-record snapshot remains unchanged. Reproduce using the same
 report command with `first-seven.json --limit 7`. No live solver source changed.
+
+## Bounded attempt outcome
+
+The attempt stopped after **3611.98 seconds**, at 147 charge calls and
+11 circuit callbacks, with `Charge/time budget exhausted`. The one-hour
+limit is checked between charge calls, so an in-flight call can finish after
+3600 seconds. Ten completed inner evaluations remain preserved locally.
+[Final status and source manifest](budget-stop.json).
+
+The seventh point's KCL and power audit remains valid, but the complete outer
+conditioning check did not finish. No final loaded result or DC result is claimed.
+
+Before a new attempt, the exact-voltage cache was tested through the complete
+load solver against independent passive resistor and diode-bridge fixtures at
+both drive signs. It reduced provider calls from 13 to 10 (resistor) and
+12 to 9 (bridge), with identical complete solution records including Jacobian
+conditioning, currents and power. The sets of distinct evaluated voltages also
+match exactly. Six cache/circuit tests passed. These are software verification
+fixtures, not graphene performance measurements; actual runtime savings remain
+unmeasured. The next bounded attempt can integrate the cache in a fresh run
+folder while preserving this failed attempt and its evidence.
