@@ -1,0 +1,96 @@
+{
+  "input_sha256": "0aee10e6c8841cb9bfbf813ff4a8df971a64a644638f49bd6e2c29b45d76d43e",
+  "source_sha256": {
+    "C:\\Users\\joelt\\development\\ballistic-device-lab\\physics_layers\\width_domain_audit.py": "e6bfc4d0c4d8dcae392856adbdcc6268fcc7c57120d307168dfdfe725ea63bf1",
+    "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9"
+  },
+  "cutoff_sigma": 5,
+  "rows": [
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.05,
+      "status": "rejected",
+      "reason": "Resolve Gaussian width with spacing no larger than sigma"
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.08,
+      "status": "rejected",
+      "reason": "Resolve Gaussian width with spacing no larger than sigma"
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.1,
+      "status": "admissible",
+      "normalized_charge_sum": 14.999999999999998
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.11,
+      "status": "admissible",
+      "normalized_charge_sum": 14.999999999999998
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.119,
+      "status": "admissible",
+      "normalized_charge_sum": 15.0
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.12,
+      "status": "rejected",
+      "reason": "Charge deposition overlaps a fixed-potential node"
+    },
+    {
+      "spacing_nm": 0.1,
+      "sigma_nm": 0.13,
+      "status": "rejected",
+      "reason": "Complete Gaussian cutoff support must fit inside mesh"
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.05,
+      "status": "admissible",
+      "normalized_charge_sum": 14.999999999999998
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.08,
+      "status": "admissible",
+      "normalized_charge_sum": 15.000000000000004
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.1,
+      "status": "admissible",
+      "normalized_charge_sum": 14.999999999999998
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.11,
+      "status": "admissible",
+      "normalized_charge_sum": 15.000000000000004
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.119,
+      "status": "admissible",
+      "normalized_charge_sum": 15.0
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.12,
+      "status": "rejected",
+      "reason": "Charge deposition overlaps a fixed-potential node"
+    },
+    {
+      "spacing_nm": 0.05,
+      "sigma_nm": 0.13,
+      "status": "rejected",
+      "reason": "Complete Gaussian cutoff support must fit inside mesh"
+    }
+  ],
+  "scope": "Numerical domain audit, not physical calibration or transport evidence"
+}
