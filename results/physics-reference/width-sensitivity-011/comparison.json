@@ -1,0 +1,22 @@
+{
+  "baseline_sigma_m": 1.0000000000000002e-10,
+  "candidate_sigma_m": 1.1000000000000001e-10,
+  "baseline_current_a": 1.5460313737127955e-06,
+  "candidate_current_a": 1.5459744529827833e-06,
+  "relative_current_change": -3.681731883320438e-05,
+  "max_site_potential_change_v": 0.00042781660862303665,
+  "baseline_residual": {
+    "potential_residual_v": 5.886697379553496e-13,
+    "occupation_residual": 1.4721557306529576e-13
+  },
+  "candidate_residual": {
+    "potential_residual_v": 5.331707297884236e-13,
+    "occupation_residual": 1.3344880755994382e-13
+  },
+  "input_sha256": {
+    "results\\physics-reference\\width-sensitivity-010-replay\\result.json": "f9d97697ebc51d4768bad5ab0f39aa2513406b3f568af999bfc90a54afc4fdb8",
+    "results\\physics-reference\\width-sensitivity-011\\result.json": "45b2be2ce770c82dcb764b1383256cfd8507ba941a2adc21356f32b7ae4af4d6"
+  },
+  "changed_baseline_sources": [],
+  "limitation": "Runner parameterization reviewed separately. Manifests cover physics_layers only. Not physical calibration."
+}
