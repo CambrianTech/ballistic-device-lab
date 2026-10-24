@@ -1,0 +1,34 @@
+{
+  "snapshot": "runs\\fresh-discovery-mixed-v2\\round-000003.json",
+  "sha256": "947539d2f607f9ae8e66422aafec20094dbc8a42a591ec967fd50e8c6cc59182",
+  "round": 3,
+  "candidates": 100,
+  "unique_exact_polygon_encodings": 100,
+  "duplicate_encodings": 0,
+  "by_strategy": {
+    "elite": {
+      "proposed": 60,
+      "converged": 7,
+      "origins": {
+        "fresh": 50,
+        "mutation": 10
+      }
+    },
+    "diversity": {
+      "proposed": 20,
+      "converged": 0,
+      "origins": {
+        "mutation": 10,
+        "fresh": 10
+      }
+    },
+    "random": {
+      "proposed": 20,
+      "converged": 1,
+      "origins": {
+        "fresh": 20
+      }
+    }
+  },
+  "limitations": "Exact polygon identity only, not atomic-lattice or behavioral novelty. Sequential strategies share history; counts do not establish strategy superiority."
+}
