@@ -15,3 +15,7 @@ python -m physics_layers.impurity_bound_reference --near-bound --output new-outp
 The result file must not already exist. [Raw cases](result.json) include charge, current, analytic errors and spectral sum-rule checks. Historical results are preserved.
 
 Measured charge changes: 0.428819895184748 electrons at 150 K and 0.126215384979774 electrons at 600 K. All eight analytic comparisons passed; maximum charge error 1.14e-10 electrons and maximum current error 4.75e-20 A.
+
+## Reproduction metadata
+
+New runs record Python and NumPy/SciPy/Kwant versions, source SHA-256 hashes, reservoir potentials, spin, reference mode and numerical tolerances in the result. Existing historical result files remain unchanged and do not acquire retrospective provenance. An existing result is rejected before numerical work; exclusive creation at write time also prevents replacement if another process creates it during the calculation.
