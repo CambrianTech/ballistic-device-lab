@@ -1,110 +1,126 @@
 # Ballistic Device Lab
 
-An open simulation project exploring **graphene shapes that turn an alternating electrical input into a DC output**. Software proposes etched obstacles, calculates electron transport and compares designs under the same test conditions.
+### Can the shape of graphene make a better rectifier?
 
-The intended application is a sensitive, zero-bias signal detector. No candidate has yet demonstrated an advantage over a fabricated or commercial detector.
+We let software carve the device—and let electron transport decide which shapes work. An open computational experiment in turning an alternating electrical signal into DC, at the scale of individual carbon atoms.
 
-[Current work](#current-work) · [Historical results](#historical-results) · [Physics and limits](#physics-and-limits) · [Run-and-review guide](#run-and-review)
+![Carbon lattice of a synthetic control and a search-selected rectifier, with atomic edge closeups](results/continuous-dc/round-000430/atomic-comparison.png)
 
-## Current work
+**Same material. Same drive. Different geometry.** The selected shape produces **28.33 µV** versus **11.21 µV** for the synthetic control in the fixed-potential simulation. Bright dots are carbon sites; black openings are etched voids. These are simulated lattices, not microscope images.
 
-**Fresh search rounds are authorized, but have not started.** We are connecting self-consistent quantum charge and Poisson electrostatics to the geometry evaluator. The original fixed-potential campaign remains stopped at checkpoint 433; its published results end at matched round 430.
+[Explore the shapes](#letting-shapes-compete) · [Follow the electrons](#following-the-electrons) · [Look inside the physics](#the-charge-changes-the-device) · [Run the code](#reproduce-and-explore)
 
-| Workstream | State | Evidence |
-| --- | --- | --- |
-| New charge/Poisson model | Loaded operating points completed on one small fixture | [Completed +10 mV](results/physics-reference/loaded-feedback-complete/README.md), [−10 mV](results/physics-reference/loaded-feedback-reverse/README.md), [+5 mV](results/physics-reference/loaded-feedback-half/README.md) |
-| Half-amplitude comparison | Both signs complete; raw even response closely follows amplitude squared; offset unresolved | [Matched ±5/±10 mV evidence](results/physics-reference/loaded-feedback-reverse-half/README.md) |
-| Geometry integration | Geometry-capable fixture added; empty-control equivalence and obstacle removal tests pass | [Fixture tests](tests/test_geometry_feedback_fixture.py) |
-| Fresh optimization | Not started; no new-model shape rankings yet | [Next campaign](#next-campaign) |
+## Letting shapes compete
 
-The completed +10 and −10 mV outputs are **−2.236 and −3.399 µV** into 10 kΩ. Their two-point even component is −2.818 µV. These are instantaneous operating points on an uncalibrated 51-site fixture; they do not establish a sinusoidal DC average or better geometry.
+A triangle is only the beginning. The search explores bevels, free profiles, islands and radial polygons, testing how each changes the output across a four-contact graphene device. Input runs left to right; the load connects top to bottom.
 
-![Completed operating points of the new feedback model](results/physics-reference/loaded-feedback-reverse/polarity.png)
+![Five geometry families and the synthetic control, with convergence labels](results/continuous-dc/round-000430/diversity.png)
 
-### Next campaign
+*Colored polygons are removed material; white space conducts. Orange marks the contacts. Screening-only candidates remain visibly distinct from numerically converged results.*
 
-1. Measure zero-drive output under the same assumptions as the completed ±5 and ±10 mV pairs. Report any offset before interpreting amplitude scaling.
-2. Connect the geometry fixture to loaded evaluation, check phase/numerical convergence and model sensitivity, then benchmark D00, the synthetic triangle and retained leaders under identical conditions.
-3. Start a small campaign from round zero with a frozen model, explicit objective, controls and fresh exploration. Publish new geometry images only from those new results.
+Three strategies start with the same population: mutate the strongest designs, preserve different kinds of shapes, or sample randomly. Each candidate passes through transport, load solving and numerical refinement before it can become a converged winner.
 
-Exploratory searches can use documented assumptions; predictive device claims need calibration. The old campaign's checkpoints, controls and rankings will remain separate. Neuromorphic experiments additionally require dynamics and energy accounting; static rectification does not demonstrate memory or neuron-like behavior.
+```mermaid
+flowchart LR
+    A[Propose a shape] --> B[Solve electron transport]
+    B --> C[Measure DC load power]
+    C --> D[Check convergence]
+    D --> E[Select and diversify]
+    E --> A
+```
 
-## Historical results
+![Best converged output as the three search strategies explore successive rounds](results/continuous-dc/round-000430/progress.png)
 
-**These shapes and scores come from the stopped fixed-potential search.** The gallery is deliberately frozen; it is not a picture of newly optimized self-consistent devices.
+**430 matched rounds · 8,640 candidates per strategy · five shape families.** Published snapshots keep the figures, candidate identities and evidence together. Equal candidate counts do not imply equal CPU time or prove one algorithm superior.
 
-![Historical round-430 shape families and synthetic control](results/continuous-dc/round-000430/diversity.png)
+<details>
+<summary><strong>Compare the converged results</strong></summary>
 
-Each square is a graphene region with four contacts. Filled polygons are **etched-out regions**, and the remaining white area conducts. Orange segments are contacts. The drive is applied left-to-right; the output load connects top and bottom.
+| Selection method | DC magnitude (µV) | DC load power (pW) |
+| --- | ---: | ---: |
+| Synthetic control D00 | 11.205 | 0.01256 |
+| Top-score selection | 27.150 | 0.07371 |
+| Diversity archive | 28.331 | 0.08026 |
+| Random search | 22.319 | 0.04981 |
 
-The historical test used a 14.76 nm-wide device, 10 mV peak drive, 10 kΩ load and 300 K reservoirs with fixed internal potential. Three search methods each evaluated 8,640 candidates, including the same 40 starting designs, across 430 matched rounds.
+Matched conditions: 14.76 nm device width, 10 mV peak sinusoidal drive, 10 kΩ load, 300 K and fixed internal potential. DC power excludes ripple heating. D00 and triangle-control are synthetic references.
 
-| Method | Best converged design | DC magnitude (µV) | DC power (pW) |
-| --- | --- | ---: | ---: |
-| Synthetic control | D00 | 11.205 | 0.01256 |
-| Top-score selection | elite-r0-profile-g411-1 | 27.150 | 0.07371 |
-| Diversity archive | diversity-r0-profile-g73-1 | 28.331 | 0.08026 |
-| Random search | random-r0-profile-g293-0 | 22.319 | 0.04981 |
+[Full results and candidate identities](results/continuous-dc/round-000430/README.md) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md)
 
-Equal candidate counts are **not equal CPU budgets**. These differences do not establish a superior search algorithm. The nominal diversity winner exceeded D00 in only **13 of 27** tested conditions; its median power ratio was **0.445×**. A nominal winner is not necessarily robust.
+</details>
 
-D00 and triangle-control are synthetic controls, not replicas of published devices. Numerical convergence verifies the calculation within its model, not the missing physics.
+## Following the electrons
 
-[Full round report and charts](results/continuous-dc/round-000430/README.md) · [Robustness cases](results/continuous-dc/round-000430/robustness) · [Independent scoring audit](results/2026-10-22-dc-audit/README.md) · [Local mutations](local_lab/README.md) · [Atomic-edge study](edge_lab/README.md)
+The geometry gives electrons different routes through the device. Trajectory diagrams make that routing visible; the quantum calculation determines the electrical score.
 
-### How shapes are explored
+![Classical electron trajectories through the control and selected shapes](results/continuous-dc/round-000430/leader-trajectories.png)
 
-Elite selection mutates strong parents; diversity selection mutates representatives of different geometry neighborhoods; random search samples without previous scores. All retain fresh exploration where specified by their protocol. Available families are triangles, bevels, free profiles, islands and radial polygons—the search cannot invent outside its representation.
+*Classical trajectories illustrate steering under matched injection. They are a separate diagnostic, not quantum paths or a direct measurement of rectification.*
 
-Shape mutation creates a new candidate. Numerical refinement evaluates the same candidate on denser energy and phase grids. The historical objective was nominal DC load power; detector qualification is a separate step.
+A strong score at one operating point is only part of the story. The nominal winner beats D00 in **13 of 27** tested conditions; its median power ratio is **0.445×**. Changing contacts or operating conditions can reverse the ranking.
 
-[Search implementation](ballistic_lab/search/dc_space.py) · [Diversity selection](ballistic_lab/search/diversity.py) · [Historical progress chart](results/continuous-dc/round-000430/progress.png)
+<details>
+<summary><strong>Explore scattering, contacts and atomic edges</strong></summary>
 
-## Physics and limits
+### Scattering changes the routes
 
-| Component | Established here | Still unresolved |
-| --- | --- | --- |
-| Quantum transport and load | Coherent graphene lattice, ideal leads, terminal conservation and load accounting | Real contacts, phonons and finite-frequency response |
-| Charge/Poisson feedback | Small equilibrium and finite-bias fixtures; loaded operating points | Integration and qualification across searched designs |
-| Charge deposition | Finite Gaussian mapping and analytic checks; two-grid comparison | Physical charge-width calibration and full convergence |
-| Bound-state occupation | Explicit reference-reservoir rule; eight regression tests including 12 temperature/filling cases | Whether that closure describes the physical device |
-| Noise | Preliminary equilibrium device/load audit | Driven, amplifier and low-frequency excess noise |
-| Fabrication robustness | Selected contact and atomic-vacancy studies | Fabrication distributions and yield |
+![Matched classical scattering comparison](results/continuous-dc/round-000430/leader-scattering.png)
 
-The detector goal is **≤0.35 pW/√Hz noise-equivalent power**, ten times below the chosen conventional reference's typical value. The preliminary audit of historical design g15 reports **1.239 pW/√Hz** under ideal electrical conditions. This is not a matched commercial-device measurement, and no design is qualified. Bandwidth, dynamic range, coupling and operating conditions must also match.
+### Contacts and energy change the ranking
 
-[Physics assumptions and experiments](physics_layers/FINITE_BIAS.md) · [Qualification requirements](docs/DEVICE-ROLE.md) · [Noise audit](results/physics-reference/detector-audit/README.md) · [Conventional comparator](references/conventional-detectors/README.md)
+![Contact and Fermi-energy sensitivity](results/continuous-dc/round-000430/leader-coverage.png)
 
-### Published-device comparisons
+![Validation matrix with completed and unresolved cases](results/continuous-dc/round-000430/leader-matrix.png)
 
-| Reference | Available evidence | Missing comparison |
-| --- | --- | --- |
-| [Auton et al., 2016](references/auton-2016/README.md) | Scale-calibrated contour reconstruction and source image | Matched contacts, materials and electrical response |
-| [Shi et al., 2026](references/shi-2026/README.md) | Device image and benchmark record | Reconstruction and reconciled operating conditions |
+### Small edge changes make distinct devices
 
-[Figure provenance](docs/assets/literature/README.md) · [Matched comparison requirements](docs/PAPER-COMPARISON.md)
+![Simulated atomic lattice and local edge mutations](results/continuous-dc/round-000430/winner-local/atomic-lattice.png)
 
-## Run and review
+[Robustness evidence](results/continuous-dc/round-000430/robustness) · [Local mutations](local_lab/README.md) · [Atomic-vacancy experiments](edge_lab/README.md)
 
-Use the repository root and the environments specified in [requirements.txt](requirements.txt), [requirements-gpu.txt](requirements-gpu.txt) and [environment-quantum.yml](environment-quantum.yml). Quantum calculations require Kwant; earlier GPU ray studies use optional CUDA.
+</details>
+
+## The charge changes the device
+
+Geometry is only one part of the physics. Electrons redistribute charge, charge changes the electrostatic potential, and that potential changes transport. A separate self-consistent graphene–Poisson experiment resolves that feedback at individual lattice sites.
+
+![Site-resolved self-consistent potential and excess charge in a four-terminal graphene fixture](results/physics-reference/four-terminal-feedback/charge-potential.png)
+
+*Potential and excess charge on a 51-site numerical fixture with pinned outputs. This experiment is distinct from the fixed-potential geometry rankings above.*
+
+With a load connected, opposite drives produce unequal outputs. At ±10 mV the two-point even component is **−2.818 µV**; at ±5 mV it is **−0.704 µV**, close to one quarter. That is consistent with quadratic scaling in this diagnostic, while zero-drive offset and numerical sensitivity remain unresolved.
+
+<details>
+<summary><strong>Inspect the loaded response and model assumptions</strong></summary>
+
+![Completed positive and negative drive operating points](results/physics-reference/loaded-feedback-reverse/polarity.png)
+
+These are individual operating points, not a sinusoidal DC average. The fixture uses surrogate contacts, a chosen Gaussian charge width and an explicit bound-state occupation rule. Numerical checks verify calculations within these assumptions; they do not establish fabricated-device performance or literature novelty.
+
+[Matched amplitude comparison](results/physics-reference/loaded-feedback-reverse-half/README.md) · [Charge and feedback experiments](physics_layers/FINITE_BIAS.md) · [Model qualification](docs/DEVICE-ROLE.md)
+
+</details>
+
+## Reproduce and explore
+
+The repository includes geometry generation, coherent quantum transport, circuit solving, charge/Poisson experiments and reproducible reports. Quantum calculations use **Kwant**; optional GPU trajectory studies use **CUDA**.
 
 ```sh
-# Run tests in an environment with the required dependencies.
+# In an environment with the repository dependencies installed:
 python -m unittest discover -s tests
 
-# Render completed historical snapshots; this does not start a search.
+# Render completed search snapshots:
 python -m ballistic_lab.reporting.dc_continuous
 ```
 
-The historical worker is intentionally stopped. Preserve its STOP sentinel and do not launch overlapping workers. New experiments use distinct run directories and source manifests. Configure BLAS for one thread per worker and follow the [start/stop contracts](docs/ARCHITECTURE.md#continuous-search-worker).
+[Python dependencies](requirements.txt) · [Quantum environment](environment-quantum.yml) · [GPU dependencies](requirements-gpu.txt) · [Worker and source-manifest contracts](docs/ARCHITECTURE.md)
 
-For review, check the model, controls, convergence gates and objective against each claim. Pending and failed attempts remain evidence, not accepted scores. Immutable historical report duplicates share storage through hard links; unique scientific records are retained.
+| Explore | Read |
+| --- | --- |
+| Experiments and diagrams | [Evidence index](docs/EVIDENCE-INDEX.md) · [Detailed experiment record](docs/EXPERIMENT-RECORD.md) |
+| Detector sensitivity | [Noise audit](results/physics-reference/detector-audit/README.md) · [Conventional reference](references/conventional-detectors/README.md) |
+| Published devices | [Auton et al.](references/auton-2016/README.md) · [Shi et al.](references/shi-2026/README.md) · [Matched comparison criteria](docs/PAPER-COMPARISON.md) |
 
-- [Architecture and operating contracts](docs/ARCHITECTURE.md)
-- [Physics roadmap](docs/PHYSICS-ROADMAP.md)
-- [Evidence index, including earlier GPU studies](docs/EVIDENCE-INDEX.md)
-- [Archived experiment narrative and detailed dashboards](docs/EXPERIMENT-RECORD.md)
+**Research software.** The application is sensitive signal detection; no design is qualified against a fabricated or commercial detector. Real contacts, driven noise, fabrication yield and finite-frequency response require separate evidence.
 
-## License
-
-[MIT](LICENSE). External figures and publications retain their stated licenses.
+[MIT license](LICENSE). External figures retain their stated licenses.
