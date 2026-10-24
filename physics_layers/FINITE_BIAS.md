@@ -163,3 +163,8 @@ now supplies a 51-site fixture, explicit remote-box electrode partition and fini
 charge support checks. All four leads conduct at 0.9 eV (one mode per spin each).
 The next callback must reconcile reservoir/lead shifts and contact electrostatics;
 this preflight has no self-consistent or loaded-DC result yet.
+
+[Four-terminal finite-bias charge benchmark](../results/physics-reference/four-terminal-charge/README.md)
+passes tolerance refinement at 0.9 eV: maximum occupation change 3.10e-9 electrons
+and current change 2.12e-21 A. One evaluation takes 12-18 s on this host. This is
+fixed onsite, with pinned output reservoirs; self-consistent loaded DC is pending.
