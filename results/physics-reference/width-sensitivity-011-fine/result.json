@@ -1,0 +1,205 @@
+{
+  "sigma_m": 1.1000000000000001e-10,
+  "grid_factors": [
+    4
+  ],
+  "cutoff_sigma": 5,
+  "positions_m": [
+    [
+      6e-10,
+      6e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      6e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      6e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      8.130422493309719e-10,
+      1.215e-09
+    ],
+    [
+      6e-10,
+      1.0260844986619438e-09,
+      1.338e-09
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      6e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      7.23e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      8.46e-10
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      9.689999999999999e-10
+    ],
+    [
+      6e-10,
+      7.42028166220648e-10,
+      1.092e-09
+    ],
+    [
+      6e-10,
+      9.550704155516198e-10,
+      1.215e-09
+    ]
+  ],
+  "rows": [
+    {
+      "spacing_m": [
+        5e-11,
+        5e-11,
+        5e-11
+      ],
+      "shape": [
+        25,
+        37,
+        41
+      ],
+      "potential_v": [
+        0.010870637668631567,
+        0.0055439596187680145,
+        0.009157450938131676,
+        0.006365355517076266,
+        0.0033634731005586795,
+        0.009258083814330981,
+        0.009141543713842702,
+        0.008946827921063358,
+        0.014987573531098428,
+        0.009095464105622855,
+        0.008895432434042588,
+        0.0033031372549623033,
+        0.005965843943092398,
+        0.005655872080869162,
+        0.009806581351546061
+      ],
+      "transport": {
+        "electrons_per_site": [
+          1.603019026152434,
+          1.262907756011652,
+          1.353871359789228,
+          1.6026136630150882,
+          1.2628162439973531,
+          1.3536741510640924,
+          1.602558839450432,
+          1.2636898183521927,
+          1.3548694375585315,
+          1.110081457276381,
+          1.1097974510219624,
+          1.1097063380423635,
+          1.1095470411535195,
+          1.109454907647493,
+          1.1094885589014445
+        ],
+        "currents_a": [
+          1.5459646748202812e-06,
+          -1.5459646748202814e-06
+        ],
+        "integration_error": 1.0589675605573274e-09
+      },
+      "residual": {
+        "potential_residual_v": 5.350910686763299e-13,
+        "occupation_residual": 1.3344880755994382e-13
+      }
+    }
+  ],
+  "max_potential_change_v": null,
+  "current_relative_change": null,
+  "source_sha256": {
+    "physics_layers\\application.py": "c158709b27e074c24a312219781028d9abd3238ee28d69b430586f3f777c8f53",
+    "physics_layers\\audit_load_linearization.py": "a264ff4b8968e414c6e3974989a26ab2e2f2944c5424733eebaa2d451d49ef5f",
+    "physics_layers\\bias_charge.py": "7b49e836e8105b0ec8e9c2c057b9d174aae949f89db832b86f6519e0224eaf1f",
+    "physics_layers\\compare_loaded_inner.py": "7f33edf7a8050a0500a1519bfbc645844bdd9c95ed915a0909af211fc9a6241c",
+    "physics_layers\\compare_polarity.py": "31659bbd37321a200012e7853b876ad91d4825aab8462a98038d8f2577752507",
+    "physics_layers\\coupling.py": "76c0415e49b76b75f218b6c294ffa42965ef4066752e6e207a3cacefe0903f44",
+    "physics_layers\\current_cache.py": "da9180a5f2784a553a10409f2b2ac705e0d1752479c8b6eecc61b7672839f5f5",
+    "physics_layers\\dc_stage.py": "ec612e9e4983cae37bd4717ca83b69e8e3e4965c0af4e705e9dc80b2c7bfa524",
+    "physics_layers\\detector_audit.py": "04c67b1e2981e26c0b485185a91506a32463aebe7638b4fb5cfb915744de52d7",
+    "physics_layers\\electrode_boundary.py": "74730189c4fbeeb3c6441589c954ee2503e08bc11b50811f2998eb41a2ced66a",
+    "physics_layers\\electrostatics.py": "18bd085bd5b5878d89a7926227bd17696db6567fed73704e6434b6bdea84625d",
+    "physics_layers\\electrostatic_demo.py": "4c9be828af454581629cbff12bf2ebf2f9fe1910115edac1167c426dc99f1e9e",
+    "physics_layers\\equilibrium_charge.py": "da16d46e40277bf658a5fafacce183e63e84db00d9c67d695e19a9a99e26f9b1",
+    "physics_layers\\even_scaling.py": "99491c0c7620e82968007e2b8296a2cf8f2144f2b266bdb101f18295f635b281",
+    "physics_layers\\feedback_current.py": "0d249c24532c47843729659ca3583bbdb7562ad822f5b3f10b95496c5fb434ca",
+    "physics_layers\\finite_bias_demo.py": "49ed9582cb3c14bdcebf155a6a4634cde3bbba831b78643dcd501f9656be5ce4",
+    "physics_layers\\finite_bias_mesh.py": "efeae3f49ce9d806ae6fb0b85bb8daa0a1d82eab4d840bd2272b60c1d0341cdf",
+    "physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+    "physics_layers\\finite_width_feedback.py": "cf0fddef8bee0e76f27bf49767124b7142e0dc2d30b093699f75361d3b8627d1",
+    "physics_layers\\four_terminal_charge.py": "c5cfe5a262a428ca12d57be2a468d37cfbd174933a3a332539655a17040f86ec",
+    "physics_layers\\four_terminal_feedback_pilot.py": "c2fbb349bf71d2f3791502c76c7c2aaf3231f4f49d5d33fb5d6c17466a2357ed",
+    "physics_layers\\four_terminal_fixture.py": "05cf26fc6ab40b5e5cce3eb73298c479b197682d10a3c6cc3d881db9dca28d4d",
+    "physics_layers\\four_terminal_preflight.py": "e7ffe62c711d683bdd49ac42bec1d1eb46e35fe10658a5acdbadea82bfe99d92",
+    "physics_layers\\gaussian_pair_demo.py": "27b10dec95425a93403dbb1d463b9d77942ea796f3c033bbfba98cfd6bb9e208",
+    "physics_layers\\gaussian_site_mesh.py": "e92ce17c8179cebadc104e6a332f420c0c757b2d749d086b0641aea9693a8a18",
+    "physics_layers\\geometry_feedback_fixture.py": "ccc84e3d719388881be684a99842ac3eb022e25ce59695b68ed8e0a78135288b",
+    "physics_layers\\geometry_feedback_model.py": "b0e7d5015abf028425afe56af130c093eec9164cb7250d0fc16897c93fb23ba8",
+    "physics_layers\\geometry_feedback_replay.py": "7d7b9a99151120e3cfa3398acac888b7186a863673b2e530f01ec24586b1e231",
+    "physics_layers\\graphene_charge.py": "3c6bd1c5ba6ddd4f7e43172e2f508b5f0a186c626f60177038d6de677b99b2fd",
+    "physics_layers\\graphene_feedback_demo.py": "a7219ebcf561cd928e605039537e78641277443666cb96532bd937d510a84bd4",
+    "physics_layers\\impurity_bound_reference.py": "2143cb1e18b74895b161bd254eb40ec691020f4612610f8feaf84fee6e988a43",
+    "physics_layers\\kernel_audit.py": "a6450a1764e41cc9510e8e71288a6c551b8292bf5a2ce82f853b62617595f743",
+    "physics_layers\\lattice_audit.py": "8fccec2d9085087440502fb2ed471b444972bea7d0df4f48f07bfce9b682c781",
+    "physics_layers\\lead_charge.py": "2d89fdfd35a23b951c8e6c3bd464b15ada8d6fa39b7254ba6eaec1a54b7f73df",
+    "physics_layers\\loaded_feedback_pilot.py": "a6128075b66c28d302d021b8c21afcb02ac7c31c255741db3e2cdcb0339c7d72",
+    "physics_layers\\negf_demo.py": "9f1009556f925217813dd8bdf415ccb18a28b0107f65981987045665364b4703",
+    "physics_layers\\negf_reference.py": "f647f90eebf6e54817247490db62dd4e3647f50c4c9129b7ab4861c314743563",
+    "physics_layers\\noise.py": "6b4ee04a69cf0cc8e0e5618e7037500565129b96cf0513b3cfc1d4d18c553381",
+    "physics_layers\\off_resonant_reference.py": "8f4d6e8bea1783fc178f8d5a7cd85ab59612138418201fd6c2339a6f03b30553",
+    "physics_layers\\plot_loaded_polarity.py": "62dfdb5d652f07c8fdae7d2d1dff266c45f0612db8f8c27bdffd9ba6150b19d6",
+    "physics_layers\\poisson2d.py": "a67c5be1a9347d5b65785a776b643f8109f0cc3310def05f9480cdceb72eeb67",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2",
+    "physics_layers\\polarity.py": "d2a3a08ffc7dbb267c85698c4bbccc281cc8448643d3cb1f13d3f7709b60317d",
+    "physics_layers\\report_feedback_broyden.py": "5ea5adfe0c565e9990b81eb69efa527645b1abe47d11f21a6fffc3fff6983737",
+    "physics_layers\\report_feedback_warm.py": "977a9ff6f96f15177653277741388d0fac1801934bfb5b8c809d8620c59aac3d",
+    "physics_layers\\report_four_terminal_feedback.py": "9980ed9fe4513638a17bddab39bba7a261f73b87acf537f8cb050d2c995dd5c1",
+    "physics_layers\\report_loaded_complete.py": "611685cadb1190ac962051232daba1f0cef27762b28b1f46c6a02b4fd3ea42ea",
+    "physics_layers\\report_loaded_inner.py": "d94a415f7f3723e660e9d601977e94d0cbc2632e68fbd8802c3f1c59774a095e",
+    "physics_layers\\scalar_bound_feedback.py": "341a2f9b421e0a4944c63109f048d19a166cfa042bdac3f48f494dc68fdb4d19",
+    "physics_layers\\scalar_feedback_convergence.py": "6781e4b73a27a9baa89ad5e9f97b5bed80b6ee87b7e63a81a9fd44052e26033d",
+    "physics_layers\\self_consistent.py": "021d50326702865179739e7f84f5522c416dada1d3a349aa2333c2a78f466bba",
+    "physics_layers\\site_acceleration.py": "91944abb217e39064d5d61d988597372fabc28fd502b781440fd43c58c19141a",
+    "physics_layers\\site_feedback.py": "6e02e8a9ca296df26ac0f38cd22adfcccfd66c97a51241df9740fca0355e747c",
+    "physics_layers\\site_mesh.py": "50b1e39afbcf51e6ee5aa7782aef5f238c78e7af10cd428e589e8f0eb10b44c9",
+    "physics_layers\\stages.py": "2b88cafdba7caf81d9aa1c468cdf9e2df7f97347147d60e3ef58a5069f126d70",
+    "physics_layers\\storage_audit.py": "0955d2a9e08fd78ef06f7b2370da482f6f1de5954eda0d7069162478d4e5050c",
+    "physics_layers\\width_domain_audit.py": "e6bfc4d0c4d8dcae392856adbdcc6268fcc7c57120d307168dfdfe725ea63bf1",
+    "physics_layers\\__init__.py": "945c18e6914cb09025751bf2aeb3486877d50a2c41af3d45a7cd12668d921acd"
+  }
+}

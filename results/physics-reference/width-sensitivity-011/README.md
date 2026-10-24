@@ -19,4 +19,4 @@ python -m physics_layers.finite_width_feedback --sigma-nm 0.11 --factors 2 --out
 python -m ballistic_lab.reporting.compare_width
 ```
 
-This is a single-grid sensitivity result for an uncalibrated numerical fixture. Small current sensitivity at these two widths does not establish width calibration, mesh convergence, rectification, or physical validation. Refinement of the 0.11 nm case remains unresolved.
+This is a single-grid sensitivity result for an uncalibrated numerical fixture. Small current sensitivity at these two widths does not establish width calibration, mesh convergence, rectification, or physical validation. A [completed finer-mesh check](../width-sensitivity-011-fine/README.md) changes the 0.11 nm case's current by −0.0006325%; asymptotic mesh convergence remains unresolved.
