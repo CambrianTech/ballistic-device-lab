@@ -122,3 +122,13 @@ correctness or a relaxation mechanism for isolated states.
 
 All five finite-bias tests passed in the isolated Kwant runtime (40.576 s):
 `python -m unittest tests.test_bias_charge`. No transport implementation changed.
+
+## Spin normalization and numerical controls
+
+The finite-bias regression suite now checks spin degeneracy at fixed Hamiltonian
+and a nonzero scattering-site shift: spin=2 doubles both occupation and nonzero
+current relative to spin=1. This catches inconsistent spin factors between the
+equilibrium baseline and bias correction; it is not a spin-polarized material model.
+It also checks rejection of zero, negative, NaN and infinite temperature/tolerance.
+All seven tests in `python -m unittest tests.test_bias_charge` passed in 47.197 s
+in the isolated Kwant runtime. Existing physical assumptions remain unchanged.

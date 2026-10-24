@@ -103,3 +103,28 @@ class BiasChargeTests(unittest.TestCase):
             abs(control.electrons_per_site[isolated] - original.electrons_per_site[isolated]), 0.5
         )
         np.testing.assert_allclose(original.currents_a, control.currents_a, rtol=0, atol=1e-11)
+
+    def test_spin_degeneracy_scales_charge_and_current(self):
+        system = chain()
+        single = BiasChargeDevice(system, reference_mu_ev=0.03, spin=1).solve(
+            [0.07], [0.08, -0.02], 300, tolerance=1e-7
+        )
+        double = BiasChargeDevice(system, reference_mu_ev=0.03, spin=2).solve(
+            [0.07], [0.08, -0.02], 300, tolerance=1e-7
+        )
+        self.assertGreater(abs(single.currents_a[0]), 1e-7)
+        np.testing.assert_allclose(
+            double.electrons_per_site, 2 * np.array(single.electrons_per_site), rtol=0, atol=2e-6
+        )
+        np.testing.assert_allclose(
+            double.currents_a, 2 * np.array(single.currents_a), rtol=0, atol=1e-11
+        )
+
+    def test_invalid_numerical_controls(self):
+        provider = BiasChargeDevice(chain(), reference_mu_ev=0.03)
+        for tolerance in [0, -1e-7, float("nan"), float("inf")]:
+            with self.subTest(tolerance=tolerance), self.assertRaises(ValueError):
+                provider.solve([0], [0.08, -0.02], 300, tolerance=tolerance)
+        for temperature in [0, -1, float("nan"), float("inf")]:
+            with self.subTest(temperature=temperature), self.assertRaises(ValueError):
+                provider.solve([0], [0.08, -0.02], temperature)
