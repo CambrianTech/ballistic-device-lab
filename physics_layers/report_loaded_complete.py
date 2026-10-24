@@ -21,6 +21,9 @@ def validate(status, result):
     if not math.isfinite(resistance) or resistance <= 0:
         raise ValueError('Invalid load')
     t = result['circuit_tolerance']
+    for key in ('current_atol_a', 'current_rtol'):
+        if not math.isfinite(t[key]) or t[key] < 0:
+            raise ValueError('Invalid tolerance component: '+key)
     limit = t['current_atol_a'] + t['current_rtol']*max(map(abs,current))
     if not math.isfinite(limit) or limit <= 0:
         raise ValueError('Invalid tolerance')
@@ -35,7 +38,7 @@ def validate(status, result):
     if abs(pin-device-load) > power_limit or device < -power_limit:
         raise ValueError('Power accounting failed')
     condition = s['output_jacobian_condition']
-    if not math.isfinite(condition) or condition > 1e12:
+    if not math.isfinite(condition) or not 1 <= condition <= 1e12:
         raise ValueError('Invalid final conditioning')
     for key, expected in [('output_v',output), ('input_power_w',pin), ('device_power_w',device), ('load_power_w',load)]:
         if not math.isclose(s[key],expected,rel_tol=1e-12,abs_tol=1e-30):

@@ -1,4 +1,5 @@
 import unittest
+import copy
 from dataclasses import asdict
 from ballistic_lab.transport.circuit import solve_terminal_load, CircuitTolerance
 from tests.test_circuit import ResistorModel
@@ -30,3 +31,17 @@ class CompletedReportTests(unittest.TestCase):
         self.result['drive_v'] = -0.001
         with self.assertRaises(ValueError):
             validate(self.status,self.result)
+
+    def test_invalid_components_cannot_hide_in_positive_combined_tolerance(self):
+        for atol, rtol in ((-1e-20, 1e-3), (1e-3, -1e-6)):
+            result = copy.deepcopy(self.result)
+            result['circuit_tolerance'].update(current_atol_a=atol, current_rtol=rtol)
+            with self.assertRaisesRegex(ValueError, 'tolerance component'):
+                validate(self.status, result)
+
+    def test_impossible_condition_numbers_rejected(self):
+        for condition in (-1, 0, .5, float('nan'), float('inf'), 1e13):
+            result = copy.deepcopy(self.result)
+            result['solution']['output_jacobian_condition'] = condition
+            with self.assertRaisesRegex(ValueError, 'conditioning'):
+                validate(self.status, result)
