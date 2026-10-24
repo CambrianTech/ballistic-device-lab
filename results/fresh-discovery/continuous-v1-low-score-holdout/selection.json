@@ -1,0 +1,70 @@
+{
+  "snapshot": "runs\\fresh-discovery-continuous-v1\\round-000021.json",
+  "snapshot_sha256": "a4c6746bcacec4ca9c951fe1096ed1c56735956a345ebfad5cf2e261a8fec4a8",
+  "rule": "Lowest SHA256(candidate key) among lower-half coarse-power rows without phase64",
+  "pool_size": 230,
+  "population": 460,
+  "candidate": {
+    "candidate": {
+      "key": "r0-islands-g0-3",
+      "family": "islands",
+      "repeat": 0,
+      "round": 0,
+      "parameters": [
+        0.24580349288453845,
+        0.36410376505292474,
+        0.19068576434740042,
+        0.253355883573096,
+        0.5077577241231654,
+        0.7819371957164873,
+        0.12430819013032501,
+        -0.53495404127142
+      ],
+      "origin": "fresh global",
+      "obstacles": [
+        [
+          [
+            -0.6229017464422693,
+            0.3727376468738628
+          ],
+          [
+            -0.37709825355773074,
+            0.3727376468738628
+          ],
+          [
+            -0.46886211943744227,
+            0.00863388182093805
+          ]
+        ],
+        [
+          [
+            0.24612113793841728,
+            0.5152767879885687
+          ],
+          [
+            0.7538788620615827,
+            0.5152767879885687
+          ],
+          [
+            0.36418647674676696,
+            -0.26666040772791866
+          ]
+        ]
+      ],
+      "proposal_strategy": "elite"
+    },
+    "levels": [
+      {
+        "count": 257,
+        "dc_v": -6.656890804948828e-07,
+        "dc_power_w": 4.431419518901226e-17,
+        "input_power_w": 4.543595640771897e-09,
+        "efficiency": 9.75311156462943e-09,
+        "max_kcl_a": 1.2313079726219349e-19
+      }
+    ],
+    "device_fingerprint": "06b68c7250b10555521140ba5d99b659633c902e5bb5169afe7d7630cd5ae301",
+    "energy_converged": false
+  },
+  "limitation": "One deterministic diagnostic, not an unbiased population estimate"
+}
