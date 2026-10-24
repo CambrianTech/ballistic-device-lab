@@ -20,7 +20,9 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_drive=False, max_seconds=3600):
+def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_drive=False, zero_drive=False, max_seconds=3600):
+    if zero_drive and (reverse_drive or half_drive):
+        raise ValueError("Zero drive cannot be combined with polarity or amplitude flags")
     if type(max_seconds) is not int or not 1 <= max_seconds <= 7200:
         raise ValueError("Time budget must be an integer from 1 to 7200 seconds")
     if type(max_poles) is not int or max_poles < 128:
@@ -36,6 +38,9 @@ def main(*, max_poles=32768, cache_currents=False, reverse_drive=False, half_dri
     if half_drive:
         drive_v *= 0.5
         out = out.with_name(out.name + "-half")
+    if zero_drive:
+        drive_v = 0.0
+        out = out.with_name(out.name + "-zero")
     if max_seconds != 3600:
         out = out.with_name(out.name + f"-seconds-{max_seconds}")
     out.mkdir(parents=True, exist_ok=True)
@@ -145,6 +150,7 @@ if __name__ == "__main__":
     parser.add_argument("--cache-currents", action="store_true")
     parser.add_argument("--reverse-drive", action="store_true")
     parser.add_argument("--half-drive", action="store_true")
+    parser.add_argument("--zero-drive", action="store_true")
     parser.add_argument("--max-seconds", type=int, default=3600)
     args = parser.parse_args()
-    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive, half_drive=args.half_drive, max_seconds=args.max_seconds)
+    main(max_poles=args.max_poles, cache_currents=args.cache_currents, reverse_drive=args.reverse_drive, half_drive=args.half_drive, zero_drive=args.zero_drive, max_seconds=args.max_seconds)
