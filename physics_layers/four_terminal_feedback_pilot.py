@@ -1,5 +1,6 @@
 """One bounded four-terminal feedback evaluation; status persists between check-ins."""
 
+import argparse
 import hashlib
 import json
 import os
@@ -15,8 +16,13 @@ from .four_terminal_fixture import fixture
 from .site_acceleration import solve_accelerated
 
 
-def main():
-    out = Path("runs/four-terminal-feedback-pilot")
+def main(*, warm_start=False):
+    seed_path = Path("results/physics-reference/four-terminal-feedback/result.json")
+    seed_bytes = seed_path.read_bytes() if warm_start else None
+    seed = json.loads(seed_bytes) if warm_start else None
+    out = Path(
+        "runs/four-terminal-feedback-warm" if warm_start else "runs/four-terminal-feedback-pilot"
+    )
     out.mkdir(parents=True, exist_ok=True)
     # A retained lock is intentional: diagnose a stopped attempt before rerunning.
     with (out / "attempt.lock").open("x") as f:
@@ -26,6 +32,8 @@ def main():
         pid=os.getpid(),
         phase="reference",
         charge_evaluations=0,
+        initialization="published same-bias solution" if warm_start else "zero",
+        seed_sha256=hashlib.sha256(seed_bytes).hexdigest() if warm_start else None,
         source_sha256={
             str(p): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in Path("physics_layers").glob("*.py")
@@ -59,7 +67,14 @@ def main():
                 return provider.solve(*args, **kwargs)
 
         result = solve_accelerated(
-            mesh, mapping, Counted(), neutral, 0.9 + voltage, 300, tolerance=1e-5
+            mesh,
+            mapping,
+            Counted(),
+            neutral,
+            0.9 + voltage,
+            300,
+            tolerance=1e-5,
+            initial_potential_v=seed["site_potential_v"] if warm_start else None,
         )
         record = dict(
             transport=asdict(result.transport),
@@ -70,6 +85,8 @@ def main():
             gate_electrostatic_v=0.03,
             convention="mu=0.9+V, lead onsite=+V, contact phi=-V, device onsite=-phi",
             source_sha256=status["source_sha256"],
+            initialization=status["initialization"],
+            seed_sha256=status["seed_sha256"],
         )
         (out / "result.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
         status["phase"] = "complete"
@@ -82,4 +99,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--warm-start",
+        action="store_true",
+        help="Benchmark the published same-bias solution in a separate retained run",
+    )
+    main(warm_start=parser.parse_args().warm_start)

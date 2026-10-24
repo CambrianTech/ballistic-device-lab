@@ -206,3 +206,11 @@ small feedback fixture and rejection of malformed guesses. This is numerical
 verification, not a measured graphene speedup. The hybrid solver still builds a
 numerical Jacobian, and multiple self-consistent branches remain possible;
 future bias sweeps must compare cold starts and forward/reverse continuation.
+
+The same-bias warm-start benchmark is available with
+`python -m physics_layers.four_terminal_feedback_pilot --warm-start`.
+It uses the published pilot potential as its initial guess, records the seed hash,
+recomputes the neutral background, and retains a separate exclusive lock and
+results in `runs/four-terminal-feedback-warm`. The 80-call ceiling and final
+checks are unchanged. Results are pending; even a speedup here would not establish
+speedup at a different bias or in a loaded-output solve.
