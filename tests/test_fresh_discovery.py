@@ -23,3 +23,10 @@ class RefinementTests(unittest.TestCase):
    return dict(candidate=dict(key=key),levels=[dict(dc_power_w=power)],energy_converged=ok,phase_converged=ok,phase64=dict(dc_power_w=power))
   rows=[row('leader',100,True),row('second',90,True),row('pending',80,False),row('other',70,False),row('lower',60,False)]
   self.assertEqual([r['candidate']['key'] for r in refinement_queue(rows)],['pending','other'])
+
+class StrategyTests(unittest.TestCase):
+ def test_mixed_visits_every_strategy_without_random_schedule(self):
+  from ballistic_lab.pipeline.fresh_discovery import strategy_for
+  self.assertEqual([strategy_for('mixed',i) for i in range(1,7)],['elite','diversity','random']*2)
+  self.assertEqual(strategy_for('random',9),'random')
+  with self.assertRaises(ValueError):strategy_for('unknown',1)

@@ -58,3 +58,19 @@ operators must also avoid launching overlapping campaigns on limited hardware.
 All completed rounds are immutable reporting inputs. Partial rows are checkpoints,
 not published champions. The campaign keeps its best in `state.json` and snapshots;
 the original champion ledger and historical studies remain intact.
+
+## Mixed proposal strategy
+
+`--strategy mixed` rotates elite, diversity and random parent strategies across
+successive feedback generations; every generation still includes fresh global
+samples. Each proposal records the strategy that produced it. Available explicit
+modes are `elite`, `diversity`, `random`, and `mixed` (default remains diversity).
+Refinement slots now go to the strongest unqualified records, so already-converged
+leaders cannot consume them. Promotion still requires both convergence gates.
+
+The bounded mixed campaign uses seed 241027 and a fresh run directory. It changes
+both seed and strategy, so its outcome is not a controlled estimate of strategy
+superiority. It broadens proposal behavior within the existing five geometry
+families; it does not add new geometric topology families. Original campaigns,
+controls, and champion are retained. The publisher's campaign root points at the
+new run so its plots update automatically.

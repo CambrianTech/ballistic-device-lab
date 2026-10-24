@@ -22,12 +22,21 @@ def refinement_queue(rows):
     return finalists([r for r in rows if not qualified(r)])
 
 
+def strategy_for(mode, generation):
+    if mode == 'mixed':
+        return ('elite', 'diversity', 'random')[(max(1, generation)-1) % 3]
+    if mode not in ('elite', 'diversity', 'random'):
+        raise ValueError('Unknown proposal strategy')
+    return mode
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--seed',type=int,default=241026)
     p.add_argument('--rounds',type=int,default=20)
     p.add_argument('--workers',type=int,default=4)
+    p.add_argument('--strategy',choices=['elite','diversity','random','mixed'],default='diversity')
     p.add_argument('--ledger',type=Path,default=Path('results/live/champions.json'))
     p.add_argument('--reference-manifest',type=Path,default=Path('runs/dc-continuous/source.json'))
     p.add_argument('--controls',type=Path,default=Path('results/2026-10-22-dc-wide/summary.json'))
@@ -40,7 +49,7 @@ def main():
         manifest=args.root/'source.json'
         if manifest.exists() and json.loads(manifest.read_text())!=hashes: raise ValueError('Source changed; use a new campaign')
         save(manifest,hashes)
-        config=dict(seed=args.seed,rounds=args.rounds,workers=args.workers)
+        config=dict(seed=args.seed,rounds=args.rounds,workers=args.workers,strategy=args.strategy)
         cfg=args.root/'config.json'
         if cfg.exists() and json.loads(cfg.read_text())!=config: raise ValueError('Resume configuration mismatch')
         save(cfg,config)
@@ -60,12 +69,13 @@ def main():
         (args.root/'spectra').mkdir(exist_ok=True)
         plan=replace(WideDCPlan(),seeds=(args.seed,args.seed+100),parent_strategy='diversity',mutation_floor=.04)
         try:
-            with ProcessPoolExecutor(max_workers=args.workers) as pool:
+            with ProcessPoolExecutor(max_workers=args.workers,strategy=args.strategy) as pool:
                 while state['round']<args.rounds and not (args.root/'STOP').exists():
                     index=state['round']; path=args.root/f'proposals-{index:06d}.json'
                     if path.exists(): items=json.loads(path.read_text())
                     else:
-                        items=[c for repeat in range(2) for c in proposals(plan,repeat,index,state['rows'])]
+                        round_plan=replace(plan,parent_strategy=strategy_for(args.strategy,index))
+                        items=[dict(c,proposal_strategy=round_plan.parent_strategy) for repeat in range(2) for c in proposals(round_plan,repeat,index,state['rows'])]
                         save(path,items)
                     known={r['candidate']['key']:r for r in state['rows']}
                     status(args.root,phase='screen',round=index)
