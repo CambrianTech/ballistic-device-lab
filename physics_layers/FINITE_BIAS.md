@@ -145,3 +145,15 @@ input propagation. Circuit output is bottom minus top. This is an integration
 fixture, not an integrated graphene device calculation. Next: implement the
 four-terminal graphene callback with explicit electrode electrostatics and benchmark
 its cost before a fresh campaign.
+
+## Explicit electrode boundaries
+
+`ElectrodeBoundary` supplies a declared-order partition of contact/gate mesh nodes.
+It rejects overlapping electrodes (including ambiguous shared edges/corners),
+missing outer-face assignments, empty electrodes and invalid voltages. The device
+callback must choose the masks and relate electrostatic voltage to lead band shifts
+and reservoir chemical potentials; no contact work function is inferred.
+Four boundary/circuit tests pass, including Poisson gauge shifts, linear
+superposition, the maximum principle and the prior analytic load fixture:
+`python -m unittest tests.test_electrode_boundary tests.test_feedback_current`.
+This establishes boundary plumbing, not calibrated graphene contact physics.
