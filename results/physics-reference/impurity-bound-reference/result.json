@@ -1,0 +1,85 @@
+{
+  "scope": "Analytic synthetic chain verification, no Poisson feedback or physical validation",
+  "rows": [
+    {
+      "onsite_ev": -0.7,
+      "temperature_k": 150,
+      "reference_ev": -0.1,
+      "bound_energy_ev": -2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 1.981486086322093e-10,
+      "current_error_a": 3.3881317890172014e-21
+    },
+    {
+      "onsite_ev": -0.7,
+      "temperature_k": 150,
+      "reference_ev": 0.2,
+      "bound_energy_ev": -2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 3.602691478477027e-10,
+      "current_error_a": 3.3881317890172014e-21
+    },
+    {
+      "onsite_ev": -0.7,
+      "temperature_k": 600,
+      "reference_ev": -0.1,
+      "bound_energy_ev": -2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 1.9880541657357753e-10,
+      "current_error_a": 1.0164395367051604e-20
+    },
+    {
+      "onsite_ev": -0.7,
+      "temperature_k": 600,
+      "reference_ev": 0.2,
+      "bound_energy_ev": -2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 3.6092528965525617e-10,
+      "current_error_a": 1.3552527156068805e-20
+    },
+    {
+      "onsite_ev": 0.7,
+      "temperature_k": 150,
+      "reference_ev": -0.1,
+      "bound_energy_ev": 2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 3.062295972355855e-10,
+      "current_error_a": 0.0
+    },
+    {
+      "onsite_ev": 0.7,
+      "temperature_k": 150,
+      "reference_ev": 0.2,
+      "bound_energy_ev": 2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 1.441072816632527e-10,
+      "current_error_a": 0.0
+    },
+    {
+      "onsite_ev": 0.7,
+      "temperature_k": 600,
+      "reference_ev": -0.1,
+      "bound_energy_ev": 2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 3.0557079089277295e-10,
+      "current_error_a": 1.0164395367051604e-20
+    },
+    {
+      "onsite_ev": 0.7,
+      "temperature_k": 600,
+      "reference_ev": 0.2,
+      "bound_energy_ev": 2.118962010041709,
+      "bound_weight": 0.33035042472810605,
+      "sum_rule": 0.9999999999999849,
+      "charge_error": 1.4345014065497708e-10,
+      "current_error_a": 1.0164395367051604e-20
+    }
+  ]
+}
