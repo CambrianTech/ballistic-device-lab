@@ -67,5 +67,10 @@ Local electrostatics remains mesh-sensitive; address finite charge extent or
 self-interaction before a quantitative dynamic charge-storage prediction.
 
 [Response-matrix diagnosis](../results/physics-reference/electrostatic-kernel/README.md)
-finds on-site responses increase by 2.083–6.481 V/e on refinement.
+finds on-site responses increase by 2.083â€“6.481 V/e on refinement.
 No diagonal subtraction is applied; finite charge extent needs independent justification.
+
+[Fixed Gaussian charge verification](../results/physics-reference/finite-charge/README.md)
+shows approximately second-order convergence: 2.59%, 0.624%, 0.155% mean-potential
+error at 0.2, 0.1, 0.05 nm grids. The 0.2 nm Gaussian width is a test choice,
+not carbon-orbital calibration. No graphene feedback model has been replaced.

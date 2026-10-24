@@ -1,0 +1,35 @@
+{
+  "sigma_nm": 0.2,
+  "relative_permittivity": 4,
+  "box_side_nm": 2.4,
+  "analytic_average_v": 1.015516247525379,
+  "boundary": "Free-space Gaussian analytic Dirichlet values; tails beyond boundary negligible, not gate box",
+  "limitation": "Chosen Gaussian test density; not a calibrated carbon pz orbital or self-interaction correction",
+  "rows": [
+    {
+      "spacing_nm": 0.2,
+      "captured_charge_fraction": 0.9999999795415923,
+      "averaged_potential_v": 1.041829834305043,
+      "relative_error": 0.025911536958453718,
+      "max_potential_error_v": 0.07894770315850042
+    },
+    {
+      "spacing_nm": 0.1,
+      "captured_charge_fraction": 0.9999999809433346,
+      "averaged_potential_v": 1.0218551145813337,
+      "relative_error": 0.00624201441523109,
+      "max_potential_error_v": 0.018292673554397565
+    },
+    {
+      "spacing_nm": 0.05,
+      "captured_charge_fraction": 0.9999999884218775,
+      "averaged_potential_v": 1.0170874215639414,
+      "relative_error": 0.001547167800014071,
+      "max_potential_error_v": 0.004493669263441191
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\joelt\\development\\ballistic-device-lab\\physics_layers\\finite_charge_demo.py": "d8a2dbf2257330db0baf2c762c05049b957910faafc8c6eb5ce7a7cd7c0a479b",
+    "physics_layers\\poisson3d.py": "0ee273d38ce11bc5ec583b7d6483d639f79b899c192cb7523c75763b3dd3f3d2"
+  }
+}
