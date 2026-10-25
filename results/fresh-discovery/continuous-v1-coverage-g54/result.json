@@ -1,0 +1,6776 @@
+{
+  "snapshot": "runs/fresh-discovery-continuous-v1/round-000054.json",
+  "snapshot_sha256": "c1c74b8861659412a73b19ce8384a49afd15cc9835ec3a473dff9fdedc027dd0",
+  "generation": 54,
+  "screening_energy_points": 257,
+  "scope": "Common coarse fixed-potential screening observable, not converged rankings or physical novelty.",
+  "families": {
+    "beveled": {
+      "count": 224,
+      "minimum_uv": -13.690780589634887,
+      "maximum_uv": 11.118995846984317,
+      "median_absolute_uv": 2.7737162044181405,
+      "positive": 98,
+      "negative": 126,
+      "qualified": 25
+    },
+    "islands": {
+      "count": 224,
+      "minimum_uv": -6.600309580663088,
+      "maximum_uv": 10.527123575674894,
+      "median_absolute_uv": 1.8259207462695999,
+      "positive": 140,
+      "negative": 84,
+      "qualified": 14
+    },
+    "profile": {
+      "count": 224,
+      "minimum_uv": -13.296645825590845,
+      "maximum_uv": 12.311374674478426,
+      "median_absolute_uv": 2.6761771340732814,
+      "positive": 103,
+      "negative": 121,
+      "qualified": 34
+    },
+    "radial": {
+      "count": 224,
+      "minimum_uv": -7.573670937291915,
+      "maximum_uv": 8.270672848340492,
+      "median_absolute_uv": 2.0755730709567453,
+      "positive": 111,
+      "negative": 113,
+      "qualified": 12
+    },
+    "triangle": {
+      "count": 224,
+      "minimum_uv": -15.100806832621359,
+      "maximum_uv": 6.90155204063322,
+      "median_absolute_uv": 2.3361897846052173,
+      "positive": 83,
+      "negative": 141,
+      "qualified": 25
+    }
+  },
+  "rows": [
+    {
+      "key": "r0-triangle-g0-0",
+      "family": "triangle",
+      "dc_uv": -6.158208769207213,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g0-1",
+      "family": "triangle",
+      "dc_uv": 3.7136054539310956,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g0-2",
+      "family": "triangle",
+      "dc_uv": 2.427916068841641,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g0-3",
+      "family": "triangle",
+      "dc_uv": 0.6740804793327427,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g0-0",
+      "family": "beveled",
+      "dc_uv": 4.669939468836185,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g0-1",
+      "family": "beveled",
+      "dc_uv": -0.785564396601611,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g0-2",
+      "family": "beveled",
+      "dc_uv": -9.654821811612864,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g0-3",
+      "family": "beveled",
+      "dc_uv": -3.3009531101230816,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g0-0",
+      "family": "profile",
+      "dc_uv": -0.04805035151577828,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g0-1",
+      "family": "profile",
+      "dc_uv": 1.6234490257526026,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g0-2",
+      "family": "profile",
+      "dc_uv": -6.369434031231563,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g0-3",
+      "family": "profile",
+      "dc_uv": -8.0343120954774,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g0-0",
+      "family": "islands",
+      "dc_uv": -1.4107566165040586,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g0-2",
+      "family": "islands",
+      "dc_uv": 1.2356238808743225,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g0-1",
+      "family": "islands",
+      "dc_uv": 0.7399160523924089,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g0-3",
+      "family": "islands",
+      "dc_uv": -0.6656890804948828,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g0-0",
+      "family": "radial",
+      "dc_uv": 1.0874837395724166,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g0-2",
+      "family": "radial",
+      "dc_uv": -0.5824847643406497,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g0-1",
+      "family": "radial",
+      "dc_uv": -5.599296198836885,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g0-3",
+      "family": "radial",
+      "dc_uv": 0.3887357334342934,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g0-0",
+      "family": "triangle",
+      "dc_uv": -1.9981325887136203,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g0-1",
+      "family": "triangle",
+      "dc_uv": 6.825228332195659,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g0-2",
+      "family": "triangle",
+      "dc_uv": 0.23016777296982607,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g0-3",
+      "family": "triangle",
+      "dc_uv": -4.609984046028,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g0-0",
+      "family": "beveled",
+      "dc_uv": 0.34617917575056173,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g0-1",
+      "family": "beveled",
+      "dc_uv": 4.661446285331807,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g0-2",
+      "family": "beveled",
+      "dc_uv": 1.4677964958180743,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g0-3",
+      "family": "beveled",
+      "dc_uv": -0.5855934774119375,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g0-0",
+      "family": "profile",
+      "dc_uv": 0.5591171169735115,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g0-1",
+      "family": "profile",
+      "dc_uv": 0.44539456568303515,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g0-2",
+      "family": "profile",
+      "dc_uv": 2.434461629433304,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g0-3",
+      "family": "profile",
+      "dc_uv": -1.2152742772528582,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g0-0",
+      "family": "islands",
+      "dc_uv": 1.202248656528704,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g0-1",
+      "family": "islands",
+      "dc_uv": -0.3076139839653672,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g0-2",
+      "family": "islands",
+      "dc_uv": 2.1604352498693555,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g0-3",
+      "family": "islands",
+      "dc_uv": -0.38358346877546606,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g0-0",
+      "family": "radial",
+      "dc_uv": -0.9209709544860449,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g0-1",
+      "family": "radial",
+      "dc_uv": -3.6100334143837927,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g0-2",
+      "family": "radial",
+      "dc_uv": 0.2962657865584126,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g0-3",
+      "family": "radial",
+      "dc_uv": 3.711383673652275,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g1-1",
+      "family": "beveled",
+      "dc_uv": 1.3972680626964955,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g1-0",
+      "family": "beveled",
+      "dc_uv": 6.0892141449919714,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g1-1",
+      "family": "triangle",
+      "dc_uv": 2.9299780917983753,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g1-0",
+      "family": "triangle",
+      "dc_uv": -5.12279025024486,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g1-0",
+      "family": "islands",
+      "dc_uv": 1.0898700679051727,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g1-0",
+      "family": "profile",
+      "dc_uv": 0.15582645188404953,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g1-1",
+      "family": "profile",
+      "dc_uv": -6.640747730349101,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g1-1",
+      "family": "islands",
+      "dc_uv": 1.0408406573304745,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g1-0",
+      "family": "radial",
+      "dc_uv": -0.14779419475837083,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g1-1",
+      "family": "radial",
+      "dc_uv": 6.276811740234719,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g1-0",
+      "family": "triangle",
+      "dc_uv": -3.2933800735000305,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g1-1",
+      "family": "triangle",
+      "dc_uv": -4.453612294660677,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g1-0",
+      "family": "beveled",
+      "dc_uv": -2.6484134991794623,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g1-1",
+      "family": "profile",
+      "dc_uv": -2.964290174023154,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g1-1",
+      "family": "beveled",
+      "dc_uv": -5.324003680631734,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g1-0",
+      "family": "profile",
+      "dc_uv": -3.8474886928824907,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g1-0",
+      "family": "islands",
+      "dc_uv": 1.6450255404947793,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g1-1",
+      "family": "radial",
+      "dc_uv": 3.0812811872541395,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g1-1",
+      "family": "islands",
+      "dc_uv": 2.4844759820432665,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g1-0",
+      "family": "radial",
+      "dc_uv": -0.4061418442827654,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g2-0",
+      "family": "triangle",
+      "dc_uv": 0.23560049525512508,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g2-0",
+      "family": "beveled",
+      "dc_uv": -3.459381020618872,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g2-1",
+      "family": "beveled",
+      "dc_uv": -1.7004853609861628,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g2-1",
+      "family": "triangle",
+      "dc_uv": -4.170849524539845,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g2-1",
+      "family": "profile",
+      "dc_uv": -2.638079928542247,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g2-0",
+      "family": "profile",
+      "dc_uv": 2.945500563275776,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g2-1",
+      "family": "islands",
+      "dc_uv": -0.4629089698698487,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g2-0",
+      "family": "islands",
+      "dc_uv": 2.905568766229619,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g2-0",
+      "family": "radial",
+      "dc_uv": 3.4678509634169283,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g2-1",
+      "family": "radial",
+      "dc_uv": 1.791517293586876,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g2-1",
+      "family": "triangle",
+      "dc_uv": 2.414696289420831,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g2-0",
+      "family": "triangle",
+      "dc_uv": -1.8829058142001132,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g2-0",
+      "family": "beveled",
+      "dc_uv": -2.8564097423383,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g2-0",
+      "family": "profile",
+      "dc_uv": 7.956299283374894,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g2-1",
+      "family": "beveled",
+      "dc_uv": -1.0661683525315764,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g2-1",
+      "family": "profile",
+      "dc_uv": 5.451688543952484,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g2-0",
+      "family": "islands",
+      "dc_uv": 0.22907061056072614,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g2-1",
+      "family": "islands",
+      "dc_uv": 0.5378168817094395,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g2-0",
+      "family": "radial",
+      "dc_uv": 3.262485802154984,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g2-1",
+      "family": "radial",
+      "dc_uv": 0.17757218471006445,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g3-0",
+      "family": "beveled",
+      "dc_uv": -2.5189535589478997,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g3-1",
+      "family": "triangle",
+      "dc_uv": -4.126463459854092,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g3-1",
+      "family": "beveled",
+      "dc_uv": 1.1951976816220355,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g3-0",
+      "family": "triangle",
+      "dc_uv": -0.16432022204685823,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g3-0",
+      "family": "profile",
+      "dc_uv": -4.365898076458208,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g3-1",
+      "family": "islands",
+      "dc_uv": 0.7716433290580428,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g3-1",
+      "family": "profile",
+      "dc_uv": -13.296645825590845,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g3-0",
+      "family": "islands",
+      "dc_uv": 0.6009654293586376,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g3-0",
+      "family": "radial",
+      "dc_uv": -1.0298318716779271,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g3-1",
+      "family": "radial",
+      "dc_uv": -0.15555223437995938,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g3-1",
+      "family": "triangle",
+      "dc_uv": -6.972550953982056,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g3-0",
+      "family": "triangle",
+      "dc_uv": -0.21626484383213532,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g3-0",
+      "family": "beveled",
+      "dc_uv": -2.1298151046045977,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g3-1",
+      "family": "beveled",
+      "dc_uv": -0.9980279623278611,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g3-0",
+      "family": "profile",
+      "dc_uv": -11.092024189749262,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g3-1",
+      "family": "profile",
+      "dc_uv": -3.229552231639581,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g3-0",
+      "family": "islands",
+      "dc_uv": 3.2500799680476393,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g3-1",
+      "family": "radial",
+      "dc_uv": -4.530559575756029,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g3-1",
+      "family": "islands",
+      "dc_uv": 2.7292422678596666,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g3-0",
+      "family": "radial",
+      "dc_uv": 4.632779507428239,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g4-1",
+      "family": "triangle",
+      "dc_uv": 0.39221128020556695,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g4-1",
+      "family": "beveled",
+      "dc_uv": 0.11929985257455193,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g4-0",
+      "family": "triangle",
+      "dc_uv": -1.585972156074375,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g4-0",
+      "family": "beveled",
+      "dc_uv": -4.316091938210483,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g4-0",
+      "family": "profile",
+      "dc_uv": 3.7171081616343224,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g4-1",
+      "family": "profile",
+      "dc_uv": -13.152174325535583,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g4-0",
+      "family": "islands",
+      "dc_uv": 0.5235833966063543,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g4-1",
+      "family": "islands",
+      "dc_uv": 0.12098765727209461,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g4-0",
+      "family": "radial",
+      "dc_uv": -0.8911446553083784,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g4-0",
+      "family": "triangle",
+      "dc_uv": -5.999734054389899,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g4-1",
+      "family": "triangle",
+      "dc_uv": -15.048829587304748,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g4-1",
+      "family": "radial",
+      "dc_uv": -1.89962333878526,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g4-0",
+      "family": "profile",
+      "dc_uv": -4.049015304880638,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g4-1",
+      "family": "profile",
+      "dc_uv": 7.765849691058022,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g4-0",
+      "family": "beveled",
+      "dc_uv": 0.9647406005365315,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g4-1",
+      "family": "beveled",
+      "dc_uv": -3.7116887466908586,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g4-0",
+      "family": "islands",
+      "dc_uv": 0.8848435908921675,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g4-1",
+      "family": "islands",
+      "dc_uv": -0.24348652854216685,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g4-1",
+      "family": "radial",
+      "dc_uv": -4.152767508365534,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g4-0",
+      "family": "radial",
+      "dc_uv": -4.640145605414536,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g5-0",
+      "family": "triangle",
+      "dc_uv": 3.3069395760570384,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g5-1",
+      "family": "triangle",
+      "dc_uv": -8.190633826351347,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g5-0",
+      "family": "beveled",
+      "dc_uv": -1.3468947407409506,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g5-1",
+      "family": "beveled",
+      "dc_uv": 3.4685146167022185,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g5-1",
+      "family": "profile",
+      "dc_uv": -4.763815265727908,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g5-0",
+      "family": "profile",
+      "dc_uv": -8.503790384740523,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g5-0",
+      "family": "islands",
+      "dc_uv": 0.9528439708006426,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g5-1",
+      "family": "islands",
+      "dc_uv": 0.3373396526588167,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g5-0",
+      "family": "radial",
+      "dc_uv": 0.8323264043103996,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g5-1",
+      "family": "radial",
+      "dc_uv": 2.433148121325469,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g5-1",
+      "family": "triangle",
+      "dc_uv": -0.41114574890804995,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g5-0",
+      "family": "triangle",
+      "dc_uv": -3.913405255566535,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g5-0",
+      "family": "profile",
+      "dc_uv": 5.181265591827927,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g5-0",
+      "family": "beveled",
+      "dc_uv": -1.9683694668979113,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g5-1",
+      "family": "beveled",
+      "dc_uv": 2.2174225065897053,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g5-1",
+      "family": "profile",
+      "dc_uv": -1.908423285896563,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g5-0",
+      "family": "islands",
+      "dc_uv": -0.098643838031376,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g5-0",
+      "family": "radial",
+      "dc_uv": 1.3334859099494631,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g5-1",
+      "family": "islands",
+      "dc_uv": 1.0199820681916372,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g5-1",
+      "family": "radial",
+      "dc_uv": 0.02614034991024764,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g6-0",
+      "family": "triangle",
+      "dc_uv": 2.586416838175762,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g6-1",
+      "family": "triangle",
+      "dc_uv": 1.7183204244417642,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g6-0",
+      "family": "beveled",
+      "dc_uv": 0.7891752591776493,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g6-1",
+      "family": "beveled",
+      "dc_uv": 0.035237735315890015,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g6-1",
+      "family": "profile",
+      "dc_uv": -1.127244687800812,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g6-0",
+      "family": "profile",
+      "dc_uv": -6.587307267374182,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g6-1",
+      "family": "islands",
+      "dc_uv": -1.7290880278902512,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g6-0",
+      "family": "islands",
+      "dc_uv": 2.7322910374814615,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g6-1",
+      "family": "radial",
+      "dc_uv": -2.3957310524606243,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g6-0",
+      "family": "triangle",
+      "dc_uv": -1.7048831757560596,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g6-0",
+      "family": "radial",
+      "dc_uv": -1.78740643467588,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g6-1",
+      "family": "triangle",
+      "dc_uv": 1.3021742996484784,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g6-0",
+      "family": "beveled",
+      "dc_uv": -4.675860835014727,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g6-0",
+      "family": "profile",
+      "dc_uv": -1.6125727828440741,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g6-1",
+      "family": "beveled",
+      "dc_uv": 0.2369069141740893,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g6-1",
+      "family": "profile",
+      "dc_uv": -3.0985788404084835,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g6-0",
+      "family": "islands",
+      "dc_uv": -0.5155610208164452,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g6-0",
+      "family": "radial",
+      "dc_uv": 2.4539939438994374,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g6-1",
+      "family": "islands",
+      "dc_uv": -3.3057677176354603,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g6-1",
+      "family": "radial",
+      "dc_uv": 4.010533913685602,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g7-1",
+      "family": "triangle",
+      "dc_uv": -7.331378843774716,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g7-0",
+      "family": "triangle",
+      "dc_uv": -4.587456317272246,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g7-1",
+      "family": "beveled",
+      "dc_uv": 2.727619262692053,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g7-0",
+      "family": "beveled",
+      "dc_uv": -0.19534117463722428,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g7-0",
+      "family": "profile",
+      "dc_uv": -0.25441017630434287,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g7-1",
+      "family": "profile",
+      "dc_uv": -0.3035462857128696,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g7-0",
+      "family": "islands",
+      "dc_uv": -1.7103197043250546,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g7-1",
+      "family": "islands",
+      "dc_uv": 4.729887266575761,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g7-0",
+      "family": "radial",
+      "dc_uv": 2.996951593092491,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g7-1",
+      "family": "triangle",
+      "dc_uv": 1.3502734029169914,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g7-1",
+      "family": "radial",
+      "dc_uv": 1.860686686224876,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g7-0",
+      "family": "triangle",
+      "dc_uv": 0.7767646604315399,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g7-0",
+      "family": "beveled",
+      "dc_uv": 0.5615187365926829,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g7-0",
+      "family": "profile",
+      "dc_uv": 5.263219672251615,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g7-1",
+      "family": "beveled",
+      "dc_uv": -1.2658135637158794,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g7-1",
+      "family": "profile",
+      "dc_uv": -4.907229155934052,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g7-0",
+      "family": "radial",
+      "dc_uv": -0.7703081395043483,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g7-1",
+      "family": "islands",
+      "dc_uv": 3.1980630963150545,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g7-0",
+      "family": "islands",
+      "dc_uv": 1.2997114384321276,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g7-1",
+      "family": "radial",
+      "dc_uv": -0.48218702855910717,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g8-0",
+      "family": "triangle",
+      "dc_uv": 1.49467116145346,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g8-1",
+      "family": "triangle",
+      "dc_uv": -2.84612623391119,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g8-1",
+      "family": "beveled",
+      "dc_uv": -0.09861120450535318,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g8-0",
+      "family": "beveled",
+      "dc_uv": -0.6140776943595293,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g8-0",
+      "family": "profile",
+      "dc_uv": 3.2381187020013713,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g8-1",
+      "family": "profile",
+      "dc_uv": -2.1074359091825787,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g8-1",
+      "family": "islands",
+      "dc_uv": -0.9545204409147833,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g8-0",
+      "family": "islands",
+      "dc_uv": 1.563000769541918,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g8-0",
+      "family": "radial",
+      "dc_uv": 5.664793800812294,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g8-1",
+      "family": "radial",
+      "dc_uv": -6.786696860285346,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g8-0",
+      "family": "triangle",
+      "dc_uv": -5.5828192418204265,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g8-1",
+      "family": "triangle",
+      "dc_uv": -5.800759905791019,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g8-0",
+      "family": "beveled",
+      "dc_uv": -3.5612449165242923,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g8-1",
+      "family": "beveled",
+      "dc_uv": -0.5051000881947243,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g8-0",
+      "family": "profile",
+      "dc_uv": 3.3887760533688294,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g8-1",
+      "family": "profile",
+      "dc_uv": -1.2008435070994432,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g8-0",
+      "family": "islands",
+      "dc_uv": -3.3565563812905643,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g8-1",
+      "family": "islands",
+      "dc_uv": 4.0192613477008585,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g8-0",
+      "family": "radial",
+      "dc_uv": -0.24042871031386256,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g8-1",
+      "family": "radial",
+      "dc_uv": 1.2118201758621951,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g9-1",
+      "family": "beveled",
+      "dc_uv": -5.64227058846066,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g9-0",
+      "family": "beveled",
+      "dc_uv": -3.5369836663201566,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g9-0",
+      "family": "triangle",
+      "dc_uv": 2.480274708287066,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g9-1",
+      "family": "triangle",
+      "dc_uv": 0.21306755877481678,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g9-0",
+      "family": "profile",
+      "dc_uv": -9.416791930404779,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g9-1",
+      "family": "profile",
+      "dc_uv": 2.3435521374072437,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g9-0",
+      "family": "islands",
+      "dc_uv": -1.3429547485107907,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g9-1",
+      "family": "islands",
+      "dc_uv": 1.8875304450998198,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g9-0",
+      "family": "radial",
+      "dc_uv": 0.41447229649930845,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g9-0",
+      "family": "triangle",
+      "dc_uv": 5.000651404843835,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g9-1",
+      "family": "radial",
+      "dc_uv": -1.3832889264755746,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g9-1",
+      "family": "triangle",
+      "dc_uv": -2.8646237150855507,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g9-0",
+      "family": "beveled",
+      "dc_uv": -2.6879777164958627,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g9-0",
+      "family": "profile",
+      "dc_uv": 5.662640101109828,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g9-1",
+      "family": "beveled",
+      "dc_uv": -2.504611743641295,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g9-1",
+      "family": "profile",
+      "dc_uv": -2.0487730085092046,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g9-0",
+      "family": "islands",
+      "dc_uv": 0.5667290348946613,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g9-1",
+      "family": "islands",
+      "dc_uv": -0.9705022515989168,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g9-0",
+      "family": "radial",
+      "dc_uv": -1.0781362390443652,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g9-1",
+      "family": "radial",
+      "dc_uv": 3.6686860614026693,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g10-1",
+      "family": "triangle",
+      "dc_uv": -6.78086786116119,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g10-1",
+      "family": "beveled",
+      "dc_uv": -9.556248769996309,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g10-0",
+      "family": "triangle",
+      "dc_uv": -3.2180582632820522,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g10-0",
+      "family": "beveled",
+      "dc_uv": -1.161995552755539,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g10-1",
+      "family": "profile",
+      "dc_uv": 1.7483965891054682,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g10-0",
+      "family": "profile",
+      "dc_uv": 7.414501894155312,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g10-0",
+      "family": "islands",
+      "dc_uv": 3.310819058885555,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g10-1",
+      "family": "islands",
+      "dc_uv": 2.956218812052884,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g10-0",
+      "family": "triangle",
+      "dc_uv": -7.177478605797679,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g10-1",
+      "family": "radial",
+      "dc_uv": 3.4877301460435386,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g10-0",
+      "family": "radial",
+      "dc_uv": 4.483661352358353,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g10-1",
+      "family": "triangle",
+      "dc_uv": 1.2907110243862505,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g10-0",
+      "family": "beveled",
+      "dc_uv": 2.356104798462386,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g10-1",
+      "family": "beveled",
+      "dc_uv": -2.520546199892141,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g10-0",
+      "family": "profile",
+      "dc_uv": -0.6427453680228816,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g10-1",
+      "family": "profile",
+      "dc_uv": -6.856406853988637,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g10-0",
+      "family": "islands",
+      "dc_uv": 2.4738167701669243,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g10-1",
+      "family": "islands",
+      "dc_uv": 5.379125247066194,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g10-0",
+      "family": "radial",
+      "dc_uv": 7.164222316076869,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g10-1",
+      "family": "radial",
+      "dc_uv": -3.8543839701534366,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g11-1",
+      "family": "triangle",
+      "dc_uv": -1.663245365751501,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g11-0",
+      "family": "triangle",
+      "dc_uv": 1.1410470182637527,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g11-0",
+      "family": "beveled",
+      "dc_uv": 0.5115734854098105,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g11-1",
+      "family": "beveled",
+      "dc_uv": 4.855637722077808,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g11-1",
+      "family": "profile",
+      "dc_uv": -8.885897558269841,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g11-0",
+      "family": "profile",
+      "dc_uv": 0.917705517598609,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g11-0",
+      "family": "islands",
+      "dc_uv": 2.3986433631049677,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g11-1",
+      "family": "islands",
+      "dc_uv": -0.4977892419910501,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g11-0",
+      "family": "radial",
+      "dc_uv": -4.333505789430557,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g11-1",
+      "family": "radial",
+      "dc_uv": 0.6931382600415724,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g11-0",
+      "family": "triangle",
+      "dc_uv": -5.767526468137464,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g11-1",
+      "family": "triangle",
+      "dc_uv": -1.9434237106503576,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g11-0",
+      "family": "beveled",
+      "dc_uv": 4.976052755281365,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g11-1",
+      "family": "beveled",
+      "dc_uv": -4.2460955258291895,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g11-1",
+      "family": "profile",
+      "dc_uv": -7.6081625081902935,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g11-0",
+      "family": "profile",
+      "dc_uv": 1.9872144453205904,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g11-0",
+      "family": "islands",
+      "dc_uv": -2.0909099370379685,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g11-1",
+      "family": "islands",
+      "dc_uv": 0.5065945373269771,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g11-0",
+      "family": "radial",
+      "dc_uv": 2.8395169149517083,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g11-1",
+      "family": "radial",
+      "dc_uv": -1.3086598066696484,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g12-1",
+      "family": "triangle",
+      "dc_uv": 3.143623935517043,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g12-0",
+      "family": "triangle",
+      "dc_uv": -0.40976508600325373,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g12-1",
+      "family": "beveled",
+      "dc_uv": 0.8752922116503176,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g12-0",
+      "family": "beveled",
+      "dc_uv": 0.048744641913227194,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g12-1",
+      "family": "profile",
+      "dc_uv": -2.676188244736168,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g12-0",
+      "family": "profile",
+      "dc_uv": 5.282200891367887,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g12-0",
+      "family": "islands",
+      "dc_uv": -0.2462691505912925,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g12-1",
+      "family": "islands",
+      "dc_uv": 0.6921141920918924,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g12-0",
+      "family": "radial",
+      "dc_uv": 2.482922325639693,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g12-1",
+      "family": "radial",
+      "dc_uv": 0.4451039184717382,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g12-0",
+      "family": "triangle",
+      "dc_uv": -1.9529375886410023,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g12-1",
+      "family": "triangle",
+      "dc_uv": -1.31978995958225,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g12-0",
+      "family": "beveled",
+      "dc_uv": -0.6966829708486159,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g12-1",
+      "family": "beveled",
+      "dc_uv": 5.116250089722457,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g12-0",
+      "family": "profile",
+      "dc_uv": -2.6237699375714114,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g12-1",
+      "family": "profile",
+      "dc_uv": -3.621142409777005,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g12-1",
+      "family": "islands",
+      "dc_uv": 4.407685360988471,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g12-0",
+      "family": "islands",
+      "dc_uv": -1.3814165953793156,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g12-0",
+      "family": "radial",
+      "dc_uv": -0.8643320413148934,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g12-1",
+      "family": "radial",
+      "dc_uv": -3.862449686736245,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g13-0",
+      "family": "triangle",
+      "dc_uv": -7.369276523672864,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g13-1",
+      "family": "beveled",
+      "dc_uv": 0.06973999199032324,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g13-1",
+      "family": "triangle",
+      "dc_uv": -0.11558408521174868,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g13-0",
+      "family": "beveled",
+      "dc_uv": 0.45562824693017007,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g13-1",
+      "family": "profile",
+      "dc_uv": -3.2381820141844195,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g13-0",
+      "family": "profile",
+      "dc_uv": 0.1263669524052995,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g13-1",
+      "family": "islands",
+      "dc_uv": 6.903643185623948,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g13-0",
+      "family": "islands",
+      "dc_uv": 3.1677039231337254,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g13-0",
+      "family": "radial",
+      "dc_uv": 3.1856873450254644,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g13-1",
+      "family": "radial",
+      "dc_uv": -6.9563471155890335,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g13-1",
+      "family": "triangle",
+      "dc_uv": -4.868262101818702,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g13-0",
+      "family": "triangle",
+      "dc_uv": -6.354483786027747,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g13-1",
+      "family": "profile",
+      "dc_uv": -9.024505274422793,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g13-1",
+      "family": "beveled",
+      "dc_uv": 2.4610024462766025,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g13-0",
+      "family": "beveled",
+      "dc_uv": -0.023683505908814545,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g13-0",
+      "family": "profile",
+      "dc_uv": -0.04018942637795629,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g13-0",
+      "family": "islands",
+      "dc_uv": 2.9621672820772442,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g13-1",
+      "family": "islands",
+      "dc_uv": 3.3167365028050138,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g13-0",
+      "family": "radial",
+      "dc_uv": -2.749986656054728,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g13-1",
+      "family": "radial",
+      "dc_uv": -2.0661334728850487,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g14-1",
+      "family": "beveled",
+      "dc_uv": -2.2184499041334456,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g14-0",
+      "family": "triangle",
+      "dc_uv": -6.563078097318249,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g14-1",
+      "family": "triangle",
+      "dc_uv": 2.3300015406886136,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g14-0",
+      "family": "beveled",
+      "dc_uv": -1.227216375281258,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g14-0",
+      "family": "profile",
+      "dc_uv": 0.58264027153674,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g14-1",
+      "family": "profile",
+      "dc_uv": 2.5086657876103486,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g14-1",
+      "family": "islands",
+      "dc_uv": -0.12919490624390198,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g14-0",
+      "family": "islands",
+      "dc_uv": 2.1584203072721477,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g14-0",
+      "family": "radial",
+      "dc_uv": 0.6121359164831638,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g14-1",
+      "family": "radial",
+      "dc_uv": -2.517200447418689,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g14-0",
+      "family": "triangle",
+      "dc_uv": -4.606242325919402,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g14-1",
+      "family": "triangle",
+      "dc_uv": 2.6847447921686225,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g14-0",
+      "family": "beveled",
+      "dc_uv": 2.5987410247608187,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g14-1",
+      "family": "beveled",
+      "dc_uv": 4.228106229601334,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g14-0",
+      "family": "profile",
+      "dc_uv": -0.7856308177680873,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g14-1",
+      "family": "profile",
+      "dc_uv": 1.7133614694448358,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g14-0",
+      "family": "islands",
+      "dc_uv": 3.6214169110048933,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g14-1",
+      "family": "islands",
+      "dc_uv": 3.4213797106606925,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g14-1",
+      "family": "radial",
+      "dc_uv": 3.633425208004929,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g14-0",
+      "family": "radial",
+      "dc_uv": 0.2078915877538494,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g15-0",
+      "family": "beveled",
+      "dc_uv": 3.0621656313324848,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g15-1",
+      "family": "triangle",
+      "dc_uv": -3.0553345365920914,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g15-0",
+      "family": "triangle",
+      "dc_uv": -1.7503690819252329,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g15-1",
+      "family": "beveled",
+      "dc_uv": 1.7033689975054322,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g15-0",
+      "family": "profile",
+      "dc_uv": 2.810131415336419,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g15-1",
+      "family": "profile",
+      "dc_uv": 0.4027436717110614,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g15-0",
+      "family": "islands",
+      "dc_uv": -0.2824048764372862,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g15-1",
+      "family": "islands",
+      "dc_uv": 2.4542228213266952,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g15-0",
+      "family": "radial",
+      "dc_uv": 3.6180516568354424,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g15-1",
+      "family": "triangle",
+      "dc_uv": 0.8482691063344683,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g15-1",
+      "family": "radial",
+      "dc_uv": 0.4511602266630546,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g15-0",
+      "family": "triangle",
+      "dc_uv": 0.8818040943540401,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g15-0",
+      "family": "beveled",
+      "dc_uv": -5.675220027694663,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g15-1",
+      "family": "beveled",
+      "dc_uv": -0.8977587246901636,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g15-0",
+      "family": "profile",
+      "dc_uv": 6.138095066656444,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g15-1",
+      "family": "profile",
+      "dc_uv": -7.212992243371483,
+      "qualified": true
+    },
+    {
+      "key": "r1-islands-g15-0",
+      "family": "islands",
+      "dc_uv": 1.5045247099029972,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g15-1",
+      "family": "islands",
+      "dc_uv": 5.544668483454302,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g15-0",
+      "family": "radial",
+      "dc_uv": -3.3781636957912426,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g15-1",
+      "family": "radial",
+      "dc_uv": -3.5933296531027903,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g16-1",
+      "family": "beveled",
+      "dc_uv": 0.7224038152026153,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g16-1",
+      "family": "triangle",
+      "dc_uv": -1.966182992565913,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g16-0",
+      "family": "triangle",
+      "dc_uv": -6.908970885062633,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g16-0",
+      "family": "beveled",
+      "dc_uv": -2.2647736886796355,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g16-1",
+      "family": "profile",
+      "dc_uv": -9.801985991874949,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g16-0",
+      "family": "islands",
+      "dc_uv": 0.24693071682410309,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g16-0",
+      "family": "profile",
+      "dc_uv": 1.7301858147320945,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g16-1",
+      "family": "islands",
+      "dc_uv": 4.848853733408075,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g16-1",
+      "family": "triangle",
+      "dc_uv": -4.105228429779208,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g16-0",
+      "family": "radial",
+      "dc_uv": 3.151842426739586,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g16-0",
+      "family": "triangle",
+      "dc_uv": 1.9891777095066696,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g16-1",
+      "family": "radial",
+      "dc_uv": 3.0435530678546714,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g16-1",
+      "family": "profile",
+      "dc_uv": 7.893732463818187,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g16-0",
+      "family": "beveled",
+      "dc_uv": 6.165190290413647,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g16-0",
+      "family": "profile",
+      "dc_uv": -3.244453863646869,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g16-1",
+      "family": "beveled",
+      "dc_uv": -1.2494551272002563,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g16-0",
+      "family": "islands",
+      "dc_uv": 1.0716646772815426,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g16-1",
+      "family": "islands",
+      "dc_uv": -0.13216087221679482,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g16-0",
+      "family": "radial",
+      "dc_uv": -3.29220252534959,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g16-1",
+      "family": "radial",
+      "dc_uv": 0.7415323146022051,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g17-1",
+      "family": "triangle",
+      "dc_uv": -0.721836660996763,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g17-0",
+      "family": "triangle",
+      "dc_uv": -5.585954038515104,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g17-0",
+      "family": "beveled",
+      "dc_uv": -5.762152217835705,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g17-1",
+      "family": "beveled",
+      "dc_uv": -3.2546720853520217,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g17-0",
+      "family": "profile",
+      "dc_uv": 4.980299815896575,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g17-1",
+      "family": "profile",
+      "dc_uv": -7.591746705894205,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g17-0",
+      "family": "islands",
+      "dc_uv": -2.6369814582003097,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g17-1",
+      "family": "islands",
+      "dc_uv": -0.031811929675292706,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g17-0",
+      "family": "radial",
+      "dc_uv": -1.0924497543016334,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g17-1",
+      "family": "radial",
+      "dc_uv": 0.08849823122471881,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g17-0",
+      "family": "triangle",
+      "dc_uv": -1.7524038280460699,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g17-1",
+      "family": "triangle",
+      "dc_uv": 4.087377955876597,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g17-0",
+      "family": "beveled",
+      "dc_uv": 5.484321989246594,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g17-1",
+      "family": "beveled",
+      "dc_uv": 1.4585110918259907,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g17-0",
+      "family": "profile",
+      "dc_uv": 2.805099059234716,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g17-1",
+      "family": "profile",
+      "dc_uv": -1.711966329476042,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g17-0",
+      "family": "islands",
+      "dc_uv": -5.055557408093031,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g17-0",
+      "family": "radial",
+      "dc_uv": -1.5735828295036338,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g17-1",
+      "family": "islands",
+      "dc_uv": 3.3101367647762174,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g17-1",
+      "family": "radial",
+      "dc_uv": -0.10520575410672528,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g18-0",
+      "family": "triangle",
+      "dc_uv": -10.50493014569493,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g18-1",
+      "family": "beveled",
+      "dc_uv": 1.6503476151044407,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g18-0",
+      "family": "beveled",
+      "dc_uv": -2.9694643674394805,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g18-1",
+      "family": "triangle",
+      "dc_uv": 0.4501515817634585,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g18-0",
+      "family": "profile",
+      "dc_uv": 2.481179944710106,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g18-1",
+      "family": "profile",
+      "dc_uv": 3.474529562047695,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g18-0",
+      "family": "islands",
+      "dc_uv": 1.3435534424537916,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g18-1",
+      "family": "islands",
+      "dc_uv": 0.006096280121677858,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g18-0",
+      "family": "radial",
+      "dc_uv": -5.372323353864388,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g18-1",
+      "family": "radial",
+      "dc_uv": -1.3861114331830664,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g18-1",
+      "family": "triangle",
+      "dc_uv": 0.2374767531932519,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g18-0",
+      "family": "triangle",
+      "dc_uv": 2.043593666909892,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g18-0",
+      "family": "beveled",
+      "dc_uv": -0.9395616884241412,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g18-1",
+      "family": "beveled",
+      "dc_uv": -4.548635272801984,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g18-0",
+      "family": "profile",
+      "dc_uv": -1.1363555442410553,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g18-1",
+      "family": "profile",
+      "dc_uv": 0.2116398256274798,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g18-0",
+      "family": "islands",
+      "dc_uv": 3.707431825154746,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g18-1",
+      "family": "islands",
+      "dc_uv": 1.148614736419314,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g18-1",
+      "family": "radial",
+      "dc_uv": -1.9770782964910392,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g18-0",
+      "family": "radial",
+      "dc_uv": -1.4660214447252353,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g19-1",
+      "family": "triangle",
+      "dc_uv": -12.163474950378065,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g19-1",
+      "family": "beveled",
+      "dc_uv": 0.038314543354375126,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g19-0",
+      "family": "beveled",
+      "dc_uv": -6.437938932684042,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g19-0",
+      "family": "triangle",
+      "dc_uv": -2.3423780285218205,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g19-0",
+      "family": "profile",
+      "dc_uv": -3.3541124336466837,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g19-1",
+      "family": "profile",
+      "dc_uv": -13.102935797532377,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g19-0",
+      "family": "islands",
+      "dc_uv": 3.449224933352,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g19-1",
+      "family": "islands",
+      "dc_uv": 3.289825130736237,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g19-0",
+      "family": "radial",
+      "dc_uv": 2.4109332012003355,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g19-0",
+      "family": "triangle",
+      "dc_uv": 6.90155204063322,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g19-1",
+      "family": "triangle",
+      "dc_uv": -1.913020484525265,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g19-1",
+      "family": "radial",
+      "dc_uv": -1.4890139351034297,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g19-0",
+      "family": "beveled",
+      "dc_uv": -6.334688997269031,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g19-1",
+      "family": "beveled",
+      "dc_uv": -6.210166060952246,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g19-0",
+      "family": "profile",
+      "dc_uv": 0.5221142068141066,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g19-1",
+      "family": "profile",
+      "dc_uv": -6.914102697492266,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g19-0",
+      "family": "radial",
+      "dc_uv": -3.5703278078726948,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g19-0",
+      "family": "islands",
+      "dc_uv": 0.3719603139410103,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g19-1",
+      "family": "islands",
+      "dc_uv": 3.5501472700460828,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g19-1",
+      "family": "radial",
+      "dc_uv": 2.722412233587201,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g20-0",
+      "family": "triangle",
+      "dc_uv": 1.3517736873096027,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g20-1",
+      "family": "triangle",
+      "dc_uv": -1.97495797359476,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g20-0",
+      "family": "beveled",
+      "dc_uv": 4.092768315416114,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g20-1",
+      "family": "beveled",
+      "dc_uv": 2.7423053579629393,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g20-0",
+      "family": "profile",
+      "dc_uv": -3.6783235908280223,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g20-1",
+      "family": "profile",
+      "dc_uv": 0.05852669917083609,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g20-1",
+      "family": "islands",
+      "dc_uv": -0.9074215963331758,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g20-0",
+      "family": "islands",
+      "dc_uv": -2.0450033537210444,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g20-1",
+      "family": "radial",
+      "dc_uv": -0.9607683141066738,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g20-0",
+      "family": "radial",
+      "dc_uv": -1.5291953521897064,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g20-1",
+      "family": "triangle",
+      "dc_uv": -1.223797235396518,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g20-0",
+      "family": "triangle",
+      "dc_uv": -0.2014840699635127,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g20-0",
+      "family": "beveled",
+      "dc_uv": -1.0209041449691323,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g20-1",
+      "family": "beveled",
+      "dc_uv": 1.6980205273605211,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g20-0",
+      "family": "profile",
+      "dc_uv": 12.311374674478426,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g20-1",
+      "family": "profile",
+      "dc_uv": -0.856831242514834,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g20-1",
+      "family": "islands",
+      "dc_uv": 3.1550634287552946,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g20-0",
+      "family": "islands",
+      "dc_uv": -0.7570646891906094,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g20-0",
+      "family": "radial",
+      "dc_uv": 3.608942648352732,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g20-1",
+      "family": "radial",
+      "dc_uv": 0.9778529234847481,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g21-0",
+      "family": "beveled",
+      "dc_uv": -2.1737966201455565,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g21-1",
+      "family": "triangle",
+      "dc_uv": -7.398922557388988,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g21-1",
+      "family": "beveled",
+      "dc_uv": -0.3101863377139521,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g21-0",
+      "family": "triangle",
+      "dc_uv": 1.4088157192571786,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g21-0",
+      "family": "profile",
+      "dc_uv": 4.165520439339753,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g21-1",
+      "family": "profile",
+      "dc_uv": -7.102078698606004,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g21-0",
+      "family": "islands",
+      "dc_uv": 3.222732948598221,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g21-1",
+      "family": "islands",
+      "dc_uv": 0.44938864409105284,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g21-0",
+      "family": "radial",
+      "dc_uv": 3.508527878415069,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g21-1",
+      "family": "radial",
+      "dc_uv": 0.6649258082241715,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g21-1",
+      "family": "triangle",
+      "dc_uv": 4.195808233225245,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g21-0",
+      "family": "triangle",
+      "dc_uv": 3.8428289894556866,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g21-0",
+      "family": "beveled",
+      "dc_uv": -8.471599176886839,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g21-1",
+      "family": "profile",
+      "dc_uv": -7.15197844589159,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g21-0",
+      "family": "profile",
+      "dc_uv": 2.5424444764707617,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g21-1",
+      "family": "beveled",
+      "dc_uv": -9.34195798140404,
+      "qualified": true
+    },
+    {
+      "key": "r1-islands-g21-0",
+      "family": "islands",
+      "dc_uv": -1.1173112522239073,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g21-1",
+      "family": "radial",
+      "dc_uv": 0.9246488797557944,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g21-0",
+      "family": "radial",
+      "dc_uv": -3.9027194140283523,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g21-1",
+      "family": "islands",
+      "dc_uv": 0.738711628433387,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g22-1",
+      "family": "triangle",
+      "dc_uv": 2.1370597646452465,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g22-1",
+      "family": "beveled",
+      "dc_uv": 5.72422625878328,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g22-0",
+      "family": "triangle",
+      "dc_uv": -4.353835838857983,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g22-0",
+      "family": "beveled",
+      "dc_uv": 0.006852121494090044,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g22-0",
+      "family": "profile",
+      "dc_uv": -6.916206866552319,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g22-1",
+      "family": "profile",
+      "dc_uv": 2.9202056838744554,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g22-1",
+      "family": "islands",
+      "dc_uv": -2.8897296581335903,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g22-0",
+      "family": "islands",
+      "dc_uv": -1.1805329398488267,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g22-0",
+      "family": "triangle",
+      "dc_uv": -6.312865827538322,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g22-0",
+      "family": "radial",
+      "dc_uv": 4.013232313709299,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g22-1",
+      "family": "triangle",
+      "dc_uv": 3.087731962795864,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g22-1",
+      "family": "radial",
+      "dc_uv": -1.703771633769662,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g22-0",
+      "family": "beveled",
+      "dc_uv": 6.865881804777107,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g22-1",
+      "family": "beveled",
+      "dc_uv": 1.8861741196473776,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g22-1",
+      "family": "profile",
+      "dc_uv": -4.135484834280828,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g22-0",
+      "family": "profile",
+      "dc_uv": -0.8288196472174986,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g22-0",
+      "family": "islands",
+      "dc_uv": 0.9553124629319188,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g22-0",
+      "family": "radial",
+      "dc_uv": -7.573670937291915,
+      "qualified": true
+    },
+    {
+      "key": "r1-islands-g22-1",
+      "family": "islands",
+      "dc_uv": 2.8286288571853677,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g22-1",
+      "family": "radial",
+      "dc_uv": -1.3026101052395052,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g23-1",
+      "family": "beveled",
+      "dc_uv": 3.7255007333341226,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g23-1",
+      "family": "triangle",
+      "dc_uv": 1.4755458502956358,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g23-0",
+      "family": "triangle",
+      "dc_uv": 0.3598947296078029,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g23-0",
+      "family": "beveled",
+      "dc_uv": -1.5897639071554563,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g23-0",
+      "family": "profile",
+      "dc_uv": 6.639344209486777,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g23-1",
+      "family": "profile",
+      "dc_uv": -5.027357701384718,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g23-1",
+      "family": "islands",
+      "dc_uv": -0.09964954515538212,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g23-0",
+      "family": "islands",
+      "dc_uv": 4.306623539783142,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g23-1",
+      "family": "radial",
+      "dc_uv": 1.1141837086427515,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g23-0",
+      "family": "radial",
+      "dc_uv": -1.8344547205124682,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g23-0",
+      "family": "triangle",
+      "dc_uv": 2.7073025675488043,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g23-1",
+      "family": "triangle",
+      "dc_uv": 2.908631429307669,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g23-1",
+      "family": "beveled",
+      "dc_uv": -3.5629796106045384,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g23-0",
+      "family": "profile",
+      "dc_uv": -2.725891503399795,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g23-0",
+      "family": "beveled",
+      "dc_uv": 2.4157046765338137,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g23-1",
+      "family": "profile",
+      "dc_uv": 2.3754580185382754,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g23-0",
+      "family": "islands",
+      "dc_uv": 0.8992580237868054,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g23-1",
+      "family": "islands",
+      "dc_uv": -5.821343327265958,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g23-0",
+      "family": "radial",
+      "dc_uv": -0.7322412027474364,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g23-1",
+      "family": "radial",
+      "dc_uv": 1.6822607859679015,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g24-0",
+      "family": "beveled",
+      "dc_uv": 5.024990652769948,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g24-1",
+      "family": "triangle",
+      "dc_uv": -5.019360640275194,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g24-1",
+      "family": "beveled",
+      "dc_uv": 0.09610264057449847,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g24-0",
+      "family": "triangle",
+      "dc_uv": -1.8575207233907634,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g24-0",
+      "family": "profile",
+      "dc_uv": 3.294403853468805,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g24-1",
+      "family": "profile",
+      "dc_uv": 1.4212683342430326,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g24-0",
+      "family": "islands",
+      "dc_uv": 0.8146754721061391,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g24-1",
+      "family": "islands",
+      "dc_uv": 3.716001217124574,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g24-1",
+      "family": "radial",
+      "dc_uv": 5.5207959717617126,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g24-0",
+      "family": "radial",
+      "dc_uv": 1.4738865895288569,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g24-0",
+      "family": "triangle",
+      "dc_uv": -4.081715049737286,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g24-1",
+      "family": "triangle",
+      "dc_uv": 0.7286440211634009,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g24-0",
+      "family": "profile",
+      "dc_uv": 1.5073194309594025,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g24-0",
+      "family": "beveled",
+      "dc_uv": 2.801718119827398,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g24-1",
+      "family": "beveled",
+      "dc_uv": 0.17366262673932878,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g24-1",
+      "family": "profile",
+      "dc_uv": -2.1705654089557584,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g24-0",
+      "family": "islands",
+      "dc_uv": -1.288351583602593,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g24-1",
+      "family": "islands",
+      "dc_uv": 3.247370871798571,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g24-0",
+      "family": "radial",
+      "dc_uv": 1.9299256634213429,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g24-1",
+      "family": "radial",
+      "dc_uv": -0.4575033118166882,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g25-1",
+      "family": "triangle",
+      "dc_uv": -1.6205317451610821,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g25-1",
+      "family": "beveled",
+      "dc_uv": -8.311103468537633,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g25-0",
+      "family": "beveled",
+      "dc_uv": 3.5789294223274917,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g25-0",
+      "family": "triangle",
+      "dc_uv": 3.0457488579505787,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g25-0",
+      "family": "profile",
+      "dc_uv": -4.475860326647884,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g25-1",
+      "family": "profile",
+      "dc_uv": 2.6761660234103952,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g25-0",
+      "family": "islands",
+      "dc_uv": 2.4048874213510016,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g25-1",
+      "family": "islands",
+      "dc_uv": 2.213469848996618,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g25-0",
+      "family": "radial",
+      "dc_uv": 4.260893425471107,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g25-1",
+      "family": "triangle",
+      "dc_uv": 0.26498974836736294,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g25-1",
+      "family": "radial",
+      "dc_uv": -1.4529507139966102,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g25-0",
+      "family": "triangle",
+      "dc_uv": -6.572447854691494,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g25-0",
+      "family": "beveled",
+      "dc_uv": 8.350891652863004,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g25-1",
+      "family": "beveled",
+      "dc_uv": 5.936141993703882,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g25-0",
+      "family": "profile",
+      "dc_uv": 4.161221113588777,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g25-1",
+      "family": "profile",
+      "dc_uv": 2.1540136197636786,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g25-0",
+      "family": "islands",
+      "dc_uv": -1.4990404088752531,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g25-1",
+      "family": "islands",
+      "dc_uv": 0.92377331622415,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g25-1",
+      "family": "radial",
+      "dc_uv": -0.4876407838642564,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g25-0",
+      "family": "radial",
+      "dc_uv": -2.774758096710839,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g26-1",
+      "family": "beveled",
+      "dc_uv": 3.6703609825270287,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g26-0",
+      "family": "beveled",
+      "dc_uv": 0.760309357892575,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g26-1",
+      "family": "triangle",
+      "dc_uv": -3.8171843136710737,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g26-0",
+      "family": "triangle",
+      "dc_uv": -0.6250566797009423,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g26-0",
+      "family": "profile",
+      "dc_uv": 2.506431822447682,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g26-0",
+      "family": "islands",
+      "dc_uv": -4.120566627814854,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g26-1",
+      "family": "profile",
+      "dc_uv": -2.360758367610325,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g26-1",
+      "family": "islands",
+      "dc_uv": 0.8540175851993563,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g26-0",
+      "family": "radial",
+      "dc_uv": 1.1377072524331613,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g26-1",
+      "family": "triangle",
+      "dc_uv": 4.723735851800354,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g26-1",
+      "family": "radial",
+      "dc_uv": 4.36071997673748,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g26-0",
+      "family": "triangle",
+      "dc_uv": -4.8843145684510985,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g26-0",
+      "family": "beveled",
+      "dc_uv": 1.1647163860613208,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g26-1",
+      "family": "profile",
+      "dc_uv": -0.95390281123541,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g26-1",
+      "family": "beveled",
+      "dc_uv": 4.349873653052663,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g26-0",
+      "family": "profile",
+      "dc_uv": -1.1240294203856052,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g26-0",
+      "family": "radial",
+      "dc_uv": 0.5588794607381361,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g26-0",
+      "family": "islands",
+      "dc_uv": 1.2892811915699744,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g26-1",
+      "family": "islands",
+      "dc_uv": -6.600309580663088,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g26-1",
+      "family": "radial",
+      "dc_uv": -3.771524777322686,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g27-1",
+      "family": "triangle",
+      "dc_uv": -6.458957124222559,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g27-1",
+      "family": "beveled",
+      "dc_uv": 3.9898985131366405,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g27-0",
+      "family": "triangle",
+      "dc_uv": -4.656744447894995,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g27-0",
+      "family": "beveled",
+      "dc_uv": 0.8033793339101888,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g27-0",
+      "family": "profile",
+      "dc_uv": -0.649359595539012,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g27-1",
+      "family": "profile",
+      "dc_uv": -1.3447576061642579,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g27-1",
+      "family": "islands",
+      "dc_uv": 0.31080606334826877,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g27-0",
+      "family": "islands",
+      "dc_uv": 0.41261891026221753,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g27-0",
+      "family": "radial",
+      "dc_uv": 0.1939006253182921,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g27-1",
+      "family": "radial",
+      "dc_uv": -0.960502811642796,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g27-1",
+      "family": "triangle",
+      "dc_uv": -12.842306993340411,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g27-0",
+      "family": "triangle",
+      "dc_uv": -13.81996867815396,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g27-1",
+      "family": "beveled",
+      "dc_uv": -3.1096718015768827,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g27-0",
+      "family": "beveled",
+      "dc_uv": -4.248508342505631,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g27-1",
+      "family": "profile",
+      "dc_uv": 0.8765266762064374,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g27-0",
+      "family": "profile",
+      "dc_uv": -1.0818698849776698,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g27-0",
+      "family": "islands",
+      "dc_uv": -3.2414737538889598,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g27-1",
+      "family": "islands",
+      "dc_uv": -1.4514314422489396,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g27-0",
+      "family": "radial",
+      "dc_uv": -1.8128785306339796,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g27-1",
+      "family": "radial",
+      "dc_uv": -0.7718583407067154,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g28-1",
+      "family": "triangle",
+      "dc_uv": -0.7306288348029771,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g28-1",
+      "family": "beveled",
+      "dc_uv": -13.690780589634887,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g28-0",
+      "family": "triangle",
+      "dc_uv": -5.024067626993453,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g28-0",
+      "family": "beveled",
+      "dc_uv": -1.3278731559974346,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g28-0",
+      "family": "profile",
+      "dc_uv": 4.974254173767129,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g28-1",
+      "family": "profile",
+      "dc_uv": -12.255466686564668,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g28-0",
+      "family": "islands",
+      "dc_uv": -5.319540901718978,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g28-1",
+      "family": "islands",
+      "dc_uv": 6.1622238548297865,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g28-1",
+      "family": "radial",
+      "dc_uv": -0.03169741023424651,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g28-0",
+      "family": "triangle",
+      "dc_uv": 0.46418605772290944,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g28-0",
+      "family": "radial",
+      "dc_uv": -1.1300950595263985,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g28-1",
+      "family": "triangle",
+      "dc_uv": 1.5465722911094104,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g28-0",
+      "family": "beveled",
+      "dc_uv": -5.214399348339856,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g28-1",
+      "family": "profile",
+      "dc_uv": 3.605649245480274,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g28-0",
+      "family": "profile",
+      "dc_uv": 6.5116024920873095,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g28-1",
+      "family": "beveled",
+      "dc_uv": -6.780256083689878,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g28-0",
+      "family": "islands",
+      "dc_uv": 0.8367873205403777,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g28-1",
+      "family": "radial",
+      "dc_uv": -0.7419311514927717,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g28-0",
+      "family": "radial",
+      "dc_uv": 2.6026476900422417,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g28-1",
+      "family": "islands",
+      "dc_uv": -5.33624849084135,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g29-1",
+      "family": "triangle",
+      "dc_uv": 2.969496779306667,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g29-0",
+      "family": "beveled",
+      "dc_uv": -1.6671067637140087,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g29-1",
+      "family": "beveled",
+      "dc_uv": -0.15491174522696488,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g29-0",
+      "family": "triangle",
+      "dc_uv": -0.08940465170600617,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g29-0",
+      "family": "profile",
+      "dc_uv": 2.1869432629897774,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g29-0",
+      "family": "islands",
+      "dc_uv": 4.031595159841553,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g29-1",
+      "family": "profile",
+      "dc_uv": -2.132322815569378,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g29-1",
+      "family": "islands",
+      "dc_uv": -2.206925993730483,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g29-0",
+      "family": "radial",
+      "dc_uv": 0.6472875971171838,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g29-1",
+      "family": "radial",
+      "dc_uv": 5.291110174306433,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g29-0",
+      "family": "triangle",
+      "dc_uv": -12.3271863051211,
+      "qualified": true
+    },
+    {
+      "key": "r1-triangle-g29-1",
+      "family": "triangle",
+      "dc_uv": 0.005456732632253292,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g29-1",
+      "family": "beveled",
+      "dc_uv": 3.754625266006514,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g29-0",
+      "family": "profile",
+      "dc_uv": -1.3455088666710786,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g29-1",
+      "family": "profile",
+      "dc_uv": 0.21237918749027396,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g29-0",
+      "family": "beveled",
+      "dc_uv": -0.14973503337796723,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g29-0",
+      "family": "islands",
+      "dc_uv": 7.8857637126483855,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g29-1",
+      "family": "radial",
+      "dc_uv": 4.691039165660825,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g29-1",
+      "family": "islands",
+      "dc_uv": -3.1857799228637202,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g29-0",
+      "family": "radial",
+      "dc_uv": 4.0269970544675395,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g30-0",
+      "family": "beveled",
+      "dc_uv": 6.123644292268567,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g30-1",
+      "family": "beveled",
+      "dc_uv": -3.030789562670198,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g30-0",
+      "family": "triangle",
+      "dc_uv": -1.7449091596086694,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g30-1",
+      "family": "triangle",
+      "dc_uv": -0.7906811497207111,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g30-0",
+      "family": "profile",
+      "dc_uv": 0.07975851612225093,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g30-0",
+      "family": "islands",
+      "dc_uv": 0.837764663003378,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g30-1",
+      "family": "profile",
+      "dc_uv": 0.8973651113758556,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g30-1",
+      "family": "islands",
+      "dc_uv": 4.010777185127748,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g30-0",
+      "family": "radial",
+      "dc_uv": -6.01218237060472,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g30-1",
+      "family": "radial",
+      "dc_uv": 2.053752918810039,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g30-0",
+      "family": "triangle",
+      "dc_uv": -4.393165376263047,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g30-1",
+      "family": "triangle",
+      "dc_uv": -2.7285127228806756,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g30-0",
+      "family": "beveled",
+      "dc_uv": 1.142502574097725,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g30-1",
+      "family": "beveled",
+      "dc_uv": -8.715505152553312,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g30-0",
+      "family": "profile",
+      "dc_uv": -1.990371433695362,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g30-1",
+      "family": "profile",
+      "dc_uv": -5.198169065110398,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g30-0",
+      "family": "islands",
+      "dc_uv": -1.530026089952186,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g30-1",
+      "family": "islands",
+      "dc_uv": 0.6321013511312459,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g30-0",
+      "family": "radial",
+      "dc_uv": -2.0242345574423037,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g30-1",
+      "family": "radial",
+      "dc_uv": -1.642435520490587,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g31-1",
+      "family": "triangle",
+      "dc_uv": 0.9859714350314903,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g31-1",
+      "family": "beveled",
+      "dc_uv": 1.064690861399122,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g31-0",
+      "family": "beveled",
+      "dc_uv": -5.58864487711223,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g31-0",
+      "family": "triangle",
+      "dc_uv": -0.06048601538907355,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g31-0",
+      "family": "profile",
+      "dc_uv": -1.5667053754344638,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g31-1",
+      "family": "profile",
+      "dc_uv": 0.44108238568211494,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g31-0",
+      "family": "islands",
+      "dc_uv": 6.024306129924336,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g31-1",
+      "family": "islands",
+      "dc_uv": 3.9478443698310985,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g31-0",
+      "family": "radial",
+      "dc_uv": -3.5673083484283783,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g31-1",
+      "family": "radial",
+      "dc_uv": -2.9565793895433936,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g31-1",
+      "family": "triangle",
+      "dc_uv": 4.145520642853873,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g31-0",
+      "family": "triangle",
+      "dc_uv": -0.6716360743770332,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g31-1",
+      "family": "beveled",
+      "dc_uv": -5.775356483074745,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g31-0",
+      "family": "profile",
+      "dc_uv": 7.239213474378323,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g31-0",
+      "family": "beveled",
+      "dc_uv": -1.5565033750341202,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g31-1",
+      "family": "profile",
+      "dc_uv": 4.714951073501652,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g31-1",
+      "family": "islands",
+      "dc_uv": 4.687014506795051,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g31-0",
+      "family": "radial",
+      "dc_uv": -2.590464150261362,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g31-0",
+      "family": "islands",
+      "dc_uv": -1.7437408902402187,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g31-1",
+      "family": "radial",
+      "dc_uv": 1.5209629911858582,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g32-1",
+      "family": "triangle",
+      "dc_uv": -3.3619017189038756,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g32-0",
+      "family": "triangle",
+      "dc_uv": 0.6689933171804393,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g32-0",
+      "family": "beveled",
+      "dc_uv": -4.266060446996296,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g32-1",
+      "family": "beveled",
+      "dc_uv": -8.704015661126059,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g32-0",
+      "family": "profile",
+      "dc_uv": -2.5706008272443555,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g32-1",
+      "family": "profile",
+      "dc_uv": 0.4669863262482607,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g32-0",
+      "family": "islands",
+      "dc_uv": -2.204335284771197,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g32-1",
+      "family": "islands",
+      "dc_uv": 0.007664502476423134,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g32-0",
+      "family": "radial",
+      "dc_uv": 8.270672848340492,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g32-1",
+      "family": "radial",
+      "dc_uv": 1.2811335175312153,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g32-1",
+      "family": "triangle",
+      "dc_uv": 2.3685230702662454,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g32-0",
+      "family": "triangle",
+      "dc_uv": -3.6797521917087233,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g32-0",
+      "family": "beveled",
+      "dc_uv": -3.996304186351843,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g32-1",
+      "family": "profile",
+      "dc_uv": -5.96925317414123,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g32-1",
+      "family": "beveled",
+      "dc_uv": 11.118995846984317,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g32-0",
+      "family": "profile",
+      "dc_uv": 0.8706506413774565,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g32-0",
+      "family": "islands",
+      "dc_uv": 2.2538775700849714,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g32-0",
+      "family": "radial",
+      "dc_uv": -1.1140513658106521,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g32-1",
+      "family": "islands",
+      "dc_uv": 2.563848858555535,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g32-1",
+      "family": "radial",
+      "dc_uv": 2.0876212218779053,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g33-0",
+      "family": "triangle",
+      "dc_uv": -5.820998721974013,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g33-1",
+      "family": "beveled",
+      "dc_uv": 3.9577442735764494,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g33-1",
+      "family": "triangle",
+      "dc_uv": 3.7420536153715283,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g33-0",
+      "family": "beveled",
+      "dc_uv": 1.9365082843750294,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g33-0",
+      "family": "profile",
+      "dc_uv": -0.7729980969791465,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g33-1",
+      "family": "profile",
+      "dc_uv": 1.2380000129229092,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g33-0",
+      "family": "islands",
+      "dc_uv": 0.7363032456856103,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g33-1",
+      "family": "islands",
+      "dc_uv": 4.722711306188192,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g33-0",
+      "family": "radial",
+      "dc_uv": -0.13388872449971415,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g33-1",
+      "family": "radial",
+      "dc_uv": -3.220514192705763,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g33-0",
+      "family": "triangle",
+      "dc_uv": -1.2244013465563663,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g33-1",
+      "family": "triangle",
+      "dc_uv": 2.125840781690666,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g33-0",
+      "family": "beveled",
+      "dc_uv": -8.77427990860898,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g33-1",
+      "family": "profile",
+      "dc_uv": -8.013173029653041,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g33-1",
+      "family": "beveled",
+      "dc_uv": 6.866608935435345,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g33-0",
+      "family": "profile",
+      "dc_uv": 2.157910301955248,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g33-0",
+      "family": "islands",
+      "dc_uv": -2.422876767420493,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g33-1",
+      "family": "islands",
+      "dc_uv": 4.711673596817186,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g33-0",
+      "family": "radial",
+      "dc_uv": 1.8992668229429484,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g33-1",
+      "family": "radial",
+      "dc_uv": 2.522600063236737,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g34-1",
+      "family": "triangle",
+      "dc_uv": 4.280323009800081,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g34-1",
+      "family": "beveled",
+      "dc_uv": 2.0217357666140607,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g34-0",
+      "family": "triangle",
+      "dc_uv": -5.8552799229991495,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g34-0",
+      "family": "beveled",
+      "dc_uv": 0.24120949566247543,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g34-0",
+      "family": "profile",
+      "dc_uv": 1.265813023698578,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g34-1",
+      "family": "profile",
+      "dc_uv": -2.44798814340932,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g34-0",
+      "family": "islands",
+      "dc_uv": -2.0563393551752296,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g34-1",
+      "family": "islands",
+      "dc_uv": 0.7905543011254327,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g34-1",
+      "family": "radial",
+      "dc_uv": 0.6712296273409939,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g34-0",
+      "family": "radial",
+      "dc_uv": -5.7009168527214,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g34-0",
+      "family": "triangle",
+      "dc_uv": -3.6134503131042117,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g34-1",
+      "family": "triangle",
+      "dc_uv": -11.301370048828545,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g34-0",
+      "family": "beveled",
+      "dc_uv": -3.2042820781199235,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g34-1",
+      "family": "beveled",
+      "dc_uv": 3.8149386454491934,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g34-0",
+      "family": "profile",
+      "dc_uv": -0.09810568618372636,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g34-1",
+      "family": "profile",
+      "dc_uv": -1.508402398409241,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g34-0",
+      "family": "islands",
+      "dc_uv": -0.6035285613882604,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g34-1",
+      "family": "islands",
+      "dc_uv": 5.594254725945017,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g34-1",
+      "family": "radial",
+      "dc_uv": -1.6088568743679217,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g34-0",
+      "family": "radial",
+      "dc_uv": -2.2801802185047135,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g35-1",
+      "family": "beveled",
+      "dc_uv": 3.008149370939292,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g35-1",
+      "family": "triangle",
+      "dc_uv": 0.08874186621304544,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g35-0",
+      "family": "beveled",
+      "dc_uv": -6.492436885869649,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g35-0",
+      "family": "triangle",
+      "dc_uv": -0.4717708259198844,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g35-1",
+      "family": "profile",
+      "dc_uv": -7.203264463967277,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g35-0",
+      "family": "profile",
+      "dc_uv": -1.0536399998102204,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g35-1",
+      "family": "islands",
+      "dc_uv": 3.9332644073386347,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g35-0",
+      "family": "islands",
+      "dc_uv": 1.3349441760178036,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g35-0",
+      "family": "radial",
+      "dc_uv": -1.3497498862729433,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g35-1",
+      "family": "radial",
+      "dc_uv": 4.2141261643218595,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g35-1",
+      "family": "triangle",
+      "dc_uv": -1.5855074115519032,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g35-0",
+      "family": "triangle",
+      "dc_uv": -0.5252251450854246,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g35-1",
+      "family": "profile",
+      "dc_uv": 9.073698761472258,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g35-1",
+      "family": "beveled",
+      "dc_uv": -3.6074778193046453,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g35-0",
+      "family": "profile",
+      "dc_uv": 9.411700923786377,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g35-0",
+      "family": "beveled",
+      "dc_uv": -3.4582496070910342,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g35-0",
+      "family": "islands",
+      "dc_uv": 2.6348830432435277,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g35-1",
+      "family": "islands",
+      "dc_uv": 2.2740154518810938,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g35-1",
+      "family": "radial",
+      "dc_uv": 0.15962028561468009,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g35-0",
+      "family": "radial",
+      "dc_uv": -2.117961478217311,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g36-1",
+      "family": "beveled",
+      "dc_uv": -4.785190514018697,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g36-1",
+      "family": "triangle",
+      "dc_uv": -6.265250314061585,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g36-0",
+      "family": "beveled",
+      "dc_uv": -0.7086933354498596,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g36-0",
+      "family": "triangle",
+      "dc_uv": -0.5072945655100373,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g36-0",
+      "family": "profile",
+      "dc_uv": 3.9580025984608227,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g36-1",
+      "family": "profile",
+      "dc_uv": -0.03626339772177347,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g36-1",
+      "family": "islands",
+      "dc_uv": -1.7790573044134297,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g36-0",
+      "family": "islands",
+      "dc_uv": -3.717754870245266,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g36-0",
+      "family": "radial",
+      "dc_uv": 4.622190222533318,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g36-1",
+      "family": "radial",
+      "dc_uv": -1.313947337988967,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g36-0",
+      "family": "triangle",
+      "dc_uv": 0.9524270943366655,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g36-1",
+      "family": "triangle",
+      "dc_uv": 1.6496858815268707,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g36-0",
+      "family": "beveled",
+      "dc_uv": -2.81209315536419,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g36-1",
+      "family": "beveled",
+      "dc_uv": -2.6588711330955945,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g36-0",
+      "family": "profile",
+      "dc_uv": -2.2820885890109555,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g36-1",
+      "family": "profile",
+      "dc_uv": -1.9326626510764857,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g36-0",
+      "family": "islands",
+      "dc_uv": -1.4985871079055373,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g36-1",
+      "family": "islands",
+      "dc_uv": 4.190420898313309,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g36-0",
+      "family": "radial",
+      "dc_uv": -1.6133440176356577,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g36-1",
+      "family": "radial",
+      "dc_uv": 0.33538509197582095,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g37-1",
+      "family": "triangle",
+      "dc_uv": -4.953793405241456,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g37-0",
+      "family": "triangle",
+      "dc_uv": -2.9696798969407907,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g37-1",
+      "family": "beveled",
+      "dc_uv": -6.262537982281954,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g37-0",
+      "family": "beveled",
+      "dc_uv": -8.59839691480801,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g37-0",
+      "family": "profile",
+      "dc_uv": -2.071932759797238,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g37-1",
+      "family": "profile",
+      "dc_uv": -3.7983407742098505,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g37-1",
+      "family": "islands",
+      "dc_uv": 4.192167942413546,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g37-0",
+      "family": "islands",
+      "dc_uv": 2.657233912911435,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g37-1",
+      "family": "triangle",
+      "dc_uv": -0.8758155504299269,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g37-1",
+      "family": "radial",
+      "dc_uv": -6.925533292189574,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g37-0",
+      "family": "radial",
+      "dc_uv": 2.7011550657502696,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g37-0",
+      "family": "triangle",
+      "dc_uv": 4.956439069100717,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g37-0",
+      "family": "profile",
+      "dc_uv": 2.870415702033386,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g37-1",
+      "family": "beveled",
+      "dc_uv": 2.281228282705138,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g37-0",
+      "family": "beveled",
+      "dc_uv": -0.9589964429793861,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g37-1",
+      "family": "profile",
+      "dc_uv": -7.006316671250964,
+      "qualified": true
+    },
+    {
+      "key": "r1-islands-g37-0",
+      "family": "islands",
+      "dc_uv": 2.2439770910793384,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g37-1",
+      "family": "islands",
+      "dc_uv": -3.621689711416582,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g37-0",
+      "family": "radial",
+      "dc_uv": -1.8346306741433942,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g37-1",
+      "family": "radial",
+      "dc_uv": 6.619691371028075,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g38-1",
+      "family": "beveled",
+      "dc_uv": 4.645540691072185,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g38-1",
+      "family": "triangle",
+      "dc_uv": -0.08826087373157358,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g38-0",
+      "family": "triangle",
+      "dc_uv": 0.3739189307280051,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g38-0",
+      "family": "beveled",
+      "dc_uv": -1.2098454159173033,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g38-0",
+      "family": "profile",
+      "dc_uv": 0.9945241648406417,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g38-0",
+      "family": "islands",
+      "dc_uv": -1.3453018334138453,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g38-1",
+      "family": "profile",
+      "dc_uv": -5.529238583043132,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g38-1",
+      "family": "islands",
+      "dc_uv": -0.6074103194592326,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g38-0",
+      "family": "radial",
+      "dc_uv": -3.0582032120804463,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g38-1",
+      "family": "triangle",
+      "dc_uv": 1.467106734896225,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g38-1",
+      "family": "radial",
+      "dc_uv": 2.8435858574803254,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g38-0",
+      "family": "triangle",
+      "dc_uv": -1.2768529374723487,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g38-1",
+      "family": "beveled",
+      "dc_uv": 8.175239592685323,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g38-1",
+      "family": "profile",
+      "dc_uv": 10.171797772079437,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g38-0",
+      "family": "beveled",
+      "dc_uv": -0.8977844944048509,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g38-0",
+      "family": "profile",
+      "dc_uv": -4.975566543947378,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g38-0",
+      "family": "islands",
+      "dc_uv": 2.4217328053671157,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g38-1",
+      "family": "islands",
+      "dc_uv": 2.1019948178687136,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g38-0",
+      "family": "radial",
+      "dc_uv": 4.443544985462129,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g38-1",
+      "family": "radial",
+      "dc_uv": 0.1968435349602352,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g39-0",
+      "family": "triangle",
+      "dc_uv": 1.8370436989508445,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g39-1",
+      "family": "triangle",
+      "dc_uv": -8.372978379214498,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g39-1",
+      "family": "beveled",
+      "dc_uv": 0.8714788202954651,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g39-0",
+      "family": "beveled",
+      "dc_uv": -3.1359352923024333,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g39-0",
+      "family": "islands",
+      "dc_uv": 2.381315762718078,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g39-0",
+      "family": "profile",
+      "dc_uv": -1.7167936488871638,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g39-1",
+      "family": "islands",
+      "dc_uv": 0.165932030338653,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g39-1",
+      "family": "profile",
+      "dc_uv": -2.343061901381375,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g39-0",
+      "family": "radial",
+      "dc_uv": 1.1122086051102922,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g39-1",
+      "family": "triangle",
+      "dc_uv": -2.2623328101778832,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g39-1",
+      "family": "radial",
+      "dc_uv": 2.924727473289029,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g39-0",
+      "family": "triangle",
+      "dc_uv": -0.5954609839251388,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g39-0",
+      "family": "beveled",
+      "dc_uv": -1.493735476110894,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g39-1",
+      "family": "profile",
+      "dc_uv": -1.9627555226907802,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g39-1",
+      "family": "beveled",
+      "dc_uv": -4.397646598896889,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g39-0",
+      "family": "profile",
+      "dc_uv": 4.324859192657562,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g39-0",
+      "family": "islands",
+      "dc_uv": -3.059299782512123,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g39-0",
+      "family": "radial",
+      "dc_uv": -3.361130059672328,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g39-1",
+      "family": "islands",
+      "dc_uv": 0.12389767487895723,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g39-1",
+      "family": "radial",
+      "dc_uv": 1.750600936531722,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g40-1",
+      "family": "triangle",
+      "dc_uv": -15.100806832621359,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g40-0",
+      "family": "beveled",
+      "dc_uv": -0.2132842978352713,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g40-1",
+      "family": "beveled",
+      "dc_uv": -6.5045267145209955,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g40-0",
+      "family": "triangle",
+      "dc_uv": 0.7561521837264109,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g40-0",
+      "family": "profile",
+      "dc_uv": 0.49313604238652914,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g40-1",
+      "family": "profile",
+      "dc_uv": -1.6035900003349595,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g40-0",
+      "family": "islands",
+      "dc_uv": 2.447903366896094,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g40-1",
+      "family": "islands",
+      "dc_uv": 8.87737485084337,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g40-0",
+      "family": "radial",
+      "dc_uv": 0.787075031595137,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g40-1",
+      "family": "radial",
+      "dc_uv": -2.8395985008647355,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g40-1",
+      "family": "triangle",
+      "dc_uv": 2.3060779904554516,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g40-0",
+      "family": "triangle",
+      "dc_uv": -4.844674196007377,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g40-0",
+      "family": "beveled",
+      "dc_uv": 4.12967179783591,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g40-0",
+      "family": "profile",
+      "dc_uv": 3.4718245976077866,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g40-1",
+      "family": "beveled",
+      "dc_uv": 3.83539042456564,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g40-1",
+      "family": "profile",
+      "dc_uv": 0.04124843428820927,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g40-0",
+      "family": "islands",
+      "dc_uv": 2.4370255587068486,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g40-1",
+      "family": "islands",
+      "dc_uv": -0.7168135114963071,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g40-0",
+      "family": "radial",
+      "dc_uv": 3.9838536098608563,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g40-1",
+      "family": "radial",
+      "dc_uv": 7.3520108904664125,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g41-0",
+      "family": "beveled",
+      "dc_uv": 3.917867339499117,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g41-0",
+      "family": "triangle",
+      "dc_uv": 0.8750477457494102,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g41-1",
+      "family": "triangle",
+      "dc_uv": 0.4624000946788297,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g41-1",
+      "family": "beveled",
+      "dc_uv": 2.7669349529665634,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g41-1",
+      "family": "islands",
+      "dc_uv": -2.8236260071106654,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g41-0",
+      "family": "islands",
+      "dc_uv": 5.667553145459715,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g41-0",
+      "family": "profile",
+      "dc_uv": -3.4191257313565164,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g41-1",
+      "family": "profile",
+      "dc_uv": 0.03274034479355292,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g41-0",
+      "family": "triangle",
+      "dc_uv": 3.3995262172479577,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g41-1",
+      "family": "triangle",
+      "dc_uv": -2.2885340386157926,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g41-1",
+      "family": "radial",
+      "dc_uv": 0.22913232943966358,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g41-0",
+      "family": "radial",
+      "dc_uv": 2.6286496043365792,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g41-1",
+      "family": "beveled",
+      "dc_uv": -1.4107584161537683,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g41-0",
+      "family": "beveled",
+      "dc_uv": 3.2097981678913783,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g41-0",
+      "family": "profile",
+      "dc_uv": -4.813167161372386,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g41-1",
+      "family": "profile",
+      "dc_uv": 0.5458151729957711,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g41-0",
+      "family": "islands",
+      "dc_uv": 3.2115452965287257,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g41-1",
+      "family": "radial",
+      "dc_uv": 2.685933748929193,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g41-1",
+      "family": "islands",
+      "dc_uv": 0.676298478549662,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g41-0",
+      "family": "radial",
+      "dc_uv": -0.8512720427693468,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g42-0",
+      "family": "beveled",
+      "dc_uv": 2.759657672240551,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g42-0",
+      "family": "triangle",
+      "dc_uv": -0.6303965535264039,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g42-1",
+      "family": "beveled",
+      "dc_uv": -3.59570784697321,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g42-1",
+      "family": "triangle",
+      "dc_uv": 0.5423577359453452,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g42-0",
+      "family": "profile",
+      "dc_uv": -7.509628473324027,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g42-1",
+      "family": "profile",
+      "dc_uv": 2.768940275781422,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g42-0",
+      "family": "islands",
+      "dc_uv": 2.209668071346512,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g42-1",
+      "family": "islands",
+      "dc_uv": -1.1679710270518924,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g42-0",
+      "family": "radial",
+      "dc_uv": 0.06702686322089654,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g42-1",
+      "family": "radial",
+      "dc_uv": 2.186609182040683,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g42-0",
+      "family": "triangle",
+      "dc_uv": -2.032346681369359,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g42-1",
+      "family": "triangle",
+      "dc_uv": -4.972319796483986,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g42-1",
+      "family": "profile",
+      "dc_uv": -1.1853201427515274,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g42-0",
+      "family": "beveled",
+      "dc_uv": -6.12582289704419,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g42-0",
+      "family": "profile",
+      "dc_uv": 4.060580592064944,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g42-1",
+      "family": "beveled",
+      "dc_uv": -2.498097509594909,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g42-0",
+      "family": "radial",
+      "dc_uv": -3.5027218765657575,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g42-0",
+      "family": "islands",
+      "dc_uv": -2.1580376048516756,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g42-1",
+      "family": "islands",
+      "dc_uv": 1.7351844141700923,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g42-1",
+      "family": "radial",
+      "dc_uv": -3.0813988787220703,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g43-1",
+      "family": "triangle",
+      "dc_uv": 1.4819033836939803,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g43-0",
+      "family": "triangle",
+      "dc_uv": 2.389810949592259,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g43-1",
+      "family": "beveled",
+      "dc_uv": -9.760062026713962,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g43-0",
+      "family": "beveled",
+      "dc_uv": 5.239973801924421,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g43-0",
+      "family": "profile",
+      "dc_uv": -3.169420723901189,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g43-1",
+      "family": "profile",
+      "dc_uv": -2.051991541997542,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g43-0",
+      "family": "islands",
+      "dc_uv": 2.345905490631984,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g43-1",
+      "family": "islands",
+      "dc_uv": -0.8701372469873162,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g43-1",
+      "family": "radial",
+      "dc_uv": -0.9151122118062455,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g43-0",
+      "family": "radial",
+      "dc_uv": -1.1831478135972238,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g43-0",
+      "family": "triangle",
+      "dc_uv": -5.220809256532007,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g43-1",
+      "family": "triangle",
+      "dc_uv": -13.512996201822581,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g43-0",
+      "family": "profile",
+      "dc_uv": -6.657820441535162,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g43-0",
+      "family": "beveled",
+      "dc_uv": -3.3386679025947337,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g43-1",
+      "family": "profile",
+      "dc_uv": -1.4406252331609135,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g43-1",
+      "family": "beveled",
+      "dc_uv": 4.371453561653525,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g43-1",
+      "family": "islands",
+      "dc_uv": 0.8133834569976446,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g43-1",
+      "family": "radial",
+      "dc_uv": 2.9020260636610224,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g43-0",
+      "family": "islands",
+      "dc_uv": -1.3875906913483704,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g43-0",
+      "family": "radial",
+      "dc_uv": 2.8976514817590284,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g44-1",
+      "family": "triangle",
+      "dc_uv": -0.9867338232367993,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g44-0",
+      "family": "triangle",
+      "dc_uv": -0.41804424489413944,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g44-0",
+      "family": "beveled",
+      "dc_uv": 0.7503126171848779,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g44-1",
+      "family": "beveled",
+      "dc_uv": 1.1065733185995534,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g44-0",
+      "family": "profile",
+      "dc_uv": -2.9787396205666026,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g44-1",
+      "family": "profile",
+      "dc_uv": 1.5640239553055064,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g44-1",
+      "family": "islands",
+      "dc_uv": -1.058913594200658,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g44-0",
+      "family": "islands",
+      "dc_uv": -0.005374069014717877,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g44-0",
+      "family": "radial",
+      "dc_uv": -1.7621413503016092,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g44-1",
+      "family": "radial",
+      "dc_uv": 2.6824834486483793,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g44-0",
+      "family": "triangle",
+      "dc_uv": -6.054316006548958,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g44-1",
+      "family": "triangle",
+      "dc_uv": -0.6768643808633517,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g44-1",
+      "family": "beveled",
+      "dc_uv": 0.670027225418862,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g44-0",
+      "family": "beveled",
+      "dc_uv": 1.908355070036358,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g44-1",
+      "family": "profile",
+      "dc_uv": -4.4224868276724765,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g44-0",
+      "family": "profile",
+      "dc_uv": -1.8204448728104803,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g44-0",
+      "family": "islands",
+      "dc_uv": 0.8454513222487524,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g44-1",
+      "family": "islands",
+      "dc_uv": 0.48917347101228614,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g44-1",
+      "family": "radial",
+      "dc_uv": 2.887305295137942,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g44-0",
+      "family": "radial",
+      "dc_uv": -2.518060737771672,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g45-0",
+      "family": "triangle",
+      "dc_uv": -4.793607655529739,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g45-0",
+      "family": "beveled",
+      "dc_uv": -2.878476441224699,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g45-1",
+      "family": "beveled",
+      "dc_uv": -2.131019141192035,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g45-1",
+      "family": "triangle",
+      "dc_uv": -1.4621001925707406,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g45-1",
+      "family": "profile",
+      "dc_uv": 0.07076694884744142,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g45-0",
+      "family": "profile",
+      "dc_uv": -4.32642943286191,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g45-0",
+      "family": "islands",
+      "dc_uv": -4.136647283136699,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g45-1",
+      "family": "islands",
+      "dc_uv": -1.5218282718806329,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g45-1",
+      "family": "radial",
+      "dc_uv": -2.0348129148362744,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g45-0",
+      "family": "radial",
+      "dc_uv": -2.2653471306911266,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g45-1",
+      "family": "triangle",
+      "dc_uv": -0.06981810154543677,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g45-0",
+      "family": "triangle",
+      "dc_uv": -0.8086286330378769,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g45-0",
+      "family": "beveled",
+      "dc_uv": -5.59171485825685,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g45-1",
+      "family": "beveled",
+      "dc_uv": -2.4607854302867502,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g45-1",
+      "family": "profile",
+      "dc_uv": 1.1213827428183387,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g45-0",
+      "family": "profile",
+      "dc_uv": -2.9613861830599713,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g45-0",
+      "family": "islands",
+      "dc_uv": -4.597345451793338,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g45-1",
+      "family": "islands",
+      "dc_uv": 0.7270166564336922,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g45-0",
+      "family": "radial",
+      "dc_uv": -5.253285760970715,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g45-1",
+      "family": "radial",
+      "dc_uv": 3.917752495481101,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g46-1",
+      "family": "triangle",
+      "dc_uv": 1.2196357099931399,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g46-1",
+      "family": "beveled",
+      "dc_uv": -7.313167143761635,
+      "qualified": true
+    },
+    {
+      "key": "r0-triangle-g46-0",
+      "family": "triangle",
+      "dc_uv": -0.9984675759389056,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g46-0",
+      "family": "beveled",
+      "dc_uv": -5.416050343386455,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g46-1",
+      "family": "profile",
+      "dc_uv": -8.010661751255755,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g46-0",
+      "family": "profile",
+      "dc_uv": -1.7198526630330946,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g46-0",
+      "family": "islands",
+      "dc_uv": 1.05066888984349,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g46-1",
+      "family": "islands",
+      "dc_uv": 4.530407178607482,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g46-0",
+      "family": "radial",
+      "dc_uv": -0.7588400561925424,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g46-1",
+      "family": "triangle",
+      "dc_uv": 6.403881853164271,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g46-0",
+      "family": "triangle",
+      "dc_uv": 2.5411484648710454,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g46-1",
+      "family": "radial",
+      "dc_uv": 1.2281776730994491,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g46-0",
+      "family": "beveled",
+      "dc_uv": 7.924456110726213,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g46-1",
+      "family": "beveled",
+      "dc_uv": 5.045763101834861,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g46-1",
+      "family": "profile",
+      "dc_uv": 3.0641653650195932,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g46-0",
+      "family": "profile",
+      "dc_uv": 6.914549502359405,
+      "qualified": true
+    },
+    {
+      "key": "r1-radial-g46-1",
+      "family": "radial",
+      "dc_uv": -4.552935215409412,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g46-0",
+      "family": "islands",
+      "dc_uv": -1.3390528173397904,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g46-0",
+      "family": "radial",
+      "dc_uv": -0.824294028711566,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g46-1",
+      "family": "islands",
+      "dc_uv": -2.473935672796524,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g47-1",
+      "family": "beveled",
+      "dc_uv": -2.4958837952292603,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g47-0",
+      "family": "triangle",
+      "dc_uv": -1.575245760260438,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g47-1",
+      "family": "triangle",
+      "dc_uv": -0.5115654060510921,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g47-0",
+      "family": "beveled",
+      "dc_uv": -4.664331078306852,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g47-0",
+      "family": "profile",
+      "dc_uv": 3.871532306969806,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g47-1",
+      "family": "profile",
+      "dc_uv": 2.514610299728204,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g47-1",
+      "family": "islands",
+      "dc_uv": 2.5509058892347056,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g47-0",
+      "family": "islands",
+      "dc_uv": 1.3719510596929256,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g47-0",
+      "family": "radial",
+      "dc_uv": -3.8366906766588973,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g47-1",
+      "family": "triangle",
+      "dc_uv": -0.2655141629696011,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g47-0",
+      "family": "triangle",
+      "dc_uv": 6.152277976120619,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g47-1",
+      "family": "radial",
+      "dc_uv": -1.020403258263205,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g47-0",
+      "family": "beveled",
+      "dc_uv": 1.1743958699562125,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g47-1",
+      "family": "beveled",
+      "dc_uv": -5.033358838642203,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g47-1",
+      "family": "profile",
+      "dc_uv": -1.821748190432089,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g47-0",
+      "family": "profile",
+      "dc_uv": 1.145610995876362,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g47-0",
+      "family": "islands",
+      "dc_uv": -0.4598705715435365,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g47-1",
+      "family": "islands",
+      "dc_uv": -4.083728962034971,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g47-0",
+      "family": "radial",
+      "dc_uv": 5.61015209305358,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g47-1",
+      "family": "radial",
+      "dc_uv": -4.389044048938515,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g48-0",
+      "family": "triangle",
+      "dc_uv": -7.3262562497540795,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g48-0",
+      "family": "beveled",
+      "dc_uv": -4.667657804498363,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g48-1",
+      "family": "triangle",
+      "dc_uv": -1.4620839132454022,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g48-1",
+      "family": "beveled",
+      "dc_uv": -1.6777537590540343,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g48-1",
+      "family": "profile",
+      "dc_uv": 2.6982205921594016,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g48-0",
+      "family": "profile",
+      "dc_uv": -2.0943823687541663,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g48-1",
+      "family": "islands",
+      "dc_uv": -2.3994804965341934,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g48-0",
+      "family": "islands",
+      "dc_uv": 0.557967032583545,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g48-0",
+      "family": "radial",
+      "dc_uv": -7.199762575101249,
+      "qualified": true
+    },
+    {
+      "key": "r0-radial-g48-1",
+      "family": "radial",
+      "dc_uv": 1.9246408989845682,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g48-0",
+      "family": "triangle",
+      "dc_uv": -1.5722102356642804,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g48-1",
+      "family": "triangle",
+      "dc_uv": -6.241037891259866,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g48-0",
+      "family": "beveled",
+      "dc_uv": -1.0587320275852392,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g48-1",
+      "family": "beveled",
+      "dc_uv": -4.740651175851871,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g48-0",
+      "family": "profile",
+      "dc_uv": 2.8404649934266675,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g48-1",
+      "family": "profile",
+      "dc_uv": 0.5820371797783669,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g48-0",
+      "family": "islands",
+      "dc_uv": -1.8727841881257703,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g48-1",
+      "family": "islands",
+      "dc_uv": 2.204678881649336,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g48-0",
+      "family": "radial",
+      "dc_uv": -5.566969434828278,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g48-1",
+      "family": "radial",
+      "dc_uv": 2.1955216550305523,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g49-1",
+      "family": "triangle",
+      "dc_uv": -11.851016718245855,
+      "qualified": true
+    },
+    {
+      "key": "r0-beveled-g49-1",
+      "family": "beveled",
+      "dc_uv": -2.4145669100100027,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g49-0",
+      "family": "beveled",
+      "dc_uv": -1.214210081702115,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g49-0",
+      "family": "triangle",
+      "dc_uv": 5.76205206114275,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g49-0",
+      "family": "islands",
+      "dc_uv": 0.37317128645476044,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g49-0",
+      "family": "profile",
+      "dc_uv": 3.0901596988875917,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g49-1",
+      "family": "profile",
+      "dc_uv": 3.0854327076617087,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g49-1",
+      "family": "islands",
+      "dc_uv": 2.540775632809444,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g49-1",
+      "family": "radial",
+      "dc_uv": 2.4321097106912624,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g49-0",
+      "family": "radial",
+      "dc_uv": 2.1316478223363564,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g49-1",
+      "family": "triangle",
+      "dc_uv": -1.1376281592500836,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g49-0",
+      "family": "triangle",
+      "dc_uv": 0.7397112616137385,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g49-0",
+      "family": "beveled",
+      "dc_uv": 3.746986191990683,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g49-1",
+      "family": "profile",
+      "dc_uv": 1.510966268594312,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g49-1",
+      "family": "beveled",
+      "dc_uv": -8.8762385820976,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g49-0",
+      "family": "profile",
+      "dc_uv": -4.136244683251769,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g49-0",
+      "family": "islands",
+      "dc_uv": -5.24041997464597,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g49-1",
+      "family": "radial",
+      "dc_uv": -2.4504917649721896,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g49-0",
+      "family": "radial",
+      "dc_uv": 3.191380841050079,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g49-1",
+      "family": "islands",
+      "dc_uv": -3.1476332323144565,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g50-1",
+      "family": "beveled",
+      "dc_uv": -5.004468547561915,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g50-1",
+      "family": "triangle",
+      "dc_uv": 2.3720991629004975,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g50-0",
+      "family": "beveled",
+      "dc_uv": -2.780497455869717,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g50-0",
+      "family": "triangle",
+      "dc_uv": -5.7714857684255305,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g50-0",
+      "family": "profile",
+      "dc_uv": 1.7298208446405499,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g50-1",
+      "family": "profile",
+      "dc_uv": 3.097357788953283,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g50-1",
+      "family": "islands",
+      "dc_uv": 10.527123575674894,
+      "qualified": true
+    },
+    {
+      "key": "r0-islands-g50-0",
+      "family": "islands",
+      "dc_uv": -1.3649509768975594,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g50-0",
+      "family": "radial",
+      "dc_uv": -2.3860388583080834,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g50-1",
+      "family": "radial",
+      "dc_uv": 0.5502333040943324,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g50-1",
+      "family": "triangle",
+      "dc_uv": 0.6125565677820104,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g50-0",
+      "family": "triangle",
+      "dc_uv": -2.750203496659627,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g50-0",
+      "family": "beveled",
+      "dc_uv": 3.6766581206532516,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g50-1",
+      "family": "beveled",
+      "dc_uv": 2.2856382432472593,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g50-0",
+      "family": "profile",
+      "dc_uv": -4.232765399113962,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g50-1",
+      "family": "profile",
+      "dc_uv": -2.0524942870416947,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g50-0",
+      "family": "islands",
+      "dc_uv": 0.007581613839289631,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g50-1",
+      "family": "islands",
+      "dc_uv": -0.5749623695107641,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g50-0",
+      "family": "radial",
+      "dc_uv": -3.8274164033163305,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g50-1",
+      "family": "radial",
+      "dc_uv": -0.32885751195514407,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g51-1",
+      "family": "beveled",
+      "dc_uv": 0.47915149874109625,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g51-0",
+      "family": "beveled",
+      "dc_uv": -1.6370204452008807,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g51-1",
+      "family": "triangle",
+      "dc_uv": 1.0396419847295153,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g51-0",
+      "family": "triangle",
+      "dc_uv": -0.4350642679930575,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g51-1",
+      "family": "profile",
+      "dc_uv": -1.0771000718679267,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g51-0",
+      "family": "profile",
+      "dc_uv": 4.820114381759133,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g51-0",
+      "family": "islands",
+      "dc_uv": -0.228284485190421,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g51-1",
+      "family": "islands",
+      "dc_uv": -2.427400755356667,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g51-0",
+      "family": "radial",
+      "dc_uv": -2.7322936667664592,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g51-0",
+      "family": "triangle",
+      "dc_uv": -0.7655183630072475,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g51-1",
+      "family": "radial",
+      "dc_uv": 5.171238753464396,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g51-1",
+      "family": "triangle",
+      "dc_uv": -3.6901916326891615,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g51-0",
+      "family": "profile",
+      "dc_uv": -0.8511482502840606,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g51-0",
+      "family": "beveled",
+      "dc_uv": -0.9789009732665478,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g51-1",
+      "family": "beveled",
+      "dc_uv": 1.4969970098697658,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g51-1",
+      "family": "profile",
+      "dc_uv": 1.9822287289542964,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g51-0",
+      "family": "islands",
+      "dc_uv": 1.0621806699213,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g51-0",
+      "family": "radial",
+      "dc_uv": -1.1887667364116479,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g51-1",
+      "family": "islands",
+      "dc_uv": 3.154798369154259,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g51-1",
+      "family": "radial",
+      "dc_uv": -1.808813661611024,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g52-1",
+      "family": "triangle",
+      "dc_uv": -5.16341276471113,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g52-1",
+      "family": "beveled",
+      "dc_uv": 7.024519295735594,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g52-0",
+      "family": "triangle",
+      "dc_uv": -1.8438856431000206,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g52-0",
+      "family": "beveled",
+      "dc_uv": -7.592417272106909,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g52-0",
+      "family": "profile",
+      "dc_uv": -2.172501669955869,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g52-1",
+      "family": "profile",
+      "dc_uv": -4.157490177944381,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g52-0",
+      "family": "islands",
+      "dc_uv": 0.16505085713633613,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g52-1",
+      "family": "islands",
+      "dc_uv": 6.451318552233287,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g52-1",
+      "family": "radial",
+      "dc_uv": -0.3276137035597476,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g52-0",
+      "family": "radial",
+      "dc_uv": -0.5837366500679368,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g52-1",
+      "family": "triangle",
+      "dc_uv": -2.389136839556025,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g52-0",
+      "family": "triangle",
+      "dc_uv": -0.3637030700615284,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g52-0",
+      "family": "beveled",
+      "dc_uv": -12.054744161748085,
+      "qualified": true
+    },
+    {
+      "key": "r1-beveled-g52-1",
+      "family": "beveled",
+      "dc_uv": 5.066826959811404,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g52-0",
+      "family": "profile",
+      "dc_uv": -5.800414029389395,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g52-1",
+      "family": "profile",
+      "dc_uv": -2.9206564762821134,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g52-0",
+      "family": "islands",
+      "dc_uv": -3.1333068169464218,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g52-1",
+      "family": "islands",
+      "dc_uv": 0.47748071439130657,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g52-0",
+      "family": "radial",
+      "dc_uv": 2.085012669028442,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g52-1",
+      "family": "radial",
+      "dc_uv": 0.18920232790642974,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g53-1",
+      "family": "beveled",
+      "dc_uv": -0.8122441100406417,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g53-1",
+      "family": "triangle",
+      "dc_uv": -0.26077729477819217,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g53-0",
+      "family": "beveled",
+      "dc_uv": -0.3513265031738811,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g53-0",
+      "family": "triangle",
+      "dc_uv": -7.764464379623594,
+      "qualified": true
+    },
+    {
+      "key": "r0-profile-g53-0",
+      "family": "profile",
+      "dc_uv": 1.594839833518525,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g53-0",
+      "family": "islands",
+      "dc_uv": 3.5502675174201763,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g53-1",
+      "family": "islands",
+      "dc_uv": 1.0726829056204914,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g53-1",
+      "family": "profile",
+      "dc_uv": 1.3354497555151905,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g53-1",
+      "family": "radial",
+      "dc_uv": 1.4611141661981872,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g53-0",
+      "family": "radial",
+      "dc_uv": 0.3559740892025766,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g53-0",
+      "family": "triangle",
+      "dc_uv": 5.014785376902928,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g53-1",
+      "family": "triangle",
+      "dc_uv": -1.69883067095507,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g53-1",
+      "family": "profile",
+      "dc_uv": -1.742986655189381,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g53-1",
+      "family": "beveled",
+      "dc_uv": -11.100880757719242,
+      "qualified": true
+    },
+    {
+      "key": "r1-profile-g53-0",
+      "family": "profile",
+      "dc_uv": -1.2242165163153278,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g53-0",
+      "family": "beveled",
+      "dc_uv": -2.337559177480875,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g53-0",
+      "family": "islands",
+      "dc_uv": -5.7017020828080485,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g53-1",
+      "family": "radial",
+      "dc_uv": -5.154519398752989,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g53-1",
+      "family": "islands",
+      "dc_uv": 1.2548277043138654,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g53-0",
+      "family": "radial",
+      "dc_uv": 2.9109344879671273,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g54-1",
+      "family": "triangle",
+      "dc_uv": -3.962735423855916,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g54-1",
+      "family": "beveled",
+      "dc_uv": 6.004424488898175,
+      "qualified": false
+    },
+    {
+      "key": "r0-beveled-g54-0",
+      "family": "beveled",
+      "dc_uv": -1.7568755505964346,
+      "qualified": false
+    },
+    {
+      "key": "r0-triangle-g54-0",
+      "family": "triangle",
+      "dc_uv": -4.3425537761382556,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g54-1",
+      "family": "profile",
+      "dc_uv": 2.4358037885698764,
+      "qualified": false
+    },
+    {
+      "key": "r0-profile-g54-0",
+      "family": "profile",
+      "dc_uv": 4.153304937329275,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g54-1",
+      "family": "islands",
+      "dc_uv": 0.5753423505655892,
+      "qualified": false
+    },
+    {
+      "key": "r0-islands-g54-0",
+      "family": "islands",
+      "dc_uv": -2.9084821560250917,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g54-0",
+      "family": "radial",
+      "dc_uv": -0.8767550051562529,
+      "qualified": false
+    },
+    {
+      "key": "r0-radial-g54-1",
+      "family": "radial",
+      "dc_uv": -1.8106996064398675,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g54-0",
+      "family": "triangle",
+      "dc_uv": -1.8289511969460797,
+      "qualified": false
+    },
+    {
+      "key": "r1-triangle-g54-1",
+      "family": "triangle",
+      "dc_uv": 2.1941150752581273,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g54-0",
+      "family": "beveled",
+      "dc_uv": -2.3610387066591145,
+      "qualified": false
+    },
+    {
+      "key": "r1-beveled-g54-1",
+      "family": "beveled",
+      "dc_uv": 1.801778055399287,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g54-0",
+      "family": "profile",
+      "dc_uv": 2.821134779517795,
+      "qualified": false
+    },
+    {
+      "key": "r1-profile-g54-1",
+      "family": "profile",
+      "dc_uv": -2.4374683005390807,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g54-1",
+      "family": "islands",
+      "dc_uv": -5.6813099925267165,
+      "qualified": false
+    },
+    {
+      "key": "r1-islands-g54-0",
+      "family": "islands",
+      "dc_uv": -0.4290710323285366,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g54-0",
+      "family": "radial",
+      "dc_uv": -2.8629021765185354,
+      "qualified": false
+    },
+    {
+      "key": "r1-radial-g54-1",
+      "family": "radial",
+      "dc_uv": 1.3781328029852826,
+      "qualified": false
+    }
+  ]
+}
