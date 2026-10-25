@@ -1,0 +1,74 @@
+{
+  "snapshot": "runs\\fresh-discovery-continuous-v1\\round-000054.json",
+  "snapshot_sha256": "c1c74b8861659412a73b19ce8384a49afd15cc9835ec3a473dff9fdedc027dd0",
+  "rule": "Lowest SHA256(candidate key) among lower-half coarse-power rows without phase64",
+  "family_filter": "islands",
+  "excluded_keys": [
+    "r0-islands-g0-3"
+  ],
+  "pool_size": 111,
+  "population": 224,
+  "candidate": {
+    "candidate": {
+      "key": "r0-islands-g12-0",
+      "family": "islands",
+      "repeat": 0,
+      "round": 12,
+      "parameters": [
+        0.26601060669494236,
+        0.6679889130180909,
+        0.13548212100078172,
+        0.4073532880131464,
+        0.32344034230290464,
+        0.7057211775988945,
+        0.16784744165291166,
+        0.5050254669189204
+      ],
+      "origin": "fresh global",
+      "obstacles": [
+        [
+          [
+            -0.6330053033474712,
+            0.4694765775098272
+          ],
+          [
+            -0.3669946966525288,
+            0.4694765775098272
+          ],
+          [
+            -0.44581985235822164,
+            -0.19851233550826375
+          ]
+        ],
+        [
+          [
+            0.3382798288485477,
+            0.5207080304523589
+          ],
+          [
+            0.6617201711514523,
+            0.5207080304523589
+          ],
+          [
+            0.58167280494597,
+            -0.1850131471465356
+          ]
+        ]
+      ],
+      "proposal_strategy": "random"
+    },
+    "levels": [
+      {
+        "count": 257,
+        "dc_v": -2.462691505912925e-07,
+        "dc_power_w": 6.06484945329567e-18,
+        "input_power_w": 5.309476109087218e-09,
+        "efficiency": 1.1422689035017267e-09,
+        "max_kcl_a": 1.689268246955793e-20
+      }
+    ],
+    "device_fingerprint": "df2d3333159c55c9dd01176525fdbac559d538e0f053ee1d84365b62c901e09c",
+    "energy_converged": false
+  },
+  "limitation": "One deterministic diagnostic, not an unbiased population estimate"
+}
