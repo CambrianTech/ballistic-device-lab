@@ -1,4 +1,9 @@
 import unittest
+import json
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
 from ballistic_lab.reporting.low_score_holdout import select_holdout
 
 
@@ -8,6 +13,22 @@ def row(key, family, power, refined=False):
 
 
 class HoldoutSelectionTests(unittest.TestCase):
+    def test_partial_run_directory_is_never_reused(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            source=root/'snapshot.json'
+            source.write_text(json.dumps(dict(rows=[row('a','islands',1),row('b','islands',2)])))
+            output=root/'run'
+            output.mkdir()
+            marker=output/'result.json'
+            marker.write_text('preserve partial evidence')
+            result=subprocess.run([sys.executable,'-m','ballistic_lab.reporting.low_score_holdout',
+                                   '--snapshot',str(source),'--output',str(output)],capture_output=True,text=True)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn('FileExistsError',result.stderr)
+            self.assertEqual(marker.read_text(),'preserve partial evidence')
+            self.assertFalse((output/'selection.json').exists())
+
     def test_exclusion_keeps_original_lower_half_boundary(self):
         rows=[row(str(i),'islands',i) for i in range(4)]
         chosen,pool,population=select_holdout(rows,'islands',['0'])

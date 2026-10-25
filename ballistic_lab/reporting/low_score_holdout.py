@@ -23,11 +23,10 @@ def main():
     args=parser.parse_args()
     source=args.snapshot
     out=args.output
-    out.mkdir(parents=True,exist_ok=True)
-    if (out/'selection.json').exists():
-        raise FileExistsError(out/'selection.json')
     state=json.loads(source.read_text())
     chosen,pool_size,population=select_holdout(state['rows'],args.family,args.exclude_key)
+    # Atomically claim a fresh directory; never overwrite partial or completed runs.
+    out.mkdir(parents=True,exist_ok=False)
     selection=dict(snapshot=str(source),snapshot_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
         rule='Lowest SHA256(candidate key) among lower-half coarse-power rows without phase64',
         family_filter=args.family,excluded_keys=args.exclude_key,pool_size=pool_size,population=population,candidate=chosen,
