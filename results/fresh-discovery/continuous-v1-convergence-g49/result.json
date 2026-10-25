@@ -1,0 +1,6137 @@
+{
+  "generation": 49,
+  "snapshot_sha256": "efee92011ed0442d6ecee57511f9689d4622d9e8ab18e1c7b431c93444132fda",
+  "counts": {
+    "converged": 100,
+    "refined_unresolved": 0,
+    "screened_only": 920
+  },
+  "groups": {
+    "screened_only": [
+      {
+        "key": "r0-triangle-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g0-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g0-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g0-2",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g0-3",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g1-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g1-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g2-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g2-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g3-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g3-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g4-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g4-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g5-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g5-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g6-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g6-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g7-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g7-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g8-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g8-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g9-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g9-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g10-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g10-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g11-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g11-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g12-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g12-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g13-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g13-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g14-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g14-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g15-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g15-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g16-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g16-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g17-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g17-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g18-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g18-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g19-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g19-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g20-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g20-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g21-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g21-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g22-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g22-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g23-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g23-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g24-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g24-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g25-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g25-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g26-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g26-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g27-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g27-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g28-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g28-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g29-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g29-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g30-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g30-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g31-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g31-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g32-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g32-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g33-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g33-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g34-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g34-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g35-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g35-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g36-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g36-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g37-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g37-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g38-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g38-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g39-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g39-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g40-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g40-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g41-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g41-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g42-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g42-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g43-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g43-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g44-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g44-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g45-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g45-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g46-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g46-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g47-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g47-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g48-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g48-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-beveled-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-triangle-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-profile-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-islands-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r0-radial-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-triangle-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-beveled-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-profile-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-radial-g49-0",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      },
+      {
+        "key": "r1-islands-g49-1",
+        "max_energy_points": 257,
+        "energy_converged": false,
+        "phase_converged": false
+      }
+    ],
+    "converged": [
+      {
+        "key": "r0-beveled-g0-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g0-2",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g0-3",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g0-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g0-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g1-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g1-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g1-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g1-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g2-0",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g3-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g3-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g3-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g4-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g4-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g4-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g5-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g5-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g6-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g7-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g8-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g8-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g9-1",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g9-0",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g10-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g10-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g10-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g10-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g10-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-radial-g10-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g11-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g11-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g13-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-islands-g13-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g13-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g13-1",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g15-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g15-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g15-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g16-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g16-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g16-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g17-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g18-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g19-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g19-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g19-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g19-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g20-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g21-1",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g21-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g21-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g21-1",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g21-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g22-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-radial-g22-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g23-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g25-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g25-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g25-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g26-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g27-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g27-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g28-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g28-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-islands-g28-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g29-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-islands-g29-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g30-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-islands-g31-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g31-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g32-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g32-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g32-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g33-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g33-1",
+        "max_energy_points": 2049,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g33-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g34-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g35-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g35-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g35-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g37-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g37-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g37-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g38-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g38-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g39-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g40-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-islands-g40-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-radial-g40-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-islands-g41-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g42-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-beveled-g43-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-triangle-g43-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-profile-g46-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-beveled-g46-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r1-profile-g46-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g48-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-radial-g48-0",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      },
+      {
+        "key": "r0-triangle-g49-1",
+        "max_energy_points": 1025,
+        "energy_converged": true,
+        "phase_converged": true
+      }
+    ],
+    "refined_unresolved": []
+  },
+  "scope": "Completed snapshot only. Screened-only means untested at refinement, not failed convergence; no physical validation."
+}
