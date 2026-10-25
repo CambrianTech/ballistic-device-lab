@@ -1,5 +1,7 @@
 # Third-mesh charge-feedback check
 
+![Current and site-potential mesh sensitivity from saved results](mesh.png)
+
 Refining the electrostatic spacing from **0.05 to 0.03333 nm** changes lead-0 current by **−1.787 pA (−0.0001156%)** and site potential by at most **0.01263 mV**. The preceding 0.10-to-0.05 nm step changed current by −9.778 pA and potential by at most 0.06977 mV.
 
 | Mesh spacing (nm) | Lead-0 current (µA) |
@@ -19,6 +21,7 @@ Reproduce in the Kwant environment with single-thread BLAS and fresh output path
 ```powershell
 python -m physics_layers.finite_width_feedback --sigma-nm 0.11 --factors 6 --output results/physics-reference/width-sensitivity-011-third
 python -m ballistic_lab.reporting.compare_width_mesh results/physics-reference/width-sensitivity-011-fine/result.json results/physics-reference/width-sensitivity-011-third/result.json results/physics-reference/width-sensitivity-011-third/comparison.json
+python -m ballistic_lab.reporting.plot_width_mesh results/physics-reference/width-sensitivity-011/result.json results/physics-reference/width-sensitivity-011-fine/result.json results/physics-reference/width-sensitivity-011-third/result.json --output results/physics-reference/width-sensitivity-011-third/mesh.png
 ```
 
 [Previous two meshes](../width-sensitivity-011-fine/README.md) · [Raw result](result.json) · [Comparison and input hashes](comparison.json)
