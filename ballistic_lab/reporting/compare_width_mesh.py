@@ -5,6 +5,17 @@ import json
 from pathlib import Path
 
 
+def validate_dimensions(record):
+    sites = len(record['positions_m'])
+    if not sites or any(len(p) != 3 for p in record['positions_m']):
+        raise ValueError('Nonempty three-dimensional site positions required')
+    for row in record['rows']:
+        if len(row['shape']) != 3 or len(row['spacing_m']) != 3:
+            raise ValueError('Three mesh dimensions required')
+        if len(row['potential_v']) != sites:
+            raise ValueError('Every site must have a potential')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('coarse', type=Path)
@@ -12,6 +23,8 @@ def main():
     parser.add_argument('output', type=Path)
     args = parser.parse_args()
     records = [json.loads(p.read_text()) for p in (args.coarse, args.fine)]
+    for record in records:
+        validate_dimensions(record)
     a, b = records
     for key in ('sigma_m', 'cutoff_sigma', 'positions_m', 'source_sha256'):
         if a[key] != b[key]:
