@@ -1,0 +1,131 @@
+{
+  "snapshot": "runs\\fresh-discovery-continuous-v1\\round-000043.json",
+  "snapshot_sha256": "bcea184753ce4c9de7c365392b97d6c8202e87107db37411ebb94bacf52d6b70",
+  "generation": 43,
+  "candidates": 20,
+  "distinct_atomic_lattices": 20,
+  "duplicates": [],
+  "rows": [
+    {
+      "key": "r0-triangle-g43-1",
+      "family": "triangle",
+      "sites": 7573,
+      "atomic_sha256": "df54acc31d207efd75d7c6f470e7d3e7ff1f02dc90a4ea5f2d42075c2a024b21"
+    },
+    {
+      "key": "r0-triangle-g43-0",
+      "family": "triangle",
+      "sites": 7782,
+      "atomic_sha256": "95864d9e5415112ed2ad626549496e06478b1d22ebff2632e9c4511e95dec760"
+    },
+    {
+      "key": "r0-beveled-g43-1",
+      "family": "beveled",
+      "sites": 7949,
+      "atomic_sha256": "2b742915b2cbc26d492ebdb4c5023251b4863e631af72276274f9bd77384aabb"
+    },
+    {
+      "key": "r0-beveled-g43-0",
+      "family": "beveled",
+      "sites": 7976,
+      "atomic_sha256": "aab491bf22547633b01e2d7fce50597c7c7468aec88ee588d592990a4decc9f0"
+    },
+    {
+      "key": "r0-profile-g43-0",
+      "family": "profile",
+      "sites": 7954,
+      "atomic_sha256": "5364d9ae614e16d9428b26181dd1a1087f836df4306b3e5a6de5d3f2713a01f6"
+    },
+    {
+      "key": "r0-profile-g43-1",
+      "family": "profile",
+      "sites": 8224,
+      "atomic_sha256": "22130e535b083d5d5496c8781de3955fc1ab87375039ceea398a496fa2692af5"
+    },
+    {
+      "key": "r0-islands-g43-0",
+      "family": "islands",
+      "sites": 8388,
+      "atomic_sha256": "90e3ef6c3364822e3a130739edd843da049576c5e2065171eb5d0ad32eae465f"
+    },
+    {
+      "key": "r0-islands-g43-1",
+      "family": "islands",
+      "sites": 8170,
+      "atomic_sha256": "e8ebe1b869b5a0c16a1cfba178926d92562ee250f9e07b63c447d90c08526cf7"
+    },
+    {
+      "key": "r0-radial-g43-1",
+      "family": "radial",
+      "sites": 7704,
+      "atomic_sha256": "c597d0ee8d31a4f73588989defd3844283b230bede0475a73485e5226890172e"
+    },
+    {
+      "key": "r0-radial-g43-0",
+      "family": "radial",
+      "sites": 8457,
+      "atomic_sha256": "609e05085376b20c8079bf8e0f46ee35fa601bb339fd3989abf2cf3afcf144f5"
+    },
+    {
+      "key": "r1-triangle-g43-0",
+      "family": "triangle",
+      "sites": 8062,
+      "atomic_sha256": "44e589e5f78421bdfb5ad0022be67ed7e07463528472b256a83ef9717bdfb9d7"
+    },
+    {
+      "key": "r1-triangle-g43-1",
+      "family": "triangle",
+      "sites": 8101,
+      "atomic_sha256": "d9235c2d013aeaa97a6f50492c59068996b6bccd43b0d3aabd5cd533ac7ded85"
+    },
+    {
+      "key": "r1-profile-g43-0",
+      "family": "profile",
+      "sites": 7207,
+      "atomic_sha256": "425eb6e49262ac68acec40674ef5526cea0f2761b6e0d060165d16f5bd45faf7"
+    },
+    {
+      "key": "r1-beveled-g43-0",
+      "family": "beveled",
+      "sites": 8252,
+      "atomic_sha256": "e2e53c859409d4537ee9d6148415db9b9e7c793b70ee9d429d939360b4f37f3f"
+    },
+    {
+      "key": "r1-profile-g43-1",
+      "family": "profile",
+      "sites": 7831,
+      "atomic_sha256": "a426ab1ae8c78ad46834dfdf1417cad8d440129f23b12171949a8a435dbdd908"
+    },
+    {
+      "key": "r1-beveled-g43-1",
+      "family": "beveled",
+      "sites": 8085,
+      "atomic_sha256": "988cc2c71d3f30c8a57310b3c1f0bb2d3f26153d344b0718e4c039771b56a8b1"
+    },
+    {
+      "key": "r1-islands-g43-1",
+      "family": "islands",
+      "sites": 7981,
+      "atomic_sha256": "bc5de7d6fc8b3b2b94a96710d802834aac6555bb165679f6337530851ad2e87d"
+    },
+    {
+      "key": "r1-radial-g43-1",
+      "family": "radial",
+      "sites": 7549,
+      "atomic_sha256": "0d536eb6de296936c5a07eceeca920d4daf4275c760b8029ef9dff4849626e7f"
+    },
+    {
+      "key": "r1-islands-g43-0",
+      "family": "islands",
+      "sites": 8480,
+      "atomic_sha256": "7eedca2a4f92860aac29afa46d63d749e0dc4bdd71d1f1371660ab1dd879ad4c"
+    },
+    {
+      "key": "r1-radial-g43-0",
+      "family": "radial",
+      "sites": 8160,
+      "atomic_sha256": "8977c71de28daefc16a738fa5462d2e51cf10fea4b91ca5d2ce3511ad85a4a46"
+    }
+  ],
+  "scope": "Exact site, graph and lead-interface identity under the fixed lattice builder; not transport diversity or physical novelty."
+}
