@@ -1,0 +1,81 @@
+{
+  "snapshot": "runs\\fresh-discovery-continuous-v1\\round-000054.json",
+  "snapshot_sha256": "c1c74b8861659412a73b19ce8384a49afd15cc9835ec3a473dff9fdedc027dd0",
+  "rule": "Lowest SHA256(candidate key) among lower-half coarse-power rows without phase64",
+  "family_filter": "radial",
+  "pool_size": 112,
+  "population": 224,
+  "candidate": {
+    "candidate": {
+      "key": "r1-radial-g39-1",
+      "family": "radial",
+      "repeat": 1,
+      "round": 39,
+      "parameters": [
+        0.3940985679632819,
+        0.5078777583106513,
+        -0.07161637371364424,
+        0.10724107939217642,
+        0.8193408758850338,
+        0.59074254018946,
+        0.8789471134457,
+        0.6472435785160153,
+        0.7901716363547151,
+        0.35360606965345476,
+        0.8381241687232037,
+        0.7785703510610142
+      ],
+      "origin": "fresh random",
+      "obstacles": [
+        [
+          [
+            0.2512846921464287,
+            0.10724107939217642
+          ],
+          [
+            0.09300571400908547,
+            0.3193907893318204
+          ],
+          [
+            -0.07161637371364421,
+            0.5536387690425962
+          ],
+          [
+            -0.2519835927838412,
+            0.3396816573103194
+          ],
+          [
+            -0.3830218840462406,
+            0.10724107939217647
+          ],
+          [
+            -0.17015569576604198,
+            -0.01974727849012331
+          ],
+          [
+            -0.0716163737136443,
+            -0.3184235446049424
+          ],
+          [
+            0.14534764683848442,
+            -0.17236206903222417
+          ]
+        ]
+      ],
+      "proposal_strategy": "random"
+    },
+    "levels": [
+      {
+        "count": 257,
+        "dc_v": 1.7506009365317222e-06,
+        "dc_power_w": 3.064603638985743e-16,
+        "input_power_w": 5.617266868167275e-09,
+        "efficiency": 5.455684607674016e-08,
+        "max_kcl_a": 1.8221134533318094e-20
+      }
+    ],
+    "device_fingerprint": "266c1d539da9759129cb7307d1055557579e7a98f8544bbec9f9c8b1cde01874",
+    "energy_converged": false
+  },
+  "limitation": "One deterministic diagnostic, not an unbiased population estimate"
+}
