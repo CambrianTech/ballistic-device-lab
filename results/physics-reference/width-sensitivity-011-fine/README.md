@@ -1,5 +1,7 @@
 # Charge feedback under mesh refinement
 
+[Completed third-mesh check](../width-sensitivity-011-third/README.md): refining further to 0.03333 nm changes current by another −1.787 pA.
+
 Halving the electrostatic mesh spacing from **0.10 to 0.05 nm** at fixed **0.11 nm charge-cloud width** changes lead-0 current by **−0.0006325% (−9.778 pA)**. The largest site-potential change is **0.06977 mV**.
 
 | Mesh spacing | Lead-0 current | Potential residual | Occupation residual |
