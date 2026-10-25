@@ -8,6 +8,13 @@ def row(key, family, power, refined=False):
 
 
 class HoldoutSelectionTests(unittest.TestCase):
+    def test_exclusion_keeps_original_lower_half_boundary(self):
+        rows=[row(str(i),'islands',i) for i in range(4)]
+        chosen,pool,population=select_holdout(rows,'islands',['0'])
+        self.assertEqual((chosen['candidate']['key'],pool,population),('1',1,4))
+        with self.assertRaises(ValueError):
+            select_holdout(rows,'islands',['0','1'])
+
     def test_family_filter_precedes_lower_half(self):
         rows=[row('i','islands',0),row('a','radial',10),row('b','radial',20)]
         chosen,pool,population=select_holdout(rows,'radial')
