@@ -44,6 +44,17 @@ def render(options):
         for ax,c in zip(axes[0],attempts):
             draw(ax,c,'#55dfc5');ax.set_title(c['family'].title(),color='white');ax.text(.5,-.08,'Proposed • unranked',transform=ax.transAxes,ha='center',color='#a8bacf',fontsize=10)
         fig.subplots_adjust(left=.02,right=.98,top=.85,bottom=.16);fig.savefig(out/'campaign-attempts.png',dpi=150,facecolor=fig.get_facecolor());plt.close(fig)
+    offspring=[c for c in candidates if c.get('proposal_strategy')=='champion'] if proposals else []
+    if offspring:
+        known={r['candidate']['key']:r['candidate'] for r in state.get('rows',[])}
+        known[state['retained_champion']['candidate']['key']]=state['retained_champion']['candidate']
+        parent=known.get(offspring[0].get('parent_key'))
+        display=([parent] if parent else [])+offspring
+        fig,axes=plt.subplots(1,len(display),figsize=(3*len(display),3.5),facecolor='#0c1725',squeeze=False)
+        for i,(ax,c) in enumerate(zip(axes[0],display)):
+            draw(ax,c,'#ffc76b' if parent and i==0 else '#55dfc5')
+            ax.set_title('Parent' if parent and i==0 else 'Proposed descendant',color='white',fontsize=10)
+        fig.tight_layout();fig.savefig(out/'campaign-offspring.png',dpi=140);plt.close(fig)
     # Reuse the atomic renderer only for this fixed-potential campaign model.
     # Cache by complete input records; never leave an old image labeled as current.
     atomic_rows=[state['control'],state['champion']]
@@ -71,5 +82,6 @@ def render(options):
         children=sum(c.get('proposal_strategy')=='champion' for c in candidates)
         body+=f'\n\nLatest proposal batch: **{len(candidates)} shapes**, including **{children} champion descendants**. Completed matched snapshots: **{len(snapshots)}** (generation labels start at zero).'
     if attempts:body+='\n\n**Shapes being explored now** — one recorded proposal per family, not selected for score.\n\n![Current diverse geometry proposals](results/live/campaign-attempts.png)'
+    if offspring:body+='\n\n**Champion branch: broad offspring** (unranked proposals; parent shown when available).\n\n![Parent and proposed champion descendants](results/live/campaign-offspring.png)'
     body+='\n\n[Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).'
     return dict(markdown=body,blocks={'atomic-hero':atomic_body},evidence=dict(source=source.as_posix(),completed_snapshot=bool(snapshots),control=state['control'],retained=state['retained_champion'],current=current,champion=state['champion'],attempts=attempts))

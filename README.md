@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-26 17:35 UTC**
+**Computing · Updated 2026-10-26 17:39 UTC**
 
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
@@ -26,13 +26,17 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 
 ![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)
 
-Champion descendants: **25% of proposals**. Completed generation: **2**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
+Champion descendants: **25% of proposals**. Completed generation: **pending**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
 
-Latest proposal batch: **20 shapes**, including **5 champion descendants**. Completed matched snapshots: **3** (generation labels start at zero).
+Latest proposal batch: **40 shapes**, including **10 champion descendants**. Completed matched snapshots: **0** (generation labels start at zero).
 
 **Shapes being explored now** — one recorded proposal per family, not selected for score.
 
 ![Current diverse geometry proposals](results/live/campaign-attempts.png)
+
+**Champion branch: broad offspring** (unranked proposals; parent shown when available).
+
+![Parent and proposed champion descendants](results/live/campaign-offspring.png)
 
 [Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).
 <!-- discovery:end -->

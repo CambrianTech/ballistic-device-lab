@@ -32,3 +32,27 @@ class ChampionTests(unittest.TestCase):
         with self.assertRaises(ValueError): champion_offspring(items,parent,.6,123,3)
         parent['phase_converged']=False
         with self.assertRaises(ValueError): champion_offspring(items,parent,.25,123,3)
+
+    def test_broad_children_change_geometry_and_do_not_duplicate_siblings(self):
+        import numpy as np
+        from ballistic_lab.search.broad_champion import shape_mask, difference
+        parent=json.loads(Path('results/fresh-discovery/champion-probe-261026/selection.json').read_text())['parent']
+        items=[dict(key=str(i), repeat=i//10, origin='fresh global' if i%2==0 else 'mutation of other') for i in range(20)]
+        for seed in range(12):
+            children=[r for r in champion_offspring(items,parent,.25,seed,1) if r.get('proposal_strategy')=='champion']
+            self.assertEqual(len(children),5)
+            masks=[]
+            for c in children:
+                mask=shape_mask(c['obstacles'])
+                area,relative=difference(mask,shape_mask(parent['candidate']['obstacles']))
+                self.assertGreaterEqual(area,.035)
+                self.assertGreaterEqual(relative,.20)
+                for sibling in masks:
+                    a,r=difference(mask,sibling)
+                    self.assertGreaterEqual(a,.02)
+                    self.assertGreaterEqual(r,.15)
+                masks.append(mask)
+        square=[[[-.5,-.5],[.5,-.5],[.5,.5],[-.5,.5]]]
+        mask=shape_mask(square)
+        self.assertAlmostEqual(float(mask.mean()),.25)
+        self.assertEqual(difference(mask,mask),(0,0))

@@ -45,7 +45,7 @@ def strategy_for(mode, generation):
 def champion_offspring(items, champion, fraction, seed, generation):
     """Replace a bounded share of proposals, retaining global exploration."""
     import numpy as np
-    from ballistic_lab.geometry.families import FAMILIES, geometry
+    from ballistic_lab.search.broad_champion import broad_child
     if not 0 <= fraction <= .5:
         raise ValueError('Champion fraction must be between zero and one half')
     if not qualified(champion):
@@ -55,24 +55,21 @@ def champion_offspring(items, champion, fraction, seed, generation):
     if not count:
         return result
     parent = champion['candidate']
-    bounds = np.array(FAMILIES[parent['family']].bounds)
-    low, width = bounds[:, 0], bounds[:, 1]-bounds[:, 0]
-    unit = (np.array(parent['parameters'])-low)/width
     rng = np.random.default_rng(np.random.SeedSequence([seed, generation, 725]))
     # Prefer mutation slots; rotate replacements so no family always loses them.
     slots = [i for i,c in enumerate(items) if c['origin'] != 'fresh global']
     if len(slots) < count:
         slots = list(range(1,len(items),2))
     slots = list(np.roll(slots, generation % len(slots)))[:count]
+    accepted = []
     for j, slot in enumerate(slots):
-        sigma = (.02, .08)[j % 2]
-        child = 1-abs(np.mod(unit+rng.normal(0, sigma, len(unit)), 2)-1)
-        parameters = low+child*width
+        child = broad_child(parent, rng, accepted)
+        if child is None:
+            continue
         result[slot] = dict(key=f'champion-g{generation}-{j}', family=parent['family'],
-            repeat=items[slot]['repeat'], round=generation, parameters=parameters.tolist(),
+            repeat=items[slot]['repeat'], round=generation,
             origin=f"mutation of {parent['key']}", parent_key=parent['key'],
-            proposal_strategy='champion', mutation_sigma=sigma,
-            obstacles=[p.tolist() for p in geometry(parent['family'], parameters)])
+            proposal_strategy='champion', **child)
     return result
 
 
