@@ -6,6 +6,19 @@ from ballistic_lab.pipeline.fresh_discovery import champion_offspring
 
 
 class ChampionTests(unittest.TestCase):
+    def test_multiple_parents_share_total_budget_and_rotate(self):
+        from unittest.mock import patch
+        parents=[dict(candidate=dict(key=f'p{i}'),energy_converged=True,phase_converged=True,phase64={'dc_power_w':1}) for i in range(7)]
+        items=[dict(key=str(i),repeat=0,origin='mutation of other') for i in range(20)]
+        with patch('ballistic_lab.search.broad_champion.broad_child',return_value={'family':'polygon','obstacles':[]}):
+            first=champion_offspring(items,parents,.25,1,0)
+            second=champion_offspring(items,parents,.25,1,1)
+        a=[r['parent_key'] for r in first if r.get('proposal_strategy')=='champion']
+        b=[r['parent_key'] for r in second if r.get('proposal_strategy')=='champion']
+        self.assertEqual(a,['p0','p1','p2','p3','p4'])
+        self.assertEqual(set(b),{'p5','p6','p0','p1','p2'})
+        self.assertEqual(len(b),5)
+
     def test_initial_population_keeps_every_family_in_each_repeat(self):
         from ballistic_lab.search.dc_space import WideDCPlan, proposals
         parent=json.loads(Path('results/fresh-discovery/champion-probe-261026/selection.json').read_text())['parent']

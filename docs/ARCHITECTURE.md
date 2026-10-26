@@ -416,4 +416,4 @@ running zero-drive pilot or edge worker.
 
 ## General device-search extension
 
-See [neuromorphic components and shared harness contracts](NEUROMORPHIC-ARCHITECTURE.md). The dependency-free `device_harness` archive is an experimental reusable layer, isolated from the live rectifier source manifest. It is not yet a replacement worker or a neuromorphic simulator.
+See [neuromorphic components and shared harness contracts](NEUROMORPHIC-ARCHITECTURE.md). The dependency-free `device_harness` archive is an experimental reusable layer, used by the fresh rectifier worker through a distinct-parent adapter and included in its source manifest. It is not a neuromorphic simulator.

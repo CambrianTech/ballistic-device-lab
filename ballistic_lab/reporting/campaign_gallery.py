@@ -48,12 +48,22 @@ def render(options):
     if offspring:
         known={r['candidate']['key']:r['candidate'] for r in state.get('rows',[])}
         known[state['retained_champion']['candidate']['key']]=state['retained_champion']['candidate']
-        parent=known.get(offspring[0].get('parent_key'))
-        display=([parent] if parent else [])+offspring
-        fig,axes=plt.subplots(1,len(display),figsize=(3*len(display),3.5),facecolor='#0c1725',squeeze=False)
-        for i,(ax,c) in enumerate(zip(axes[0],display)):
-            draw(ax,c,'#ffc76b' if parent and i==0 else '#55dfc5')
-            ax.set_title('Parent' if parent and i==0 else 'Proposed descendant',color='white',fontsize=10)
+        # Latest proposals can follow the last completed snapshot's archive.
+        live=json.loads((root/'state.json').read_text())
+        for r in live.get('parent_archive',[]):
+            known[r['candidate']['key']]=r['candidate']
+        parent_keys=list(dict.fromkeys(c.get('parent_key') for c in offspring))
+        columns=1+max(sum(c.get('parent_key')==k for c in offspring) for k in parent_keys)
+        fig,axes=plt.subplots(len(parent_keys),columns,figsize=(3*columns,3*len(parent_keys)),facecolor='#0c1725',squeeze=False)
+        for parent_index,(row,key) in enumerate(zip(axes,parent_keys),1):
+            for ax in row: ax.axis('off')
+            parent=known.get(key)
+            if parent:
+                draw(row[0],parent,'#ffc76b')
+            row[0].set_title(f'Qualified parent {parent_index}\n'+(parent['family'].title() if parent else 'Receipt unavailable'),color='#ffc76b',fontsize=10)
+            for ax,c in zip(row[1:],[c for c in offspring if c.get('parent_key')==key]):
+                draw(ax,c,'#55dfc5')
+                ax.set_title('Proposed descendant',color='white',fontsize=10)
         fig.tight_layout();fig.savefig(out/'campaign-offspring.png',dpi=140);plt.close(fig)
     # Reuse the atomic renderer only for this fixed-potential campaign model.
     # Cache by complete input records; never leave an old image labeled as current.
@@ -78,6 +88,8 @@ def render(options):
     config=json.loads((root/'config.json').read_text())
     fraction=config.get('champion_fraction',0)
     body=f'**One benchmark. A fresh population. A champion to beat.**\n\n![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)\n\nChampion descendants: **{fraction:.0%} of proposals**. Completed generation: **{state["round"] if snapshots else "pending"}**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).'
+    if 'parent_archive' in state:
+        body+=f'\n\n**{len(state["parent_archive"])} distinct qualified parents / {config.get("champion_capacity",5)} available niches** feed the {fraction:.0%} descendant allocation. Parent slots rotate evenly; empty niches stay empty until a sufficiently different design passes convergence.'
     if current:
         from ballistic_lab.search.broad_champion import shape_mask, difference
         area, relative = difference(shape_mask(current['candidate']['obstacles']), shape_mask(state['retained_champion']['candidate']['obstacles']))
@@ -87,6 +99,6 @@ def render(options):
         children=sum(c.get('proposal_strategy')=='champion' for c in candidates)
         body+=f'\n\nLatest proposal batch: **{len(candidates)} shapes**, including **{children} champion descendants**. Completed matched snapshots: **{len(snapshots)}** (generation labels start at zero).'
     if attempts:body+='\n\n**Shapes being explored now** — one recorded proposal per family, not selected for score.\n\n![Current diverse geometry proposals](results/live/campaign-attempts.png)'
-    if offspring:body+='\n\n**Champion branch: broad offspring** (unranked proposals; parent shown when available).\n\n![Parent and proposed champion descendants](results/live/campaign-offspring.png)'
+    if offspring:body+='\n\n**Distinct champions → evolved descendants.** Each row pairs a qualified parent with its unranked proposals.\n\n![Qualified parents and their proposed descendants grouped by lineage](results/live/campaign-offspring.png)'
     body+='\n\n[Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).'
-    return dict(markdown=body,blocks={'atomic-hero':atomic_body},evidence=dict(source=source.as_posix(),completed_snapshot=bool(snapshots),control=state['control'],retained=state['retained_champion'],current=current,champion=state['champion'],attempts=attempts))
+    return dict(markdown=body,blocks={'atomic-hero':atomic_body},evidence=dict(source=source.as_posix(),completed_snapshot=bool(snapshots),control=state['control'],retained=state['retained_champion'],current=current,champion=state['champion'],parent_archive=state.get('parent_archive',[]),offspring=offspring,attempts=attempts))

@@ -1,6 +1,6 @@
 """Physics-independent search records and distinct qualified parent selection.
 
-Experimental API; not yet wired into the live rectifier worker.
+Experimental API; used by the rectifier's distinct-parent adapter.
 """
 from dataclasses import dataclass
 from math import isfinite

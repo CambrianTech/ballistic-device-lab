@@ -39,7 +39,7 @@ Reuse existing geometry factories where their parameterization fits, transport b
 | Distinct-parent archive and deterministic selection | Which differences matter for this experiment |
 | Saved records and generated publication | Device-specific figures and interpretation |
 
-`device_harness` currently provides dependency-free evaluation records, an `Experiment` protocol and deterministic distinct-parent selection. It is tested independently and **not yet connected to the live rectifier worker**. It does not implement a neuromorphic solver or a new scheduling loop. Extend these small contracts when a second real adapter demands it rather than introducing a universal simulator framework.
+`device_harness` currently provides dependency-free evaluation records, an `Experiment` protocol and deterministic distinct-parent selection. The rectifier worker now uses its distinct-parent selector through a geometry-specific adapter. It does not implement a neuromorphic solver or a new scheduling loop. Extend these small contracts when a second real adapter demands it rather than introducing a universal simulator framework.
 
 ## Five distinct parents, one continuous history
 

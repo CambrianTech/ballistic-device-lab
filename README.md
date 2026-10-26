@@ -1,7 +1,7 @@
 # Evolutionary Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-26 18:24 UTC**
+**Computing · Updated 2026-10-26 18:31 UTC**
 
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
@@ -32,21 +32,21 @@ The experimental starting point is Shi et al., [*Nanoscale Graphene-Based Ballis
 <!-- discovery:start -->
 **One benchmark. A fresh population. A champion to beat.**
 
-![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png?v=ea364475d52e674a)
+![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png?v=3556ee170919e97f)
 
-Champion descendants: **25% of proposals**. Completed generation: **2**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
+Champion descendants: **25% of proposals**. Completed generation: **pending**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
 
-**Geometrically distinct under the current mask threshold.** Current best versus retained champion: **11.9% of device area changed**; **43.4% of etched union changed**. Best score does not imply a new shape family.
+**5 distinct qualified parents / 5 available niches** feed the 25% descendant allocation. Parent slots rotate evenly; empty niches stay empty until a sufficiently different design passes convergence.
 
-Latest proposal batch: **20 shapes**, including **5 champion descendants**. Completed matched snapshots: **3** (generation labels start at zero).
+Latest proposal batch: **40 shapes**, including **10 champion descendants**. Completed matched snapshots: **0** (generation labels start at zero).
 
 **Shapes being explored now** — one recorded proposal per family, not selected for score.
 
-![Current diverse geometry proposals](results/live/campaign-attempts.png?v=94dcd4c616c46f4b)
+![Current diverse geometry proposals](results/live/campaign-attempts.png?v=12a67364f041bd36)
 
-**Champion branch: broad offspring** (unranked proposals; parent shown when available).
+**Distinct champions → evolved descendants.** Each row pairs a qualified parent with its unranked proposals.
 
-![Parent and proposed champion descendants](results/live/campaign-offspring.png?v=92e8ed3faca465af)
+![Qualified parents and their proposed descendants grouped by lineage](results/live/campaign-offspring.png?v=113b08113b7cc51b)
 
 [Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).
 <!-- discovery:end -->

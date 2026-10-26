@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from ballistic_lab.pipeline.dc_continuous import save, single_worker, status, task, finalists
 from ballistic_lab.search.dc_space import WideDCPlan, proposals
+from ballistic_lab.search.champion_archive import select_parents, import_history
 
 
 def qualified(row):
@@ -48,13 +49,13 @@ def champion_offspring(items, champion, fraction, seed, generation):
     from ballistic_lab.search.broad_champion import broad_child
     if not 0 <= fraction <= .5:
         raise ValueError('Champion fraction must be between zero and one half')
-    if not qualified(champion):
+    parents = champion if isinstance(champion, list) else [champion]
+    if not parents or not all(qualified(r) for r in parents):
         raise ValueError('Champion must pass energy and phase convergence')
     count = int(len(items)*fraction)
     result = list(items)
     if not count:
         return result
-    parent = champion['candidate']
     rng = np.random.default_rng(np.random.SeedSequence([seed, generation, 725]))
     # Prefer mutation slots; rotate replacements so no family always loses them.
     slots = [i for i,c in enumerate(items) if c['origin'] != 'fresh global']
@@ -63,6 +64,7 @@ def champion_offspring(items, champion, fraction, seed, generation):
     slots = list(np.roll(slots, generation % len(slots)))[:count]
     accepted = []
     for j, slot in enumerate(slots):
+        parent = parents[(generation*count+j) % len(parents)]['candidate']
         child = broad_child(parent, rng, accepted)
         if child is None:
             continue
@@ -86,12 +88,18 @@ def main():
     p.add_argument('--controls',type=Path,default=Path('results/2026-10-22-dc-wide/summary.json'))
     p.add_argument('--refinement-policy', choices=['score','family'], default='score')
     p.add_argument('--champion-fraction', type=float, default=0.0)
+    p.add_argument('--champion-capacity', type=int, default=5)
+    p.add_argument('--champion-distance', type=float, default=.2)
+    p.add_argument('--seed-archive', type=Path)
     args=p.parse_args()
     if args.rounds<1 or args.workers<1: raise ValueError('Positive rounds and workers required')
     if not 0 <= args.champion_fraction <= .5: raise ValueError('Champion fraction must be in [0, .5]')
+    if args.champion_capacity < 1 or not 0 < args.champion_distance <= 1:
+        raise ValueError('Positive champion capacity and distance in (0, 1] required')
     args.root.mkdir(parents=True,exist_ok=True)
     with single_worker(args.root):
         files=[x for x in Path('ballistic_lab').rglob('*.py') if 'reporting' not in x.parts]
+        files += list(Path('device_harness').rglob('*.py'))
         hashes={str(x):hashlib.sha256(x.read_bytes()).hexdigest() for x in files}
         manifest=args.root/'source.json'
         if manifest.exists() and json.loads(manifest.read_text())!=hashes: raise ValueError('Source changed; use a new campaign')
@@ -100,6 +108,10 @@ def main():
         if args.continuous: config['continuous']=True
         if args.refinement_policy != 'score': config['refinement_policy']=args.refinement_policy
         if args.champion_fraction: config['champion_fraction']=args.champion_fraction
+        config.update(champion_capacity=args.champion_capacity, champion_distance=args.champion_distance)
+        if args.seed_archive:
+            config['seed_archive']=str(args.seed_archive)
+            config['seed_archive_sha256']=hashlib.sha256(args.seed_archive.read_bytes()).hexdigest()
         cfg=args.root/'config.json'
         if cfg.exists() and json.loads(cfg.read_text())!=config: raise ValueError('Resume configuration mismatch')
         save(cfg,config)
@@ -115,6 +127,11 @@ def main():
             champion=max((r['candidate'] for r in records),key=lambda r:r['phase64']['dc_power_w'])
             control=next(r for r in json.loads(args.controls.read_text()) if r['candidate']['key']=='D00')
             state=dict(round=0,rows=[],champion=champion,retained_champion=champion,control=control,objective='DC power at fixed 10 mV peak and 10 kohm',physics_verified=physics)
+            state['parent_history'] = [champion]
+            if args.seed_archive:
+                state['parent_history'] += import_history(args.seed_archive, {k:hashes[k] for k in physics}, state['objective'])
+            state['champion'] = choose_champion(champion, state['parent_history'])
+            state['parent_archive'] = select_parents(state['parent_history'],args.champion_capacity,args.champion_distance)
             save(statepath,state)
         (args.root/'spectra').mkdir(exist_ok=True)
         plan=replace(WideDCPlan(),seeds=(args.seed,args.seed+100),parent_strategy='diversity',mutation_floor=.04)
@@ -126,7 +143,7 @@ def main():
                     else:
                         round_plan=replace(plan,parent_strategy=strategy_for(args.strategy,index))
                         items=[dict(c,proposal_strategy=round_plan.parent_strategy) for repeat in range(2) for c in proposals(round_plan,repeat,index,state['rows'])]
-                        items=champion_offspring(items,state['champion'],args.champion_fraction,args.seed,index)
+                        items=champion_offspring(items,state['parent_archive'],args.champion_fraction,args.seed,index)
                         save(path,items)
                     known={r['candidate']['key']:r for r in state['rows']}
                     status(args.root,phase='screen',round=index)
@@ -140,6 +157,7 @@ def main():
                             refined=pool.submit(task,r['candidate'],args.root/'spectra',True).result()
                             known[refined['candidate']['key']]=refined
                     state['rows']=list(known.values());state['champion']=choose_champion(state['champion'],state['rows'])
+                    state['parent_archive']=select_parents(state['parent_history']+state['rows'],args.champion_capacity,args.champion_distance)
                     save(args.root/f'round-{index:06d}.json',state)
                     state['round']+=1;save(statepath,state)
             status(args.root,phase='stopped' if (args.root/'STOP').exists() else 'complete',round=state['round'])
