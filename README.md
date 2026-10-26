@@ -6,11 +6,13 @@
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
 
-### Evolve devices. Simulate the physics. Beat the champion.
+### Evolve the geometry. Discover the electrical function.
 
-**An evolutionary-search harness for discovering electrical device designs.** Algorithms mutate geometries, preserve diverse candidates and test them against controls through physics simulation. Every completed generation produces results and diagrams you can inspect—and a record for the next run to beat.
+**What if the useful circuit is a shape we would never think to draw?** This project uses evolutionary algorithms to search for electrical device geometries, simulate their behavior and retain the strongest qualified designs. The ambition is to make geometry itself part of the electrical function: exploring how boundaries and pathways can shape ballistic transport, diffraction and interference.
 
-The featured experiment is a **graphene ballistic rectifier**: can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms.
+The search proposes, mutates and compares shapes against controls, with numerical checks before a candidate earns its place. Saved results drive the diagrams and campaign summaries automatically, so each run—and each fork—can tell its own story. The reusable harness is being developed toward other electrical targets, including [neuromorphic components](docs/NEUROMORPHIC-ARCHITECTURE.md).
+
+**Current experiment: a graphene ballistic rectifier.** Can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms. These are simulation results; a promising shape still needs physical validation.
 
 <!-- atomic-hero:start -->
 ![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png?v=0c9fb19feed6afd0)
