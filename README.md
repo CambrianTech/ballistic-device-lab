@@ -14,6 +14,8 @@ The search proposes, mutates and compares shapes against controls, with numerica
 
 **Current experiment: a graphene ballistic rectifier.** Can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms. These are simulation results; a promising shape still needs physical validation.
 
+The experimental starting point is Shi et al., [*Nanoscale Graphene-Based Ballistic Rectifiers for Detection of High Terahertz Frequency Optical Signals* (2026)](https://doi.org/10.1002/smsc.202500654), alongside Auton et al., [*Graphene ballistic nano-rectifier with very high responsivity* (2016)](https://doi.org/10.1038/ncomms11670). Our current search uses a smaller synthetic benchmark; it does not yet reproduce those devices or establish an improvement over their measurements. [Published-device comparison](docs/PAPER-COMPARISON.md).
+
 <!-- atomic-hero:start -->
 ![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png?v=0c9fb19feed6afd0)
 
