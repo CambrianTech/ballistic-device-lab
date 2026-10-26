@@ -78,6 +78,11 @@ def render(options):
     config=json.loads((root/'config.json').read_text())
     fraction=config.get('champion_fraction',0)
     body=f'**One benchmark. A fresh population. A champion to beat.**\n\n![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)\n\nChampion descendants: **{fraction:.0%} of proposals**. Completed generation: **{state["round"] if snapshots else "pending"}**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).'
+    if current:
+        from ballistic_lab.search.broad_champion import shape_mask, difference
+        area, relative = difference(shape_mask(current['candidate']['obstacles']), shape_mask(state['retained_champion']['candidate']['obstacles']))
+        relation='Close geometric relative' if relative < .20 else 'Geometrically distinct under the current mask threshold'
+        body+=f'\n\n**{relation}.** Current best versus retained champion: **{area:.1%} of device area changed**; **{relative:.1%} of etched union changed**. Best score does not imply a new shape family.'
     if proposals:
         children=sum(c.get('proposal_strategy')=='champion' for c in candidates)
         body+=f'\n\nLatest proposal batch: **{len(candidates)} shapes**, including **{children} champion descendants**. Completed matched snapshots: **{len(snapshots)}** (generation labels start at zero).'

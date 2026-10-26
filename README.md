@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-26 17:40 UTC**
+**Computing · Updated 2026-10-26 17:45 UTC**
 
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
@@ -13,7 +13,7 @@ Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) �
 The featured experiment is a **graphene ballistic rectifier**: can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms.
 
 <!-- atomic-hero:start -->
-![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png)
+![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png?v=0c9fb19feed6afd0)
 
 **Same material. Same drive. Evolving geometry.** This image follows the strongest qualified champion in the configured campaign, including its retained benchmark. Bright dots are simulated carbon sites; black openings are etched voids. Scores and lattice geometry come from saved records.
 <!-- atomic-hero:end -->
@@ -24,19 +24,21 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 <!-- discovery:start -->
 **One benchmark. A fresh population. A champion to beat.**
 
-![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)
+![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png?v=11fc3c901439e7d3)
 
-Champion descendants: **25% of proposals**. Completed generation: **pending**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
+Champion descendants: **25% of proposals**. Completed generation: **0**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
 
-Latest proposal batch: **40 shapes**, including **10 champion descendants**. Completed matched snapshots: **0** (generation labels start at zero).
+**Geometrically distinct under the current mask threshold.** Current best versus retained champion: **11.1% of device area changed**; **42.2% of etched union changed**. Best score does not imply a new shape family.
+
+Latest proposal batch: **20 shapes**, including **5 champion descendants**. Completed matched snapshots: **1** (generation labels start at zero).
 
 **Shapes being explored now** — one recorded proposal per family, not selected for score.
 
-![Current diverse geometry proposals](results/live/campaign-attempts.png)
+![Current diverse geometry proposals](results/live/campaign-attempts.png?v=7d464fd5a7b28ba8)
 
 **Champion branch: broad offspring** (unranked proposals; parent shown when available).
 
-![Parent and proposed champion descendants](results/live/campaign-offspring.png)
+![Parent and proposed champion descendants](results/live/campaign-offspring.png?v=0c5a6cf26bf8d9d2)
 
 [Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).
 <!-- discovery:end -->
@@ -88,7 +90,7 @@ Matched conditions: 14.76 nm device width, 10 mV peak sinusoidal drive, 10 kΩ l
 <!-- evolution:start -->
 **Champion to beat: 28.331 µV DC.** Archived three-arm study -- completed generation: **432**. The champion survives restarts; records from different source manifests remain separate.
 
-![Parents and latest diverse attempts](results/live/generation.png)
+![Parents and latest diverse attempts](results/live/generation.png?v=f75821ae161f4184)
 
 The strip selects new attempts by screening score within each family, not by visual preference. Parent links come from recorded mutation origins; fresh samples have no parent. [Selection evidence](results/live/evidence.json) · [Champion ledger](results/live/champions.json).
 <!-- evolution:end -->
@@ -136,7 +138,7 @@ A strong score at one operating point is only part of the story. The nominal win
 
 These fixtures are completed checks, not the active evolutionary population. See the [current campaign and evolving designs](#current-discovery) above.
 
-![Small-device charge-feedback experiments](results/live/discovery.png)
+![Small-device charge-feedback experiments](results/live/discovery.png?v=c60fbcf8c9a64dfa)
 
 These small fixtures test the physics implementation; their current scores are separate from the main loaded-power competition. This image changes only when new charge-feedback geometry results are saved. [Run evidence](results/live/evidence.json).
 
@@ -166,7 +168,7 @@ With a load connected, the calculation solves for the output at each applied dri
 Individual operating points; source manifests and accounting are retained in the [data snapshot](results/live/evidence.json).
 <!-- loaded-points:end -->
 
-![Completed loaded-feedback operating points](results/live/loaded-points.png)
+![Completed loaded-feedback operating points](results/live/loaded-points.png?v=8161187358b9f0cc)
 
 These are individual operating points, not a sinusoidal DC average. The fixture uses surrogate contacts, a chosen Gaussian charge width and an explicit bound-state occupation rule. Numerical checks verify calculations within these assumptions; they do not establish fabricated-device performance or literature novelty.
 
@@ -201,6 +203,8 @@ python -m ballistic_lab.reporting.dc_continuous
 **Electrical devices for machine learning.** The broader aim is to reuse this harness to search for components that store weights, multiply and accumulate signals, or implement useful nonlinear responses. Neuromorphic ideas include a charge-storage node coupled to a ballistic channel, with explicit memory and time-dependent behavior.
 
 Each experiment supplies its own device physics, electrical objective and acceptance tests; the harness supplies proposal, selection, retained champions and reproducible reporting. These ML and neuromorphic experiments are planned extensions, not demonstrated capabilities of the rectifier model.
+
+[Component targets and reusable architecture](docs/NEUROMORPHIC-ARCHITECTURE.md) — weight cells, multiplication, integration and nonlinear elements.
 
 [MIT license](LICENSE). External figures retain their stated licenses.
 

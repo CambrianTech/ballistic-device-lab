@@ -114,6 +114,14 @@ def publish(config, process_map=None):
     out = Path('results/live'); out.mkdir(parents=True,exist_ok=True)
     evidence = dict(published_utc=now, workers=rows, loaded_points=points, rejected=rejected, adapters=extra)
     (out/'evidence.json').write_text(json.dumps(evidence,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    # Content-address the URL, so changed image bytes invalidate client caches.
+    def image_version(match):
+        path = Path(match.group(1))
+        if not path.is_file():
+            return match.group(0)
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+        return '('+path.as_posix()+'?v='+digest+')'
+    text = re.sub(r'\((results/live/[^()?]+\.png)(?:\?v=[a-f0-9]+)?\)', image_version, text)
     target.write_text(text,encoding='utf-8')
 
 

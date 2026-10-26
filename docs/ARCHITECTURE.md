@@ -412,3 +412,8 @@ mock expensive feedback and do not establish numerical parity of a full loaded
 geometry solve. Full pilot replay and matched control/champion evaluation remain
 required before fresh search scoring. This separate module does not change the
 running zero-drive pilot or edge worker.
+
+
+## General device-search extension
+
+See [neuromorphic components and shared harness contracts](NEUROMORPHIC-ARCHITECTURE.md). The dependency-free `device_harness` archive is an experimental reusable layer, isolated from the live rectifier source manifest. It is not yet a replacement worker or a neuromorphic simulator.
