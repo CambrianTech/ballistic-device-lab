@@ -1,5 +1,7 @@
 """Matched control, retained champion and fresh campaign best from run receipts."""
 import json
+import os
+import subprocess
 from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
@@ -42,7 +44,32 @@ def render(options):
         for ax,c in zip(axes[0],attempts):
             draw(ax,c,'#55dfc5');ax.set_title(c['family'].title(),color='white');ax.text(.5,-.08,'Proposed • unranked',transform=ax.transAxes,ha='center',color='#a8bacf',fontsize=10)
         fig.subplots_adjust(left=.02,right=.98,top=.85,bottom=.16);fig.savefig(out/'campaign-attempts.png',dpi=150,facecolor=fig.get_facecolor());plt.close(fig)
-    body='**One benchmark. A fresh population. A champion to beat.**\n\n![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)\n\nAll three use the same fixed-potential transport model: 14.76 nm, 10 mV peak drive, 10 kΩ load and 300 K. Only energy- and phase-converged designs enter the comparison. The retained champion survives every restart.'
+    # Reuse the atomic renderer only for this fixed-potential campaign model.
+    # Cache by complete input records; never leave an old image labeled as current.
+    atomic_rows=[state['control'],state['champion']]
+    atomic_input=out/'atomic-comparison-input.json'
+    payload=json.dumps(atomic_rows,sort_keys=True)
+    runtime=Path(os.environ.get('BALLISTIC_KWANT_PYTHON','../ballistic-quantum-runtime/env/python.exe')).resolve()
+    atomic_body='Atomic rendering unavailable: configure `BALLISTIC_KWANT_PYTHON` for this checkout.'
+    if runtime.exists():
+        if not atomic_input.exists() or atomic_input.read_text(encoding='utf-8')!=payload or not (out/'atomic-comparison.png').exists():
+            atomic_input.write_text(payload,encoding='utf-8')
+            env=os.environ.copy()
+            env['PATH']=str(runtime.parent)+os.pathsep+str(runtime.parent/'Library/bin')+os.pathsep+env.get('PATH','')
+            env.update(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1')
+            try:
+                subprocess.run([str(runtime),'-m','ballistic_lab.reporting.atomic_view',str(out),'comparison'],env=env,check=True,timeout=120)
+            except Exception:
+                atomic_input.unlink(missing_ok=True)
+                raise
+        atomic_body='![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png)\n\n**Same material. Same drive. Evolving geometry.** This image follows the strongest qualified champion in the configured campaign, including its retained benchmark. Bright dots are simulated carbon sites; black openings are etched voids. Scores and lattice geometry come from saved records.'
+    # Return the hero as a second generated block alongside the campaign gallery.
+    config=json.loads((root/'config.json').read_text())
+    fraction=config.get('champion_fraction',0)
+    body=f'**One benchmark. A fresh population. A champion to beat.**\n\n![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)\n\nChampion descendants: **{fraction:.0%} of proposals**. Completed generation: **{state["round"] if snapshots else "pending"}**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).'
+    if proposals:
+        children=sum(c.get('proposal_strategy')=='champion' for c in candidates)
+        body+=f'\n\nLatest proposal batch: **{len(candidates)} shapes**, including **{children} champion descendants**. Completed matched snapshots: **{len(snapshots)}** (generation labels start at zero).'
     if attempts:body+='\n\n**Shapes being explored now** — one recorded proposal per family, not selected for score.\n\n![Current diverse geometry proposals](results/live/campaign-attempts.png)'
     body+='\n\n[Machine-readable selection and run evidence](results/live/evidence.json) · [Run your own campaign](docs/FRESH_DISCOVERY.md).'
-    return dict(markdown=body,evidence=dict(source=source.as_posix(),completed_snapshot=bool(snapshots),control=state['control'],retained=state['retained_champion'],current=current,champion=state['champion'],attempts=attempts))
+    return dict(markdown=body,blocks={'atomic-hero':atomic_body},evidence=dict(source=source.as_posix(),completed_snapshot=bool(snapshots),control=state['control'],retained=state['retained_champion'],current=current,champion=state['champion'],attempts=attempts))

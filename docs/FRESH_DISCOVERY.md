@@ -93,8 +93,18 @@ and immutable snapshots; monitor free space during long runs.
 python -m ballistic_lab.pipeline.fresh_discovery --root runs/fresh-discovery-continuous-v1 --seed 241029 --continuous --workers 4 --strategy mixed --refinement-policy family
 ```
 
-The configured publisher follows this campaign every five minutes. One refinement
+Configure the publisher adapter root to follow your selected campaign every five minutes. One refinement
 slot exploits coarse power and one rotates across geometry families. Numerical
 energy/phase convergence gates remain required for champion promotion. This is
 fixed-potential discovery; the separate small charge-feedback checks are not its
 fitness function or a claim of physical validation.
+
+
+## Champion descendants and physics gates
+Use `--champion-fraction 0.25` in a fresh run to allocate one quarter of proposals to the strongest qualified champion (initially the retained benchmark). This is five of twenty candidates per later generation, replacing mutation/random slots while preserving all ten global proposals. Replacement slots rotate across families. Initial allocation preserves a global seed population in every family/repeat. Offspring alternate Gaussian parameter standard deviations 0.02 and 0.08, normalized to parameter bounds, reflected at bounds. Parent keys and mutation scales are recorded; parents are never modified. Fractions are rounded down to whole candidates. Zero preserves the original proposal policy.
+This allocation is fixed, not adaptively inferred from advantage. Four exploratory descendants all converged but none improved on the parent; that small probe does not establish an optimal allocation. `--strategy mixed` rotates elite/diversity/random selection for remaining slots. `--refinement-policy family` spends one refinement slot on coarse power and one on a rotating family. A coarse score is never enough to replace the champion.
+The active score remains fixed-potential DC power at 14.76 nm width, 10 mV peak drive, 10 kohm load and 300 K. Small self-consistent charge/3D Poisson fixtures test numerical behavior separately. Boundary-distance tests move normal boundaries with lateral boundaries and mesh spacing fixed; they are not calibrated housing models. Full-device stack validation is required before using that model for champion ranking.
+```sh
+python -m ballistic_lab.pipeline.fresh_discovery --root runs/fresh-discovery-champion-v2 --seed 261027 --continuous --workers 4 --strategy mixed --refinement-policy family --champion-fraction 0.25
+```
+Set the publication adapter root to the same run. Current gallery shapes, scores, generation and offspring allocation come from run records/configuration. Archived figures remain explicitly labeled historical. A policy/source change starts a new directory and preserves prior STOP sentinels and checkpoints.

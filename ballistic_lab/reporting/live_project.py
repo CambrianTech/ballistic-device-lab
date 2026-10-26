@@ -108,6 +108,8 @@ def publish(config, process_map=None):
         module, function = spec['callable'].split(':')
         output = getattr(importlib.import_module(module), function)(spec.get('options', {}))
         text = replace_block(text, spec['block'], output['markdown'])
+        for name, body in output.get('blocks', {}).items():
+            text = replace_block(text, name, body)
         extra[spec['block']] = output['evidence']
     out = Path('results/live'); out.mkdir(parents=True,exist_ok=True)
     evidence = dict(published_utc=now, workers=rows, loaded_points=points, rejected=rejected, adapters=extra)

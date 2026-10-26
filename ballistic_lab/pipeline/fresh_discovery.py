@@ -42,6 +42,40 @@ def strategy_for(mode, generation):
     return mode
 
 
+def champion_offspring(items, champion, fraction, seed, generation):
+    """Replace a bounded share of proposals, retaining global exploration."""
+    import numpy as np
+    from ballistic_lab.geometry.families import FAMILIES, geometry
+    if not 0 <= fraction <= .5:
+        raise ValueError('Champion fraction must be between zero and one half')
+    if not qualified(champion):
+        raise ValueError('Champion must pass energy and phase convergence')
+    count = int(len(items)*fraction)
+    result = list(items)
+    if not count:
+        return result
+    parent = champion['candidate']
+    bounds = np.array(FAMILIES[parent['family']].bounds)
+    low, width = bounds[:, 0], bounds[:, 1]-bounds[:, 0]
+    unit = (np.array(parent['parameters'])-low)/width
+    rng = np.random.default_rng(np.random.SeedSequence([seed, generation, 725]))
+    # Prefer mutation slots; rotate replacements so no family always loses them.
+    slots = [i for i,c in enumerate(items) if c['origin'] != 'fresh global']
+    if len(slots) < count:
+        slots = list(range(1,len(items),2))
+    slots = list(np.roll(slots, generation % len(slots)))[:count]
+    for j, slot in enumerate(slots):
+        sigma = (.02, .08)[j % 2]
+        child = 1-abs(np.mod(unit+rng.normal(0, sigma, len(unit)), 2)-1)
+        parameters = low+child*width
+        result[slot] = dict(key=f'champion-g{generation}-{j}', family=parent['family'],
+            repeat=items[slot]['repeat'], round=generation, parameters=parameters.tolist(),
+            origin=f"mutation of {parent['key']}", parent_key=parent['key'],
+            proposal_strategy='champion', mutation_sigma=sigma,
+            obstacles=[p.tolist() for p in geometry(parent['family'], parameters)])
+    return result
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
@@ -54,8 +88,10 @@ def main():
     p.add_argument('--reference-manifest',type=Path,default=Path('runs/dc-continuous/source.json'))
     p.add_argument('--controls',type=Path,default=Path('results/2026-10-22-dc-wide/summary.json'))
     p.add_argument('--refinement-policy', choices=['score','family'], default='score')
+    p.add_argument('--champion-fraction', type=float, default=0.0)
     args=p.parse_args()
     if args.rounds<1 or args.workers<1: raise ValueError('Positive rounds and workers required')
+    if not 0 <= args.champion_fraction <= .5: raise ValueError('Champion fraction must be in [0, .5]')
     args.root.mkdir(parents=True,exist_ok=True)
     with single_worker(args.root):
         files=[x for x in Path('ballistic_lab').rglob('*.py') if 'reporting' not in x.parts]
@@ -66,6 +102,7 @@ def main():
         config=dict(seed=args.seed,rounds=args.rounds,workers=args.workers,strategy=args.strategy)
         if args.continuous: config['continuous']=True
         if args.refinement_policy != 'score': config['refinement_policy']=args.refinement_policy
+        if args.champion_fraction: config['champion_fraction']=args.champion_fraction
         cfg=args.root/'config.json'
         if cfg.exists() and json.loads(cfg.read_text())!=config: raise ValueError('Resume configuration mismatch')
         save(cfg,config)
@@ -92,6 +129,7 @@ def main():
                     else:
                         round_plan=replace(plan,parent_strategy=strategy_for(args.strategy,index))
                         items=[dict(c,proposal_strategy=round_plan.parent_strategy) for repeat in range(2) for c in proposals(round_plan,repeat,index,state['rows'])]
+                        items=champion_offspring(items,state['champion'],args.champion_fraction,args.seed,index)
                         save(path,items)
                     known={r['candidate']['key']:r for r in state['rows']}
                     status(args.root,phase='screen',round=index)

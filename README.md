@@ -1,7 +1,7 @@
 # Ballistic Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-26 17:16 UTC**
+**Computing · Updated 2026-10-26 17:29 UTC**
 
 Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
@@ -12,9 +12,11 @@ Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) �
 
 The featured experiment is a **graphene ballistic rectifier**: can an evolved shape turn an alternating electrical input into more DC output? Below, the search reshapes a device at the scale of individual carbon atoms.
 
-![Carbon lattice of a synthetic control and a search-selected rectifier, with atomic edge closeups](results/continuous-dc/round-000430/atomic-comparison.png)
+<!-- atomic-hero:start -->
+![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png)
 
-**Same material. Same drive. Different geometry.** The selected shape produces **28.33 µV** versus **11.21 µV** for the synthetic control in the fixed-potential simulation. Bright dots are carbon sites; black openings are etched voids. These are simulated lattices, not microscope images.
+**Same material. Same drive. Evolving geometry.** This image follows the strongest qualified champion in the configured campaign, including its retained benchmark. Bright dots are simulated carbon sites; black openings are etched voids. Scores and lattice geometry come from saved records.
+<!-- atomic-hero:end -->
 
 [Explore the shapes](#letting-shapes-compete) · [Follow the electrons](#following-the-electrons) · [Look inside the physics](#the-charge-changes-the-device) · [Run the code](#reproduce-and-explore)
 
@@ -24,7 +26,9 @@ The featured experiment is a **graphene ballistic rectifier**: can an evolved sh
 
 ![Synthetic control, retained champion, and best converged design from this campaign](results/live/campaign.png)
 
-All three use the same fixed-potential transport model: 14.76 nm, 10 mV peak drive, 10 kΩ load and 300 K. Only energy- and phase-converged designs enter the comparison. The retained champion survives every restart.
+Champion descendants: **25% of proposals**. Completed generation: **0**. Only energy- and phase-converged designs enter the comparison. The retained benchmark is preserved; improved qualified winners become parents for subsequent generations. [Model and search methodology](docs/FRESH_DISCOVERY.md).
+
+Latest proposal batch: **20 shapes**, including **5 champion descendants**. Completed matched snapshots: **1** (generation labels start at zero).
 
 **Shapes being explored now** — one recorded proposal per family, not selected for score.
 
@@ -34,6 +38,11 @@ All three use the same fixed-potential transport model: 14.76 nm, 10 mV peak dri
 <!-- discovery:end -->
 
 ## Letting shapes compete
+
+The active campaign reserves a configurable share for champion descendants while retaining fresh exploration. [Methodology and reproducible configuration](docs/FRESH_DISCOVERY.md).
+
+<details>
+<summary>Archived matched three-strategy study and its figures</summary>
 
 A triangle is only the beginning. The search explores bevels, free profiles, islands and radial polygons, testing how each changes the output across a four-contact graphene device. Input runs left to right; the load connects top to bottom.
 
@@ -73,14 +82,18 @@ Matched conditions: 14.76 nm device width, 10 mV peak sinusoidal drive, 10 kΩ l
 </details>
 
 <!-- evolution:start -->
-**Champion to beat: 28.331 µV DC.** Latest completed generation: **432**. The champion survives restarts; records from different source manifests remain separate.
+**Champion to beat: 28.331 µV DC.** Archived three-arm study -- completed generation: **432**. The champion survives restarts; records from different source manifests remain separate.
 
 ![Parents and latest diverse attempts](results/live/generation.png)
 
 The strip selects new attempts by screening score within each family, not by visual preference. Parent links come from recorded mutation origins; fresh samples have no parent. [Selection evidence](results/live/evidence.json) · [Champion ledger](results/live/champions.json).
 <!-- evolution:end -->
 
+</details>
+
 ## Following the electrons
+
+Reference-study diagnostics below describe the archived champion, not the current campaign leader.
 
 The geometry gives electrons different routes through the device. Trajectory diagrams make that routing visible; the quantum calculation determines the electrical score.
 
@@ -132,7 +145,7 @@ Geometry is only one part of the physics. Electrons redistribute charge, charge 
 
 *Potential and excess charge on a 51-site numerical fixture with pinned outputs. This experiment is distinct from the fixed-potential geometry rankings above.*
 
-With a load connected, opposite drives produce unequal outputs. At ±10 mV the two-point even component is **−2.818 µV**; at ±5 mV it is **−0.704 µV**, close to one quarter. That is consistent with quadratic scaling in this diagnostic, while zero-drive offset and numerical sensitivity remain unresolved.
+With a load connected, the calculation solves for the output at each applied drive. The plot and table below are generated from completed records in this checkout. These operating points remain separate from the geometry-search score; numerical convergence and zero-drive sensitivity remain unresolved.
 
 <details>
 <summary><strong>Inspect the loaded response and model assumptions</strong></summary>
