@@ -1,0 +1,442 @@
+{
+  "snapshot": "runs\\fresh-discovery-continuous-v1\\round-000955.json",
+  "snapshot_sha256": "5eb3a9cb6f59fb4183de2e2a32ae192ea54566c595c070b5c2383e7d7cf7f792",
+  "seed": 261026,
+  "parent": {
+    "candidate": {
+      "key": "diversity-r0-profile-g73-1",
+      "family": "profile",
+      "repeat": 0,
+      "round": 73,
+      "parameters": [
+        1.3418130373742911,
+        1.0463649051039141,
+        0.21877843626138227,
+        0.8837297054660306,
+        0.34297573577667617,
+        0.1697368491311527,
+        0.9163481923897311,
+        0.9522423345877419,
+        0.8296039599449422,
+        0.8335919218252448
+      ],
+      "origin": "mutation of diversity-r0-profile-g15-1",
+      "obstacles": [
+        [
+          [
+            -0.6709065186871456,
+            0.7419608888133393
+          ],
+          [
+            0.6709065186871456,
+            0.7419608888133393
+          ],
+          [
+            0.6709065186871456,
+            -0.13028044336272226
+          ],
+          [
+            0.4472710124580971,
+            -0.12610758000828148
+          ],
+          [
+            0.2236355062290485,
+            -0.2544320712534929
+          ],
+          [
+            0.0,
+            -0.21687370055868482
+          ],
+          [
+            -0.22363550622904854,
+            0.5643542067795834
+          ],
+          [
+            -0.4472710124580971,
+            0.3830831155944324
+          ],
+          [
+            -0.6709065186871456,
+            -0.1827428605841337
+          ]
+        ]
+      ],
+      "arm": "diversity"
+    },
+    "levels": [
+      {
+        "count": 257,
+        "dc_v": -2.8374284899264268e-05,
+        "dc_power_w": 8.051000435446162e-14,
+        "input_power_w": 3.227539330962993e-09,
+        "efficiency": 2.4944701241003948e-05,
+        "max_kcl_a": 1.565191155072839e-20
+      },
+      {
+        "count": 513,
+        "dc_v": -2.833300768637125e-05,
+        "dc_power_w": 8.027593245559723e-14,
+        "input_power_w": 3.2295047529024328e-09,
+        "efficiency": 2.4857041124788975e-05,
+        "max_kcl_a": 1.415471464200741e-20
+      },
+      {
+        "count": 1025,
+        "dc_v": -2.8330774372317925e-05,
+        "dc_power_w": 8.026327765351861e-14,
+        "input_power_w": 3.229448141837862e-09,
+        "efficiency": 2.4853558294898397e-05,
+        "max_kcl_a": 1.4079441206265084e-20
+      }
+    ],
+    "device_fingerprint": "50869efc1297b526620e64be69378ff33bcc5113c5b3f830866af74ffd01d2f1",
+    "energy_converged": true,
+    "phase64": {
+      "dc_v": -2.833077437231901e-05,
+      "dc_power_w": 8.026327765352475e-14,
+      "input_power_w": 3.229448141837857e-09,
+      "efficiency": 2.4853558294900335e-05,
+      "max_kcl_a": 1.6290494983619327e-20
+    },
+    "phase_converged": true
+  },
+  "children": [
+    {
+      "key": "champion-probe-261026-0",
+      "family": "profile",
+      "parameters": [
+        1.3133388717156396,
+        1.0505397383133543,
+        0.2182723643755498,
+        0.8845112665234262,
+        0.3674335926561155,
+        0.1707375344293599,
+        0.9028767512753875,
+        0.9360309481057133,
+        0.8202681954506946,
+        0.8191049738002351
+      ],
+      "origin": "mutation of diversity-r0-profile-g73-1",
+      "mutation_sigma": 0.02,
+      "obstacles": [
+        [
+          [
+            -0.6566694358578198,
+            0.743542233532227
+          ],
+          [
+            0.6566694358578198,
+            0.743542233532227
+          ],
+          [
+            0.6566694358578198,
+            -0.11696009129503881
+          ],
+          [
+            0.4377796239052132,
+            -0.11818210186331313
+          ],
+          [
+            0.2188898119526066,
+            -0.23979547374394994
+          ],
+          [
+            0.0,
+            -0.20496567248183006
+          ],
+          [
+            -0.2188898119526066,
+            0.5641756687925399
+          ],
+          [
+            -0.4377796239052132,
+            0.3575386432557358
+          ],
+          [
+            -0.6566694358578198,
+            -0.1856720009365067
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "champion-probe-261026-1",
+      "family": "profile",
+      "parameters": [
+        1.380226743713726,
+        1.0544494460030578,
+        0.20416118616606393,
+        0.8700580034642508,
+        0.33668166330086846,
+        0.16870661957930122,
+        0.9323148305040084,
+        0.9735790053783775,
+        0.8449258294247419,
+        0.8291956538590802
+      ],
+      "origin": "mutation of diversity-r0-profile-g73-1",
+      "mutation_sigma": 0.02,
+      "obstacles": [
+        [
+          [
+            -0.690113371856863,
+            0.7313859091675928
+          ],
+          [
+            0.690113371856863,
+            0.7313859091675928
+          ],
+          [
+            0.690113371856863,
+            -0.14295898867225754
+          ],
+          [
+            0.4600755812379086,
+            -0.15954566358300037
+          ],
+          [
+            0.23003779061895435,
+            -0.29520393369384534
+          ],
+          [
+            0.0,
+            -0.2516929473577936
+          ],
+          [
+            -0.2300377906189543,
+            0.55349330761515
+          ],
+          [
+            -0.4600755812379086,
+            0.37637211582060404
+          ],
+          [
+            -0.690113371856863,
+            -0.1860462705758129
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "champion-probe-261026-2",
+      "family": "profile",
+      "parameters": [
+        1.280565757226091,
+        1.0154469454243122,
+        0.13834383074067125,
+        0.7181168951542342,
+        0.25914282970907454,
+        0.05353875661189274,
+        0.8749286987832087,
+        0.8909470825921881,
+        0.8394210330770981,
+        0.8558935883963484
+      ],
+      "origin": "mutation of diversity-r0-profile-g73-1",
+      "mutation_sigma": 0.08,
+      "obstacles": [
+        [
+          [
+            -0.6402828786130454,
+            0.6460673034528274
+          ],
+          [
+            0.6402828786130454,
+            0.6460673034528274
+          ],
+          [
+            0.6402828786130454,
+            -0.2230472264924982
+          ],
+          [
+            0.42685525240869704,
+            -0.20632022051023247
+          ],
+          [
+            0.21342762620434852,
+            -0.25864219010011247
+          ],
+          [
+            0.0,
+            -0.24237637119065003
+          ],
+          [
+            -0.21342762620434846,
+            0.5917015365894652
+          ],
+          [
+            -0.42685525240869693,
+            0.3829215085961349
+          ],
+          [
+            -0.6402828786130454,
+            -0.08314230418913082
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "champion-probe-261026-3",
+      "family": "profile",
+      "parameters": [
+        1.363571473656695,
+        1.026609203697418,
+        0.1612178904605936,
+        0.9875166179610311,
+        0.34649454790102235,
+        0.07627725575940267,
+        0.8525371565587304,
+        0.9023483145668271,
+        0.8515207659596333,
+        0.8068128216355731
+      ],
+      "origin": "mutation of diversity-r0-profile-g73-1",
+      "mutation_sigma": 0.08,
+      "obstacles": [
+        [
+          [
+            -0.6817857368283475,
+            0.6745224923093025
+          ],
+          [
+            0.6817857368283475,
+            0.6745224923093025
+          ],
+          [
+            0.6817857368283475,
+            -0.15375897604286004
+          ],
+          [
+            0.4545238245522316,
+            -0.199656563164332
+          ],
+          [
+            0.2272619122761158,
+            -0.251836592365855
+          ],
+          [
+            0.0,
+            -0.2006999991079167
+          ],
+          [
+            -0.22726191227611586,
+            0.5962155595139178
+          ],
+          [
+            -0.4545238245522317,
+            0.3188080004031371
+          ],
+          [
+            -0.6817857368283475,
+            -0.3392711564936388
+          ]
+        ]
+      ]
+    }
+  ],
+  "source_sha256": {
+    "ballistic_lab\\models.py": "aa7399d9cb9d398040640b634f357124451144899de682e6ec596935c81e55d2",
+    "ballistic_lab\\paths.py": "ae8ac95ee8f9931ac8bf16f6b00394b7764f27908cae59804faf37a57bfae483",
+    "ballistic_lab\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\experiments\\classical.py": "8d7b33ac5661db77a872720cc6f9284b265f2ec7ee8432083f2b1c05a9963eb9",
+    "ballistic_lab\\experiments\\convergence.py": "babb3121c42c33a1813e8090788dc55c0ebe68cebb8f1ec3f475f086ac7cb47d",
+    "ballistic_lab\\experiments\\coverage.py": "ec0b8b086b918237b0d10b737b80dec40c037dec8ad7f8900f0e25a7b4cdab7e",
+    "ballistic_lab\\experiments\\dc_audit.py": "812c8a13c33155650bc2ccfc4637a8c31bd050dfabccad07df308e92df335e11",
+    "ballistic_lab\\experiments\\dc_refine.py": "c99861f310088779a89937f49c917569f5975a612b1590366b37884442b6a612",
+    "ballistic_lab\\experiments\\dc_search.py": "f97bf3ee3d94a64fe37dedf12e0c10d34f8cc22a8ebff66945f47fe592a599f0",
+    "ballistic_lab\\experiments\\dc_wide.py": "30674ab898ecb43ff212a78acc14cac342b1fdbd95d8a5f157c7a53cf39e37ea",
+    "ballistic_lab\\experiments\\discovery.py": "c9353c48936f7c1bf9faa85c991e79e0750c9d562dbf8d0ef93377aa2e77975f",
+    "ballistic_lab\\experiments\\families.py": "1c9775351c3f3eb51b3aef8329880af067edf081a8ff87fd4a20a65d7ed7817b",
+    "ballistic_lab\\experiments\\final_checks.py": "62c3b7d429ccd268b07063adc6f1091834164558b728f06fd0bafa15730fc33f",
+    "ballistic_lab\\experiments\\finite_bias.py": "5e1e15e9fc284a0aa0922b6b83d81c8915f393f6c596ee2d56aa578ce8e1755f",
+    "ballistic_lab\\experiments\\lattice.py": "deed9b0a189abef92af154108a19dec5aa3549ccfb597ba908ff1b1a9239c6cd",
+    "ballistic_lab\\experiments\\learn_search.py": "86f88e9a284dd069e287fddfc1a027d1761c2ad082e0d1ec3fa4f4893816b264",
+    "ballistic_lab\\experiments\\linear_load.py": "4732589454671763d6c8e61400352e89cb2e861fe32f106deca716fc7b6ab4fa",
+    "ballistic_lab\\experiments\\refinement.py": "4d9a959f0f5a3a33e8bfc6c20ea9fb9f83f9f691ea85d697f112fcfd96d3e446",
+    "ballistic_lab\\experiments\\rf_screen.py": "29d91001899fd93386bf722e6e68965c8fe3c113f3a898be0c1ad75623fbc785",
+    "ballistic_lab\\experiments\\robust_search.py": "bfe39ae9a46922a0a12a1027d540131592c48aa2fab5fe525d216ef5878e4546",
+    "ballistic_lab\\experiments\\validate_gpu.py": "0e5d3694ad9db2ae490013633bead557303bc590d3cae6233e0305784adb1de0",
+    "ballistic_lab\\experiments\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\geometry\\basic.py": "83e89c15af5e6efdb8cc5138e163595adaad4a3e401c8cbb62a4779ca75a08fb",
+    "ballistic_lab\\geometry\\families.py": "f92044d2fd38edc7dd411731d471a3a66a0f660976bd5c872c004f03384ee3a8",
+    "ballistic_lab\\geometry\\registry.py": "d15b7467f6657d41d54c0290619b9980afc87953822165ab43b330a1ca424545",
+    "ballistic_lab\\geometry\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\metrics\\angular.py": "628ff9edaa63c9d70f49e519fa3f0942c723b097d6c584797a5a9bca550b94c7",
+    "ballistic_lab\\metrics\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\pipeline\\contracts.py": "5631408c6c636362a4dcf983095037bfedf6e78913286902dc23c053851331e9",
+    "ballistic_lab\\pipeline\\dc_continuous.py": "3af09fa87a874418c68690e3b23487115f8575735d6fede38974f6f3871e0bee",
+    "ballistic_lab\\pipeline\\dc_publish.py": "61c529f7425eff9bcf3a57e37950efca79b06110aaeb2378fb5ace6889b2158d",
+    "ballistic_lab\\pipeline\\dc_workflow.py": "1a0119a00915f1f84af92068545209edc2bfb86382875d281d0e058eb371c344",
+    "ballistic_lab\\pipeline\\feedback_capacity.py": "87b06f6e470bc76e73d84bbbba55e798d898ab8d4e761a9d723159296f53ad16",
+    "ballistic_lab\\pipeline\\fresh_discovery.py": "7d659fe20948e29afa81f96204d5fae3659cd4e1c39de8f6bf0aa849996f10d0",
+    "ballistic_lab\\pipeline\\prepare_feedback_campaign.py": "48b1075256bae5d9e81b70b153f5c1b650b9df6de40e810130678ac0d8057ccc",
+    "ballistic_lab\\pipeline\\ray.py": "00bdab69e66c820f669daeb42a00bb4baba30bd81583355d4f3a495910817eb8",
+    "ballistic_lab\\pipeline\\screening_audit.py": "cdef4355fd8948ac0329e1407c5cbade72a3501065baa9bdc3e8aaaafb4ea101",
+    "ballistic_lab\\pipeline\\small_feedback_experiment.py": "93e38b286c64a85bbf4c93fe1f1ac16bde3f1e4792833a35fe958807456e03de",
+    "ballistic_lab\\pipeline\\__init__.py": "921e745a0387347e3c4b601ade67e2daa100dcaabb74db42dbf50c9eba734637",
+    "ballistic_lab\\reporting\\atomic_diversity_audit.py": "9fb450743dcc8540ef3c12df1b59fd0692b89c06fd774ab16f716187985fdecb",
+    "ballistic_lab\\reporting\\atomic_view.py": "cf4ea2a3647b473018412aaa729d9f5e580cad471cee982b2624d62c65820b72",
+    "ballistic_lab\\reporting\\audit_fresh_campaign.py": "e4dec4bfeadc494a520519b6a0e9b3e531956ecf2c29e70385b19f0c74fb3c88",
+    "ballistic_lab\\reporting\\campaign_gallery.py": "e9433837faaeecb300f0ff812af7e9d0efaa90a80006883deffadf75329e0518",
+    "ballistic_lab\\reporting\\catalog.py": "1546ac1c9152a6d082f074593aa1d2ecff54a1d178e8ee8b62278c0042278b31",
+    "ballistic_lab\\reporting\\champion_probe.py": "f465c4bed5838a897f1a303d67ee9566970bd1d64c543c316e7f3d668d9253ed",
+    "ballistic_lab\\reporting\\compare_refinement.py": "9bd526432e823eba50bbd05e0f833f610e6391e457811cced0e602bf67bbe229",
+    "ballistic_lab\\reporting\\compare_width.py": "8361e2a4edd3dda9a26609109d16a56295780e63686ab35438d103a3032c6af7",
+    "ballistic_lab\\reporting\\compare_width_mesh.py": "ea8a0c2f27b0e2d0f04858b1902049b9d665e1376b4ad6c8459b28778f94fb99",
+    "ballistic_lab\\reporting\\comparison.py": "83e75b86b46b982ce8c3a2b99f9c5a1503b4679656d0c4f6f71dde6421c61cb3",
+    "ballistic_lab\\reporting\\convergence.py": "5bdc474f3711da264ec033c2a8409927261a155a21b518b096bc6402a53e2196",
+    "ballistic_lab\\reporting\\convergence_inventory.py": "b126d5a643fe60e48b82234407bf003134f17a62c148ab64d880ec57d9e5d513",
+    "ballistic_lab\\reporting\\coverage.py": "7cd766997d6b7ca3a2b8afe6008b9bf653cf5013293b7397b70abb5ae722903c",
+    "ballistic_lab\\reporting\\dc_continuous.py": "37538b8074fb51814ed857bdab4212e385cbe8820c370218cfecc6386252883f",
+    "ballistic_lab\\reporting\\dc_search.py": "27be51717034c8b20ed072cab434b98b2b8d4a58db712158528a1a1954aeac35",
+    "ballistic_lab\\reporting\\dc_wide.py": "4c109b15b06c7e8d7c13fc6d7b80be053d93efe5768fd5215ce71c7516291672",
+    "ballistic_lab\\reporting\\device_role.py": "658a7b987b80d76473d01d6cefbb67c30ed4f7422582812c62158225ac6ccdbb",
+    "ballistic_lab\\reporting\\discovery.py": "b29ef3cfaa6cfec608872f1970c606ec31cd67d9b9f304f43a942854d291b4c9",
+    "ballistic_lab\\reporting\\discovery_gallery.py": "52bfbfeb59e65a09f4c06c258db10f251e7490f16a582f2f8b521a4fd7b5e0d5",
+    "ballistic_lab\\reporting\\diversity_gallery.py": "66ce5fc0c8dc618eb884a5b76cfe01354aef29d4357ab2ae4e500d6727c696c8",
+    "ballistic_lab\\reporting\\edge_sensitivity.py": "9c49357e40b1f872ebd98a6d287df21cb61bac683b656b32c3e5a9b75de42193",
+    "ballistic_lab\\reporting\\evolution_story.py": "3ab19b9907c1050e1a5e95ea56fbce1634488f91f3e03bb8a3e674a45a9204b6",
+    "ballistic_lab\\reporting\\falsification.py": "d2f5ff506090938b1b0fa7cc50ec95e4b0de442fe9e6edf1f2d779227faf9bfe",
+    "ballistic_lab\\reporting\\families.py": "adee15e12bc327e803d536764aa6060cc8f9b9c1d98f708d58155e26b149f632",
+    "ballistic_lab\\reporting\\finite_bias.py": "4bcb789fd073e1a1d807446bfdd8349fe4a9eb8af96208cbd162ccdcb11d48e2",
+    "ballistic_lab\\reporting\\lattice.py": "ddb2e7aac61c4dda77cffeda6cfb1bb677b5e38ce5fdffedc784b8b5c8935de3",
+    "ballistic_lab\\reporting\\leader_evidence.py": "cbed0b44ea37af53206da8f374a27bc3bdbaf06a85fcf4c28b0ec374c7d32c70",
+    "ballistic_lab\\reporting\\leader_validation.py": "b90541bf5db34ea2dc35f224bbf533870ef8729b08decb56e2b40de1b6ee93f9",
+    "ballistic_lab\\reporting\\linear_load.py": "f961cb166fce0e797c41b3b22843c72f8376394cb205ceac3416a36dcae42200",
+    "ballistic_lab\\reporting\\live_project.py": "eec00b60498af725e3d8e5e6c09cdb3529952af161d755f607a83e863f639aa4",
+    "ballistic_lab\\reporting\\local_refinement.py": "4d71c555f3191156716108ca28f485353c714015b43c84299c309e195932f9e0",
+    "ballistic_lab\\reporting\\low_score_holdout.py": "4af4aa24aabf59fc92c0f3b4df311db5394083cc1b00ab8cd09f05bd8dc32a0c",
+    "ballistic_lab\\reporting\\plot_refinement.py": "25e080a7c4c831f1b2a2ba585a7579a0e48257c131a0ff19c3b132a8896a9445",
+    "ballistic_lab\\reporting\\plot_width_mesh.py": "428abf8daad0ca3ad8c564a86922f46cf6d1af0262d3bc3f7dc8c040e682d3ef",
+    "ballistic_lab\\reporting\\proposal_diversity_audit.py": "f0817aa1ca3ba0b3854acac6c77b73fe9846cc79c6080a5caf5ed8aad8f16907",
+    "ballistic_lab\\reporting\\rank_stability.py": "fe6aebc5c5934374748533bbf062ab3a0590a7907636804c8fcecaa6d8ef1f6c",
+    "ballistic_lab\\reporting\\response_diversity_audit.py": "08cdd85b4d6a1455946481653f5b1efcdc77e17a2dc7f5a3eb9828e9bceb0b5b",
+    "ballistic_lab\\reporting\\robustness.py": "0184c0cd3c962d6307777550c6f4c558ec053982ee7245ca5a2064f6b8760d87",
+    "ballistic_lab\\reporting\\showcase.py": "b1a8ab88a5df05049afb7dfa3c341d2377b9713e4ef8ce5f379c409a2be46ddb",
+    "ballistic_lab\\reporting\\small_feedback_report.py": "2c358514b8178304e2a57ed4c5e278d7e24cf5a41174aaafb001442a0338a367",
+    "ballistic_lab\\reporting\\spectra.py": "3a0fa8537f308cd8d7399c847edfe0cd4bae6af01ecb471928e7336086271d32",
+    "ballistic_lab\\reporting\\storage.py": "f651fa0827da99db7b37c6365909d275057537ca97f780b6624ff1d4ba84fdb3",
+    "ballistic_lab\\reporting\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\search\\dc_space.py": "51825c28c728dda748f48bdb0d5f6e5f1b592e8f7522ee5684718b3f2fdf353d",
+    "ballistic_lab\\search\\discovery.py": "e788344bbe8c082433715fa06974a0f21b56649e533268aece4a1c7eb54af0fa",
+    "ballistic_lab\\search\\diversity.py": "7b2c613ebc31577c5e94da622cd37926f604509fb718ca03402d22f2bd1b4baa",
+    "ballistic_lab\\search\\families.py": "f7a1dfa02ed7e29285767de0f3e0e5e9fbb9e96b31ec46353cc5f16e2555ed75",
+    "ballistic_lab\\search\\legacy_objective.py": "58a300a63a837485778be236de97fffefdab76c924b74fe5423b2bbb73af86d9",
+    "ballistic_lab\\search\\refinement.py": "7a03dd6ea398d822bed38bc00dcec5ac4d62055885cc1ed171567a2c09cac5da",
+    "ballistic_lab\\search\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\transport\\backend.py": "a31ecf15b53d24394a8d0e5a585ab13f27bcef4dd3e1d20106d12d39b0525de6",
+    "ballistic_lab\\transport\\circuit.py": "f03a4f36f419b78ade0233b3414a1e4bdd8c6022290fb469a9068c14df83cdf6",
+    "ballistic_lab\\transport\\cpu.py": "a8c60f544d3acd349ecd39eb17eaee71f1fe03c094e751f24bef4b35eaafa24d",
+    "ballistic_lab\\transport\\finite_bias.py": "f09e8922a647264b5e4dc169a81583d7cc3d91f6580642fc3b5f28c246317a5d",
+    "ballistic_lab\\transport\\gpu.py": "b15a4c8cf8b7361bb51031e9d3a8810be319d3dba3605ac96aa7d2d7156e83c7",
+    "ballistic_lab\\transport\\quantum.py": "76e7d7d37818d8553b8355742bb3dc3f0c7fc3cb893c84c7fdb105dd3c594b7f",
+    "ballistic_lab\\transport\\reservoirs.py": "b432706945b86a67c8e9a936255b93b7fd027dab854aa008e0991af6b9b5cc5a",
+    "ballistic_lab\\transport\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a",
+    "ballistic_lab\\validation\\dc_score.py": "627533f7d0e3bde68f985c0eaa79c196bd2cb44b8415197a5615f30305f2249d",
+    "ballistic_lab\\validation\\families.py": "ba38339aa13256567333d932b875809646cd59b99132b65fe2a1e8effe870c86",
+    "ballistic_lab\\validation\\receipts.py": "0596ba449d490ab7200d4b5179fd3cb8f0a8c4244cc1b667ee06765ef8bf5c42",
+    "ballistic_lab\\validation\\registry.py": "1e9c282ffeb928f82ceacc4318a0b8cf8920bfe2355d609d4583aa92ee24e2b2",
+    "ballistic_lab\\validation\\__init__.py": "00d051ff55a9b23fd872371d9433e8054abb97104be19fdc3d9eb85603cbc96a"
+  },
+  "limitation": "Four fixed-potential mutations; no evidence yet for optimal spawn allocation or physical novelty."
+}
