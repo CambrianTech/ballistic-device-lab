@@ -1,6 +1,7 @@
 """Broad parameter recombination gated by actual etched-area differences."""
 import numpy as np
 from ballistic_lab.geometry.families import FAMILIES, geometry
+from ballistic_lab.search.polygon_mutation import mutate_polygon
 
 
 def shape_mask(obstacles, resolution=128):
@@ -23,21 +24,28 @@ def difference(a, b):
 
 
 def broad_child(parent, rng, accepted):
-    """Keep parent structure but redraw half its genes; reject lookalikes.
+    """Mutate the full boundary, or redraw multi-obstacle genes; reject lookalikes.
 
     Fixed 128x128 geometry diagnostic, not a physics or novelty claim.
     A bounded failure leaves the original search proposal in its slot.
     """
-    bounds = np.asarray(FAMILIES[parent['family']].bounds)
-    low, width = bounds[:, 0], bounds[:, 1]-bounds[:, 0]
-    unit = (np.asarray(parent['parameters'])-low)/width
     original = shape_mask(parent['obstacles'])
     for attempt in range(256):
-        child = unit.copy()
-        indices = rng.choice(len(unit), max(2, (len(unit)+1)//2), replace=False)
-        child[indices] = rng.random(len(indices))
-        parameters = low + child * width
-        obstacles = [p.tolist() for p in geometry(parent['family'], parameters)]
+        if len(parent['obstacles']) == 1:
+            proposal = mutate_polygon(parent, rng)
+            if proposal is None:
+                continue
+        else:
+            bounds = np.asarray(FAMILIES[parent['family']].bounds)
+            low, width = bounds[:, 0], bounds[:, 1]-bounds[:, 0]
+            unit = (np.asarray(parent['parameters'])-low)/width
+            indices = rng.choice(len(unit), max(2, (len(unit)+1)//2), replace=False)
+            unit[indices] = rng.random(len(indices))
+            parameters = low + unit * width
+            proposal = dict(family=parent['family'], parameters=parameters.tolist(),
+                            obstacles=[p.tolist() for p in geometry(parent['family'],parameters)],
+                            mutation_operator='half-gene redraw')
+        obstacles = proposal['obstacles']
         mask = shape_mask(obstacles)
         area, relative = difference(original, mask)
         if area < .035 or relative < .20:
@@ -45,8 +53,7 @@ def broad_child(parent, rng, accepted):
         if any(difference(mask, other)[0] < .02 or difference(mask, other)[1] < .15 for other in accepted):
             continue
         accepted.append(mask)
-        return dict(parameters=parameters.tolist(), obstacles=obstacles,
-                    mutation_operator='half-gene redraw with shape-distance gate',
+        return dict(**proposal,
                     changed_device_fraction=area, changed_union_fraction=relative,
                     shape_grid=128, proposal_trials=attempt+1)
     return None

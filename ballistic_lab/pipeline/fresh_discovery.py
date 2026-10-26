@@ -66,7 +66,7 @@ def champion_offspring(items, champion, fraction, seed, generation):
         child = broad_child(parent, rng, accepted)
         if child is None:
             continue
-        result[slot] = dict(key=f'champion-g{generation}-{j}', family=parent['family'],
+        result[slot] = dict(key=f'champion-g{generation}-{j}',
             repeat=items[slot]['repeat'], round=generation,
             origin=f"mutation of {parent['key']}", parent_key=parent['key'],
             proposal_strategy='champion', **child)

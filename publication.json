@@ -42,7 +42,7 @@
       "callable": "ballistic_lab.reporting.campaign_gallery:render",
       "block": "discovery",
       "options": {
-        "root": "runs/fresh-discovery-broad-v3"
+        "root": "runs/fresh-discovery-polygon-v4"
       }
     },
     {
