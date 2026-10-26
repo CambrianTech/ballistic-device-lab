@@ -1,4 +1,4 @@
-# Ballistic Device Lab
+# Evolutionary Device Lab
 
 <!-- activity:start -->
 **Computing · Updated 2026-10-26 17:45 UTC**
