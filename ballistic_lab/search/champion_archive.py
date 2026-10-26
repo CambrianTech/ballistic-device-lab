@@ -1,6 +1,7 @@
 """Rectifier adapter for the reusable distinct-parent archive."""
 from device_harness import Evaluation, distinct_champions
 from ballistic_lab.search.broad_champion import shape_mask, difference
+import numpy as np
 import copy
 import hashlib
 import json
@@ -31,12 +32,34 @@ def import_history(path, physics_hashes, objective):
     return rows
 
 
+def normalized_shape_mask(obstacles):
+    """Compare outline independently of translation and axis-wise stretching.
+
+    Orientation and relative placement of multiple obstacles remain meaningful.
+    This is an archive diversity heuristic, never a transport equivalence.
+    """
+    polygons = [np.asarray(p, dtype=float) for p in obstacles]
+    if not polygons:
+        return shape_mask([])
+    vertices = np.concatenate(polygons)
+    low = vertices.min(axis=0)
+    span = vertices.max(axis=0) - low
+    if not np.isfinite(vertices).all() or np.any(span <= 0):
+        raise ValueError('Invalid archive geometry')
+    return shape_mask([(p-low)/span*1.8-.9 for p in polygons])
+
+
+SHAPE_DISTANCE = .5
+
+
 def select_parents(rows, capacity=5, minimum_distance=.2):
     """Caller supplies only records from the same verified physics/objective.
 
-    Distance is changed etched area / etched union on the fixed 128² grid.
+    Distance is changed etched area / etched union on the fixed 128Â² grid.
     Empty niches stay empty; qualification is never relaxed to fill the archive.
     """
+    if not 0 < minimum_distance <= 1:
+        raise ValueError('Minimum distance must be in (0, 1]')
     qualified = [r for r in rows if r.get('energy_converged') and
                  r.get('phase_converged') and r.get('phase64')]
     by_id = {}
@@ -46,9 +69,12 @@ def select_parents(rows, capacity=5, minimum_distance=.2):
             raise ValueError('Conflicting candidate records in parent history')
         by_id[key] = row
     masks = {key: shape_mask(row['candidate']['obstacles']) for key, row in by_id.items()}
-    contract = 'fixed-dc-verified-inputs:etched-union-128-v1'
+    normalized = {key: normalized_shape_mask(row['candidate']['obstacles']) for key, row in by_id.items()}
+    contract = 'fixed-dc-verified-inputs:normalized-outline-128-v2'
     records = [Evaluation(key, contract, row['phase64']['dc_power_w'], True, key)
                for key, row in by_id.items()]
     selected = distinct_champions(records, contract,
-        lambda a, b: difference(masks[a], masks[b])[1], capacity, minimum_distance)
+        lambda a, b: min(1.0, difference(masks[a], masks[b])[1] / minimum_distance,
+                         difference(normalized[a], normalized[b])[1] / SHAPE_DISTANCE),
+        capacity, 1.0)
     return [by_id[r.candidate_id] for r in selected]

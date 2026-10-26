@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-26 19:37 UTC",
+  "published_utc": "2026-10-26 19:40 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "9e2dbd24a74d03e6858b11175d4f4ea1178d9be8b7572e750ec848be97a919f0"
+      "status_sha256": "863fe426216b665331e91dc602bf975860fe3e2dd99e9aea0ec6db1afdf05c4d"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
@@ -100,10 +100,10 @@
     {
       "run": "runs/fresh-discovery-archive-v6",
       "label": "Fresh evolutionary shape search",
-      "phase": "refine",
-      "live": true,
-      "stopped": false,
-      "status_sha256": "29843e9cb9d95acfceb2921a57ffb2b6837ac2450aab364c01cfccfc61163cf2"
+      "phase": "stopped",
+      "live": false,
+      "stopped": true,
+      "status_sha256": "2ae3708226212045252b7126dc1e926d5e126d4bb5fcc200e4e62f7bca11953c"
     },
     {
       "run": "runs/fresh-discovery-broad-v3",
@@ -885,8 +885,8 @@
       }
     },
     "discovery": {
-      "source": "runs/fresh-discovery-archive-v6/round-000023.json",
-      "completed_snapshot": true,
+      "source": "runs/fresh-discovery-shape-v7/state.json",
+      "completed_snapshot": false,
       "control": {
         "candidate": {
           "key": "D00",
@@ -1068,101 +1068,7 @@
         },
         "phase_converged": true
       },
-      "current": {
-        "candidate": {
-          "key": "champion-g10-1",
-          "repeat": 0,
-          "round": 10,
-          "origin": "mutation of champion-g1-3",
-          "parent_key": "champion-g1-3",
-          "proposal_strategy": "champion",
-          "family": "polygon",
-          "parameters": [],
-          "obstacles": [
-            [
-              [
-                -0.6506751483861868,
-                0.5539262689489212
-              ],
-              [
-                0.6124503859966784,
-                0.8388179479107666
-              ],
-              [
-                0.5599156178782767,
-                -0.3564614690458904
-              ],
-              [
-                0.49350098095249967,
-                -0.3910881204790084
-              ],
-              [
-                0.18106782588829867,
-                -0.41114217748029624
-              ],
-              [
-                -0.26030538600262615,
-                -0.31217901086086247
-              ],
-              [
-                -0.15711816024134195,
-                0.6155131781310643
-              ],
-              [
-                -0.6251487626477488,
-                0.34534840192881056
-              ],
-              [
-                -0.8241154515738025,
-                -0.38059444350217986
-              ]
-            ]
-          ],
-          "geometry_encoding": "explicit-polygons-v1",
-          "rotation_rad": 0.0,
-          "mutation_operator": "delete-vertex+scale+translation",
-          "changed_device_fraction": 0.0982666015625,
-          "changed_union_fraction": 0.314453125,
-          "shape_grid": 128,
-          "proposal_trials": 6
-        },
-        "levels": [
-          {
-            "count": 257,
-            "dc_v": 1.6606772597300883e-05,
-            "dc_power_w": 2.7578489609846352e-14,
-            "input_power_w": 1.965229394730098e-09,
-            "efficiency": 1.4033216521084015e-05,
-            "max_kcl_a": 6.209810294558089e-20
-          },
-          {
-            "count": 513,
-            "dc_v": 1.6661362638033546e-05,
-            "dc_power_w": 2.776010049560602e-14,
-            "input_power_w": 1.964743316702883e-09,
-            "efficiency": 1.412912325982174e-05,
-            "max_kcl_a": 7.164045849199262e-20
-          },
-          {
-            "count": 1025,
-            "dc_v": 1.6657901958893207e-05,
-            "dc_power_w": 2.7748569767209814e-14,
-            "input_power_w": 1.9645884802518248e-09,
-            "efficiency": 1.4124367543707142e-05,
-            "max_kcl_a": 7.115076756936123e-20
-          }
-        ],
-        "device_fingerprint": "269b80527c9c8191892ea5f4b4083840b9976e3c5080b55b0558b6c0ec3e94f3",
-        "energy_converged": true,
-        "phase64": {
-          "dc_v": 1.6657901958894332e-05,
-          "dc_power_w": 2.7748569767213562e-14,
-          "input_power_w": 1.9645884802518206e-09,
-          "efficiency": 1.412436754370908e-05,
-          "max_kcl_a": 7.115076756936123e-20
-        },
-        "phase_converged": true
-      },
+      "current": null,
       "champion": {
         "candidate": {
           "key": "diversity-r0-profile-g73-1",
@@ -1362,349 +1268,141 @@
         },
         {
           "candidate": {
-            "key": "champion-g10-1",
-            "repeat": 0,
-            "round": 10,
-            "origin": "mutation of champion-g1-3",
-            "parent_key": "champion-g1-3",
-            "proposal_strategy": "champion",
-            "family": "polygon",
-            "parameters": [],
-            "obstacles": [
-              [
-                [
-                  -0.6506751483861868,
-                  0.5539262689489212
-                ],
-                [
-                  0.6124503859966784,
-                  0.8388179479107666
-                ],
-                [
-                  0.5599156178782767,
-                  -0.3564614690458904
-                ],
-                [
-                  0.49350098095249967,
-                  -0.3910881204790084
-                ],
-                [
-                  0.18106782588829867,
-                  -0.41114217748029624
-                ],
-                [
-                  -0.26030538600262615,
-                  -0.31217901086086247
-                ],
-                [
-                  -0.15711816024134195,
-                  0.6155131781310643
-                ],
-                [
-                  -0.6251487626477488,
-                  0.34534840192881056
-                ],
-                [
-                  -0.8241154515738025,
-                  -0.38059444350217986
-                ]
-              ]
-            ],
-            "geometry_encoding": "explicit-polygons-v1",
-            "rotation_rad": 0.0,
-            "mutation_operator": "delete-vertex+scale+translation",
-            "changed_device_fraction": 0.0982666015625,
-            "changed_union_fraction": 0.314453125,
-            "shape_grid": 128,
-            "proposal_trials": 6
-          },
-          "levels": [
-            {
-              "count": 257,
-              "dc_v": 1.6606772597300883e-05,
-              "dc_power_w": 2.7578489609846352e-14,
-              "input_power_w": 1.965229394730098e-09,
-              "efficiency": 1.4033216521084015e-05,
-              "max_kcl_a": 6.209810294558089e-20
-            },
-            {
-              "count": 513,
-              "dc_v": 1.6661362638033546e-05,
-              "dc_power_w": 2.776010049560602e-14,
-              "input_power_w": 1.964743316702883e-09,
-              "efficiency": 1.412912325982174e-05,
-              "max_kcl_a": 7.164045849199262e-20
-            },
-            {
-              "count": 1025,
-              "dc_v": 1.6657901958893207e-05,
-              "dc_power_w": 2.7748569767209814e-14,
-              "input_power_w": 1.9645884802518248e-09,
-              "efficiency": 1.4124367543707142e-05,
-              "max_kcl_a": 7.115076756936123e-20
-            }
-          ],
-          "device_fingerprint": "269b80527c9c8191892ea5f4b4083840b9976e3c5080b55b0558b6c0ec3e94f3",
-          "energy_converged": true,
-          "phase64": {
-            "dc_v": 1.6657901958894332e-05,
-            "dc_power_w": 2.7748569767213562e-14,
-            "input_power_w": 1.9645884802518206e-09,
-            "efficiency": 1.412436754370908e-05,
-            "max_kcl_a": 7.115076756936123e-20
-          },
-          "phase_converged": true
-        },
-        {
-          "candidate": {
-            "key": "champion-g20-0",
-            "repeat": 0,
-            "round": 20,
-            "origin": "mutation of diversity-r0-profile-g73-1",
-            "parent_key": "diversity-r0-profile-g73-1",
-            "proposal_strategy": "champion",
-            "family": "polygon",
-            "parameters": [],
-            "obstacles": [
-              [
-                [
-                  -0.559741931604782,
-                  0.6519089770099133
-                ],
-                [
-                  0.8961517307161398,
-                  0.8141968097366894
-                ],
-                [
-                  0.7009222800757071,
-                  -0.057046982978027905
-                ],
-                [
-                  0.5112530287324618,
-                  -0.09303256135747873
-                ],
-                [
-                  0.32887056548612414,
-                  -0.2538497048858133
-                ],
-                [
-                  0.001241533120694055,
-                  -0.10286962994246568
-                ],
-                [
-                  -0.20635463663328749,
-                  0.6359254822520648
-                ],
-                [
-                  -0.39154738126768207,
-                  0.2778095058114057
-                ],
-                [
-                  -0.2872440803321402,
-                  0.35182610155000754
-                ],
-                [
-                  -0.5642884063214054,
-                  -0.15939762704735672
-                ]
-              ]
-            ],
-            "geometry_encoding": "explicit-polygons-v1",
-            "rotation_rad": 0.0,
-            "mutation_operator": "insert-vertex+scale+translation",
-            "changed_device_fraction": 0.0914306640625,
-            "changed_union_fraction": 0.32159725203950196,
-            "shape_grid": 128,
-            "proposal_trials": 4
-          },
-          "levels": [
-            {
-              "count": 257,
-              "dc_v": 1.5335291649837603e-05,
-              "dc_power_w": 2.351711699855789e-14,
-              "input_power_w": 3.4125023108942084e-09,
-              "efficiency": 6.891458189927347e-06,
-              "max_kcl_a": 4.3913364359215133e-20
-            },
-            {
-              "count": 513,
-              "dc_v": 1.5321666655261584e-05,
-              "dc_power_w": 2.347534690949547e-14,
-              "input_power_w": 3.410300068397411e-09,
-              "efficiency": 6.883660217186445e-06,
-              "max_kcl_a": 2.1877272840802476e-20
-            },
-            {
-              "count": 1025,
-              "dc_v": 1.5324974980991122e-05,
-              "dc_power_w": 2.348548581680038e-14,
-              "input_power_w": 3.4105728005675975e-09,
-              "efficiency": 6.8860825410006955e-06,
-              "max_kcl_a": 2.429925767435774e-20
-            }
-          ],
-          "device_fingerprint": "b1acbfcdd0699cbad8cc0401ae593965543cb1c0fb2ab3226e02a3957b8b6b51",
-          "energy_converged": true,
-          "phase64": {
-            "dc_v": 1.5324974980993385e-05,
-            "dc_power_w": 2.348548581680732e-14,
-            "input_power_w": 3.410572800567592e-09,
-            "efficiency": 6.886082541002741e-06,
-            "max_kcl_a": 4.139873529705393e-20
-          },
-          "phase_converged": true
-        },
-        {
-          "candidate": {
-            "key": "champion-g11-0",
+            "key": "import-b1c0593be9c8-r1-beveled-g8-0",
+            "family": "beveled",
             "repeat": 1,
-            "round": 11,
-            "origin": "mutation of diversity-r0-profile-g73-1",
-            "parent_key": "diversity-r0-profile-g73-1",
-            "proposal_strategy": "champion",
-            "family": "polygon",
-            "parameters": [],
-            "obstacles": [
-              [
-                [
-                  -0.8508282254613151,
-                  0.7897405739932633
-                ],
-                [
-                  0.720597359056195,
-                  0.8039614474536605
-                ],
-                [
-                  0.7006426450684354,
-                  0.025766169948738843
-                ],
-                [
-                  0.3104061911992452,
-                  -0.176528110464263
-                ],
-                [
-                  0.13872712325684272,
-                  -0.2538357322240493
-                ],
-                [
-                  -0.17922376907306548,
-                  -0.21688450186537792
-                ],
-                [
-                  -0.29372787913133414,
-                  0.5684561898084801
-                ],
-                [
-                  -0.4592463789738362,
-                  0.3793292818309293
-                ],
-                [
-                  -0.7420879818289166,
-                  -0.24366788197329767
-                ]
-              ]
-            ],
-            "geometry_encoding": "explicit-polygons-v1",
-            "rotation_rad": 0.0,
-            "mutation_operator": "boundary-jitter+scale+translation",
-            "changed_device_fraction": 0.09576416015625,
-            "changed_union_fraction": 0.298686464877213,
-            "shape_grid": 128,
-            "proposal_trials": 1
-          },
-          "levels": [
-            {
-              "count": 257,
-              "dc_v": 1.4737280873762367e-05,
-              "dc_power_w": 2.1718744755216205e-14,
-              "input_power_w": 3.6840356321753206e-09,
-              "efficiency": 5.895367722703564e-06,
-              "max_kcl_a": 1.2361387073992446e-20
-            },
-            {
-              "count": 513,
-              "dc_v": 1.4756439880599132e-05,
-              "dc_power_w": 2.1775251794973652e-14,
-              "input_power_w": 3.6807754600948617e-09,
-              "efficiency": 5.91594136372895e-06,
-              "max_kcl_a": 1.7522994096323338e-20
-            },
-            {
-              "count": 1025,
-              "dc_v": 1.4749176656345011e-05,
-              "dc_power_w": 2.175382120400726e-14,
-              "input_power_w": 3.6806228402983255e-09,
-              "efficiency": 5.91036412800287e-06,
-              "max_kcl_a": 1.7920040790348792e-20
-            }
-          ],
-          "device_fingerprint": "586aced2e4d37df2df6af213678717496f8a4d867b7a55126b29c53a31372713",
-          "energy_converged": true,
-          "phase64": {
-            "dc_v": 1.4749176656346382e-05,
-            "dc_power_w": 2.1753821204011303e-14,
-            "input_power_w": 3.680622840298319e-09,
-            "efficiency": 5.910364128003979e-06,
-            "max_kcl_a": 1.7920040790348792e-20
-          },
-          "phase_converged": true
-        },
-        {
-          "candidate": {
-            "key": "r1-profile-g19-1",
-            "family": "profile",
-            "repeat": 1,
-            "round": 19,
+            "round": 8,
             "parameters": [
-              1.4103694329672638,
-              0.4625353714726428,
-              0.057533151992375575,
-              0.771675821762591,
-              0.32832472523462003,
-              0.783608124329399,
-              0.07517798510383333,
-              0.7552081909968057,
-              0.34994367098000473,
-              0.19003134985641656
+              1.1303341896864916,
+              0.318893077257034,
+              0.006563213766802467,
+              -0.4269438192273833,
+              0.5697468980299201,
+              0.7007325869416862
             ],
-            "origin": "mutation of r1-profile-g0-3",
+            "origin": "fresh global",
             "obstacles": [
               [
                 [
-                  -0.7051847164836319,
-                  0.28880083772869697
+                  -0.5651670948432458,
+                  0.16600975239531945
                 ],
                 [
-                  0.7051847164836319,
-                  0.28880083772869697
+                  0.5651670948432458,
+                  0.16600975239531945
                 ],
                 [
-                  0.7051847164836319,
-                  0.20090461673141158
+                  5.310656603160768e-05,
+                  -0.015678589175091295
                 ],
                 [
-                  0.4701231443224213,
-                  0.1269395118774602
+                  -0.24129459797402011,
+                  -0.15288332486171452
                 ],
                 [
-                  0.2350615721612106,
-                  -0.06050966343319314
+                  -0.33821908227281017,
+                  -0.015678589175091295
+                ]
+              ]
+            ],
+            "proposal_strategy": "diversity"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": -1.2152308647316143e-05,
+              "dc_power_w": 1.476786054596347e-14,
+              "input_power_w": 5.403012958661468e-09,
+              "efficiency": 2.733263950864562e-06,
+              "max_kcl_a": 1.1312522057275206e-20
+            },
+            {
+              "count": 513,
+              "dc_v": -1.2167490598792091e-05,
+              "dc_power_w": 1.4804782747169393e-14,
+              "input_power_w": 5.3961527385263455e-09,
+              "efficiency": 2.7435811150172304e-06,
+              "max_kcl_a": 1.34962788744152e-20
+            },
+            {
+              "count": 1025,
+              "dc_v": -1.2175334183547689e-05,
+              "dc_power_w": 1.4823876248106486e-14,
+              "input_power_w": 5.39541056727923e-09,
+              "efficiency": 2.7474973522880197e-06,
+              "max_kcl_a": 1.3114121431415701e-20
+            }
+          ],
+          "device_fingerprint": "354c435e07331f2a74c3c459b11b8daadf02d88047860f0a8a452a2a31f14d4a",
+          "energy_converged": true,
+          "phase64": {
+            "dc_v": -1.2175334183549324e-05,
+            "dc_power_w": 1.4823876248110468e-14,
+            "input_power_w": 5.395410567279221e-09,
+            "efficiency": 2.747497352288762e-06,
+            "max_kcl_a": 1.9121107039775788e-20
+          },
+          "phase_converged": true,
+          "archive_provenance": {
+            "source": "runs/fresh-discovery-archive-v6/round-000024.json",
+            "sha256": "b1c0593be9c87eaddd52b3d17bb828ad2da49c85ff2bcfbe789a36b8abd9c070",
+            "candidate_key": "r1-beveled-g8-0"
+          }
+        },
+        {
+          "candidate": {
+            "key": "import-b1c0593be9c8-r1-radial-g16-0",
+            "family": "radial",
+            "repeat": 1,
+            "round": 16,
+            "parameters": [
+              0.731660725704077,
+              0.6958260883455992,
+              0.159505069695627,
+              0.11115248327064214,
+              0.7626174662882985,
+              0.4483224890562293,
+              0.9268381444909843,
+              0.9838415399774121,
+              0.7993630748220516,
+              0.814152312101168,
+              0.7862506121760051,
+              0.5216669579732884
+            ],
+            "origin": "fresh global",
+            "obstacles": [
+              [
+                [
+                  0.7174823185147281,
+                  0.11115248327064214
                 ],
                 [
-                  0.0,
-                  0.2540283604621306
+                  0.3914502061444043,
+                  0.33173761424187204
                 ],
                 [
-                  -0.23506157216121065,
-                  -0.07364563714698241
+                  0.15950506969562703,
+                  0.756070643881297
                 ],
                 [
-                  -0.4701231443224213,
-                  0.13693903897864862
+                  -0.3494974135713123,
+                  0.5952254893063373
                 ],
                 [
-                  -0.7051847164836319,
-                  -0.06812652514671991
+                  -0.4253574977297177,
+                  0.11115248327064221
+                ],
+                [
+                  -0.261706611025365,
+                  -0.2894294611538351
+                ],
+                [
+                  0.1595050696956269,
+                  -0.4359412046591203
+                ],
+                [
+                  0.42939586639121086,
+                  -0.1455198386780978
                 ]
               ]
             ],
@@ -1713,103 +1411,225 @@
           "levels": [
             {
               "count": 257,
-              "dc_v": -1.4397771761612606e-05,
-              "dc_power_w": 2.0729583169948937e-14,
-              "input_power_w": 5.077369016638604e-09,
-              "efficiency": 4.0827411011525504e-06,
-              "max_kcl_a": 1.660316925516437e-20
+              "dc_v": 1.0376834754989043e-05,
+              "dc_power_w": 1.0767869953234852e-14,
+              "input_power_w": 4.646325677659927e-09,
+              "efficiency": 2.317502194262451e-06,
+              "max_kcl_a": 1.0616035981505557e-20
             },
             {
               "count": 513,
-              "dc_v": -1.4272579817943505e-05,
-              "dc_power_w": 2.0370653465956826e-14,
-              "input_power_w": 5.075705731791677e-09,
-              "efficiency": 4.0133637650357195e-06,
-              "max_kcl_a": 1.5537760626196072e-20
+              "dc_v": 1.0384107434333315e-05,
+              "dc_power_w": 1.0782968720777641e-14,
+              "input_power_w": 4.644134329693527e-09,
+              "efficiency": 2.3218468621447527e-06,
+              "max_kcl_a": 1.313562812734208e-20
             },
             {
               "count": 1025,
-              "dc_v": -1.4241740006789036e-05,
-              "dc_power_w": 2.0282715842097537e-14,
-              "input_power_w": 5.077459558302085e-09,
-              "efficiency": 3.99465827530493e-06,
-              "max_kcl_a": 1.6470820357155887e-20
+              "dc_v": 1.0381487160996111e-05,
+              "dc_power_w": 1.077752756739271e-14,
+              "input_power_w": 4.6439832211303764e-09,
+              "efficiency": 2.3207507551608656e-06,
+              "max_kcl_a": 1.2123159057577174e-20
             }
           ],
-          "device_fingerprint": "82ee903f831f3147c70bc2884f52d9a105b769fc9a1e4bf2feceb716ce451fac",
+          "device_fingerprint": "da4a0bc260b2c65c40d092cb5cded94b5560e3e6fa119ed6d518a030aefaf063",
           "energy_converged": true,
           "phase64": {
-            "dc_v": -1.4241740006787972e-05,
-            "dc_power_w": 2.0282715842094508e-14,
-            "input_power_w": 5.0774595583020774e-09,
-            "efficiency": 3.994658275304339e-06,
-            "max_kcl_a": 1.6765296655224765e-20
+            "dc_v": 1.0381487160997685e-05,
+            "dc_power_w": 1.0777527567395978e-14,
+            "input_power_w": 4.643983221130368e-09,
+            "efficiency": 2.3207507551615733e-06,
+            "max_kcl_a": 1.3880090678639804e-20
           },
-          "phase_converged": true
+          "phase_converged": true,
+          "archive_provenance": {
+            "source": "runs/fresh-discovery-archive-v6/round-000024.json",
+            "sha256": "b1c0593be9c87eaddd52b3d17bb828ad2da49c85ff2bcfbe789a36b8abd9c070",
+            "candidate_key": "r1-radial-g16-0"
+          }
+        },
+        {
+          "candidate": {
+            "key": "import-b1c0593be9c8-r0-beveled-g9-0",
+            "family": "beveled",
+            "repeat": 0,
+            "round": 9,
+            "parameters": [
+              1.2311652813215899,
+              0.5312976904142082,
+              0.08794897631935233,
+              -0.3387558501948442,
+              0.20421117978244727,
+              0.8332458125992099
+            ],
+            "origin": "fresh global",
+            "obstacles": [
+              [
+                [
+                  -0.6155826406607949,
+                  0.3535978215264564
+                ],
+                [
+                  0.6155826406607949,
+                  0.3535978215264564
+                ],
+                [
+                  -0.07110761675405268,
+                  0.24510089335128155
+                ],
+                [
+                  -0.20853222080223488,
+                  -0.17769986888775174
+                ],
+                [
+                  -0.2764095827968995,
+                  0.24510089335128155
+                ]
+              ]
+            ],
+            "proposal_strategy": "random"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": -6.7989351033845405e-06,
+              "dc_power_w": 4.6225518540034555e-15,
+              "input_power_w": 5.725905524737667e-09,
+              "efficiency": 8.073049466206899e-07,
+              "max_kcl_a": 1.5812384589563677e-20
+            },
+            {
+              "count": 513,
+              "dc_v": -6.750296879801197e-06,
+              "dc_power_w": 4.556650796545378e-15,
+              "input_power_w": 5.7238512902285115e-09,
+              "efficiency": 7.960812686248989e-07,
+              "max_kcl_a": 1.3800681339834714e-20
+            },
+            {
+              "count": 1025,
+              "dc_v": -6.745751944866445e-06,
+              "dc_power_w": 4.550516930166943e-15,
+              "input_power_w": 5.724005178693803e-09,
+              "efficiency": 7.949882622582382e-07,
+              "max_kcl_a": 1.8118564137361518e-20
+            }
+          ],
+          "device_fingerprint": "055f36423cfa57ffd0d7bc496ab81fafbfd8f559f91aeb9108ac21b41fc82d7f",
+          "energy_converged": true,
+          "phase64": {
+            "dc_v": -6.745751944866159e-06,
+            "dc_power_w": 4.550516930166556e-15,
+            "input_power_w": 5.724005178693792e-09,
+            "efficiency": 7.949882622581722e-07,
+            "max_kcl_a": 1.8118564137361518e-20
+          },
+          "phase_converged": true,
+          "archive_provenance": {
+            "source": "runs/fresh-discovery-archive-v6/round-000024.json",
+            "sha256": "b1c0593be9c87eaddd52b3d17bb828ad2da49c85ff2bcfbe789a36b8abd9c070",
+            "candidate_key": "r0-beveled-g9-0"
+          }
+        },
+        {
+          "candidate": {
+            "key": "import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+            "family": "islands",
+            "repeat": 1,
+            "round": 0,
+            "parameters": [
+              0.3693539037911864,
+              0.6977107319283163,
+              -0.012462032778333743,
+              0.40815217985916885,
+              0.5604765078773575,
+              0.4414403505856015,
+              -0.24967608830779237,
+              -0.22534080397891193
+            ],
+            "origin": "fresh global",
+            "obstacles": [
+              [
+                [
+                  -0.6846769518955932,
+                  0.33639333318582443
+                ],
+                [
+                  -0.3153230481044068,
+                  0.33639333318582443
+                ],
+                [
+                  -0.42462369951406675,
+                  -0.3613173987424919
+                ]
+              ],
+              [
+                [
+                  0.21976174606132126,
+                  -0.02895591301499162
+                ],
+                [
+                  0.7802382539386787,
+                  -0.02895591301499162
+                ],
+                [
+                  0.43685088655181165,
+                  -0.4703962636005931
+                ]
+              ]
+            ],
+            "proposal_strategy": "elite"
+          },
+          "levels": [
+            {
+              "count": 257,
+              "dc_v": 6.277068047791152e-06,
+              "dc_power_w": 3.940158327660063e-15,
+              "input_power_w": 5.141914799246136e-09,
+              "efficiency": 7.662823056184703e-07,
+              "max_kcl_a": 1.8303852594573396e-20
+            },
+            {
+              "count": 513,
+              "dc_v": 6.270820893858738e-06,
+              "dc_power_w": 3.93231946828553e-15,
+              "input_power_w": 5.1376808281601e-09,
+              "efficiency": 7.653880417662627e-07,
+              "max_kcl_a": 2.0203059280995148e-20
+            },
+            {
+              "count": 1025,
+              "dc_v": 6.276131603782823e-06,
+              "dc_power_w": 3.938982790800155e-15,
+              "input_power_w": 5.137525258226205e-09,
+              "efficiency": 7.667082092673036e-07,
+              "max_kcl_a": 1.9038388978520485e-20
+            }
+          ],
+          "device_fingerprint": "fbdceee428fe76f0d124e6bf8e577d7547a0e6bffc3fdc54fa8c7dd073b4e933",
+          "energy_converged": true,
+          "phase64": {
+            "dc_v": 6.276131603784988e-06,
+            "dc_power_w": 3.938982790802872e-15,
+            "input_power_w": 5.137525258226195e-09,
+            "efficiency": 7.66708209267834e-07,
+            "max_kcl_a": 1.9038388978520485e-20
+          },
+          "phase_converged": true,
+          "archive_provenance": {
+            "source": "runs/fresh-discovery-archive-v6/round-000024.json",
+            "sha256": "b1c0593be9c87eaddd52b3d17bb828ad2da49c85ff2bcfbe789a36b8abd9c070",
+            "candidate_key": "import-ceba5c14e227-r1-islands-g0-0"
+          }
         }
       ],
       "offspring": [
         {
-          "key": "champion-g24-4",
+          "key": "champion-g0-0",
           "repeat": 0,
-          "round": 24,
-          "origin": "mutation of r1-profile-g19-1",
-          "parent_key": "r1-profile-g19-1",
-          "proposal_strategy": "champion",
-          "family": "polygon",
-          "parameters": [],
-          "obstacles": [
-            [
-              [
-                -0.642033519996812,
-                0.1831705314032605
-              ],
-              [
-                0.7497704166637109,
-                0.1872015109356414
-              ],
-              [
-                0.6358993262713,
-                0.046110487277579715
-              ],
-              [
-                0.4480783924148898,
-                -7.23458224563267e-05
-              ],
-              [
-                0.3417449439440038,
-                -0.23319469939148407
-              ],
-              [
-                0.11837473093745386,
-                -0.009367521579993737
-              ],
-              [
-                -0.22482379746182377,
-                -0.23490500946630832
-              ],
-              [
-                -0.3514062453852207,
-                0.10761175457188321
-              ],
-              [
-                -0.7187233934295358,
-                -0.1440594312832632
-              ]
-            ]
-          ],
-          "geometry_encoding": "explicit-polygons-v1",
-          "rotation_rad": 0.0,
-          "mutation_operator": "boundary-jitter+scale+translation",
-          "changed_device_fraction": 0.0833740234375,
-          "changed_union_fraction": 0.6902475997978778,
-          "shape_grid": 128,
-          "proposal_trials": 3
-        },
-        {
-          "key": "champion-g24-0",
-          "repeat": 1,
-          "round": 24,
+          "round": 0,
           "origin": "mutation of diversity-r0-profile-g73-1",
           "parent_key": "diversity-r0-profile-g73-1",
           "proposal_strategy": "champion",
@@ -1818,528 +1638,770 @@
           "obstacles": [
             [
               [
-                -0.42641642716907835,
-                0.757536271093699
+                -0.8676166884217326,
+                0.728062132087849
               ],
               [
-                0.6419961292344305,
-                0.69709823018831
+                0.758710054506621,
+                0.8941944828983402
               ],
               [
-                0.6996824866692151,
-                0.018850725363935728
+                0.7558813779280321,
+                -0.2008399368849424
               ],
               [
-                0.5090984242372767,
-                -0.14221403258455645
+                0.43455893268471657,
+                -0.12916316762575253
               ],
               [
-                0.3537498978400787,
-                0.03158440329224246
+                0.1274025165554865,
+                -0.2277715825012484
               ],
               [
-                0.18763683838318806,
-                -0.07972526587356815
+                -0.12478757758157383,
+                -0.27961739181944123
               ],
               [
-                0.1360253062122102,
-                -0.20322241821417314
+                -0.378579802040658,
+                0.4483716888796857
               ],
               [
-                -0.08732571248690205,
-                0.5161722701177569
+                -0.3521848010530723,
+                0.3415746946094639
               ],
               [
-                -0.28577725854409697,
-                0.44372443262166955
-              ],
-              [
-                -0.4585072579760797,
-                -0.012262356363648946
-              ]
-            ]
-          ],
-          "geometry_encoding": "explicit-polygons-v1",
-          "rotation_rad": 0.0,
-          "mutation_operator": "insert-vertex+scale+translation",
-          "changed_device_fraction": 0.09326171875,
-          "changed_union_fraction": 0.37515344954578933,
-          "shape_grid": 128,
-          "proposal_trials": 1
-        },
-        {
-          "key": "champion-g24-1",
-          "repeat": 1,
-          "round": 24,
-          "origin": "mutation of champion-g10-1",
-          "parent_key": "champion-g10-1",
-          "proposal_strategy": "champion",
-          "family": "polygon",
-          "parameters": [],
-          "obstacles": [
-            [
-              [
-                -0.4637142078913502,
-                0.5395041930660052
-              ],
-              [
-                0.5483442546076273,
-                0.8209348268099583
-              ],
-              [
-                0.37811872411834624,
-                -0.21318634530199335
-              ],
-              [
-                0.3089179884006542,
-                -0.27215885147577956
-              ],
-              [
-                0.21590358173437244,
-                -0.3155066460089563
-              ],
-              [
-                -0.16379186140509153,
-                -0.2858045172552798
-              ],
-              [
-                -0.18467147605752446,
-                0.5503617283536497
-              ],
-              [
-                -0.43668520282060086,
-                0.35216216519483123
-              ],
-              [
-                -0.6735323847710282,
-                -0.23997128848544055
+                -0.78590223734052,
+                -0.2904502119889821
               ]
             ]
           ],
           "geometry_encoding": "explicit-polygons-v1",
           "rotation_rad": 0.0,
           "mutation_operator": "boundary-jitter+scale+translation",
-          "changed_device_fraction": 0.0975341796875,
-          "changed_union_fraction": 0.37644287396937576,
+          "changed_device_fraction": 0.1319580078125,
+          "changed_union_fraction": 0.36165941786550687,
           "shape_grid": 128,
           "proposal_trials": 1
         },
         {
-          "key": "champion-g24-2",
-          "repeat": 1,
-          "round": 24,
-          "origin": "mutation of champion-g20-0",
-          "parent_key": "champion-g20-0",
+          "key": "champion-g0-1",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r1-beveled-g8-0",
+          "parent_key": "import-b1c0593be9c8-r1-beveled-g8-0",
           "proposal_strategy": "champion",
           "family": "polygon",
           "parameters": [],
           "obstacles": [
             [
               [
-                -0.3949295366888601,
-                0.6167837703172698
+                -0.46801556415637835,
+                0.3230120310055792
               ],
               [
-                0.7289307113606185,
-                0.7257370851876553
+                0.407450090718269,
+                0.24158838853056377
               ],
               [
-                0.45700590062461727,
-                -0.036079261508341814
+                -0.016124372238166054,
+                0.1232383746621698
               ],
               [
-                0.3366107482133799,
-                0.053612770170748475
+                -0.28817059399880063,
+                0.0706492191706563
               ],
               [
-                0.11717501180379868,
-                -0.1194926112874918
-              ],
-              [
-                -0.06429759614586547,
-                -0.08124821963127535
-              ],
-              [
-                -0.24572076912571061,
-                0.5669254806251087
-              ],
-              [
-                -0.3983613817856199,
-                0.3471927155700325
-              ],
-              [
-                -0.3540530306363966,
-                0.23425294886289214
-              ],
-              [
-                -0.4458896043482664,
-                -0.11874794901718635
-              ],
-              [
-                -0.5773197510680073,
-                0.330861939652463
-              ]
-            ]
-          ],
-          "geometry_encoding": "explicit-polygons-v1",
-          "rotation_rad": 0.0,
-          "mutation_operator": "insert-vertex+scale+translation",
-          "changed_device_fraction": 0.104736328125,
-          "changed_union_fraction": 0.4115107913669065,
-          "shape_grid": 128,
-          "proposal_trials": 4
-        },
-        {
-          "key": "champion-g24-3",
-          "repeat": 1,
-          "round": 24,
-          "origin": "mutation of champion-g11-0",
-          "parent_key": "champion-g11-0",
-          "proposal_strategy": "champion",
-          "family": "polygon",
-          "parameters": [],
-          "obstacles": [
-            [
-              [
-                -0.8322735103754686,
-                0.7930384636313914
-              ],
-              [
-                0.676014591287746,
-                0.6921324131598152
-              ],
-              [
-                0.8887082820418726,
-                -0.09588113781888427
-              ],
-              [
-                0.45899427050611674,
-                -0.0567078590706257
-              ],
-              [
-                0.2377173762425444,
-                -0.2742577640170752
-              ],
-              [
-                -0.002017423947960728,
-                -0.44666662300527155
-              ],
-              [
-                -0.26829280130274835,
-                0.5930928035479937
-              ],
-              [
-                -0.3707067441102485,
-                0.4919415153276629
-              ],
-              [
-                -0.6726215077331041,
-                -0.25481532476164953
+                -0.400766684633193,
+                0.05478533990363646
               ]
             ]
           ],
           "geometry_encoding": "explicit-polygons-v1",
           "rotation_rad": 0.0,
           "mutation_operator": "boundary-jitter+scale+translation",
-          "changed_device_fraction": 0.0843505859375,
-          "changed_union_fraction": 0.24455848522385418,
+          "changed_device_fraction": 0.052734375,
+          "changed_union_fraction": 0.8462291870714985,
+          "shape_grid": 128,
+          "proposal_trials": 1
+        },
+        {
+          "key": "champion-g0-2",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r1-radial-g16-0",
+          "parent_key": "import-b1c0593be9c8-r1-radial-g16-0",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                0.7475927438379126,
+                0.24149973779515174
+              ],
+              [
+                0.5388018467538738,
+                0.5059469289493587
+              ],
+              [
+                0.19274054107263072,
+                0.7889409201542126
+              ],
+              [
+                -0.5000317936115554,
+                0.5986704310295123
+              ],
+              [
+                -0.5965012208508376,
+                0.1991375957606377
+              ],
+              [
+                -0.3596684335214367,
+                -0.1542041490008911
+              ],
+              [
+                0.11954186220571812,
+                -0.3986811856432354
+              ],
+              [
+                0.4057991668428004,
+                -0.03492668137501373
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "boundary-jitter+scale+translation",
+          "changed_device_fraction": 0.08172607421875,
+          "changed_union_fraction": 0.3081703107019563,
+          "shape_grid": 128,
+          "proposal_trials": 3
+        },
+        {
+          "key": "champion-g0-3",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r0-beveled-g9-0",
+          "parent_key": "import-b1c0593be9c8-r0-beveled-g9-0",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                -0.8719316960718249,
+                0.4870494234371656
+              ],
+              [
+                0.5493633180428191,
+                0.48859696758322746
+              ],
+              [
+                -0.20833178937144997,
+                0.4391187553438377
+              ],
+              [
+                -0.3840130481680196,
+                0.0197720730285168
+              ],
+              [
+                -0.4143291104613184,
+                0.452617067059902
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "boundary-jitter+scale+translation",
+          "changed_device_fraction": 0.044189453125,
+          "changed_union_fraction": 0.9305912596401028,
+          "shape_grid": 128,
+          "proposal_trials": 1
+        },
+        {
+          "key": "champion-g0-4",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "parent_key": "import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "proposal_strategy": "champion",
+          "family": "islands",
+          "parameters": [
+            0.6421359302433179,
+            0.6977107319283163,
+            -0.012462032778333743,
+            0.40815217985916885,
+            0.1530138689379777,
+            0.6044106472620461,
+            -0.24967608830779237,
+            0.5983615679393784
+          ],
+          "obstacles": [
+            [
+              [
+                -0.821067965121659,
+                0.33639333318582443
+              ],
+              [
+                -0.17893203487834103,
+                0.33639333318582443
+              ],
+              [
+                -0.3689554101526473,
+                -0.3613173987424919
+              ]
+            ],
+            [
+              [
+                0.4234930655310112,
+                0.05252923532323067
+              ],
+              [
+                0.5765069344689888,
+                0.05252923532323067
+              ],
+              [
+                0.5457788092670994,
+                -0.5518814119388153
+              ]
+            ]
+          ],
+          "mutation_operator": "half-gene redraw",
+          "changed_device_fraction": 0.05377197265625,
+          "changed_union_fraction": 0.5788436268068331,
+          "shape_grid": 128,
+          "proposal_trials": 2
+        },
+        {
+          "key": "champion-g0-5",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of diversity-r0-profile-g73-1",
+          "parent_key": "diversity-r0-profile-g73-1",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                -0.8915269534462564,
+                0.8095777313594615
+              ],
+              [
+                0.6278568724688968,
+                0.7596529265318588
+              ],
+              [
+                0.3825915791242471,
+                -0.2929458853746355
+              ],
+              [
+                0.18546698147743787,
+                -0.4491828612180191
+              ],
+              [
+                -0.04621081578336991,
+                -0.3387111354507103
+              ],
+              [
+                -0.33552066897107946,
+                0.4851197579325094
+              ],
+              [
+                -0.5248516281130372,
+                0.312375625990745
+              ],
+              [
+                -0.8201661701473095,
+                -0.24780341199070363
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "delete-vertex+scale+translation",
+          "changed_device_fraction": 0.1376953125,
+          "changed_union_fraction": 0.41295991213618893,
+          "shape_grid": 128,
+          "proposal_trials": 1
+        },
+        {
+          "key": "champion-g0-6",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r1-beveled-g8-0",
+          "parent_key": "import-b1c0593be9c8-r1-beveled-g8-0",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                -0.667251486360064,
+                0.30064773354066066
+              ],
+              [
+                0.602049632674997,
+                0.29558679176070446
+              ],
+              [
+                -0.09834898816714638,
+                -0.008034269193309074
+              ],
+              [
+                -0.21733808520391992,
+                -0.003964721643054225
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "delete-vertex+scale+translation",
+          "changed_device_fraction": 0.0531005859375,
+          "changed_union_fraction": 0.725604670558799,
+          "shape_grid": 128,
+          "proposal_trials": 1
+        },
+        {
+          "key": "champion-g0-7",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r1-radial-g16-0",
+          "parent_key": "import-b1c0593be9c8-r1-radial-g16-0",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                0.39189979205271597,
+                0.2770441614301076
+              ],
+              [
+                0.19550123174182998,
+                0.7081561234106604
+              ],
+              [
+                -0.24294192147236962,
+                0.5875932808731579
+              ],
+              [
+                -0.33980897463059867,
+                0.02882204951380117
+              ],
+              [
+                -0.05606372397733306,
+                -0.26037217187036693
+              ],
+              [
+                0.30008785279997885,
+                -0.42688344946299933
+              ],
+              [
+                0.4511790692760995,
+                -0.16862395980567763
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "delete-vertex+scale+translation",
+          "changed_device_fraction": 0.06207275390625,
+          "changed_union_fraction": 0.294953596287703,
+          "shape_grid": 128,
+          "proposal_trials": 2
+        },
+        {
+          "key": "champion-g0-8",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-r0-beveled-g9-0",
+          "parent_key": "import-b1c0593be9c8-r0-beveled-g9-0",
+          "proposal_strategy": "champion",
+          "family": "polygon",
+          "parameters": [],
+          "obstacles": [
+            [
+              [
+                -0.7724969125182395,
+                0.2505713183202557
+              ],
+              [
+                0.6271387664181768,
+                0.16152591797741286
+              ],
+              [
+                -0.2569342040849444,
+                -0.2367649431374658
+              ],
+              [
+                -0.5468037687079653,
+                0.09492215727042083
+              ]
+            ]
+          ],
+          "geometry_encoding": "explicit-polygons-v1",
+          "rotation_rad": 0.0,
+          "mutation_operator": "delete-vertex+scale+translation",
+          "changed_device_fraction": 0.08966064453125,
+          "changed_union_fraction": 0.9067901234567901,
+          "shape_grid": 128,
+          "proposal_trials": 1
+        },
+        {
+          "key": "champion-g0-9",
+          "repeat": 0,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "parent_key": "import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "proposal_strategy": "champion",
+          "family": "islands",
+          "parameters": [
+            0.22345248761400338,
+            0.6977107319283163,
+            -0.012462032778333743,
+            0.40815217985916885,
+            0.2706375011844351,
+            0.2642651718827897,
+            -0.03302061690049218,
+            -0.22534080397891193
+          ],
+          "obstacles": [
+            [
+              [
+                -0.6117262438070017,
+                0.33639333318582443
+              ],
+              [
+                -0.3882737561929983,
+                0.33639333318582443
+              ],
+              [
+                -0.4543986900426953,
+                -0.3613173987424919
+              ]
+            ],
+            [
+              [
+                0.36468124940778246,
+                0.09911196904090266
+              ],
+              [
+                0.6353187505922175,
+                0.09911196904090266
+              ],
+              [
+                0.46950716394812786,
+                -0.16515320284188703
+              ]
+            ]
+          ],
+          "mutation_operator": "half-gene redraw",
+          "changed_device_fraction": 0.04864501953125,
+          "changed_union_fraction": 0.6918402777777778,
           "shape_grid": 128,
           "proposal_trials": 1
         }
       ],
       "attempts": [
         {
-          "key": "r0-beveled-g24-0",
+          "key": "r0-beveled-g0-0",
           "family": "beveled",
           "repeat": 0,
-          "round": 24,
+          "round": 0,
           "parameters": [
-            0.4778720481184092,
-            0.4966113806600164,
-            0.10746408267660129,
-            -0.28591046639949863,
-            0.561229756306621,
-            0.5744623242879611
+            0.4118591676536637,
+            0.6114788520700876,
+            0.09133861670355459,
+            -0.11178774608800823,
+            0.6861280232079379,
+            0.717988148775991
           ],
           "origin": "fresh global",
           "obstacles": [
             [
               [
-                -0.2389360240592046,
-                0.3557697730066095
+                -0.20592958382683185,
+                0.39707804273859837
               ],
               [
-                0.2389360240592046,
-                0.3557697730066095
+                0.20592958382683185,
+                0.39707804273859837
               ],
               [
-                0.06243228297225842,
-                0.07705668885969391
+                0.04154620588405017,
+                -0.022474733265709868
               ],
               [
-                -0.06831431007840902,
-                -0.14084160765340692
+                -0.023020404028843085,
+                -0.2144008093314892
               ],
               [
-                -0.14092027767180107,
-                0.07705668885969391
+                -0.074602960429539,
+                -0.022474733265709868
               ]
             ]
           ],
-          "proposal_strategy": "random"
+          "proposal_strategy": "elite"
         },
         {
-          "key": "r0-islands-g24-0",
-          "family": "islands",
+          "key": "champion-g0-4",
           "repeat": 0,
-          "round": 24,
+          "round": 0,
+          "origin": "mutation of import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "parent_key": "import-b1c0593be9c8-import-ceba5c14e227-r1-islands-g0-0",
+          "proposal_strategy": "champion",
+          "family": "islands",
           "parameters": [
-            0.667888793511377,
-            0.3806609308443686,
-            0.1364274775926299,
-            0.06752001136931018,
-            0.6584264967770811,
-            0.49887007026302105,
-            -0.16200310777412644,
-            -0.46692028198648694
+            0.6421359302433179,
+            0.6977107319283163,
+            -0.012462032778333743,
+            0.40815217985916885,
+            0.1530138689379777,
+            0.6044106472620461,
+            -0.24967608830779237,
+            0.5983615679393784
           ],
-          "origin": "fresh global",
           "obstacles": [
             [
               [
-                -0.8339443967556885,
-                0.3267579430148142
+                -0.821067965121659,
+                0.33639333318582443
               ],
               [
-                -0.1660556032443115,
-                0.3267579430148142
+                -0.17893203487834103,
+                0.33639333318582443
               ],
               [
-                -0.47745207053433847,
-                -0.05390298782955438
+                -0.3689554101526473,
+                -0.3613173987424919
               ]
             ],
             [
               [
-                0.17078675161145945,
-                0.08743192735738409
+                0.4234930655310112,
+                0.05252923532323067
               ],
               [
-                0.8292132483885406,
-                0.08743192735738409
+                0.5765069344689888,
+                0.05252923532323067
               ],
               [
-                0.3462836572287353,
-                -0.41143814290563696
+                0.5457788092670994,
+                -0.5518814119388153
               ]
             ]
           ],
-          "proposal_strategy": "random"
+          "mutation_operator": "half-gene redraw",
+          "changed_device_fraction": 0.05377197265625,
+          "changed_union_fraction": 0.5788436268068331,
+          "shape_grid": 128,
+          "proposal_trials": 2
         },
         {
-          "key": "champion-g24-4",
+          "key": "champion-g0-0",
           "repeat": 0,
-          "round": 24,
-          "origin": "mutation of r1-profile-g19-1",
-          "parent_key": "r1-profile-g19-1",
+          "round": 0,
+          "origin": "mutation of diversity-r0-profile-g73-1",
+          "parent_key": "diversity-r0-profile-g73-1",
           "proposal_strategy": "champion",
           "family": "polygon",
           "parameters": [],
           "obstacles": [
             [
               [
-                -0.642033519996812,
-                0.1831705314032605
+                -0.8676166884217326,
+                0.728062132087849
               ],
               [
-                0.7497704166637109,
-                0.1872015109356414
+                0.758710054506621,
+                0.8941944828983402
               ],
               [
-                0.6358993262713,
-                0.046110487277579715
+                0.7558813779280321,
+                -0.2008399368849424
               ],
               [
-                0.4480783924148898,
-                -7.23458224563267e-05
+                0.43455893268471657,
+                -0.12916316762575253
               ],
               [
-                0.3417449439440038,
-                -0.23319469939148407
+                0.1274025165554865,
+                -0.2277715825012484
               ],
               [
-                0.11837473093745386,
-                -0.009367521579993737
+                -0.12478757758157383,
+                -0.27961739181944123
               ],
               [
-                -0.22482379746182377,
-                -0.23490500946630832
+                -0.378579802040658,
+                0.4483716888796857
               ],
               [
-                -0.3514062453852207,
-                0.10761175457188321
+                -0.3521848010530723,
+                0.3415746946094639
               ],
               [
-                -0.7187233934295358,
-                -0.1440594312832632
+                -0.78590223734052,
+                -0.2904502119889821
               ]
             ]
           ],
           "geometry_encoding": "explicit-polygons-v1",
           "rotation_rad": 0.0,
           "mutation_operator": "boundary-jitter+scale+translation",
-          "changed_device_fraction": 0.0833740234375,
-          "changed_union_fraction": 0.6902475997978778,
+          "changed_device_fraction": 0.1319580078125,
+          "changed_union_fraction": 0.36165941786550687,
           "shape_grid": 128,
-          "proposal_trials": 3
+          "proposal_trials": 1
         },
         {
-          "key": "r0-profile-g24-0",
+          "key": "r0-profile-g0-0",
           "family": "profile",
           "repeat": 0,
-          "round": 24,
+          "round": 0,
           "parameters": [
-            0.8110366694184403,
-            0.4975256156843225,
-            -0.1045855878436644,
-            0.2750510925212938,
-            0.596511711885103,
-            0.0908535825927261,
-            0.40620483827253984,
-            0.22990628603601482,
-            0.551853979416409,
-            0.8026203516759762
+            0.7310373159042702,
+            1.0010430444133183,
+            0.05596592675241385,
+            0.6351339083201772,
+            0.4617332620180424,
+            0.5906277726431657,
+            0.567127268076168,
+            0.8320462272202741,
+            0.7371224472532331,
+            0.7687200600626233
           ],
           "origin": "fresh global",
           "obstacles": [
             [
               [
-                -0.40551833470922016,
-                0.14417721999849686
+                -0.3655186579521351,
+                0.556487448959073
               ],
               [
-                0.40551833470922016,
-                0.14417721999849686
+                0.3655186579521351,
+                0.556487448959073
               ],
               [
-                0.40551833470922016,
-                -0.2551469646298607
+                0.3655186579521351,
+                -0.21303442026760433
               ],
               [
-                0.27034555647281344,
-                -0.13038427087849547
+                0.24367910530142345,
+                -0.18140384974469903
               ],
               [
-                0.13517277823640672,
-                0.029792953488732635
+                0.12183955265071172,
+                -0.2764266394301258
               ],
               [
                 0.0,
-                -0.05792009225699918
+                -0.0112313580457023
               ],
               [
-                -0.13517277823640672,
-                0.09897523538192436
+                -0.1218395526507117,
+                -0.034756374682698765
               ],
               [
-                -0.27034555647281344,
-                -0.1526026367200482
+                -0.2436791053014234,
+                0.09427257864163946
               ],
               [
-                -0.40551833470922016,
-                0.00733225584719463
+                -0.3655186579521351,
+                -0.07930893223588664
               ]
             ]
           ],
-          "proposal_strategy": "random"
+          "proposal_strategy": "elite"
         },
         {
-          "key": "r0-radial-g24-0",
+          "key": "r0-radial-g0-0",
           "family": "radial",
           "repeat": 0,
-          "round": 24,
+          "round": 0,
           "parameters": [
-            0.6156391916677377,
-            0.21248264092756522,
-            0.06052154528582038,
-            -0.16739871892643696,
-            0.6044807415516981,
-            0.6250943401299569,
-            0.8386130934550169,
-            0.4937657846518513,
-            0.9370032809038972,
-            0.913580457850988,
-            0.35117226162202586,
-            0.7728936453814856
+            0.34581757172855404,
+            0.6926428951356991,
+            -0.0655172369762706,
+            -0.007406707558062553,
+            0.8777905390537131,
+            0.7529762625973447,
+            0.7446715152046386,
+            0.7414381581648306,
+            0.9851382168738155,
+            0.5733935429594419,
+            0.9574381661136515,
+            0.9336695294538304
           ],
           "origin": "fresh global",
           "obstacles": [
             [
               [
-                0.43266358039342245,
-                -0.16739871892643696
+                0.23803815572558296,
+                -0.007406707558062553
               ],
               [
-                0.33263926817621847,
-                -0.07347959684079668
+                0.11860801088495704,
+                0.3613803500478033
               ],
               [
-                0.06052154528582041,
-                0.0107920058873201
+                -0.06551723697627058,
+                0.5083847266583661
               ],
               [
-                -0.15442588318188663,
-                -0.09321143865001014
+                -0.24682107273725853,
+                0.35572930393203545
               ],
               [
-                -0.5163343971598731,
-                -0.16739871892643693
+                -0.40619534295257115,
+                -0.00740670755806247
               ],
               [
-                -0.33718071804917327,
-                -0.3046622790766116
+                -0.20572913137949667,
+                -0.28823908974869983
               ],
               [
-                0.060521545285820336,
-                -0.2420167284963909
+                -0.06551723697627065,
+                -0.6705694508484366
               ],
               [
-                0.3969796529915206,
-                -0.2835243786543878
+                0.16279292639881646,
+                -0.4646923560535449
               ]
             ]
           ],
-          "proposal_strategy": "random"
+          "proposal_strategy": "elite"
         },
         {
-          "key": "r0-triangle-g24-0",
+          "key": "r0-triangle-g0-0",
           "family": "triangle",
           "repeat": 0,
-          "round": 24,
+          "round": 0,
           "parameters": [
-            0.918635381342638,
-            1.0411478409052448,
-            0.2279787850161617,
-            0.40706768659535364
+            1.1330485411652425,
+            1.0839610481452895,
+            -0.1611835972227607,
+            -0.24271438219566416
           ],
           "origin": "fresh global",
           "obstacles": [
             [
               [
-                -0.459317690671319,
-                0.7485527054687842
+                -0.5665242705826212,
+                0.38079692684988403
               ],
               [
-                0.459317690671319,
-                0.7485527054687842
+                0.5665242705826212,
+                0.38079692684988403
               ],
               [
-                0.18697338975389408,
-                -0.2925951354364607
+                -0.1375035883333102,
+                -0.7031641212954054
               ]
             ]
           ],
-          "proposal_strategy": "random"
+          "proposal_strategy": "elite"
         }
       ]
     },

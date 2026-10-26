@@ -105,7 +105,7 @@ Use `--champion-fraction 0.25` in a fresh run to allocate one quarter of proposa
 This allocation is fixed, not adaptively inferred from advantage. Four exploratory descendants all converged but none improved on the parent; that small probe does not establish an optimal allocation. `--strategy mixed` rotates elite/diversity/random selection for remaining slots. `--refinement-policy family` spends one refinement slot on coarse power and one on a rotating family. A coarse score is never enough to replace the champion.
 The active score remains fixed-potential DC power at 14.76 nm width, 10 mV peak drive, 10 kohm load and 300 K. Small self-consistent charge/3D Poisson fixtures test numerical behavior separately. Boundary-distance tests move normal boundaries with lateral boundaries and mesh spacing fixed; they are not calibrated housing models. Full-device stack validation is required before using that model for champion ranking.
 ```sh
-python -m ballistic_lab.pipeline.fresh_discovery --root runs/fresh-discovery-archive-v6 --seed 261031 --continuous --workers 4 --strategy mixed --refinement-policy family --champion-fraction 0.25
+python -m ballistic_lab.pipeline.fresh_discovery --root runs/fresh-discovery-shape-v7 --seed 261032 --continuous --workers 4 --strategy mixed --refinement-policy family --champion-fraction 0.25
 ```
 Set the publication adapter root to the same run. Current gallery shapes, scores, generation and offspring allocation come from run records/configuration. Archived figures remain explicitly labeled historical. A policy/source change starts a new directory and preserves prior STOP sentinels and checkpoints.
 
@@ -120,7 +120,7 @@ Five focused mutation tests cover distance gates, reproducibility, parent preser
 
 ## Distinct champion parents
 
-Use --champion-capacity 5 (configurable N) and --champion-distance 0.2 to retain up to N qualified, pairwise-distinct parents. Selection uses the shared device_harness selector: best DC power first, then reject shapes with less than the configured changed etched area / union on the 128 by 128 grid. The overall champion remains retained separately. This geometric threshold is not proof of physical novelty.
+Use --champion-capacity 5 (configurable N) and --champion-distance 0.2 to retain up to N qualified, pairwise-distinct parents. Selection uses the shared device_harness selector: best DC power first. Both physical-position mask distance (the configured threshold) and normalized-outline distance (at least 0.5 changed area / union) must pass on 128 by 128 grids. Outline comparison maps the joint obstacle bounding box to a fixed square, removing translation and independent width/height scaling while preserving orientation and relative obstacle placement. Thus stretched or shifted copies compete for one slot. This is conservative greedy separation, not a learned taxonomy or a guarantee of human-perceived diversity. Different shapes can share a generator-family label. The overall champion remains retained separately. This geometric threshold is not proof of physical novelty.
 
 The 25% descendant allocation is shared evenly across available parents with a rotating starting parent; it is not 25% per parent. If fewer than N qualified distinct shapes exist, use the available parents without relaxing convergence. Full evaluation history is retained so the archive can be rebuilt. Bounded mutation failure leaves the original proposal in place.
 

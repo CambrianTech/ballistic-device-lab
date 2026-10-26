@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def row(key, x, power, converged=True):
-    return dict(candidate=dict(key=key, obstacles=[[[x,-.3],[x+.2,-.3],[x+.2,.3],[x,.3]]]),
+    return dict(candidate=dict(key=key, obstacles=([[[x,-.3],[x+.2,-.3],[x+.2,.3],[x,.3]]] if x < 0 else [[[x,-.3],[x+.1,.3],[x+.2,-.3]]])),
                 energy_converged=converged, phase_converged=converged,
                 phase64=dict(dc_power_w=power))
 
@@ -40,3 +40,24 @@ class ArchiveTests(unittest.TestCase):
     def test_archive_rebuild_promotes_better_niche_without_losing_other(self):
         rows=[row('old',-.7,10),row('other',.4,8),row('new',-.7,11)]
         self.assertEqual([r['candidate']['key'] for r in select_parents(rows)],['new','other'])
+
+    def test_actual_displayed_lookalikes_share_one_slot(self):
+        data=json.loads((Path(__file__).parent/'fixtures/archive-lookalikes.json').read_text())
+        rows=[dict(candidate=c,energy_converged=True,phase_converged=True,
+                   phase64=dict(dc_power_w=10-i)) for i,c in enumerate(data['candidates'])]
+        self.assertEqual(len(select_parents(rows)),1)
+        self.assertEqual(select_parents(rows)[0],rows[0])
+
+    def test_translation_and_stretch_do_not_create_niche(self):
+        a=row('best',-.7,10)
+        b=copy.deepcopy(a);b['candidate']['key']='stretched'
+        b['candidate']['obstacles']=[[[x*.5+.6,y*1.3+.1] for x,y in p] for p in a['candidate']['obstacles']]
+        b['phase64']['dc_power_w']=9
+        self.assertEqual(select_parents([b,a]),[a])
+
+    def test_well_separated_shapes_and_invalid_threshold(self):
+        a=row('rectangle',-.7,10)
+        b=row('triangle',.4,8)
+        b['candidate']['obstacles']=[[[.4,-.3],[.5,.3],[.6,-.3]], [[-.5,.4],[-.4,.7],[-.3,.4]]]
+        self.assertEqual(len(select_parents([a,b])),2)
+        with self.assertRaises(ValueError): select_parents([a,b],minimum_distance=0)
