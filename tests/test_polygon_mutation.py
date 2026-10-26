@@ -17,5 +17,6 @@ class PolygonTests(unittest.TestCase):
         self.assertGreater(len(children),10)
         self.assertGreater(len({len(c['obstacles'][0]) for c in children}),1)
         self.assertTrue(all(valid_polygon(c['obstacles'][0]) for c in children))
-        self.assertTrue(any(abs(c['rotation_rad'])>1 for c in children))
+        self.assertTrue(all(c['rotation_rad']==0 for c in children))
+        self.assertTrue(all('rotation' not in c['mutation_operator'] for c in children))
         self.assertTrue(any(mutate_polygon(children[0],rng) is not None for _ in range(100)))

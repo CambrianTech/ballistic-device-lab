@@ -40,11 +40,9 @@ def mutate_polygon(parent,rng):
     elif operation==2 and len(p)>3:
         p=np.delete(p,int(rng.integers(len(p))),axis=0)
     p+=rng.normal(0,.07,p.shape)
-    angle=float(rng.uniform(-np.pi,np.pi))
     center=p.mean(axis=0)
-    rotation=np.array([[np.cos(angle),-np.sin(angle)],[np.sin(angle),np.cos(angle)]])
-    p=(p-center)@rotation.T*float(rng.uniform(.8,1.15))+center+rng.uniform(-.16,.16,2)
+    p=(p-center)*float(rng.uniform(.8,1.15))+center+rng.uniform(-.16,.16,2)
     if not valid_polygon(p): return None
     return dict(family='polygon',parameters=[],obstacles=[p.tolist()],
-                geometry_encoding='explicit-polygons-v1',rotation_rad=angle,
-                mutation_operator=('boundary-jitter','insert-vertex','delete-vertex')[operation]+'+rotation+translation')
+                geometry_encoding='explicit-polygons-v1',rotation_rad=0.0,
+                mutation_operator=('boundary-jitter','insert-vertex','delete-vertex')[operation]+'+scale+translation')
