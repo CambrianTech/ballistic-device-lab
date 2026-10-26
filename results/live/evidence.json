@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-26 17:39 UTC",
+  "published_utc": "2026-10-26 17:40 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "a56400e2711e211af0b6600434a3e0e7f78f8f3227932d6396fb28dffaa0e395"
+      "status_sha256": "bba00c53770b76b183860e0d57a7965a4641fe20fef5f8793811fc8d00c2056c"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
@@ -103,7 +103,7 @@
       "phase": "screen",
       "live": true,
       "stopped": false,
-      "status_sha256": "a648c4c1d128d549013daeb452e5c84939a8493113a25e01e7ee652b3daf1a80"
+      "status_sha256": "7717801a99e8db304cecc6bccdf72d0e62593e4cfe0d2425e9634d08121f8f82"
     },
     {
       "run": "runs/fresh-discovery-champion-v2",
