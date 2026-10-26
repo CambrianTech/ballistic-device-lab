@@ -1,5 +1,14 @@
 # Third-party scientific figures
 
+## Prakash et al. (2021), schematic
+
+- File: `prakash-2021-schematic.jpg`
+- Source: Krishna Prakash et al., *Thermoelectric rectification in a graphene-based triangular ballistic rectifier (G-TBR)*, Journal of Computational Electronics 20, 2308–2316 (2021).
+- DOI: https://doi.org/10.1007/s10825-021-01794-5
+- Image supplied by the repository owner from the linked article; retained unchanged. Markdown display may scale it.
+- Rights remain with the original rights holder. No Creative Commons license or permission grant has been verified for this image; it is not covered by this repository's MIT license.
+- Used as an attributed literature illustration. Its layers and dimensions are not the current simulation configuration.
+
 ## Auton et al. (2016), Figure 1
 
 - File: `auton-2016-figure-1.jpg`

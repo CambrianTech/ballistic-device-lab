@@ -16,6 +16,10 @@ The search proposes, mutates and compares shapes against controls, with numerica
 
 The experimental starting point is Shi et al., [*Nanoscale Graphene-Based Ballistic Rectifiers for Detection of High Terahertz Frequency Optical Signals* (2026)](https://doi.org/10.1002/smsc.202500654), alongside Auton et al., [*Graphene ballistic nano-rectifier with very high responsivity* (2016)](https://doi.org/10.1038/ncomms11670). Our current search uses a smaller synthetic benchmark; it does not yet reproduce those devices or establish an improvement over their measurements. [Published-device comparison](docs/PAPER-COMPARISON.md).
 
+![Literature schematic showing a graphene rectifier above its substrate and an enlarged triangular scattering region](docs/assets/literature/prakash-2021-schematic.jpg)
+
+**From a physical stack to a shape we can evolve.** Literature schematic from Prakash et al., [*Thermoelectric rectification in a graphene-based triangular ballistic rectifier* (2021)](https://doi.org/10.1007/s10825-021-01794-5). Left: graphene, contacts and underlying layers. Right: the patterned device region. This is the paper's layout, not our simulated stack or an evolved result. [Image credit](docs/assets/literature/README.md#prakash-et-al-2021-schematic).
+
 <!-- atomic-hero:start -->
 ![Atomic lattices of the synthetic control and strongest qualified champion](results/live/atomic-comparison.png?v=0c9fb19feed6afd0)
 
