@@ -1,9 +1,9 @@
 # Evolutionary Device Lab
 
 <!-- activity:start -->
-**Computing · Updated 2026-10-27 02:17 UTC**
+**Workers waiting · Updated 2026-10-27 02:22 UTC**
 
-Fresh evolutionary shape search · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
+Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
 
 ### Evolve the geometry. Discover the electrical function.
