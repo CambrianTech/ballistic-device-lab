@@ -1,7 +1,7 @@
 # Evolutionary Device Lab
 
 <!-- activity:start -->
-**Workers waiting · Updated 2026-10-29 22:29 UTC**
+**Workers waiting · Updated 2026-10-29 22:34 UTC**
 
 Atomic-edge sensitivity · [Data snapshot](results/live/evidence.json) · Published every 5 minutes while the publisher runs.
 <!-- activity:end -->
