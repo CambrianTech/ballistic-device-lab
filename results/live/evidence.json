@@ -1,5 +1,5 @@
 {
-  "published_utc": "2026-10-30 19:48 UTC",
+  "published_utc": "2026-10-30 19:54 UTC",
   "workers": [
     {
       "run": "runs/loaded-feedback-pilot",
@@ -79,7 +79,7 @@
       "phase": "waiting",
       "live": true,
       "stopped": false,
-      "status_sha256": "336d3fbed79119a4418fe8c91443105b63937cb45f952b428c347ec1be80ce99"
+      "status_sha256": "5f923208bb599b5c7effea923349d808ac843a6855f450cd93cabf31f61d389c"
     },
     {
       "run": "runs/small-feedback-shapes-v1",
